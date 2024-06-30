@@ -1,0 +1,28 @@
+.hero {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.main-underline {
+  /* third one is horiz stretch */
+  transform: matrix(-1, 0.06, 0.06, 1, 55, -30);
+}
+@media (max-width: 600px) {
+  .main-underline {
+    max-width: 340px;
+
+    transform: matrix(-1, 0.06, 0.06, 1, 15, -25);
+  }
+}
+@media (max-width: 389.6px) {
+  .main-underline {
+    max-width: 230px;
+
+    transform: matrix(-1, 0.06, 0.06, 1, 55, -20);
+  }
+}
