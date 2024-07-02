@@ -19,6 +19,7 @@
     transform: matrix(-1, 0.06, 0.06, 1, 15, -25);
   }
 }
+/* 406.4px */
 @media (max-width: 389.6px) {
   .main-underline {
     max-width: 230px;
