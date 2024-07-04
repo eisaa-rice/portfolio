@@ -9,7 +9,7 @@ interface SkillProps {
 const Skill: React.FC<SkillProps> = ({ title }) => {
   return (
     <div className="skill">
-      <p>{title}</p>
+      <p className="text-center">{title}</p>
 
       <div></div>
     </div>

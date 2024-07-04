@@ -21,6 +21,7 @@ function About() {
       </div>
 
       <div className="md:grid md:grid-cols-2 gap-20">
+        {/* md:mb-16 lg:mb-28 */}
         <div className="flex items-center justify-center mt-48 sm:mt-54 md:mt-0 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
           <Image
             className="rounded-full absolute sm:h-[380px] sm:w-[380px] md:h-[300px] md:w-[300px] lg:h-[420px] lg:w-[420px]"
@@ -39,25 +40,31 @@ function About() {
           />
         </div>
 
-        <div className="flex flex-col gap-4 lg:gap-28 mt-[200px] sm:mt-[250px] md:mt-0 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
-          <p className="text-lg">
-            Duis aute irure dolor in <strong>mexico</strong> in{" "}
-            <strong>detroit</strong> velit esse cillum dolore eu fugiat nulla
-            pariatur.
+        <div className="flex flex-col gap-10 lg:gap-24 mt-[200px] sm:mt-[250px] md:mt-0 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
+          {/* about me: a brief introduction about yourself, your background, and your career goals */}
+          <p className="text-lg text-center md:text-start">
+            as you&apos;ve probably seen, my name&apos;s{" "}
+            <strong>jesus orozco</strong>, but some of my friends call me{" "}
+            <strong>eisaa</strong>.
           </p>
 
-          <p className="text-lg">
-            Lorem <strong>software engineer</strong> sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna <strong>web </strong> and
-            <strong> app development</strong>.
+          <p className="text-lg text-center md:text-start">
+            i was born and raised, and am still <strong>located</strong> in,{" "}
+            <strong>detroit, michigan</strong>, where the roots of my{" "}
+            <strong>mexican</strong> heritage lie.
           </p>
 
-          <p className="text-lg">
-            Ut enim ad minim veniam,{" "}
-            <strong>university of michigan - dearborn</strong> nostrud
-            exercitation <strong>computer and information science</strong>{" "}
-            laboris nisi ut aliquip ex ea commodo consequat.
+          <p className="text-lg text-center md:text-start">
+            i&apos;m currently attending{" "}
+            <strong>university of michigan - dearborn</strong> where i&apos;m
+            majoring in <strong>computer science</strong>.
+          </p>
+
+          <p className="text-lg text-center md:text-start">
+            i&apos;m aspiring to be a <strong>web</strong> and{" "}
+            <strong>app developer</strong>, having already worked on multiple
+            projects for regional events such as <strong>conferences</strong>{" "}
+            and <strong>hackathons</strong>.
           </p>
         </div>
       </div>
