@@ -8,6 +8,15 @@
   align-items: center;
 }
 
+.name {
+  width: 372.8px;
+}
+@media (min-width: 390.4px) {
+  .name {
+    width: auto;
+  }
+}
+
 .main-underline {
   /* third one is horiz stretch */
   transform: matrix(-1, 0.06, 0.06, 1, 55, -30);

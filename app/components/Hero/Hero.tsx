@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className="hero">
       <div className="my-auto pt-52">
-        <p className="text-6xl font-bold text-center">jésus orozco</p>
+        <p className="name text-6xl font-bold text-center">jésus orozco</p>
 
         <Image
           className="main-underline"

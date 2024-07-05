@@ -22,7 +22,7 @@ function About() {
 
       <div className="md:grid md:grid-cols-2 gap-20">
         {/* md:mb-16 lg:mb-28 */}
-        <div className="flex items-center justify-center mt-48 sm:mt-54 md:mt-0 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
+        <div className="images flex items-center justify-center mt-48 sm:mt-54 md:mt-0 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
           <Image
             className="rounded-full absolute sm:h-[380px] sm:w-[380px] md:h-[300px] md:w-[300px] lg:h-[420px] lg:w-[420px]"
             src="/images/image.png"
@@ -40,7 +40,7 @@ function About() {
           />
         </div>
 
-        <div className="flex flex-col gap-10 lg:gap-24 mt-[200px] sm:mt-[250px] md:mt-0 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
+        <div className="desc flex flex-col gap-10 lg:gap-24 pt-[200px] sm:pt-[250px] md:pt-0 mt-[200px] sm:mt-[250px] md:mt-0 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
           {/* about me: a brief introduction about yourself, your background, and your career goals */}
           <p className="text-lg text-center md:text-start">
             as you&apos;ve probably seen, my name&apos;s{" "}
