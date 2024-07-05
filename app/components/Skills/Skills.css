@@ -4,3 +4,10 @@
 
   padding: 7.5rem;
 }
+
+.skill {
+  background: rgba(255, 0, 0, 0.1);
+
+  min-height: 500px;
+  width: 275px;
+}
