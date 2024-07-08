@@ -9,19 +9,13 @@ interface SkillProps {
 const Skill: React.FC<SkillProps> = ({ title }) => {
   return (
     <div className="skill">
-      <p className="text-center">{title}</p>
+      <p className="text-xl font-semibold text-center my-6">{title}</p>
 
       <div className="relative">
-        <div className="absolute p-6">
-          <p>A</p>
-          <p>B</p>
-          <p>C</p>
-          <p>D</p>
-        </div>
+        <div className="absolute p-6"></div>
 
         <Image
-          // md:w-[300px] lg:w-[300px]
-          className="absolute"
+          className="absolute hidden lg:block lg:w-[300px]"
           src="/images/rectangle.png"
           alt=""
           width={900}
@@ -49,7 +43,7 @@ function Skills() {
         />
       </div>
 
-      <div className="flex items-center justify-center md:justify-evenly flex-col md:flex-row gap-12 mt-16">
+      <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-6 mt-16">
         <Skill title="languages" />
 
         <Skill title="frameworks" />
