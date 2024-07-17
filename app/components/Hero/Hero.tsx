@@ -22,16 +22,17 @@ function Hero() {
       </div>
 
       <motion.div
+        // start at initial pos 0, then down 10, then back up to 0
         animate={{ y: [0, -10, 0] }}
         transition={{
-          duration: 2,
+          duration: 1.5,
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "loop",
         }}
       >
         <Image
-          className="mx-auto flex flex-col mt-auto mb-0 pb-20 sm:pb-14 lg:pb-10"
+          className="mx-auto flex flex-col mt-auto mb-0 pb-20 sm:pb-14 md:pb-32 lg:pb-10"
           src="/arrow-down.svg"
           alt=""
           width={48}

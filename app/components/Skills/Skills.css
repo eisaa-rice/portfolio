@@ -4,14 +4,18 @@
 
   padding: 7.5rem;
 
-  background: rgba(192, 255, 192, 0.174);
+  /* background: rgba(192, 255, 192, 0.174); */
 }
 
 .skill {
-  background: rgba(255, 0, 0, 0.05);
-
   min-height: 580px;
   min-width: 290px;
-
   width: 100%;
+
+  /* background: rgba(255, 0, 0, 0.05); */
+}
+@media (min-width: 1024px) {
+  .skill {
+    min-width: 0;
+  }
 }

@@ -15,7 +15,8 @@ const Skill: React.FC<SkillProps> = ({ title }) => {
         <div className="absolute p-6"></div>
 
         <Image
-          className="absolute hidden lg:block lg:w-[300px]"
+          // left-0 right-0 mx-auto
+          className="absolute hidden lg:block lg:w-[300px] left-0 right-0 mx-auto"
           src="/images/rectangle.png"
           alt=""
           width={900}
@@ -30,12 +31,12 @@ function Skills() {
   return (
     <div className="skills">
       <div>
-        <p className="text-4xl font-bold text-center md:text-start">
+        <p className="text-4xl font-bold text-center">
           i&apos;ve used these before
         </p>
 
         <Image
-          className="secondary-underline hidden sm:block sm:mx-auto md:mx-0"
+          className="secondary-underline hidden sm:block sm:mx-auto"
           src="/images/underline.png"
           alt=""
           width={500}
@@ -43,7 +44,7 @@ function Skills() {
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-6 mt-16">
+      <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-6 mt-16 lg:mt-0">
         <Skill title="languages" />
 
         <Skill title="frameworks" />

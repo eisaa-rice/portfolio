@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -7,12 +9,10 @@ function About() {
   return (
     <div className="about">
       <div>
-        <p className="text-4xl font-bold text-center md:text-start">
-          holá, nice to meet you
-        </p>
+        <p className="text-4xl font-bold text-center">holá, nice to meet you</p>
 
         <Image
-          className="secondary-underline hidden sm:block sm:mx-auto md:mx-0"
+          className="secondary-underline hidden sm:block sm:mx-auto"
           src="/images/underline.png"
           alt=""
           width={450}
