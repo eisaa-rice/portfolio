@@ -1,11 +1,35 @@
 "use client";
 
 import React from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import "./About.css";
+import { tree } from "next/dist/build/templates/app-page";
 
 function About() {
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  /*
+  initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+  */
+  const easeType = "easeIn";
+  const transDuration = 1;
+  const easeDelay = 0.25;
+
   return (
     <div className="about">
       <div>
@@ -21,7 +45,6 @@ function About() {
       </div>
 
       <div className="md:grid md:grid-cols-2 gap-20">
-        {/* md:mb-16 lg:mb-28 */}
         <div className="flex items-center justify-center mt-48 sm:mt-54 md:mt-0 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
           <Image
             className="rounded-full absolute sm:h-[380px] sm:w-[380px] md:h-[300px] md:w-[300px] lg:h-[420px] lg:w-[420px]"
@@ -41,31 +64,74 @@ function About() {
         </div>
 
         <div className="flex flex-col gap-10 lg:gap-24 pt-[200px] sm:pt-[250px] md:pt-0 mt-[200px] sm:mt-[250px] md:mt-0 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
-          {/* about me: a brief introduction about yourself, your background, and your career goals */}
-          <p className="text-lg text-center md:text-start">
-            as you&apos;ve probably seen, my name&apos;s{" "}
-            <strong>jesus orozco</strong>, but some of my friends call me{" "}
-            <strong>eisaa</strong>.
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              delay: easeDelay,
+              duration: transDuration,
+              ease: easeType,
+            }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg text-center md:text-start">
+              as you&apos;ve probably seen, my name&apos;s{" "}
+              <strong>jesus orozco</strong>, but some of my friends call me{" "}
+              <strong>eisaa</strong>.
+            </p>
+          </motion.div>
 
-          <p className="text-lg text-center md:text-start">
-            i was born and raised, and am still <strong>located</strong> in,{" "}
-            <strong>detroit, michigan</strong>, where the roots of my{" "}
-            <strong>mexican</strong> heritage lie.
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              delay: easeDelay,
+              duration: transDuration,
+              ease: easeType,
+            }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg text-center md:text-start">
+              i was born and raised, and am still <strong>located</strong> in,{" "}
+              <strong>detroit, michigan</strong>, where the roots of my{" "}
+              <strong>mexican</strong> heritage lie.
+            </p>
+          </motion.div>
 
-          <p className="text-lg text-center md:text-start">
-            i&apos;m currently attending{" "}
-            <strong>university of michigan - dearborn</strong> where i&apos;m
-            majoring in <strong>computer science</strong>.
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              delay: easeDelay,
+              duration: transDuration,
+              ease: easeType,
+            }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg text-center md:text-start">
+              i&apos;m currently attending{" "}
+              <strong>university of michigan - dearborn</strong> where i&apos;m
+              majoring in <strong>computer science</strong>.
+            </p>
+          </motion.div>
 
-          <p className="text-lg text-center md:text-start">
-            i&apos;m aspiring to be a <strong>web</strong> and{" "}
-            <strong>app developer</strong>, having already worked on multiple
-            projects for regional events such as <strong>conferences</strong>{" "}
-            and <strong>hackathons</strong>.
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              delay: easeDelay,
+              duration: transDuration,
+              ease: easeType,
+            }}
+            viewport={{ once: true }}
+          >
+            <p className="text-lg text-center md:text-start">
+              i&apos;m aspiring to be a <strong>web</strong> and{" "}
+              <strong>app developer</strong>, having already worked on multiple
+              projects for regional events such as <strong>conferences</strong>{" "}
+              and <strong>hackathons</strong>.
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>

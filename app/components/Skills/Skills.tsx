@@ -14,14 +14,14 @@ const Skill: React.FC<SkillProps> = ({ title }) => {
       <div className="relative">
         <div className="absolute p-6"></div>
 
-        <Image
+        {/* <Image
           // left-0 right-0 mx-auto
           className="absolute hidden lg:block lg:w-[300px] left-0 right-0 mx-auto"
           src="/images/rectangle.png"
           alt=""
           width={900}
           height={900}
-        />
+        /> */}
       </div>
     </div>
   );
