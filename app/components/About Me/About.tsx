@@ -1,31 +1,12 @@
 "use client";
 
 import React from "react";
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import "./About.css";
-import { tree } from "next/dist/build/templates/app-page";
 
 function About() {
-  const [scrollY, setScrollY] = useState(0);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  /*
-  initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-  */
   const easeType = "easeIn";
   const transDuration = 1;
   const easeDelay = 0.25;
