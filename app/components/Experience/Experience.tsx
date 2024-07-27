@@ -15,7 +15,7 @@ function Experience() {
 
         <Image
           className="secondary-underline hidden sm:block sm:mx-auto"
-          src="/images/underline.png"
+          src="/images/underline-one.png"
           alt=""
           width={500}
           height={300}

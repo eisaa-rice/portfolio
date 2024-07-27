@@ -18,7 +18,7 @@ function About() {
 
         <Image
           className="secondary-underline hidden sm:block sm:mx-auto"
-          src="/images/underline.png"
+          src="/images/underline-one.png"
           alt=""
           width={450}
           height={300}

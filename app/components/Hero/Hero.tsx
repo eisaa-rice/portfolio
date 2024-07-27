@@ -20,7 +20,7 @@ function Hero() {
 
           <Image
             className="main-underline"
-            src="/images/underline.png"
+            src="/images/underline-one.png"
             alt=""
             width={450}
             height={300}
@@ -28,23 +28,32 @@ function Hero() {
         </div>
 
         <motion.div
-          // start at initial pos 0, then down 10, then back up to 0
-          animate={{ y: [0, -10, 0] }}
+          animate={{ y: [100, 0] }}
           transition={{
-            duration: 1.5,
+            delay: 0.5,
+            duration: 1,
             ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "loop",
           }}
-          className=""
         >
-          <Image
-            className="mx-auto flex flex-col mt-auto mb-20 sm:mb-12 md:mb-6"
-            src="/arrow-down.svg"
-            alt=""
-            width={48}
-            height={48}
-          />
+          <motion.div
+            // start at initial pos 0, then down 10, then back up to 0
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              duration: 1.5,
+              ease: "easeOut",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className=""
+          >
+            <Image
+              className="mx-auto flex flex-col mt-auto mb-20 sm:mb-12 md:mb-6"
+              src="/arrow-down.svg"
+              alt=""
+              width={48}
+              height={48}
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
     </div>
