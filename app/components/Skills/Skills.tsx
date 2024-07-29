@@ -36,7 +36,7 @@ function Skills() {
     { label: "HTML", path: "/html.svg" },
     { label: "CSS", path: "/css.svg" },
     { label: "JavaScript", path: "/javascript.svg" },
-    { label: "TypeScript", path: "/typeScript.svg" },
+    { label: "TypeScript", path: "/typescript.svg" },
   ];
 
   const frameworks = [
