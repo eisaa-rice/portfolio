@@ -1,5 +1,6 @@
 .about {
-  width: 100vw;
-
   padding: 7.5rem;
+
+  background: white;
+  border-radius: 5rem;
 }

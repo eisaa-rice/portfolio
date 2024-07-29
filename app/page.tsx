@@ -6,7 +6,7 @@ import Experience from "./components/Experience/Experience";
 export default function Home() {
   return (
     // WHY DOES IT KEEP MAKING A SCROLL
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden mx-auto max-w-[1000px]">
       <Hero />
 
       <About />

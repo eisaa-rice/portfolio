@@ -1,23 +1,40 @@
 "use client";
 
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 import "./About.css";
 
-function About() {
+const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
   const easeType = "easeIn";
   const transDuration = 1;
   const easeDelay = 0.25;
 
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        delay: easeDelay,
+        duration: transDuration,
+        ease: easeType,
+      }}
+      viewport={{ once: true }}
+    >
+      <p className="text-lg text-center">{children}</p>
+    </motion.div>
+  );
+};
+
+function About() {
   return (
     <div className="about">
       <div>
         <p className="text-4xl font-bold text-center">holá, nice to meet you</p>
 
         <Image
-          className="secondary-underline hidden sm:block sm:mx-auto"
+          className="secondary-underline"
           src="/images/underline-one.png"
           alt=""
           width={450}
@@ -25,95 +42,49 @@ function About() {
         />
       </div>
 
-      <div className="md:grid md:grid-cols-2 gap-20">
-        <div className="flex items-center justify-center mt-48 sm:mt-54 md:mt-0 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
-          <Image
-            className="rounded-full absolute sm:h-[380px] sm:w-[380px] md:h-[300px] md:w-[300px] lg:h-[420px] lg:w-[420px]"
-            src="/images/image.png"
-            alt=""
-            width={245}
-            height={245}
-          />
+      <div className="flex items-center justify-center mt-48 mb-96 sm:mb-48">
+        <Image
+          className="rounded-full absolute"
+          src="/images/image.png"
+          alt=""
+          width={245}
+          height={245}
+        />
 
-          <Image
-            className="rounded-full absolute sm:h-[440px] sm:w-[440px] md:h-[360px] md:w-[360px] lg:h-[480px] lg:w-[480px]"
-            src="/images/circle.png"
-            alt=""
-            width={285}
-            height={285}
-          />
-        </div>
+        <Image
+          className="rounded-full absolute "
+          src="/images/circle.png"
+          alt=""
+          width={285}
+          height={285}
+        />
+      </div>
 
-        <div className="flex flex-col gap-10 lg:gap-24 pt-[200px] sm:pt-[250px] md:pt-0 mt-[200px] sm:mt-[250px] md:mt-0 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: easeDelay,
-              duration: transDuration,
-              ease: easeType,
-            }}
-            viewport={{ once: true }}
-          >
-            <p className="text-lg text-center md:text-start">
-              as you&apos;ve probably seen, my name&apos;s{" "}
-              <strong>jesus orozco</strong>, but some of my friends call me{" "}
-              <strong>eisaa</strong>.
-            </p>
-          </motion.div>
+      <div className="flex flex-col gap-10">
+        <FadeInText>
+          as you&apos;ve probably seen, my name&apos;s{" "}
+          <strong>jesus orozco</strong>, but some of my friends call me{" "}
+          <strong>eisaa</strong>.
+        </FadeInText>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: easeDelay,
-              duration: transDuration,
-              ease: easeType,
-            }}
-            viewport={{ once: true }}
-          >
-            <p className="text-lg text-center md:text-start">
-              i was born and raised, and am still <strong>located</strong> in,{" "}
-              <strong>detroit, michigan</strong>, where the roots of my{" "}
-              <strong>mexican</strong> heritage lie.
-            </p>
-          </motion.div>
+        <FadeInText>
+          i was born and raised, and am still <strong>located</strong> in,{" "}
+          <strong>detroit, michigan</strong>, where the roots of my{" "}
+          <strong>mexican</strong> heritage lie.
+        </FadeInText>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: easeDelay,
-              duration: transDuration,
-              ease: easeType,
-            }}
-            viewport={{ once: true }}
-          >
-            <p className="text-lg text-center md:text-start">
-              i&apos;m currently attending{" "}
-              <strong>university of michigan - dearborn</strong> where i&apos;m
-              majoring in <strong>computer science</strong>.
-            </p>
-          </motion.div>
+        <FadeInText>
+          i&apos;m currently attending{" "}
+          <strong>university of michigan - dearborn</strong> where i&apos;m
+          majoring in <strong>computer science</strong>.
+        </FadeInText>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: easeDelay,
-              duration: transDuration,
-              ease: easeType,
-            }}
-            viewport={{ once: true }}
-          >
-            <p className="text-lg text-center md:text-start">
-              i&apos;m aspiring to be a <strong>web</strong> and{" "}
-              <strong>app developer</strong>, having already worked on multiple
-              projects for regional events such as <strong>conferences</strong>{" "}
-              and <strong>hackathons</strong>.
-            </p>
-          </motion.div>
-        </div>
+        <FadeInText>
+          i&apos;m aspiring to be a <strong>web</strong> and{" "}
+          <strong>app developer</strong>, having already worked on multiple
+          projects for regional events such as <strong>conferences</strong> and{" "}
+          <strong>hackathons</strong>.
+        </FadeInText>
       </div>
     </div>
   );
