@@ -34,7 +34,7 @@ function About() {
         <p className="text-4xl font-bold text-center">holá, nice to meet you</p>
 
         <Image
-          className="secondary-underline"
+          className="secondary-underline hidden sm:block sm:mx-auto"
           src="/images/underline-one.png"
           alt=""
           width={450}
@@ -42,9 +42,9 @@ function About() {
         />
       </div>
 
-      <div className="flex items-center justify-center mt-48 mb-96 sm:mb-48">
+      <div className="flex items-center justify-center mt-48 mb-96 sm:mb-[450px] md:mb-64">
         <Image
-          className="rounded-full absolute"
+          className="rounded-full absolute sm:w-[340px] sm:h-[340px]"
           src="/images/image.png"
           alt=""
           width={245}
@@ -52,7 +52,7 @@ function About() {
         />
 
         <Image
-          className="rounded-full absolute "
+          className="rounded-full absolute sm:w-[400px] sm:h-[400px]"
           src="/images/circle.png"
           alt=""
           width={285}

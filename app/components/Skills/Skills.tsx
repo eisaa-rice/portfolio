@@ -5,29 +5,47 @@ import "./Skills.css";
 
 interface SkillProps {
   title: string;
+  icons: { path: string; label: string }[];
 }
-const Skill: React.FC<SkillProps> = ({ title }) => {
+const Skill: React.FC<SkillProps> = ({ title, icons }) => {
   return (
     <div className="skill">
       <p className="text-xl font-semibold text-center my-6">{title}</p>
 
-      <div className="relative">
-        <div className="absolute p-6"></div>
-
-        {/* <Image
-          // left-0 right-0 mx-auto
-          className="absolute hidden lg:block lg:w-[300px] left-0 right-0 mx-auto"
-          src="/images/rectangle.png"
-          alt=""
-          width={900}
-          height={900}
-        /> */}
-      </div>
+      {icons.map(({ path, label }, index) => (
+        <div key={index}>
+          <Image height={48} width={48} src={path} alt={label} />
+        </div>
+      ))}
     </div>
   );
 };
 
 function Skills() {
+  const languages = [
+    { label: "C++", path: "/c++.svg" },
+    { label: "Java", path: "/java.svg" },
+    { label: "Python", path: "/python.svg" },
+    { label: "HTML", path: "/html.svg" },
+    { label: "CSS", path: "/css.svg" },
+    { label: "JavaScript", path: "/javascript.svg" },
+    { label: "TypeScript", path: "/typeScript.svg" },
+  ];
+
+  const frameworks = [
+    { label: "React", path: "/react.svg" },
+    { label: "React Native", path: "/react-native.svg" },
+    { label: "Next.js", path: "/nextjs.svg" },
+    { label: "Tailwind CSS", path: "/tailwind-css.svg" },
+  ];
+
+  const technologies = [
+    { label: "Git", path: "/git.svg" },
+    { label: "GitHub", path: "/github.svg" },
+    { label: "Node.js", path: "/nodejs.svg" },
+    { label: "Docker", path: "/docker.svg" },
+  ];
+
   return (
     <div className="skills">
       <div>
@@ -45,11 +63,11 @@ function Skills() {
       </div>
 
       <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-6 mt-16 lg:mt-0">
-        <Skill title="languages" />
+        <Skill title="languages" icons={languages} />
 
-        <Skill title="frameworks" />
+        <Skill title="Frameworks" icons={frameworks} />
 
-        <Skill title="technologies" />
+        <Skill title="Technologies" icons={technologies} />
       </div>
     </div>
   );
