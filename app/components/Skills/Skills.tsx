@@ -12,11 +12,18 @@ const Skill: React.FC<SkillProps> = ({ title, icons }) => {
     <div className="skill">
       <p className="text-xl font-semibold text-center my-6">{title}</p>
 
-      {icons.map(({ path, label }, index) => (
-        <div key={index}>
-          <Image height={48} width={48} src={path} alt={label} />
-        </div>
-      ))}
+      <div className="flex flex-row justify-center items-center flex-wrap gap-10">
+        {icons.map(({ path, label }, index) => (
+          <Image
+            key={index}
+            className="flex flex-row justify-center items-center"
+            height={48}
+            width={48}
+            src={path}
+            alt={label}
+          />
+        ))}
+      </div>
     </div>
   );
 };
@@ -62,12 +69,12 @@ function Skills() {
         />
       </div>
 
-      <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-6 mt-16 lg:mt-0">
+      <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-12 mt-16 lg:mt-0">
         <Skill title="languages" icons={languages} />
 
-        <Skill title="Frameworks" icons={frameworks} />
+        <Skill title="frameworks" icons={frameworks} />
 
-        <Skill title="Technologies" icons={technologies} />
+        <Skill title="technologies" icons={technologies} />
       </div>
     </div>
   );
