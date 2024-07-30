@@ -11,7 +11,7 @@ interface SkillProps {
 const Skill: React.FC<SkillProps> = ({ title, icons }) => {
   return (
     <div className="skill">
-      <p className="text-xl font-semibold text-center my-6">{title}</p>
+      <p className="text-xl font-light text-center my-6">{title}</p>
 
       <motion.div className="flex flex-row justify-center items-center flex-wrap gap-10 mt-16">
         {icons.map(({ path, label }, index) => (
@@ -60,7 +60,7 @@ function Skills() {
         i&apos;ve used these before
       </p>
 
-      <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-12 mt-16 lg:mt-0">
+      <div className="flex flex-col items-start justify-evenly lg:justify-evenly lg:flex-row gap-12 lg:gap-12 mt-16 lg:mt-0">
         <Skill title="languages" icons={languages} />
 
         <Skill title="frameworks" icons={frameworks} />

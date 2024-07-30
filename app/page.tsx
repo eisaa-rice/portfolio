@@ -14,7 +14,7 @@ export default function Home() {
       <motion.div
         className="bg-white h-[500vh] w-full z-50 absolute top-0 left-0 right-0"
         initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
+        animate={{ opacity: 0, display: "none" }}
         transition={{ duration: 2, ease: "easeIn" }}
       />
 
