@@ -12,13 +12,13 @@ const Skill: React.FC<SkillProps> = ({ title, icons }) => {
     <div className="skill">
       <p className="text-xl font-semibold text-center my-6">{title}</p>
 
-      <div className="flex flex-row justify-center items-center flex-wrap gap-10">
+      <div className="flex flex-row justify-center items-center flex-wrap gap-10 mt-16">
         {icons.map(({ path, label }, index) => (
           <Image
             key={index}
             className="flex flex-row justify-center items-center"
-            height={48}
-            width={48}
+            height={64}
+            width={64}
             src={path}
             alt={label}
           />
@@ -41,7 +41,7 @@ function Skills() {
 
   const frameworks = [
     { label: "React", path: "/react.svg" },
-    { label: "React Native", path: "/react-native.svg" },
+    // { label: "React Native", path: "/react-native.svg" },
     { label: "Next.js", path: "/nextjs.svg" },
     { label: "Tailwind CSS", path: "/tailwind-css.svg" },
   ];
@@ -55,19 +55,9 @@ function Skills() {
 
   return (
     <div className="skills">
-      <div>
-        <p className="text-4xl font-bold text-center">
-          i&apos;ve used these before
-        </p>
-
-        <Image
-          className="secondary-underline hidden sm:block sm:mx-auto"
-          src="/images/underline-one.png"
-          alt=""
-          width={500}
-          height={300}
-        />
-      </div>
+      <p className="text-4xl font-bold text-center mb-24">
+        i&apos;ve used these before
+      </p>
 
       <div className="flex flex-col items-center justify-center lg:justify-evenly lg:flex-row gap-12 lg:gap-12 mt-16 lg:mt-0">
         <Skill title="languages" icons={languages} />

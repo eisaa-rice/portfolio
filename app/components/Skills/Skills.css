@@ -2,19 +2,22 @@
   min-height: 100vh;
 
   padding: 7.5rem;
-
-  margin-top: 20rem;
-  margin-bottom: 20rem;
 }
 
 .skill {
   min-width: 290px;
   width: 100%;
+
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 @media (min-width: 1024px) {
   .skill {
     min-width: 0;
 
     min-height: 580px;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 }

@@ -30,19 +30,11 @@ const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
 function About() {
   return (
     <div className="about">
-      <div>
-        <p className="text-4xl font-bold text-center">holá, nice to meet you</p>
+      <p className="text-4xl font-bold text-center mb-24">
+        holá, nice to meet you
+      </p>
 
-        <Image
-          className="secondary-underline hidden sm:block sm:mx-auto"
-          src="/images/underline-one.png"
-          alt=""
-          width={450}
-          height={300}
-        />
-      </div>
-
-      <div className="flex items-center justify-center mt-48 mb-96 sm:mb-[450px] md:mb-64">
+      <div className="flex items-center justify-center my-64 sm:mb-[450px] md:mb-64">
         <Image
           className="rounded-full absolute sm:w-[340px] sm:h-[340px]"
           src="/images/image.png"
@@ -60,7 +52,7 @@ function About() {
         />
       </div>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 pt-64 sm:pt-0">
         <FadeInText>
           as you&apos;ve probably seen, my name&apos;s{" "}
           <strong>jesus orozco</strong>, but some of my friends call me{" "}
