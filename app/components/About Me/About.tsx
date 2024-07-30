@@ -34,7 +34,7 @@ function About() {
         holá, nice to meet you
       </p>
 
-      <div className="flex items-center justify-center my-64 sm:mb-[450px] md:mb-64">
+      <div className="flex items-center justify-center my-72 sm:mb-[450px] md:mb-72">
         <Image
           className="rounded-full absolute sm:w-[340px] sm:h-[340px]"
           src="/images/image.png"

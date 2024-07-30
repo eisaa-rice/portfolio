@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import "./Skills.css";
 
@@ -12,7 +13,7 @@ const Skill: React.FC<SkillProps> = ({ title, icons }) => {
     <div className="skill">
       <p className="text-xl font-semibold text-center my-6">{title}</p>
 
-      <div className="flex flex-row justify-center items-center flex-wrap gap-10 mt-16">
+      <motion.div className="flex flex-row justify-center items-center flex-wrap gap-10 mt-16">
         {icons.map(({ path, label }, index) => (
           <Image
             key={index}
@@ -23,7 +24,7 @@ const Skill: React.FC<SkillProps> = ({ title, icons }) => {
             alt={label}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ export default function Home() {
     // WHY DOES IT KEEP MAKING A SCROLL
     <div className="overflow-x-hidden mx-auto max-w-[1000px]">
       <motion.div
-        className="bg-white h-[100vh] w-full z-50 absolute top-0 left-0 right-0"
+        className="bg-white h-[500vh] w-full z-50 absolute top-0 left-0 right-0"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ duration: 2, ease: "easeIn" }}

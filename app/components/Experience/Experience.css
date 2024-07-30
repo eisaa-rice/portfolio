@@ -1,3 +1,24 @@
 .experience {
-  padding: 7.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+}
+
+.job {
+  min-width: 100px;
+  height: 150px;
+}
+
+.timeline {
+  grid-template-columns: 15fr 1fr 15fr;
+}
+.middle {
+  background: rgba(255, 255, 0, 0.15);
+
+  width: 50px;
+  height: 150px;
+
+  grid-column: 2/3;
 }
