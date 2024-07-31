@@ -48,9 +48,7 @@ const Experience: React.FC = () => {
 
   return (
     <div className="experience">
-      <p className="text-4xl font-bold text-center">
-        here&apos;s where i&apos;ve been
-      </p>
+      <p className="text-4xl text-center">here&apos;s where i&apos;ve been</p>
 
       <div className="timeline md:grid md:grid-cols-3 my-24 gap-x-4 gap-y-4">
         <Image

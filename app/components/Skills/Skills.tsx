@@ -29,7 +29,7 @@ const Skill: React.FC<SkillProps> = ({ title, icons }) => {
   );
 };
 
-function Skills() {
+const Skills = () => {
   const languages = [
     { label: "C++", path: "/c++.svg" },
     { label: "Java", path: "/java.svg" },
@@ -56,9 +56,7 @@ function Skills() {
 
   return (
     <div className="skills">
-      <p className="text-4xl font-bold text-center mb-24">
-        i&apos;ve used these before
-      </p>
+      <p className="text-4xl text-center mb-24">i&apos;ve used these before</p>
 
       <div className="flex flex-col items-start justify-evenly lg:justify-evenly lg:flex-row gap-12 lg:gap-12 mt-16 lg:mt-0">
         <Skill title="languages" icons={languages} />
@@ -69,6 +67,6 @@ function Skills() {
       </div>
     </div>
   );
-}
+};
 
 export default Skills;

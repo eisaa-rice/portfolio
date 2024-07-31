@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About Me/About";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
 
 import { motion } from "framer-motion";
 
@@ -25,6 +26,8 @@ export default function Home() {
       <Skills />
 
       <Experience />
+
+      <Projects />
     </div>
   );
 }

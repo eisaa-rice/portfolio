@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import "./Hero.css";
 
-function Hero() {
+const Hero = () => {
   return (
     <div className="hero">
       <motion.div
@@ -58,6 +58,6 @@ function Hero() {
       </motion.div>
     </div>
   );
-}
+};
 
 export default Hero;

@@ -30,9 +30,7 @@ const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
 function About() {
   return (
     <div className="about">
-      <p className="text-4xl font-bold text-center mb-24">
-        holá, nice to meet you
-      </p>
+      <p className="text-4xl text-center mb-24">holá, nice to meet you</p>
 
       <div className="flex items-center justify-center my-72 sm:mb-[450px] md:my-64">
         <Image
