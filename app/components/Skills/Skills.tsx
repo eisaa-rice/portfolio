@@ -56,7 +56,7 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <p className="text-4xl text-center mb-24">i&apos;ve used these before</p>
+      <p className="text-4xl text-center mb-20">i&apos;ve used these before</p>
 
       <div className="flex flex-col items-center lg:items-start justify-evenly lg:justify-evenly lg:flex-row gap-12 lg:gap-12 mt-16 lg:mt-0">
         <Skill title="languages" icons={languages} />

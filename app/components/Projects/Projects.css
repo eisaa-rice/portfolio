@@ -5,3 +5,10 @@
   padding-left: 7.5rem;
   padding-right: 7.5rem;
 }
+
+.project {
+  width: 350px;
+  /* height: 500px; */
+  padding: 2.5rem;
+  border-radius: 20px;
+}
