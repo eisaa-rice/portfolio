@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import "./Skills.css";
 
@@ -13,18 +15,19 @@ const Skill: React.FC<SkillProps> = ({ title, icons }) => {
     <div className="skill">
       <p className="text-xl font-light text-center my-6">{title}</p>
 
-      <motion.div className="flex flex-row justify-center items-center flex-wrap gap-10 mt-16">
+      <div className="flex flex-row justify-center items-center flex-wrap gap-10 mt-16">
         {icons.map(({ path, label }, index) => (
-          <Image
-            key={index}
-            className="flex flex-row justify-center items-center"
-            height={64}
-            width={64}
-            src={path}
-            alt={label}
-          />
+          <motion.div key={index} whileHover={{ scale: 1.1 }}>
+            <Image
+              className="flex flex-row justify-center items-center"
+              height={64}
+              width={64}
+              src={path}
+              alt={label}
+            />
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

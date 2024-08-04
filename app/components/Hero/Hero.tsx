@@ -44,7 +44,6 @@ const Hero = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className=""
           >
             <Image
               className="mx-auto flex flex-col mt-auto mb-20 sm:mb-12 md:mb-6"

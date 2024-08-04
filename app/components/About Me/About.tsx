@@ -12,7 +12,7 @@ const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
   const easeDelay = 0.25;
 
   return (
-    <motion.div
+    <motion.p
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{
@@ -21,9 +21,10 @@ const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
         ease: easeType,
       }}
       viewport={{ once: true }}
+      className="text-lg text-center"
     >
-      <p className="text-lg text-center">{children}</p>
-    </motion.div>
+      {children}
+    </motion.p>
   );
 };
 

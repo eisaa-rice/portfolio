@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import "./Experience.css";
 
@@ -14,7 +15,7 @@ interface JobProps {
 }
 const Job: React.FC<JobProps> = ({ company, title, desc, col, row }) => {
   return (
-    <div
+    <motion.div
       className={"job flex flex-col justify-center items-center p-4"}
       style={{ gridRow: row, gridColumn: col }}
     >
@@ -24,7 +25,7 @@ const Job: React.FC<JobProps> = ({ company, title, desc, col, row }) => {
       <p className="text-center font-bold pb-2">{company}</p>
 
       <p className="text-center text-lg p-4">{desc}</p>
-    </div>
+    </motion.div>
   );
 };
 
