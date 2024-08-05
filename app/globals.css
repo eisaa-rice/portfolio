@@ -6,11 +6,3 @@
   margin: 0;
   padding: 0;
 }
-
-body {
-  /* background-image: url("../public/images/paper.png"); */
-}
-
-.secondary-underline {
-  transform: matrix(1, 0.06, 0.06, 1, 0, -30);
-}

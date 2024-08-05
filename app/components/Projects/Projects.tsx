@@ -70,7 +70,7 @@ const Projects = () => {
         here&apos;s what i&apos;ve done
       </p>
 
-      <div className="flex flex-row flex-wrap justify-center sm:justify-start items-start p-4 gap-6">
+      <div className="flex flex-row flex-wrap justify-center items-start p-4 gap-6">
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
