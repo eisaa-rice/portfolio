@@ -14,7 +14,7 @@ export default function Home() {
       className="overflow-x-hidden mx-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeIn" }}
+      transition={{ duration: 5, ease: "easeIn" }}
     >
       <Hero />
 
