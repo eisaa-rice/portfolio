@@ -10,21 +10,29 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <motion.div
-      // WHY DOES IT KEEP MAKING A SCROLL
-      className="overflow-x-hidden mx-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 5, ease: "easeIn" }}
+      transition={{ duration: 0.5, delay: 2.5, ease: "easeIn" }}
     >
-      <Hero />
+      <div className="home absolute top-0 left-0 right-0 -z-50"></div>
 
-      <About />
+      <div className="max-w-6xl mx-auto">
+        <Hero />
 
-      {/* <Skills />
+        <About />
+
+        {/* <Skills />
 
       <Experience />
 
       <Projects /> */}
+      </div>
     </motion.div>
   );
 }
+
+/*
+  initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 5, ease: "easeIn" }}
+*/

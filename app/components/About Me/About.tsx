@@ -33,12 +33,11 @@ function About() {
     <div className="about">
       <motion.p
         className="text-4xl text-center mb-24"
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.25,
-          duration: 0.5,
-          ease: "easeIn",
+          delay: 0.45,
+          duration: 0.35,
         }}
         viewport={{ once: true }}
       >

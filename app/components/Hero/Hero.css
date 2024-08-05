@@ -3,10 +3,3 @@
 .cedarville {
   font-family: "Cedarville Cursive", cursive;
 }
-
-.hero {
-  background-image: url("/images/agabe.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
