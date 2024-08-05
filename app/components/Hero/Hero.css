@@ -3,3 +3,7 @@
 .cedarville {
   font-family: "Cedarville Cursive", cursive;
 }
+
+.underline::after {
+  content: "";
+}

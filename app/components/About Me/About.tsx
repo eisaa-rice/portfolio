@@ -45,7 +45,7 @@ function About() {
       </motion.p>
 
       <div className="lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-6">
-        <div className="flex items-center justify-center my-72 sm:mb-[450px] md:my-64 lg:my-0 lg:ml-12 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
+        <div className="flex items-center justify-center my-48 sm:mb-[450px] md:my-64 lg:my-0 lg:ml-12 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
           <Image
             className="rounded-full absolute sm:w-[340px] sm:h-[340px]"
             src="/images/image.png"
@@ -63,7 +63,7 @@ function About() {
           />
         </div>
 
-        <div className="flex flex-col gap-10 pt-64 sm:pt-0 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2">
+        <div className="flex flex-col gap-10 pt-48 sm:pt-0 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2">
           <FadeInText>
             as you&apos;ve probably seen, my name&apos;s{" "}
             <strong>jesus orozco</strong>, but some of my friends call me{" "}

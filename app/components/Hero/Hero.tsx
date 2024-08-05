@@ -17,7 +17,7 @@ const Hero = () => {
         animate={{ x: 0, rotate: 0 }}
         transition={{ duration: 1, delay: 3, ease: "easeOut" }}
       >
-        <motion.div whileHover={{ scale: 1.5 }}>
+        <motion.div whileHover={{ scale: 1.25 }}>
           <Image src="/instagram.svg" alt="Instagram" height={35} width={35} />
         </motion.div>
       </motion.a>
@@ -30,7 +30,7 @@ const Hero = () => {
         animate={{ x: 50, rotate: 0 }}
         transition={{ duration: 1, delay: 3.5, ease: "easeOut" }}
       >
-        <motion.div whileHover={{ scale: 1.5 }}>
+        <motion.div whileHover={{ scale: 1.25 }}>
           <Image src="/linkedin.svg" alt="LinkedIn" height={35} width={35} />
         </motion.div>
       </motion.a>
@@ -43,14 +43,24 @@ const Hero = () => {
         animate={{ x: 100, rotate: 0 }}
         transition={{ duration: 1, delay: 4, ease: "easeOut" }}
       >
-        <motion.div whileHover={{ scale: 1.5 }}>
+        <motion.div whileHover={{ scale: 1.25 }}>
           <Image src="/email.svg" alt="Email" height={35} width={35} />
         </motion.div>
       </motion.a>
 
-      <motion.p className="cedarville text-white text-center text-8xl font-light">
+      <motion.p
+        className="cedarville text-white text-center text-8xl font-light"
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 1.65,
+          duration: 1,
+        }}
+      >
         jésus orozco
       </motion.p>
+
+      <div className="underline" />
     </motion.div>
   );
 };

@@ -12,11 +12,11 @@ export default function Home() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 2.5, ease: "easeIn" }}
+      transition={{ duration: 0.5, delay: 1.5, ease: "easeIn" }}
     >
-      <div className="home absolute top-0 left-0 right-0 -z-50"></div>
+      <div className="home absolute -z-50" />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <Hero />
 
         <About />
@@ -30,9 +30,3 @@ export default function Home() {
     </motion.div>
   );
 }
-
-/*
-  initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 5, ease: "easeIn" }}
-*/
