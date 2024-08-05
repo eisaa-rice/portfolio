@@ -48,19 +48,21 @@ const Hero = () => {
         </motion.div>
       </motion.a>
 
-      <motion.p
-        className="cedarville text-white text-center text-8xl font-light"
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 1.65,
-          duration: 1,
-        }}
-      >
-        jésus orozco
-      </motion.p>
+      <div>
+        <p className="name cedarville text-white text-center text-8xl font-light">
+          jésus orozco
+        </p>
 
-      <div className="underline" />
+        <motion.div
+          className="underline -mt-2 md:ml-3"
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{
+            delay: 2,
+            duration: 1,
+          }}
+        />
+      </div>
     </motion.div>
   );
 };

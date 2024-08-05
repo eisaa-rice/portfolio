@@ -4,6 +4,19 @@
   font-family: "Cedarville Cursive", cursive;
 }
 
-.underline::after {
+.underline {
   content: "";
+  background-color: white;
+
+  height: 1px;
+  border-radius: 100px;
+}
+
+.name {
+  max-width: 300px;
+}
+@media (min-width: 558.4px) {
+  .name {
+    max-width: none;
+  }
 }
