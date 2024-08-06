@@ -61,7 +61,7 @@ const Job: React.FC<JobProps> = ({
             initial: { scale: 1, x: 0, y: 0 },
             hovered: { scale: 1.25, x: 1, y: 1 },
           }}
-          transition={{ ease: "anticipate" }}
+          transition={{ ease: "backIn" }}
         >
           <Image
             src="/external-link.svg"
@@ -120,7 +120,7 @@ const Experience: React.FC = () => {
           className="mt-auto md:mx-auto col-start-0 col-end-1"
           height={48}
           width={48}
-          src={"/images/dot.png"}
+          src={"/images/bigger-circle.png"}
           alt=""
         />
 
