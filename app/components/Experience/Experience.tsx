@@ -25,11 +25,18 @@ const Job: React.FC<JobProps> = ({
   row,
 }) => {
   return (
-    <div
+    <motion.div
       className={
         "job flex flex-col justify-center items-start md:items-center p-4"
       }
       style={{ gridRow: row, gridColumn: col }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        delay: 0.25,
+        duration: 1,
+        ease: "easeIn",
+      }}
     >
       <p className="md:text-center">{time}</p>
 
@@ -74,7 +81,7 @@ const Job: React.FC<JobProps> = ({
       </motion.a>
 
       <p className="md:text-center text-lg py-4">{desc}</p>
-    </div>
+    </motion.div>
   );
 };
 

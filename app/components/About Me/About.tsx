@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import "./About.css";
 
 const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const easeType = "easeIn";
-  const transDuration = 1;
   const easeDelay = 0.25;
+  const transDuration = 1;
+  const easeType = "easeIn";
 
   return (
     <motion.p
