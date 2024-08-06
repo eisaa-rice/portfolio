@@ -9,11 +9,14 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1.5, ease: "easeIn" }}
-    >
+    <div>
+      <motion.div
+        className="h-screen w-full bg-white absolute top-0 z-30"
+        initial={{ height: "100vh" }}
+        animate={{ height: 0 }}
+        transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
+      />
+
       <div className="home absolute -z-50" />
 
       <div className="max-w-4xl mx-auto">
@@ -21,12 +24,10 @@ export default function Home() {
 
         <About />
 
-        {/* <Skills />
+        <Experience />
 
-      <Experience />
-
-      <Projects /> */}
+        {/* <Projects /> */}
       </div>
-    </motion.div>
+    </div>
   );
 }

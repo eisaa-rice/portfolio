@@ -1,9 +1,4 @@
 .experience {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-
-  padding-left: 7.5rem;
-  padding-right: 7.5rem;
 }
 
 .job {
@@ -11,51 +6,10 @@
   min-height: 150px;
 }
 
-.timeline {
-  grid-template-columns: 15fr 1fr 15fr;
-}
-.middle {
-  width: 50px;
-
-  grid-column: 2/3;
-  grid-row: 1/4;
-}
-
-.dot {
-  transform: translateY(-40px);
-
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-.mid-line {
-  width: 0.5px;
-  height: 100%;
+.hover-underline {
+  content: "";
   background-color: black;
 
-  grid-column: 2/3;
-  grid-row: 1/5; /* manually update */
-
-  border-radius: 50px;
-}
-.chevron {
-  transform: translateY(20px);
-
-  grid-column: 2/3;
-  grid-row: 4/5; /* manually update */
-}
-img,
-video {
-  max-width: none;
-}
-
-.dummy {
-  height: 50px;
-}
-.start {
-  grid-column: 1/4;
-  grid-row: 1/2;
-}
-.end {
-  grid-column: 1/4;
-  grid-row: 4/5; /* manually update */
+  height: 1px;
+  border-radius: 100px;
 }

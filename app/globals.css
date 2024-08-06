@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.cedarville {
+  font-family: "Cedarville Cursive", cursive;
+}
+
 .home {
   background-image: url("/images/agabe.jpg");
   background-repeat: no-repeat;

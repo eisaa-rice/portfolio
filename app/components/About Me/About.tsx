@@ -28,11 +28,11 @@ const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-function About() {
+const About = () => {
   return (
-    <div className="about">
+    <div className="about p-20">
       <motion.p
-        className="text-4xl text-center mb-24"
+        className="text-4xl text-center font-light mb-24"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -46,17 +46,17 @@ function About() {
 
       <div className="lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-6">
         <div className="flex items-center justify-center my-48 sm:mb-[450px] md:my-64 lg:my-0 lg:ml-12 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
-          <Image
+          {/* <Image
             className="rounded-full absolute sm:w-[340px] sm:h-[340px]"
             src="/images/image.png"
             alt=""
             width={245}
             height={245}
-          />
+          /> */}
 
           <Image
-            className="rounded-full absolute sm:w-[400px] sm:h-[400px]"
-            src="/images/circle.png"
+            className="rounded-full absolute sm:w-[400px] md:w-[500px]"
+            src="/images/pfp-circle.png"
             alt=""
             width={285}
             height={285}
@@ -92,6 +92,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
 export default About;

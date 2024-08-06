@@ -17,7 +17,7 @@ const Hero = () => {
         animate={{ x: 0, rotate: 0 }}
         transition={{ duration: 1, delay: 3, ease: "easeOut" }}
       >
-        <motion.div whileHover={{ scale: 1.25 }}>
+        <motion.div whileHover={{ scale: 1.25, rotate: -10 }}>
           <Image src="/instagram.svg" alt="Instagram" height={35} width={35} />
         </motion.div>
       </motion.a>
@@ -28,9 +28,9 @@ const Hero = () => {
         target="_blank"
         initial={{ x: -100, rotate: -90 }}
         animate={{ x: 50, rotate: 0 }}
-        transition={{ duration: 1, delay: 3.5, ease: "easeOut" }}
+        transition={{ duration: 0.9, delay: 3.5, ease: "easeOut" }}
       >
-        <motion.div whileHover={{ scale: 1.25 }}>
+        <motion.div whileHover={{ scale: 1.25, rotate: -10 }}>
           <Image src="/linkedin.svg" alt="LinkedIn" height={35} width={35} />
         </motion.div>
       </motion.a>
@@ -41,9 +41,9 @@ const Hero = () => {
         target="_blank"
         initial={{ x: -100, rotate: -90 }}
         animate={{ x: 100, rotate: 0 }}
-        transition={{ duration: 1, delay: 4, ease: "easeOut" }}
+        transition={{ duration: 0.8, delay: 4, ease: "easeOut" }}
       >
-        <motion.div whileHover={{ scale: 1.25 }}>
+        <motion.div whileHover={{ scale: 1.25, rotate: -10 }}>
           <Image src="/email.svg" alt="Email" height={35} width={35} />
         </motion.div>
       </motion.a>
@@ -54,12 +54,13 @@ const Hero = () => {
         </p>
 
         <motion.div
-          className="underline -mt-2 md:ml-3"
+          className="main-underline -mt-2 md:ml-3"
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
           transition={{
             delay: 2,
             duration: 1,
+            ease: "easeOut",
           }}
         />
       </div>
