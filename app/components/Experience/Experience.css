@@ -2,14 +2,42 @@
 }
 
 .job {
-  min-width: 100px;
-  min-height: 150px;
+}
+
+.timeline {
+  transform: translateX(-60px);
+}
+
+.midline {
+  background-color: black;
+
+  width: 1px;
+  height: calc(100% + 60px); /* increase the height by 5px */
+  border-radius: 50px;
+
+  transform: translateX(-36px) translateY(-30px);
+}
+
+.dot {
+  transform: translateX(-52.5px);
+}
+@media (min-width: 768px) {
+  .timeline {
+    transform: translateX(0px);
+  }
+
+  .midline {
+    transform: translateX(0px) translateY(-30px);
+  }
+
+  .dot {
+    transform: translateX(-72.5px);
+  }
 }
 
 .hover-underline {
-  content: "";
   background-color: black;
 
   height: 0.5px;
-  border-radius: 100px;
+  border-radius: 50px;
 }
