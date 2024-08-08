@@ -16,11 +16,15 @@
   border-radius: 50px;
 
   transform: translateX(-36px) translateY(-30px);
+
+  /* background-color: black;
+  width: 2px;
+  height: auto; 
+  border-radius: 50px;
+  position: relative; 
+  transform: translateX(-36px); */
 }
 
-.dot {
-  transform: translateX(-52.5px);
-}
 @media (min-width: 768px) {
   .timeline {
     transform: translateX(0px);
@@ -28,10 +32,6 @@
 
   .midline {
     transform: translateX(0px) translateY(-30px);
-  }
-
-  .dot {
-    transform: translateX(-72.5px);
   }
 }
 

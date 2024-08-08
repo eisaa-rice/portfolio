@@ -16,27 +16,9 @@ interface JobProps {
 const Job: React.FC<JobProps> = ({ company, link, title, desc }) => {
   return (
     <>
-      <motion.div
-        className={"flex flex-col justify-center items-start py-2"}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{
-          delay: 0.25,
-          duration: 1,
-          ease: "easeIn",
-        }}
-        viewport={{ once: true }}
-      >
+      <div className={"flex flex-col justify-center items-start py-2"}>
         <div className="flex flex-row items-center justify-center">
-          <Image
-            src="/images/small-circle.png"
-            alt=""
-            className="dot mt-[-0.7rem]"
-            height={30}
-            width={30}
-          />
-
-          <p className="text-3xl pb-4">{title}</p>
+          <p className="text-2xl pb-4">{title}</p>
         </div>
 
         <motion.a
@@ -78,17 +60,14 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => {
         </motion.a>
 
         <p className="text-lg py-4">{desc}</p>
-      </motion.div>
+      </div>
     </>
   );
 };
 
 const Experience: React.FC = () => {
-  const timeRowStart = ["2", "3"];
-  const timeRowEnd = ["3", "4"];
-
-  const descRowStart = ["2", "3"];
-  const descRowEnd = ["3", "4"];
+  const rowStart = [2, 3];
+  const rowEnd = [3, 4];
 
   const workExperience: JobProps[] = [
     {
@@ -122,7 +101,7 @@ const Experience: React.FC = () => {
         here&apos;s where i&apos;ve been
       </motion.p>
 
-      <div className="grid md:grid-cols-[3fr_50px_7fr] md:gap-8 items-center h-full mt-16">
+      <div className="grid md:grid-cols-[175px_40px_5fr] md:gap-8 items-center h-full mt-16">
         <Image
           className="timeline mt-auto md:mx-auto col-start-1 col-end-2 md:col-start-2 md:col-end-3 row-start-1 row-end-2"
           height={48}
@@ -134,16 +113,34 @@ const Experience: React.FC = () => {
         <div className="mid-line mx-auto hidden md:block" />
 
         {workExperience.map((job, index) => {
+          // this is deadass the most ghetto code ive ever written
+
           return (
             <React.Fragment key={index}>
+              <Image
+                className={`md:hidden mx-auto mt-2.5 mb-auto md:row-start-${rowStart[index]} md:row-end-${rowEnd[index]} md:col-start-2 md:col-end-3`}
+                src="/images/small-circle.png"
+                alt=""
+                height={30}
+                width={30}
+              />
+
               <p
-                className={`col-start-1 col-end-2 md:row-start-${timeRowStart[index]} md:row-end-${timeRowEnd[index]}  mt-0 mb-auto md:pt-2`}
+                className={`font-light md:row-start-${rowStart[index]} md:row-end-${rowEnd[index]} md:col-start-1 md:col-end-2 mt-0 mb-auto md:pt-[0.75rem]`}
               >
                 {job.time}
               </p>
 
+              <Image
+                className={`hidden md:block mx-auto mt-2.5 mb-auto md:row-start-${rowStart[index]} md:row-end-${rowEnd[index]} md:col-start-2 md:col-end-3`}
+                src="/images/small-circle.png"
+                alt=""
+                height={30}
+                width={30}
+              />
+
               <div
-                className={`md:col-start-3 md:col-end-4 md:row-start-${descRowStart[index]} md:row-end-${descRowEnd[index]}`}
+                className={`md:row-start-${rowStart[index]} md:row-end-${rowEnd[index]} md:col-start-3 md:col-end-4`}
               >
                 <Job {...job} />
               </div>
@@ -152,7 +149,7 @@ const Experience: React.FC = () => {
         })}
 
         <Image
-          className="timeline mt-auto md:mx-auto col-start-1 col-end-2 md:col-start-2 md:col-end-3 row-start-6 row-end-7 md:row-start-4 md:row-end-5"
+          className="timeline mt-auto md:mx-auto col-start-1 col-end-2 md:col-start-2 md:col-end-3 row-start-8 row-end-9 md:row-start-4 md:row-end-5"
           height={48}
           width={48}
           src={"/images/arrow-down.png"}
