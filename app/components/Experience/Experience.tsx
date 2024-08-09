@@ -15,7 +15,7 @@ interface JobProps {
 }
 
 const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
-  <div className="flex flex-col justify-center items-start pl-12">
+  <div className="flex flex-col justify-center items-start pl-12 mb-6 md:mb-2 md:mt-4">
     <div className="flex flex-row items-center justify-center pb-4">
       <Image
         className="-ml-[5.45rem] md:-ml-[6.013rem] rounded-full z-50"
@@ -25,7 +25,7 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
         width={32}
       />
 
-      <p className="my-4 text-2xl pl-[3.4rem] md:pl-16">{title}</p>
+      <p className="my-2 text-2xl pl-[3.4rem] md:pl-16">{title}</p>
     </div>
 
     <motion.a
@@ -116,17 +116,15 @@ const Experience: React.FC = () => {
         {workExperience.map((job, index) => (
           <React.Fragment key={index}>
             <div
-              className={`md:none ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+              className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
                 index + 1
               } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
             />
 
             <p
-              className={`py-4 font-light md:row-start-${
-                index * 2 + 1
-              } md:row-end-${
+              className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
                 index * 2 + 2
-              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto md:pt-[1.1rem] pl-12 md:pl-0`}
+              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto mt-2 md:py-0 pt-6 md:pt-[1.3rem] pl-12 md:pl-0`}
             >
               {job.time}
             </p>

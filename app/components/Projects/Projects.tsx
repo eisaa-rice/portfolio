@@ -7,19 +7,20 @@ import "./Projects.css";
 
 interface ProjectProps {
   title: string;
+  link: string;
   desc: string;
   skills: string[];
-  delay: number[];
 }
-const Project: React.FC<ProjectProps> = ({ title, desc, skills, delay }) => {
+const Project: React.FC<ProjectProps> = ({ title, link, desc, skills }) => {
   return (
-    <motion.div
-      className="project"
+    <motion.a
+      href={link}
+      target="_blank"
+      className="w-[350px] p-10 rounded-3xl"
       whileHover={{
         scale: 1.05,
         rotate: 3,
         transition: { stiffness: 300, damping: 20 },
-        // outline: "1px solid black", // Applying outline style
       }}
     >
       <motion.p
@@ -34,13 +35,13 @@ const Project: React.FC<ProjectProps> = ({ title, desc, skills, delay }) => {
       <div className="flex flex-wrap flex-row justify-center items-center gap-x-6 gap-y-6 sm:gap-y-2 mt-12 mb-0">
         {skills.map((skill, index) => (
           <motion.div key={index}>
-            <p className="yuh px-3 py-1 rounded-xl text-center text-sm font-medium">
+            <p className="px-3 py-1 rounded-xl text-center text-sm font-bold">
               {skill}
             </p>
           </motion.div>
         ))}
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 
@@ -48,26 +49,26 @@ const Projects = () => {
   const projects = [
     {
       title: "hack dearborn 3 app",
+      link: "https://www.hackdearborn.org/",
       desc: "Aenean per posuere mauris vivamus habitant lectus vestibulum scelerisque ullamcorper. Per id curabitur cursus cras quam eu vestibulum leo. At arcu egestas commodo litora vivamus commodo ultricies.",
       skills: ["React Native", "Typescript", "Storybook", "Supabase"],
-      delay: [0.1, 0.2, 0.3, 0.4],
     },
     {
       title: "international women's day summit website",
+      link: "https://www.iwdsummit.com/",
       desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Nulla quam quisque purus a aptent sit. At tortor habitant hac blandit quis. Duis iaculis sapien aenean lacinia fermentum euismod class cras.",
       skills: ["React.js", "Tailwind CSS", "Javascript"],
-      delay: [0.1, 0.2, 0.3],
     },
     {
       title: "code conductor",
+      link: "https://www.codeconductor.org/",
       desc: "Sollicitudin suscipit ipsum bibendum enim eget nunc neque duis. Quis nisl lectus mus turpis dui cubilia neque ultricies placerat. Finibus risus taciti, integer phasellus maecenas dictum quis fames.",
       skills: ["React.js", "Typescript", "Git / Github"],
-      delay: [0.1, 0.2, 0.3],
     },
   ];
 
   return (
-    <div className="projects">
+    <div className="projects p-20">
       <motion.p
         className="text-4xl text-center font-light mb-24"
         initial={{ opacity: 0, y: -15 }}
