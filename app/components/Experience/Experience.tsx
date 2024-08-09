@@ -18,14 +18,14 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
   <div className="flex flex-col justify-center items-start pl-12 mb-12 md:mb-0">
     <div className="flex flex-row items-center justify-center pb-4">
       <Image
-        className="-ml-12 md:-ml-[6.013rem] rounded-full z-50"
+        className="-ml-[5.45rem] md:-ml-[6.013rem] rounded-full z-50"
         src="/images/small-circle.png"
         alt=""
         height={32}
         width={32}
       />
 
-      <p className="text-2xl pl-4 md:pl-16">{title}</p>
+      <p className="my-4 text-2xl pl-[3.4rem] md:pl-16">{title}</p>
     </div>
 
     <motion.a
@@ -54,7 +54,7 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
           initial: { scale: 1, x: 0, y: 0 },
           hovered: { scale: 1.25, x: 1, y: 1 },
         }}
-        transition={{ ease: "backIn" }}
+        transition={{ ease: "anticipate" }}
       >
         <Image
           src="/external-link.svg"
@@ -103,13 +103,19 @@ const Experience: React.FC = () => {
         here&apos;s where i&apos;ve been
       </motion.p>
 
-      <div className="grid md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full mt-16">
+      <div className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full mt-16">
         {workExperience.map((job, index) => (
           <React.Fragment key={index}>
+            <div
+              className={`md:none ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+                index + 1
+              } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
+            />
+
             <p
               className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
                 index * 2 + 2
-              } md:col-start-1 md:col-end-2 mb-auto md:pt-[0.25rem] pl-12 md:pl-0`}
+              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto md:pt-[0.25rem] pl-12 md:pl-0`}
             >
               {job.time}
             </p>
@@ -123,7 +129,7 @@ const Experience: React.FC = () => {
             <div
               className={`md:row-start-${index * 2 + 1} md:row-end-${
                 index * 2 + 2
-              } md:col-start-3 md:col-end-4`}
+              } col-start-2 col-end-3 md:col-start-3 md:col-end-4`}
             >
               <Job {...job} />
             </div>
@@ -135,23 +141,3 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
-
-{
-  /* <Image
-          className="mt-auto md:mx-auto -ml-2 col-start-1 col-end-2 md:col-start-2 md:col-end-3 row-start-1 row-end-2"
-          height={48}
-          width={48}
-          src={"/images/bigger-circle.png"}
-          alt=""
-        /> */
-}
-
-{
-  /* <Image
-          className="mt-auto md:mx-auto -ml-2 col-start-1 col-end-2 md:col-start-2 md:col-end-3 row-start-8 row-end-9 md:row-start-4 md:row-end-5"
-          height={48}
-          width={48}
-          src={"/images/arrow-down.png"}
-          alt=""
-        /> */
-}
