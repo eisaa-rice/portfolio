@@ -15,7 +15,7 @@ interface JobProps {
 }
 
 const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
-  <div className="flex flex-col justify-center items-start pl-12 mb-12 md:mb-0">
+  <div className="flex flex-col justify-center items-start pl-12">
     <div className="flex flex-row items-center justify-center pb-4">
       <Image
         className="-ml-[5.45rem] md:-ml-[6.013rem] rounded-full z-50"
@@ -66,7 +66,7 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
       </motion.div>
     </motion.a>
 
-    <p className="text-lg py-4">{desc}</p>
+    <p className="text-lg pt-4">{desc}</p>
   </div>
 );
 
@@ -122,7 +122,9 @@ const Experience: React.FC = () => {
             />
 
             <p
-              className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
+              className={`py-4 font-light md:row-start-${
+                index * 2 + 1
+              } md:row-end-${
                 index * 2 + 2
               } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto md:pt-[1.1rem] pl-12 md:pl-0`}
             >

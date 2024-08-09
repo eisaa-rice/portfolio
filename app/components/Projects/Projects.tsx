@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -66,9 +68,18 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      <p className="text-4xl text-center mb-20">
+      <motion.p
+        className="text-4xl text-center font-light mb-24"
+        initial={{ opacity: 0, y: -15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.45,
+          duration: 0.35,
+        }}
+        viewport={{ once: true }}
+      >
         here&apos;s what i&apos;ve done
-      </p>
+      </motion.p>
 
       <div className="flex flex-row flex-wrap justify-center items-start p-4 gap-6">
         {projects.map((project, index) => (
