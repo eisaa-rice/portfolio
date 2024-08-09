@@ -103,7 +103,16 @@ const Experience: React.FC = () => {
         here&apos;s where i&apos;ve been
       </motion.p>
 
-      <div className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full mt-16">
+      <motion.div
+        className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full mt-16"
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.45,
+          duration: 0.35,
+        }}
+        viewport={{ once: true }}
+      >
         {workExperience.map((job, index) => (
           <React.Fragment key={index}>
             <div
@@ -115,7 +124,7 @@ const Experience: React.FC = () => {
             <p
               className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
                 index * 2 + 2
-              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto md:pt-[0.25rem] pl-12 md:pl-0`}
+              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto md:pt-[1.1rem] pl-12 md:pl-0`}
             >
               {job.time}
             </p>
@@ -135,7 +144,7 @@ const Experience: React.FC = () => {
             </div>
           </React.Fragment>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
