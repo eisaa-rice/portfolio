@@ -15,10 +15,10 @@ interface JobProps {
 }
 
 const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
-  <div className="flex flex-col justify-center items-start pl-12">
+  <div className="flex flex-col justify-center items-start pl-12 mb-12 md:mb-0">
     <div className="flex flex-row items-center justify-center pb-4">
       <Image
-        className="-ml-12 md:-ml-[6.1rem] rounded-full z-50"
+        className="-ml-12 md:-ml-[6.013rem] rounded-full z-50"
         src="/images/small-circle.png"
         alt=""
         height={32}
@@ -109,7 +109,7 @@ const Experience: React.FC = () => {
             <p
               className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
                 index * 2 + 2
-              } md:col-start-1 md:col-end-2 mt-0 mb-auto md:pt-[0.75rem] pl-12 md:pl-0`}
+              } md:col-start-1 md:col-end-2 mb-auto md:pt-[0.25rem] pl-12 md:pl-0`}
             >
               {job.time}
             </p>
