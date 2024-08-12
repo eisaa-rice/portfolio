@@ -1,15 +1,9 @@
 .projects {
 }
 
-.swiper {
-  border-radius: 50px !important;
-}
-
 .swiper-scrollbar {
   width: 60% !important;
   left: 25% !important;
-
-  margin-top: -50px !important;
 }
 
 .swiper-scrollbar-drag {

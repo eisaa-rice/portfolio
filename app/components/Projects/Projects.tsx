@@ -23,9 +23,10 @@ const Project: React.FC<ProjectProps> = ({ title, link, desc, skills }) => {
     <motion.a
       href={link}
       target="_blank"
-      className="w-[350px] p-10 rounded-3xl"
+      className="block md:w-[700px] h-5/6 mx-auto mt-10 p-10 rounded-3xl"
+      initial={{ scale: 0.9 }}
       whileHover={{
-        scale: 1.05,
+        scale: 1,
       }}
     >
       <motion.p
@@ -91,40 +92,16 @@ const Projects = () => {
         className=""
         spaceBetween={50}
         slidesPerView={1}
-        // loop={true}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         scrollbar={{ draggable: true }}
+        // loop={true}
         // onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>
-          <Image
-            className=""
-            src="/images/img_1.jpg"
-            alt=""
-            height={300}
-            width={300}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            className=""
-            src="/images/img_2.jpg"
-            alt=""
-            height={300}
-            width={300}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Image
-            className=""
-            src="/images/img_3.jpg"
-            alt=""
-            height={300}
-            width={300}
-          />
-        </SwiperSlide>
+        {projects.map((project, index) => (
+          <SwiperSlide key={index}>
+            <Project {...project} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
