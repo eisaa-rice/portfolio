@@ -1,2 +1,24 @@
 .projects {
 }
+
+.swiper {
+  border-radius: 50px !important;
+}
+
+.swiper-scrollbar {
+  width: 60% !important;
+  left: 25% !important;
+
+  margin-top: -50px !important;
+}
+
+.swiper-scrollbar-drag {
+  background: black !important;
+}
+
+.swiper-slide {
+  /* background: rgba(255, 0, 0, 0.2); */
+
+  height: 500px !important;
+  /* width: 300px; */
+}

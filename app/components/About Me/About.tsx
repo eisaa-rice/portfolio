@@ -30,7 +30,7 @@ const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
 
 const About = () => {
   return (
-    <div className="about p-20">
+    <div className="about px-20 py-32">
       <motion.p
         className="text-4xl text-center font-light mb-24"
         initial={{ opacity: 0, y: -15 }}
@@ -45,7 +45,16 @@ const About = () => {
       </motion.p>
 
       <div className="lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-6">
-        <div className="flex items-center justify-center my-48 sm:mb-[450px] md:my-64 lg:my-0 lg:ml-12 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
+        <motion.div
+          className="bg-red-400 flex items-center justify-center my-48 sm:mb-[450px] md:my-64 lg:my-0 lg:ml-12 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            delay: 0.75,
+            duration: 1,
+          }}
+          viewport={{ once: true }}
+        >
           {/* <Image
             className="rounded-full absolute sm:w-[340px] sm:h-[340px]"
             src="/images/image.png"
@@ -61,7 +70,7 @@ const About = () => {
             width={285}
             height={285}
           />
-        </div>
+        </motion.div>
 
         <div className="flex flex-col gap-10 pt-48 sm:pt-0 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2">
           <FadeInText>

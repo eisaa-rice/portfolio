@@ -1,9 +1,16 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import "./Projects.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 interface ProjectProps {
   title: string;
@@ -19,8 +26,6 @@ const Project: React.FC<ProjectProps> = ({ title, link, desc, skills }) => {
       className="w-[350px] p-10 rounded-3xl"
       whileHover={{
         scale: 1.05,
-        rotate: 3,
-        transition: { stiffness: 300, damping: 20 },
       }}
     >
       <motion.p
@@ -68,7 +73,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects p-20">
+    <div className="projects px-20 py-32">
       <motion.p
         className="text-4xl text-center font-light mb-24"
         initial={{ opacity: 0, y: -15 }}
@@ -82,13 +87,55 @@ const Projects = () => {
         here&apos;s what i&apos;ve done
       </motion.p>
 
-      <div className="flex flex-row flex-wrap justify-center items-start p-4 gap-6">
-        {projects.map((project, index) => (
-          <Project key={index} {...project} />
-        ))}
-      </div>
+      <Swiper
+        className=""
+        spaceBetween={50}
+        slidesPerView={1}
+        // loop={true}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        scrollbar={{ draggable: true }}
+        // onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide>
+          <Image
+            className=""
+            src="/images/img_1.jpg"
+            alt=""
+            height={300}
+            width={300}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            className=""
+            src="/images/img_2.jpg"
+            alt=""
+            height={300}
+            width={300}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            className=""
+            src="/images/img_3.jpg"
+            alt=""
+            height={300}
+            width={300}
+          />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };
 
 export default Projects;
+
+/*
+{projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <Project {...project} />
+            </SwiperSlide>
+          ))}
+*/

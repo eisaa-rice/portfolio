@@ -89,7 +89,7 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="experience p-20">
+    <div className="experience px-20 py-32">
       <motion.p
         className="text-4xl text-center font-light mb-24"
         initial={{ opacity: 0, y: -15 }}
