@@ -3,14 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import "./Projects.css";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 interface ProjectProps {
   title: string;
@@ -88,21 +82,11 @@ const Projects = () => {
         here&apos;s what i&apos;ve done
       </motion.p>
 
-      <Swiper
-        className=""
-        spaceBetween={50}
-        slidesPerView={1}
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        scrollbar={{ draggable: true }}
-        // loop={true}
-        // onSwiper={(swiper) => console.log(swiper)}
-      >
-        {projects.map((project, index) => (
-          <SwiperSlide key={index}>
-            <Project {...project} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {projects.map((project, index) => (
+        <div key={index}>
+          <Project {...project} />
+        </div>
+      ))}
     </div>
   );
 };
