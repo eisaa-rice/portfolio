@@ -73,18 +73,28 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
 const Experience: React.FC = () => {
   const workExperience: JobProps[] = [
     {
-      time: "CURRENT - MAY 2024",
+      time: "MAY 2024 - CURRENT",
       company: "radical ai",
       link: "https://lab.radicalai.app/",
       title: "software engineer intern",
       desc: "Felis nascetur in tortor; odio feugiat interdum. Nulla id ad mi risus turpis consectetur cursus. Tincidunt euismod praesent ac pulvinar tempor eu. Lobortis non dis phasellus convallis efficitur justo. Iaculis adipiscing iaculis semper duis volutpat potenti platea dignissim. Interdum leo est vivamus bibendum tempus, porta curae. Litora etiam volutpat porta enim magna lobortis posuere ligula. Laoreet molestie tempus etiam, malesuada litora rhoncus. Sagittis ante facilisi facilisis accumsan sagittis mus. Neque ultricies non class nisl convallis donec.",
     },
     {
-      time: "CURRENT - FEB 2024",
+      time: "FEB 2024 - CURRENT",
       company: "google student developer clubs",
       link: "https://gdsc.community.dev/university-of-michigan-dearborn-united-states/",
       title: "volunteer frontend developer",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+  ];
+
+  const education: JobProps[] = [
+    {
+      time: "SEP 2021 - CURRENT",
+      company: "university of michigan - dearborn",
+      link: "https://umdearborn.edu/",
+      title: "major in computer and information science",
+      desc: "Felis nascetur in tortor; odio feugiat interdum. Nulla id ad mi risus turpis consectetur cursus. Tincidunt euismod praesent ac pulvinar tempor eu. ",
     },
   ];
 
@@ -103,8 +113,10 @@ const Experience: React.FC = () => {
         here&apos;s where i&apos;ve been
       </motion.p>
 
+      <p className="text-small font-medium my-3 md:ml-[14.25rem]">work</p>
+
       <motion.div
-        className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full mt-16"
+        className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full"
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -114,6 +126,51 @@ const Experience: React.FC = () => {
         viewport={{ once: true }}
       >
         {workExperience.map((job, index) => (
+          <React.Fragment key={index}>
+            <div
+              className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+                index + 1
+              } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
+            />
+
+            <p
+              className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
+                index * 2 + 2
+              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto mt-2 md:py-0 pt-6 md:pt-[1.3rem] pl-12 md:pl-0`}
+            >
+              {job.time}
+            </p>
+
+            <div
+              className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+                index + 1
+              } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
+            />
+
+            <div
+              className={`md:row-start-${index * 2 + 1} md:row-end-${
+                index * 2 + 2
+              } col-start-2 col-end-3 md:col-start-3 md:col-end-4`}
+            >
+              <Job {...job} />
+            </div>
+          </React.Fragment>
+        ))}
+      </motion.div>
+
+      <p className="text-small font-medium my-3 md:ml-[13.75rem]">school</p>
+
+      <motion.div
+        className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full"
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.45,
+          duration: 0.35,
+        }}
+        viewport={{ once: true }}
+      >
+        {education.map((job, index) => (
           <React.Fragment key={index}>
             <div
               className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
