@@ -18,14 +18,14 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
       />
 
-      <div className="max-w-4xl mx-auto">
+      <div className="flex flex-col">
         <Hero />
 
-        <About />
+        {/* <About /> */}
 
-        <Experience />
+        {/* <Experience /> */}
 
-        <Projects />
+        {/* <Projects /> */}
 
         <Footer />
       </div>

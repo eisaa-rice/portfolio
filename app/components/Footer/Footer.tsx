@@ -9,7 +9,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer flex flex-col items-center justify-center">
-      <div className="flex w-96 flex-row items-center justify-center">
+      <div className="flex w-72 flex-row items-center justify-center">
         <motion.a
           href="https://www.linkedin.com/in/eisaa-orozco/"
           className="mx-6"
