@@ -25,7 +25,7 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
         width={32}
       />
 
-      <p className="my-2 text-2xl pl-[3.4rem] md:pl-16">{title}</p>
+      <p className="my-2 font-light text-2xl pl-[3.4rem] md:pl-16">{title}</p>
     </div>
 
     <motion.a
@@ -66,19 +66,12 @@ const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
       </motion.div>
     </motion.a>
 
-    <p className="text-lg pt-4">{desc}</p>
+    <p className="text-lg font-thin pt-4">{desc}</p>
   </div>
 );
 
 const Experience: React.FC = () => {
   const workExperience: JobProps[] = [
-    {
-      time: "MAY 2024 - CURRENT",
-      company: "radical ai",
-      link: "https://lab.radicalai.app/",
-      title: "software engineer intern",
-      desc: "Felis nascetur in tortor; odio feugiat interdum. Nulla id ad mi risus turpis consectetur cursus. Tincidunt euismod praesent ac pulvinar tempor eu. Lobortis non dis phasellus convallis efficitur justo. Iaculis adipiscing iaculis semper duis volutpat potenti platea dignissim. Interdum leo est vivamus bibendum tempus, porta curae. Litora etiam volutpat porta enim magna lobortis posuere ligula. Laoreet molestie tempus etiam, malesuada litora rhoncus. Sagittis ante facilisi facilisis accumsan sagittis mus. Neque ultricies non class nisl convallis donec.",
-    },
     {
       time: "FEB 2024 - CURRENT",
       company: "google student developer clubs",
@@ -99,9 +92,9 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="experience px-20 py-32">
+    <div className="experience px-20 py-32 -ml-12 md:-ml-0">
       <motion.p
-        className="text-4xl text-center font-light mb-24"
+        className="text-4xl text-center font-light mb-24 ml-12 md:ml-0"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -113,14 +106,25 @@ const Experience: React.FC = () => {
         here&apos;s where i&apos;ve been
       </motion.p>
 
-      <p className="text-small font-medium my-3 md:ml-[14.25rem]">work</p>
+      <motion.div
+        className="my-3 md:ml-[14.35rem]"
+        initial={{ opacity: 0, y: -15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.25,
+          duration: 0.35,
+        }}
+        viewport={{ once: true }}
+      >
+        <Image src="/suitcase.svg" alt="" height={35} width={35} />
+      </motion.div>
 
       <motion.div
         className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full"
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.45,
+          delay: 0.25,
           duration: 0.35,
         }}
         viewport={{ once: true }}
@@ -128,7 +132,7 @@ const Experience: React.FC = () => {
         {workExperience.map((job, index) => (
           <React.Fragment key={index}>
             <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
                 index + 1
               } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
             />
@@ -142,7 +146,7 @@ const Experience: React.FC = () => {
             </p>
 
             <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
                 index + 1
               } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
             />
@@ -158,14 +162,25 @@ const Experience: React.FC = () => {
         ))}
       </motion.div>
 
-      <p className="text-small font-medium my-3 md:ml-[13.75rem]">school</p>
+      <motion.div
+        className="my-3 md:ml-[14.35rem]"
+        initial={{ opacity: 0, y: -15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.25,
+          duration: 0.35,
+        }}
+        viewport={{ once: true }}
+      >
+        <Image src="/graduation-cap.svg" alt="" height={35} width={35} />
+      </motion.div>
 
       <motion.div
         className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full"
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.45,
+          delay: 0.25,
           duration: 0.35,
         }}
         viewport={{ once: true }}
@@ -173,7 +188,7 @@ const Experience: React.FC = () => {
         {education.map((job, index) => (
           <React.Fragment key={index}>
             <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
                 index + 1
               } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
             />
@@ -187,7 +202,7 @@ const Experience: React.FC = () => {
             </p>
 
             <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-black h-full md:inline-grid md:row-start-${
+              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
                 index + 1
               } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
             />

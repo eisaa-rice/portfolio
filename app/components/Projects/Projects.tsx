@@ -17,7 +17,7 @@ const Project: React.FC<ProjectProps> = ({ title, link, desc, skills }) => {
     <motion.a
       href={link}
       target="_blank"
-      className="block md:w-[700px] h-5/6 mx-auto mt-10 p-10 rounded-3xl"
+      className="block sm:h-[350px] sm:w-[350px] mx-auto mt-10 p-10 rounded-3xl"
       initial={{ scale: 0.9 }}
       whileHover={{
         scale: 1,
@@ -68,9 +68,9 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects px-20 py-32">
+    <div className="projects sm:px-20 py-32">
       <motion.p
-        className="text-4xl text-center font-light mb-24"
+        className="text-4xl text-center font-light mb-24 px-20"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -82,21 +82,15 @@ const Projects = () => {
         here&apos;s what i&apos;ve done
       </motion.p>
 
-      {projects.map((project, index) => (
-        <div key={index}>
-          <Project {...project} />
-        </div>
-      ))}
+      <div className="sm:grid sm:grid-flow-col">
+        {projects.map((project, index) => (
+          <div key={index}>
+            <Project {...project} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Projects;
-
-/*
-{projects.map((project, index) => (
-            <SwiperSlide key={index}>
-              <Project {...project} />
-            </SwiperSlide>
-          ))}
-*/

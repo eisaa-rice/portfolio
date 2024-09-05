@@ -10,20 +10,3 @@
 .cedarville {
   font-family: "Cedarville Cursive", cursive;
 }
-
-.home {
-  background-image: url("/images/agabe.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: -160px center;
-
-  height: 100vh;
-  width: 100%;
-}
-@media (min-width: 640px) {
-  .home {
-    background-attachment: fixed;
-    background-position: 0px center;
-  }
-}

@@ -9,7 +9,27 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <motion.div className="hero h-screen flex flex-col justify-center items-center">
-      <motion.a
+      <div className="mx-6">
+        <p className="cedarville text-center font-light text-8xl mt-12">
+          jésus orozco
+        </p>
+
+        <p className="text-center font-thin text-xl mt-16">
+          im fucking trying to be somebody this shit is hard
+        </p>
+
+        <p className="text-center font-thin text-sm mt-4">
+          currently a <strong>free agent</strong>
+        </p>
+      </div>
+    </motion.div>
+  );
+};
+
+export default Hero;
+
+/*
+<motion.a
         className="absolute top-5 left-4"
         href="https://www.instagram.com/eisaarice/"
         target="_blank"
@@ -47,25 +67,4 @@ const Hero = () => {
           <Image src="/email.svg" alt="Email" height={35} width={35} />
         </motion.div>
       </motion.a>
-
-      <div>
-        <p className="name cedarville text-white text-center text-8xl font-light">
-          jésus orozco
-        </p>
-
-        <motion.div
-          className="main-underline -mt-2 md:ml-3"
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{
-            delay: 2.15,
-            duration: 0.65,
-            ease: "easeOut",
-          }}
-        />
-      </div>
-    </motion.div>
-  );
-};
-
-export default Hero;
+*/
