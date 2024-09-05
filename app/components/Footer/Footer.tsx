@@ -8,7 +8,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer flex flex-col items-center justify-center">
+    <div className="footer flex flex-col items-center justify-center mt-96">
       <div className="flex w-72 flex-row items-center justify-center">
         <motion.a
           href="https://www.linkedin.com/in/eisaa-orozco/"
