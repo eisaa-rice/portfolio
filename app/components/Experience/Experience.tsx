@@ -28,19 +28,38 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="experience px-20 py-32 -ml-12 md:-ml-0">
-      <motion.p
-        className="cedarville text-4xl text-center font-light mb-24 ml-12 md:ml-0"
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.45,
-          duration: 0.35,
-        }}
-        viewport={{ once: true }}
-      >
-        here&apos;s where i&apos;ve been
-      </motion.p>
+    <div className="my-32">
+      <div className="flex flex-col sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0">
+        <div className="bg-red-300 h-[300px] w-[300px] sm:rotate-[3deg]"></div>
+
+        <div className="w-[300px] sm:rotate-[-1deg]">
+          <p className="text-3xl font-light">title</p>
+
+          <p className="text-xl font-bold">company</p>
+
+          <p className="text-lg font-extralight">
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus
+            inceptos dignissim convallis phasellus luctus. Ullamcorper bibendum
+            lectus porttitor magnis vel venenatis nisi ultricies ac.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0">
+        <div className="w-[300px] sm:rotate-[-2deg]">
+          <p className="text-3xl font-light">title</p>
+
+          <p className="text-xl font-bold">company</p>
+
+          <p className="text-lg font-extralight">
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus
+            inceptos dignissim convallis phasellus luctus. Ullamcorper bibendum
+            lectus porttitor magnis vel venenatis nisi ultricies ac.
+          </p>
+        </div>
+
+        <div className="bg-red-300 h-[300px] w-[300px] sm:rotate-[-3deg]"></div>
+      </div>
     </div>
   );
 };
