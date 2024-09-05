@@ -6,45 +6,6 @@ import { motion } from "framer-motion";
 
 import "./Projects.css";
 
-interface ProjectProps {
-  title: string;
-  link: string;
-  desc: string;
-  skills: string[];
-}
-const Project: React.FC<ProjectProps> = ({ title, link, desc, skills }) => {
-  return (
-    <motion.a
-      href={link}
-      target="_blank"
-      className="block sm:h-[350px] sm:w-[350px] mx-auto mt-10 p-10 rounded-3xl"
-      initial={{ scale: 0.9 }}
-      whileHover={{
-        scale: 1,
-      }}
-    >
-      <motion.p
-        className="text-xl font-semibold text-center mb-10"
-        whileHover={{ textDecoration: "underline" }}
-      >
-        {title}
-      </motion.p>
-
-      <p className="text-center text-lg font-light mb-0 mt-auto">{desc}</p>
-
-      <div className="flex flex-wrap flex-row justify-center items-center gap-x-6 gap-y-6 sm:gap-y-2 mt-12 mb-0">
-        {skills.map((skill, index) => (
-          <motion.div key={index}>
-            <p className="px-3 py-1 rounded-xl text-center text-sm font-bold">
-              {skill}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-    </motion.a>
-  );
-};
-
 const Projects = () => {
   const projects = [
     {
@@ -70,7 +31,7 @@ const Projects = () => {
   return (
     <div className="projects sm:px-20 py-32">
       <motion.p
-        className="text-4xl text-center font-light mb-24 px-20"
+        className="cedarville text-4xl text-center font-light mb-24 px-20"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -81,14 +42,6 @@ const Projects = () => {
       >
         here&apos;s what i&apos;ve done
       </motion.p>
-
-      <div className="sm:grid sm:grid-flow-col">
-        {projects.map((project, index) => (
-          <div key={index}>
-            <Project {...project} />
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

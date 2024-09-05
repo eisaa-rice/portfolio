@@ -6,72 +6,8 @@ import { motion } from "framer-motion";
 
 import "./Experience.css";
 
-interface JobProps {
-  time: string;
-  company: string;
-  link: string;
-  title: string;
-  desc: string;
-}
-
-const Job: React.FC<JobProps> = ({ company, link, title, desc }) => (
-  <div className="flex flex-col justify-center items-start pl-12 mb-6 md:mb-2 md:mt-4">
-    <div className="flex flex-row items-center justify-center pb-4">
-      <Image
-        className="-ml-[5.45rem] md:-ml-[6.013rem] rounded-full z-50"
-        src="/images/small-circle.png"
-        alt=""
-        height={32}
-        width={32}
-      />
-
-      <p className="my-2 font-light text-2xl pl-[3.4rem] md:pl-16">{title}</p>
-    </div>
-
-    <motion.a
-      href={link}
-      target="_blank"
-      className="grid grid-rows-[auto_10px] grid-cols-[auto_auto] pb-2 cursor-pointer"
-      whileHover="hovered"
-      initial="initial"
-    >
-      <p className="text-lg font-bold row-start-1 row-end-2 col-start-1 col-end-2">
-        {company}
-      </p>
-
-      <motion.div
-        className="hover-underline row-start-2 row-end-3 col-start-1 col-end-2"
-        variants={{
-          initial: { width: 0 },
-          hovered: { width: "100%" },
-        }}
-        transition={{ ease: "backInOut" }}
-      />
-
-      <motion.div
-        className="row-start-1 row-end-2 col-start-2 col-end-3"
-        variants={{
-          initial: { scale: 1, x: 0, y: 0 },
-          hovered: { scale: 1.25, x: 1, y: 1 },
-        }}
-        transition={{ ease: "anticipate" }}
-      >
-        <Image
-          src="/external-link.svg"
-          alt=""
-          height={20}
-          width={20}
-          className="h-full ml-3"
-        />
-      </motion.div>
-    </motion.a>
-
-    <p className="text-lg font-thin pt-4">{desc}</p>
-  </div>
-);
-
 const Experience: React.FC = () => {
-  const workExperience: JobProps[] = [
+  const workExperience = [
     {
       time: "FEB 2024 - CURRENT",
       company: "google student developer clubs",
@@ -81,7 +17,7 @@ const Experience: React.FC = () => {
     },
   ];
 
-  const education: JobProps[] = [
+  const education = [
     {
       time: "SEP 2021 - CURRENT",
       company: "university of michigan - dearborn",
@@ -94,7 +30,7 @@ const Experience: React.FC = () => {
   return (
     <div className="experience px-20 py-32 -ml-12 md:-ml-0">
       <motion.p
-        className="text-4xl text-center font-light mb-24 ml-12 md:ml-0"
+        className="cedarville text-4xl text-center font-light mb-24 ml-12 md:ml-0"
         initial={{ opacity: 0, y: -15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -105,118 +41,6 @@ const Experience: React.FC = () => {
       >
         here&apos;s where i&apos;ve been
       </motion.p>
-
-      <motion.div
-        className="my-3 md:ml-[14.35rem]"
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.25,
-          duration: 0.35,
-        }}
-        viewport={{ once: true }}
-      >
-        <Image src="/suitcase.svg" alt="" height={35} width={35} />
-      </motion.div>
-
-      <motion.div
-        className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full"
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.25,
-          duration: 0.35,
-        }}
-        viewport={{ once: true }}
-      >
-        {workExperience.map((job, index) => (
-          <React.Fragment key={index}>
-            <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
-                index + 1
-              } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
-            />
-
-            <p
-              className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
-                index * 2 + 2
-              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto mt-2 md:py-0 pt-6 md:pt-[1.3rem] pl-12 md:pl-0`}
-            >
-              {job.time}
-            </p>
-
-            <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
-                index + 1
-              } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
-            />
-
-            <div
-              className={`md:row-start-${index * 2 + 1} md:row-end-${
-                index * 2 + 2
-              } col-start-2 col-end-3 md:col-start-3 md:col-end-4`}
-            >
-              <Job {...job} />
-            </div>
-          </React.Fragment>
-        ))}
-      </motion.div>
-
-      <motion.div
-        className="my-3 md:ml-[14.35rem]"
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.25,
-          duration: 0.35,
-        }}
-        viewport={{ once: true }}
-      >
-        <Image src="/graduation-cap.svg" alt="" height={35} width={35} />
-      </motion.div>
-
-      <motion.div
-        className="grid grid-cols-[40px_5fr] md:grid-cols-[175px_40px_5fr] md:gap-x-8 items-center h-full"
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.25,
-          duration: 0.35,
-        }}
-        viewport={{ once: true }}
-      >
-        {education.map((job, index) => (
-          <React.Fragment key={index}>
-            <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
-                index + 1
-              } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
-            />
-
-            <p
-              className={`font-light md:row-start-${index * 2 + 1} md:row-end-${
-                index * 2 + 2
-              } col-start-2 col-end-3 md:col-start-1 md:col-end-2 mb-auto mt-2 md:py-0 pt-6 md:pt-[1.3rem] pl-12 md:pl-0`}
-            >
-              {job.time}
-            </p>
-
-            <div
-              className={`ml-4 md:ml-auto w-[0.5px] bg-[#e5c687] h-full md:inline-grid md:row-start-${
-                index + 1
-              } md:row-end-${index + 2} md:col-start-2 md:col-end-3`}
-            />
-
-            <div
-              className={`md:row-start-${index * 2 + 1} md:row-end-${
-                index * 2 + 2
-              } col-start-2 col-end-3 md:col-start-3 md:col-end-4`}
-            >
-              <Job {...job} />
-            </div>
-          </React.Fragment>
-        ))}
-      </motion.div>
     </div>
   );
 };

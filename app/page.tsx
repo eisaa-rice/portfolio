@@ -4,14 +4,15 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About Me/About";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer/Footer";
 
 import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="bg-[#181f1c] text-[#e5c687]">
+    <div className="text-[#150f03]">
       <motion.div
-        className="h-screen w-full bg-[#e5c687] absolute top-0 z-30"
+        className="h-screen w-full bg-[#150f03] absolute top-0 z-30"
         initial={{ height: "100vh" }}
         animate={{ height: 0 }}
         transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
@@ -25,6 +26,8 @@ export default function Home() {
         <Experience />
 
         <Projects />
+
+        <Footer />
       </div>
     </div>
   );

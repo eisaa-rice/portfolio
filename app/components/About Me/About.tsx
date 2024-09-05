@@ -21,7 +21,7 @@ const FadeInText: React.FC<{ children: ReactNode }> = ({ children }) => {
         ease: easeType,
       }}
       viewport={{ once: true }}
-      className="text-lg text-center font-thin"
+      className="text-lg text-center font-extralight"
     >
       {children}
     </motion.p>
@@ -32,16 +32,16 @@ const About = () => {
   return (
     <div className="about px-20 py-32">
       <motion.p
-        className="text-4xl text-center font-light mb-24"
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        className="cedarville text-6xl text-center font-light mb-24 rotate-[-5deg]"
+        initial={{ opacity: 0, y: -15, rotate: -5 }}
+        whileInView={{ opacity: 1, y: 0, rotate: -5 }}
         transition={{
           delay: 0.45,
           duration: 0.35,
         }}
         viewport={{ once: true }}
       >
-        holá, nice to meet you
+        holá!
       </motion.p>
 
       <div className="lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-6">
