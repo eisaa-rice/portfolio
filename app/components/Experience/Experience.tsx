@@ -30,7 +30,7 @@ const Experience: React.FC = () => {
   return (
     <div className="my-32">
       <div className="flex flex-col sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0">
-        <div className="bg-red-300 h-[300px] w-[300px] sm:rotate-[3deg]"></div>
+        <div className="bg-green-300 h-[300px] w-[300px] sm:rotate-[3deg] rounded-md"></div>
 
         <div className="w-[300px] sm:rotate-[-1deg]">
           <p className="text-3xl font-light">title</p>
@@ -58,7 +58,7 @@ const Experience: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-red-300 h-[300px] w-[300px] sm:rotate-[-3deg]"></div>
+        <div className="bg-blue-300 h-[300px] w-[300px] sm:rotate-[-3deg] rounded-md"></div>
       </div>
     </div>
   );

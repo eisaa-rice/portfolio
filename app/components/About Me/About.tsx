@@ -7,7 +7,7 @@ import "./About.css";
 const About = () => {
   return (
     <div className="my-32 flex flex-col md:flex-row items-center sm:items-start sm:mx-auto justify-center text-center xs:text-start gap-x-12 lg:gap-x-32">
-      <div className="bg-red-300 my-12 md:my-0 mx-auto h-[200px] w-[200px] xs:h-[300px] xs:w-[300px] lg:h-[400px] lg:w-[400px] xs:rotate-[-7deg]"></div>
+      <div className="bg-red-300 rounded-md my-12 md:my-0 mx-auto h-[250px] w-[250px] xs:h-[300px] xs:w-[300px] lg:h-[400px] lg:w-[400px] xs:rotate-[-7deg]"></div>
 
       <div className="max-w-[350px] mx-2 md:rotate-[4deg] md:translate-y-5 flex flex-col gap-y-3">
         <p className="text-lg font-extralight">

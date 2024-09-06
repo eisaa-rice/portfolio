@@ -29,19 +29,60 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects sm:px-20 py-32">
-      <motion.p
-        className="cedarville text-4xl text-center font-light mb-24 px-20"
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.45,
-          duration: 0.35,
-        }}
-        viewport={{ once: true }}
-      >
-        here&apos;s what i&apos;ve done
-      </motion.p>
+    <div className="my-32 flex flex-col sm:flex-row flex-wrap md:mx-12 xl:mx-44 gap-x-6 gap-y-12">
+      <div className="flex flex-col justify-center items-start mx-auto w-[250px]">
+        <p className="text-2xl sm:rotate-[-3deg]">project name</p>
+
+        <p className="text-xl font-extralight sm:rotate-[1deg] mt-1">
+          a one liner
+        </p>
+
+        <div className="bg-yellow-100 h-[250px] w-[250px] sm:rotate-[-3deg] rounded-md my-6"></div>
+
+        <div className="flex flex-row flex-wrap items-center justify-evenly w-full">
+          <p className="font-thin">skill 1</p>
+
+          <p className="font-thin">skill 2</p>
+
+          <p className="font-thin">skill 3</p>
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center items-start mx-auto w-[250px]">
+        <p className="text-2xl sm:rotate-[3deg]">project name</p>
+
+        <p className="text-xl font-extralight sm:rotate-[-2deg] mt-1">
+          a one liner
+        </p>
+
+        <div className="bg-purple-200 h-[250px] w-[250px] sm:rotate-[2deg] rounded-md my-6"></div>
+
+        <div className="flex flex-row flex-wrap items-center justify-evenly w-full">
+          <p className="font-thin">skill 1</p>
+
+          <p className="font-thin">skill 2</p>
+
+          <p className="font-thin">skill 3</p>
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center items-start mx-auto w-[250px]">
+        <p className="text-2xl sm:rotate-[1deg]">project name</p>
+
+        <p className="text-xl font-extralight sm:rotate-[3deg] mt-1">
+          a one liner
+        </p>
+
+        <div className="bg-orange-200 h-[250px] w-[250px] sm:rotate-[-1deg] rounded-md my-6"></div>
+
+        <div className="flex flex-row flex-wrap items-center justify-evenly w-full">
+          <p className="font-thin">skill 1</p>
+
+          <p className="font-thin">skill 2</p>
+
+          <p className="font-thin">skill 3</p>
+        </div>
+      </div>
     </div>
   );
 };
