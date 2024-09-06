@@ -7,10 +7,6 @@
   padding: 0;
 }
 
-.cedarville {
-  font-family: "Cedarville Cursive", cursive;
-}
-
 .century-gothic {
   font-family: "Century Gothic";
   src: url("../public/fonts/centurygothic.ttf") format("truetype");

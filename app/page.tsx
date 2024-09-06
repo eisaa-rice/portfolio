@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About Me/About";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer/Footer";
 
 import { motion } from "framer-motion";
@@ -26,6 +27,8 @@ export default function Home() {
         <Experience />
 
         <Projects />
+
+        <Skills />
 
         <Footer />
       </div>
