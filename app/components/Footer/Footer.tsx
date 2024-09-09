@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="bg-black w-11/12 h-[0.5px] opacity-35" />
 
       <div className="flex flex-col sm:flex-row items-center justify-between mt-4 mb-6 w-full sm:px-32">
-        <p className="century-gothic-bold mb-6 sm:my-0">jesus orozco 2024</p>
+        <p className="century-gothic mb-6 sm:my-0">jesus orozco 2024</p>
 
         <div className="flex flex-row items-center justify-center">
           <motion.a

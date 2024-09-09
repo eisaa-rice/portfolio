@@ -15,20 +15,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Century Gothic";
-  src: url("../public/fonts/centurygothic_bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 .century-gothic {
   font-family: "Century Gothic", sans-serif; /* Fallback to a default font */
-  font-weight: normal;
-}
-
-.century-gothic-bold {
-  font-family: "Century Gothic", sans-serif; /* Fallback to a default font */
-  font-weight: bold;
 }
