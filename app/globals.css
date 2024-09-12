@@ -7,12 +7,43 @@
   padding: 0;
 }
 
+.hero {
+  background-image: linear-gradient(
+      rgba(21, 46, 14, 0.5),
+      rgba(14, 48, 34, 0.5)
+    ),
+    url("../public/images/agabe.jpg");
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.underline {
+  content: "";
+  height: 0.5px;
+  /* width: 100%; */
+  background: white;
+}
+
 @font-face {
   font-family: "Century Gothic";
   src: url("../public/fonts/centurygothic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxurious Script";
+  src: url("../public/fonts/luxuriousscript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.luxurious-script {
+  font-family: "Luxurious Script", sans-serif; /* Fallback to a default font */
 }
 
 .century-gothic {

@@ -1,42 +1,25 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 import "./About.css";
 
 const About = () => {
   return (
-    <div className="my-32 flex flex-col md:flex-row items-center sm:items-start sm:mx-auto justify-center text-center xs:text-start gap-x-12 lg:gap-x-32">
-      <div className="bg-red-300 rounded-md my-12 md:my-0 mx-auto h-[250px] w-[250px] xs:h-[300px] xs:w-[300px] lg:h-[400px] lg:w-[400px] xs:rotate-[-7deg]"></div>
-
-      <div className="max-w-[350px] mx-2 md:rotate-[4deg] md:translate-y-5 flex flex-col gap-y-3">
-        <p className="text-lg font-extralight">
-          as you&apos;ve probably seen, my name&apos;s{" "}
-          <strong>jesus orozco</strong>, but some of my friends call me{" "}
-          <strong>eisaa</strong>.
-        </p>
-
-        <p className="text-lg font-extralight">
-          i was born and raised, and am still <strong>located</strong> in,{" "}
-          <strong>detroit, michigan</strong>, where the roots of my{" "}
-          <strong>mexican</strong> heritage lie.
-        </p>
-
-        <p className="text-lg font-extralight">
-          i&apos;m currently attending{" "}
-          <strong>university of michigan - dearborn</strong> where i&apos;m
-          majoring in <strong>computer science</strong>.
-        </p>
-
-        <p className="text-lg font-extralight">
-          i&apos;m aspiring to be a <strong>web</strong> and{" "}
-          <strong>app developer</strong>, having already worked on multiple
-          projects for regional events such as <strong>conferences</strong> and{" "}
-          <strong>hackathons</strong>.
-        </p>
-      </div>
+    <div className="h-[100vh] w-full mx-auto ">
+      <p className="font-extralight text-3xl text-center mt-6">
+        software engineer. artist. gamer.
+      </p>
     </div>
   );
 };
 
 export default About;
+
+/*
+initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1, duration: 0.25 }}
+      // viewport={{ once: true }}
+*/

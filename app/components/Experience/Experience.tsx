@@ -28,11 +28,11 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="my-32">
-      <div className="grid grid-rows-2 sm:flex sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0">
-        <div className="row-start-2 row-end-3 bg-green-300 h-[300px] w-[300px] sm:rotate-[3deg] rounded-md"></div>
+    <div className="my-32 sm:mx-20">
+      <div className="grid grid-rows-2 sm:flex sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0 w-[250px] xs:w-[350px] sm:w-auto mx-auto">
+        <div className="row-start-2 row-end-3 bg-green-300 h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] sm:rotate-[3deg] rounded-md mx-auto"></div>
 
-        <div className="row-start-1 row-end-2 w-[300px] sm:rotate-[-1deg]">
+        <div className="row-start-1 row-end-2 sm:rotate-[-1deg] mx-6 sm:w-[300px]">
           <p className="text-3xl font-light">title</p>
 
           <p className="text-xl font-bold">company</p>
@@ -45,8 +45,8 @@ const Experience: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-rows-2 sm:flex sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0">
-        <div className="row-start-1 row-end-2 w-[300px] sm:rotate-[-1deg]">
+      <div className="grid grid-rows-2 sm:flex sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0 w-[250px] xs:w-[350px] sm:w-auto mx-auto">
+        <div className="row-start-1 row-end-2 sm:rotate-[-1deg] mx-6 sm:w-[300px]">
           <p className="text-3xl font-light">title</p>
 
           <p className="text-xl font-bold">company</p>
@@ -58,7 +58,7 @@ const Experience: React.FC = () => {
           </p>
         </div>
 
-        <div className="row-start-2 row-end-3 bg-blue-300 h-[300px] w-[300px] sm:rotate-[3deg] rounded-md"></div>
+        <div className="row-start-2 row-end-3 bg-blue-300 h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] sm:rotate-[3deg] rounded-md mx-auto"></div>
       </div>
     </div>
   );

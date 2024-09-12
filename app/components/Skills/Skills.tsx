@@ -93,7 +93,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center xs:row-start-3 xs:row-end-4 xs:col-start-2 xs:col-end-3 md:col-start-1 md:col-end-3">
+      <div className="flex flex-col items-center justify-center xs:row-start-3 xs:row-end-4 xs:col-start-2 xs:col-end-3 md:col-start-1 :col-end-3">
         <p className="my-4">languages</p>
 
         <div className="flex flex-wrap items-center justify-center gap-8">

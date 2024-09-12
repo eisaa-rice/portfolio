@@ -1,24 +1,31 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="h-screen flex flex-col items-center sm:items-start sm:mx-auto justify-center text-center sm:text-start">
-      <p className="century-gothic-bold font-bold text-7xl sm:text-8xl mt-12 ">
-        jésus orozco
-      </p>
+    <motion.div
+      className="hero flex flex-col items-center justify-center "
+      initial={{ height: "120vh" }}
+      animate={{ height: "97.5vh" }}
+      transition={{ delay: 2.1, duration: 0.5, ease: "backInOut" }}
+    >
+      <div className="mx-auto w-[290px] xs:w-[520px] sm:w-[390px] md:w-[695px]">
+        <p className="times font-thin text-7xl sm:text-8xl text-center text-[#fffffffa]">
+          JESUS OROZCO
+        </p>
 
-      <p className="font-extralight text-2xl mt-16">
-        software engineer. i think.
-      </p>
-
-      <p className="font-extralight text-lg mt-6">
-        currently a <strong>free agent</strong>
-      </p>
-    </div>
+        <motion.div
+          className="underline"
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{ delay: 2.3, duration: 0.5, ease: "backInOut" }}
+        />
+      </div>
+    </motion.div>
   );
 };
 
