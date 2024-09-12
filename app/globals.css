@@ -20,10 +20,9 @@
 }
 
 .underline {
-  content: "";
-  height: 0.5px;
-  /* width: 100%; */
   background: white;
+  height: 0.5px;
+  margin-top: -3.5px;
 }
 
 @font-face {

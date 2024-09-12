@@ -7,19 +7,16 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="h-[100vh] w-full mx-auto ">
+    <div className="h-[500vh] w-full mx-auto ">
       <p className="font-extralight text-3xl text-center mt-6">
         software engineer. artist. gamer.
+      </p>
+
+      <p className="font-extralight text-sm text-center mt-96">
+        to be continued...
       </p>
     </div>
   );
 };
 
 export default About;
-
-/*
-initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1, duration: 0.25 }}
-      // viewport={{ once: true }}
-*/
