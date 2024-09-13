@@ -8,9 +8,9 @@ import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer/Footer";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-const useScrollPosition = () => {
+const useScrollPos = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -19,8 +19,6 @@ const useScrollPosition = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -30,7 +28,15 @@ const useScrollPosition = () => {
 };
 
 export default function Home() {
-  const scrollY = useScrollPosition();
+  const yPos = useScrollPos();
+
+  const { scrollY } = useScroll();
+
+  const background = useTransform(
+    scrollY,
+    [550, 850],
+    ["rgba(0,0,0,0)", "rgba(0,0,0,1)"]
+  );
 
   return (
     <div className="text-black">
@@ -42,7 +48,10 @@ export default function Home() {
       />
 
       <div className="flex flex-col">
-        <div className="hero w-full h-[30px] pt-5 pb-7 fixed top-0 left-0 right-0 flex items-center justify-evenly">
+        <motion.div
+          className="w-5/6 h-[30px] mx-auto pt-5 pb-7 fixed top-0 left-0 right-0 flex items-center justify-evenly rounded-b-lg"
+          style={{ background }}
+        >
           <div className="">
             <p className="times text-lg font-thin text-[#fffffffa] inline-block">
               home
@@ -51,7 +60,7 @@ export default function Home() {
             <motion.div
               className="underline"
               initial={{ width: 0 }}
-              animate={{ width: scrollY >= 0 && scrollY < 500 ? "100%" : 0 }}
+              animate={{ width: yPos >= 0 && yPos < 500 ? "100%" : 0 }}
               transition={{ duration: 0.5, ease: "backInOut" }}
             />
           </div>
@@ -64,7 +73,7 @@ export default function Home() {
             <motion.div
               className="underline"
               initial={{ width: 0 }}
-              animate={{ width: scrollY >= 500 && scrollY < 1000 ? "100%" : 0 }}
+              animate={{ width: yPos >= 500 && yPos < 1000 ? "100%" : 0 }}
               transition={{ duration: 0.75, ease: "backInOut" }}
             />
           </div>
@@ -78,7 +87,7 @@ export default function Home() {
               className="underline"
               initial={{ width: 0 }}
               animate={{
-                width: scrollY >= 1000 && scrollY < 1500 ? "100%" : 0,
+                width: yPos >= 1000 && yPos < 1500 ? "100%" : 0,
               }}
               transition={{ duration: 0.75, ease: "backInOut" }}
             />
@@ -93,12 +102,12 @@ export default function Home() {
               className="underline"
               initial={{ width: 0 }}
               animate={{
-                width: scrollY >= 1500 && scrollY < 2000 ? "100%" : 0,
+                width: yPos >= 1500 && yPos < 2000 ? "100%" : 0,
               }}
               transition={{ duration: 0.75, ease: "backInOut" }}
             />
           </div>
-        </div>
+        </motion.div>
 
         <Hero />
 
