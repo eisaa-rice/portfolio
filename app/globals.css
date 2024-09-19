@@ -5,26 +5,14 @@
 * {
   margin: 0;
   padding: 0;
+  color: white;
 }
 
-.hero {
-  background-image: linear-gradient(
-      rgba(21, 46, 14, 0.5),
-      rgba(14, 48, 34, 0.5)
-    ),
-    url("../public/images/agabe.jpg");
-
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-.underline {
-  display: block;
-
-  background: white;
-  height: 0.5px;
-  margin-top: -3.5px;
+body {
+  /* at X_POS Y_POS, COLOR, TYPE SIZE */
+  background: radial-gradient(circle at 10% 10%, #0f1a14, transparent 60%),
+    radial-gradient(circle at 80% 60%, #0b1414, transparent 60%),
+    radial-gradient(circle at 30% 120%, #0f120a, transparent 60%), #000000;
 }
 
 @font-face {
@@ -33,18 +21,6 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: "Luxurious Script";
-  src: url("../public/fonts/luxuriousscript.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-.luxurious-script {
-  font-family: "Luxurious Script", sans-serif; /* Fallback to a default font */
 }
 
 .century-gothic {
