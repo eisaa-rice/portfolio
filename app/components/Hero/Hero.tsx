@@ -12,10 +12,12 @@ const Hero: React.FC<HeroProps> = () => {
   const opacity = useTransform(scrollY, [0, 500], [0.5, 0]);
 
   return (
-    <div className="hero min-h-screen flex flex-col items-center justify-start mb-64">
+    <div className="hero min-h-screen flex flex-col items-center justify-start mb-52">
       <div className="flex items-center justify-between w-full mt-5 mb-auto century-gothic">
         <div className="opacity-75">
-          <p className="text-sm sm:text-lg">jésus orozco</p>
+          <p className="text-sm py-1 px-3 bg-white rounded-md bg-opacity-10 ">
+            jésus orozco
+          </p>
         </div>
 
         <div className=" hidden lg:flex items-center gap-5 opacity-75">
@@ -54,9 +56,9 @@ const Hero: React.FC<HeroProps> = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-y-12 lg:grid lg:grid-rows-1 lg:grid-cols-2 mb-36 lg:gap-x-12">
-        <div className="hidden md:block sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 m-auto mb-16">
+        <div className="hidden md:block sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 m-auto">
           <motion.div
-            className="h-[350px] w-[350px] rounded-full bg-opacity-0 dashed-circle opacity-75"
+            className="h-[350px] w-[350px] rounded-full bg-opacity-0 dashed-circle opacity-75 "
             animate={{ rotate: 360 }}
             transition={{
               repeat: Infinity,
@@ -67,20 +69,25 @@ const Hero: React.FC<HeroProps> = () => {
         </div>
 
         <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2">
-          <p className="text-6xl font-medium">aspiring developer of whatever</p>
+          <p className="text-6xl font-medium">aspiring software engineer</p>
 
           <p className="font-light mt-12 opacity-75">
-            Sed luctus magna sed hendrerit molestie. Sed dignissim ut arcu sed
-            molestie. Integer sed ante mattis, iaculis diam auctor, viverra
-            lectus. Phasellus ac neque mollis, faucibus leo ut, sodales ex.
+            currently a student at{" "}
+            <span className="font-semibold">
+              university of michigan - deaborn
+            </span>{" "}
+            studying <span className="font-semibold">computer science</span> and
+            having <span className="font-semibold">way too much fun</span>{" "}
+            making <span className="font-semibold">web applications</span> on
+            the side
           </p>
         </div>
 
         <motion.div
           className="-mb-32 mx-auto flex flex-col items-center justify-center lg:col-start-1 lg:col-end-3"
           initial={{ y: 50, opacity: "0%" }}
-          animate={{ y: -15, opacity: "50%" }}
-          transition={{ delay: 4, duration: 1.5, ease: "backOut" }}
+          animate={{ y: 15, opacity: "50%" }}
+          transition={{ delay: 4, duration: 2, ease: "backOut" }}
           style={{ opacity }}
         >
           <div className="bg-black w-[37px] h-[51px] rounded-3xl absolute z-20" />

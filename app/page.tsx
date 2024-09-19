@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <motion.div
-      className="flex flex-col mx-4 xs:mx-16 sm:mx-32"
+      className="flex flex-col mx-4 xs:mx-16 sm:mx-32 min-h-[3000px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 100 }}
       transition={{ ease: "easeIn", duration: 1, delay: 2 }}
