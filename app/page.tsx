@@ -1,9 +1,8 @@
 "use client";
 
 import Hero from "./components/Hero/Hero";
-import About from "./components/About Me/About";
+import Projects from "./components/About Me/Projects";
 import Experience from "./components/Experience/Experience";
-import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer/Footer";
 
@@ -19,11 +18,9 @@ export default function Home() {
     >
       <Hero />
 
-      <About />
+      <Projects />
 
       {/* <Experience />
-
-    <Projects />
 
     <Skills />
 

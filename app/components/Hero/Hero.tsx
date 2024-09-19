@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = () => {
   const opacity = useTransform(scrollY, [0, 500], [0.5, 0]);
 
   return (
-    <div className="hero min-h-screen flex flex-col items-center justify-start mb-52">
+    <div className="hero min-h-screen flex flex-col items-center justify-start mb-72">
       <div className="flex items-center justify-between w-full mt-5 mb-auto century-gothic">
         <div className="opacity-75">
           <p className="text-sm py-1 px-3 bg-white rounded-md bg-opacity-10 ">
@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = () => {
           </p>
         </div>
 
-        <div className=" hidden lg:flex items-center gap-5 opacity-75">
+        <div className="hidden lg:flex items-center gap-5 opacity-75">
           <motion.a
             href="https://www.linkedin.com/in/eisaa-orozco/"
             target="_blank"

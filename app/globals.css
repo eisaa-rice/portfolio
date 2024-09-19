@@ -10,8 +10,8 @@
 
 body {
   /* at X_POS Y_POS, COLOR, TYPE SIZE */
-  background: radial-gradient(circle at -50% -50%, #1d3226, transparent 65%),
-    radial-gradient(circle at 150% -50%, #1c2f31, transparent 65%), #000000;
+  background: radial-gradient(circle at -50% -50%, #1d3226, transparent 60%),
+    radial-gradient(circle at 150% -50%, #1c2f31, transparent 60%), #000000;
 }
 
 @font-face {
@@ -23,5 +23,5 @@ body {
 }
 
 .century-gothic {
-  font-family: "Century Gothic", sans-serif; /* Fallback to a default font */
+  font-family: "Century Gothic", sans-serif;
 }
