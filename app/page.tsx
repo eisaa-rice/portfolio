@@ -7,32 +7,27 @@ import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer/Footer";
 
-import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="text-black">
-      <motion.div
-        className="w-full bg-black absolute top-0 z-30"
-        initial={{ height: "120vh" }}
-        animate={{ height: 0 }}
-        transition={{ duration: 0.55, delay: 1.5, ease: "easeInOut" }}
-      />
+    <motion.div
+      className="flex flex-col mx-4 xs:mx-16 sm:mx-32"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 100 }}
+      transition={{ ease: "easeIn", duration: 1, delay: 2 }}
+    >
+      <Hero />
 
-      <div className="flex flex-col mx-4 xs:mx-16 sm:mx-32">
-        <Hero />
+      <About />
 
-        {/* <About /> */}
+      {/* <Experience />
 
-        {/* <Experience />
+    <Projects />
 
-        <Projects />
+    <Skills />
 
-        <Skills />
-
-        <Footer /> */}
-      </div>
-    </div>
+    <Footer /> */}
+    </motion.div>
   );
 }
