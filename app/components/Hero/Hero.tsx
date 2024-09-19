@@ -87,13 +87,13 @@ const Hero: React.FC<HeroProps> = () => {
           className="-mb-32 mx-auto flex flex-col items-center justify-center lg:col-start-1 lg:col-end-3"
           initial={{ y: 50, opacity: "0%" }}
           animate={{ y: 15, opacity: "50%" }}
-          transition={{ delay: 4, duration: 2, ease: "backOut" }}
+          transition={{ delay: 4, duration: 1.75, ease: "anticipate" }}
           style={{ opacity }}
         >
-          <div className="bg-black w-[37px] h-[51px] rounded-3xl absolute z-20" />
+          <div className="bg-black w-[27px] h-[41px] rounded-3xl absolute z-20" />
 
           <motion.div
-            className="bg-green-300 w-[10px] h-[10px] rounded-full absolute z-30"
+            className="bg-green-300 w-[7px] h-[7px] rounded-full absolute z-30"
             initial={{ y: 0 }}
             animate={{ y: [10, -10, 10] }}
             transition={{
@@ -104,9 +104,9 @@ const Hero: React.FC<HeroProps> = () => {
             }}
           />
 
-          <div className="bg-slate-50 w-[40px] h-[55px] rounded-3xl absolute -z-20" />
+          <div className="bg-slate-50 w-[30px] h-[45px] rounded-3xl absolute -z-20" />
 
-          <motion.div className="mt-20">
+          <motion.div className="mt-16">
             <Image height={23.5} width={23.5} src={"/down-arrow.svg"} alt="" />
           </motion.div>
         </motion.div>
