@@ -20,10 +20,10 @@ export default function Home() {
         transition={{ duration: 0.55, delay: 1.5, ease: "easeInOut" }}
       />
 
-      <div className="flex flex-col mx-32">
+      <div className="flex flex-col mx-4 xs:mx-16 sm:mx-32">
         <Hero />
 
-        <About />
+        {/* <About /> */}
 
         {/* <Experience />
 

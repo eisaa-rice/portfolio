@@ -10,9 +10,9 @@
 
 body {
   /* at X_POS Y_POS, COLOR, TYPE SIZE */
-  background: radial-gradient(circle at 10% 10%, #0f1a14, transparent 60%),
-    radial-gradient(circle at 80% 60%, #0b1414, transparent 60%),
-    radial-gradient(circle at 30% 120%, #0f120a, transparent 60%), #000000;
+  background: radial-gradient(circle at -10% -10%, #1d3226, transparent 60%),
+    radial-gradient(circle at 110% 60%, #1c2f31, transparent 60%),
+    radial-gradient(circle at 30% 120%, #0f120a, transparent 200%), #000000;
 }
 
 @font-face {
