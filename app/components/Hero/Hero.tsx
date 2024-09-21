@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = () => {
           </p>
         </div>
 
-        <div className="hidden lg:flex items-center gap-5 opacity-75">
+        <div className="flex items-center gap-5 opacity-75">
           <motion.a
             href="https://www.linkedin.com/in/eisaa-orozco/"
             target="_blank"
