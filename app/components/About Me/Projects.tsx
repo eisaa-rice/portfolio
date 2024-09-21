@@ -5,6 +5,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import "./Projects.css";
 
+const OtherWorks = () => {
+  return (
+    <div className="mt-0 mb-0">
+      <p className="font-light">some other works</p>
+    </div>
+  );
+};
+
 const Projects = () => {
   const { scrollY } = useScroll();
 
@@ -16,7 +24,7 @@ const Projects = () => {
       const width = window.innerWidth;
 
       setScreenWidth(width);
-      setIsMobile(width <= 768);
+      setIsMobile(width <= 1024);
     };
 
     updateScreenSize();
@@ -143,10 +151,6 @@ const Projects = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="mt-0 mb-0">
-        <p className="font-light">some other works</p>
       </div>
     </div>
   );
