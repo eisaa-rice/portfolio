@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-y-12 lg:grid lg:grid-rows-1 lg:grid-cols-2 mb-36 lg:gap-x-12">
+      <div className="flex flex-col items-center justify-center lg:mt-32 mb-36 lg:grid lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-12 gap-y-12 lg:gap-y-0">
         <div className="hidden md:block sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 lg:m-auto">
           <motion.div
             className="h-[350px] w-[350px] rounded-full bg-opacity-0 dashed-circle opacity-75 "
@@ -84,7 +84,7 @@ const Hero: React.FC<HeroProps> = () => {
         </div>
 
         <motion.div
-          className="-mb-32 xl:-mb-52 mx-auto flex flex-col items-center justify-center lg:col-start-1 lg:col-end-3"
+          className="-mb-32 xl:-mb-96 mx-auto flex flex-col items-center justify-center lg:col-start-1 lg:col-end-3"
           initial={{ y: 500 }}
           animate={{ y: 15 }}
           transition={{ delay: 2.5, duration: 2.5, ease: "anticipate" }}
