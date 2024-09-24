@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = () => {
   const opacity = useTransform(scrollY, [0, 500], [0.5, 0]);
 
   return (
-    <div className="hero min-h-screen flex flex-col items-center justify-start mb-72">
+    <div className="flex flex-col items-center justify-start mb-72">
       <div className="flex items-center justify-between w-full mt-5 mb-32 century-gothic">
         <div className="opacity-75">
           <p className="text-sm py-1 px-3 bg-white rounded-md bg-opacity-10 ">
@@ -71,7 +71,7 @@ const Hero: React.FC<HeroProps> = () => {
         <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2 md:mt-28 lg:mt-0">
           <p className="text-6xl font-medium">aspiring software engineer</p>
 
-          <p className="font-light mt-12 opacity-75">
+          <p className="text-lg font-extralight mt-12 opacity-75">
             currently a student at{" "}
             <span className="font-semibold">
               university of michigan - deaborn
@@ -84,7 +84,7 @@ const Hero: React.FC<HeroProps> = () => {
         </div>
 
         <motion.div
-          className="-mb-32 xl:-mb-96 mx-auto flex flex-col items-center justify-center lg:col-start-1 lg:col-end-3"
+          className="lg:mt-48 mx-auto flex flex-col items-center justify-center lg:col-start-1 lg:col-end-3"
           initial={{ y: 500 }}
           animate={{ y: 15 }}
           transition={{ delay: 2.5, duration: 2.5, ease: "anticipate" }}
