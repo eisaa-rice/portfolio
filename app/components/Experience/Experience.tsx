@@ -58,9 +58,19 @@ const Experience: React.FC = () => {
               volunteer software developer
             </p>
 
-            <p className="flex text-lg font-medium opacity-50">
-              feb 2024 - current · dearborn, mi · volunteer
-            </p>
+            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+              <p className="font-extralight p-2 bg-white rounded-xl flex-shrink-0">
+                feb 2024 - current
+              </p>
+
+              <p className="font-extralight p-2 bg-white rounded-xl flex-shrink-0">
+                dearborn, MI
+              </p>
+
+              <p className="font-extralight p-2 bg-white rounded-xl flex-shrink-0">
+                volunteer
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col gap-4">
