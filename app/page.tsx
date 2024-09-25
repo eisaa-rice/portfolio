@@ -30,7 +30,7 @@ export default function Home() {
       animate={{ opacity: 100 }}
       transition={{ ease: "easeIn", duration: 1, delay: 2 }}
     >
-      <div className="fixed left-0 right-0 top-0 flex items-center justify-center mx-auto p-5 font-extralight z-50 flex-shrink-0">
+      <div className="fixed left-1/2 mt-5 z-50 flex-shrink-0">
         <motion.p
           initial={{ opacity: 0 }}
           style={{ opacity }}

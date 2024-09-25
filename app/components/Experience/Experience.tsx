@@ -64,7 +64,7 @@ const Experience: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <p className="font-light opacity-75 text-xl">
+            <p className="font-light opacity-75 text-2xl">
               i&apos;m assisting this university club with{" "}
               <span className="font-semibold">frontend</span> and{" "}
               <span className="font-semibold">backend web</span> and{" "}
@@ -72,7 +72,7 @@ const Experience: React.FC = () => {
               multiple regional events, like conferences and hackathons
             </p>
 
-            <p className="font-light opacity-75 text-xl">
+            <p className="font-light opacity-75 text-2xl">
               i&apos;ve <span className="font-semibold">converted</span> lots of
               provided <span className="font-semibold"> figma designs</span>{" "}
               into their equivalent functional{" "}
@@ -80,13 +80,13 @@ const Experience: React.FC = () => {
               sure our clients were satisfied with final web app layouts
             </p>
 
-            <p className="font-light opacity-75 text-xl">
+            <p className="font-light opacity-75 text-2xl">
               every project incorporated{" "}
               <span className="font-semibold"> responsive design</span> to
               ensure seamless access from any device on any platform
             </p>
 
-            <p className="font-light opacity-75 text-xl">
+            <p className="font-light opacity-75 text-2xl">
               <span className="font-semibold"> best coding practices</span> were
               always withheld through the design of{" "}
               <span className="font-semibold">reusable components</span>,
@@ -94,7 +94,7 @@ const Experience: React.FC = () => {
               user interfaces.
             </p>
 
-            <p className="font-light opacity-75 text-xl">
+            <p className="font-light opacity-75 text-2xl">
               <span className="font-semibold">user-acceptance testing</span> was
               performed on all assigned issues to guarantee client guidelines
               and specifications were met.
