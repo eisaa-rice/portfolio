@@ -10,8 +10,8 @@ const About = () => {
   const { scrollY } = useScroll();
 
   return (
-    <div className="flex flex-col md:flex-row justify-evenly gap-12 mb-24">
-      <div className="bg-white h-[400px] w-full max-w-96 rounded-3xl"></div>
+    <div className="flex flex-col lg:flex-row justify-evenly gap-12 mb-24">
+      <div className="bg-white h-[400px] w-full max-w-96 mx-auto lg:mx-0 rounded-3xl mb-16 lg:mb-0"></div>
 
       <div className="w-full max-w-xl flex flex-col justify-center gap-6 text-2xl font-light opacity-75">
         <p>
@@ -37,8 +37,6 @@ const About = () => {
           i have a passion for technology and enjoy working on innovative
           projects that make a difference
         </p>
-
-        <span className="font-semibold"></span>
       </div>
     </div>
   );

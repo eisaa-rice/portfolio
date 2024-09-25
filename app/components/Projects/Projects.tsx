@@ -103,20 +103,20 @@ const Projects = () => {
           </motion.a>
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8">
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               for a group project, some classmates and i made an{" "}
               <span className="font-semibold">online platform</span> that lets
               people brainstorm and visualize custom algorithms easily
             </p>
 
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               we used <span className="font-semibold">git</span> and{" "}
               <span className="font-semibold">github</span> to work
               simultaneously and and our leader assigned issues to each of us so
               that we could progress incrementally
             </p>
 
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               blocks consisting of code type and description are properly
               indented and are drag-and-drop-able to make designing the
               algorithm easy and simple
@@ -192,7 +192,7 @@ const Projects = () => {
           </motion.a>
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8">
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               for this conference, students at <span>GDSC</span> made a website
               using <span className="font-semibold">react</span>,{" "}
               <span className="font-semibold">git and github</span>, and{" "}
@@ -200,13 +200,13 @@ const Projects = () => {
               registration and information for over 200 conference attendees
             </p>
 
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               <span className="font-semibold">responsive design</span> was
               applied to make sure that a smooth experience was present across
               various devices and screen sizes
             </p>
 
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               to follow best coding practices,{" "}
               <span className="font-semibold">reusable components</span> were
               designed and give us an easier time maintening consistency across
@@ -287,21 +287,21 @@ const Projects = () => {
           </motion.a>
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8">
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               university club made an <span className="font-semibold">app</span>{" "}
               and a <span className="font-semibold">website</span> for our
               school&apos;s annual hackathon, which were used by over 250
               attendees for registration, information display, and check-in
             </p>
 
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               wireframe mockups were translated into{" "}
               <span className="font-semibold">responsive</span>,{" "}
               <span className="font-semibold">user-friendly interfaces</span>{" "}
               with appealing and engaging designs
             </p>
 
-            <p className="font-light opacity-75 text-lg">
+            <p className="font-light opacity-75 text-xl">
               <span className="font-semibold">supabase</span> was used for the
               backend to take advantage of its database tables, edge functions,
               and simple authentication features
