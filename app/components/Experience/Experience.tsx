@@ -29,17 +29,10 @@ const Experience: React.FC = () => {
 
   const { scrollY } = useScroll();
 
-  const scale = useTransform(
-    scrollY,
-    [3000, 4000, 6250, 7250],
-    [1, 1.162, 1.162, 1]
-  );
+  const y = useTransform(scrollY, [3100, 3650], [300, -300]);
 
   return (
-    <motion.div
-      className="h-[3000px] mb-[3000px] bg-white text-black rounded-xl flex items-center justify-center"
-      style={{ scale }}
-    >
+    <motion.div className="h-[700px] bg-white bg-opacity-25 flex items-center justify-center mb-96">
       <p>EXPERIENCE</p>
     </motion.div>
   );

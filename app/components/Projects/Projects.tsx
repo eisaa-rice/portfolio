@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-
 import Image from "next/image";
+
 import "./Projects.css";
 
 const Projects = () => {
@@ -66,10 +66,10 @@ const Projects = () => {
             whileHover="hover"
           >
             <div className="flex flex-col ">
-              <p className="font-semibold text-3xl">code conductor</p>
+              <p className="font-semibold text-3xl">🤖 code conductor</p>
 
               <motion.div
-                className="h-[1px] bg-white opacity-50"
+                className="h-[1px] bg-black opacity-50"
                 initial={{ width: 0 }}
                 variants={{
                   hover: {
@@ -81,7 +81,7 @@ const Projects = () => {
             </div>
 
             <motion.div
-              className="opacity-75 -mb-1 ml-5 flex-shrink-0"
+              className="-mb-1 ml-5 flex-shrink-0"
               initial={{ rotate: 0, x: 0, y: 0, scale: 1 }}
               variants={{
                 hover: {
@@ -123,11 +123,17 @@ const Projects = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 opacity-50 mt-4">
-              <p className="font-extralight">react.js</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                react.js
+              </p>
 
-              <p className="font-extralight">typescript</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                typescript
+              </p>
 
-              <p className="font-extralight">material ui</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                material ui
+              </p>
             </div>
           </div>
         </div>
@@ -148,11 +154,11 @@ const Projects = () => {
           >
             <div className="flex flex-col ">
               <p className="font-semibold text-3xl">
-                international women&apos;s day summit
+                👩 international women&apos;s day summit
               </p>
 
               <motion.div
-                className="h-[1px] bg-white opacity-50"
+                className="h-[1px] bg-black opacity-50"
                 initial={{ width: 0 }}
                 variants={{
                   hover: {
@@ -164,7 +170,7 @@ const Projects = () => {
             </div>
 
             <motion.div
-              className="opacity-75 -mb-1 ml-5 flex-shrink-0"
+              className="-mb-1 ml-5 flex-shrink-0"
               initial={{ rotate: 0, x: 0, y: 0, scale: 1 }}
               variants={{
                 hover: {
@@ -208,11 +214,17 @@ const Projects = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 opacity-50 mt-4">
-              <p className="font-extralight">react.js</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                react.js
+              </p>
 
-              <p className="font-extralight">javascript</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                javascript
+              </p>
 
-              <p className="font-extralight">tailwind css</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                tailwind css
+              </p>
             </div>
           </div>
         </div>
@@ -232,10 +244,10 @@ const Projects = () => {
             whileHover="hover"
           >
             <div className="flex flex-col ">
-              <p className="font-semibold text-3xl">hack dearborn 3</p>
+              <p className="font-semibold text-3xl">🧑‍💻 hack dearborn 3</p>
 
               <motion.div
-                className="h-[1px] bg-white opacity-50"
+                className="h-[1px] bg-black opacity-50"
                 initial={{ width: 0 }}
                 variants={{
                   hover: {
@@ -247,7 +259,7 @@ const Projects = () => {
             </div>
 
             <motion.div
-              className="opacity-75 -mb-1 ml-5 rounded-full flex-shrink-0"
+              className="-mb-1 ml-5 rounded-full flex-shrink-0"
               initial={{
                 rotate: 0,
                 x: 0,
@@ -296,11 +308,17 @@ const Projects = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 opacity-50 mt-4">
-              <p className="font-extralight">react native</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                react native
+              </p>
 
-              <p className="font-extralight">typescript</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                typescript
+              </p>
 
-              <p className="font-extralight">supabase</p>
+              <p className="font-extralight p-2 bg-white rounded-xl">
+                supabase
+              </p>
             </div>
           </div>
         </div>
