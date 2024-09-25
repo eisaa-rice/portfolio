@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import Image from "next/image";
 import "./Projects.css";
 
 const Projects = () => {
   const { scrollY } = useScroll();
+
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
@@ -80,7 +81,7 @@ const Projects = () => {
             </div>
 
             <motion.div
-              className="opacity-75 -mb-1 ml-5"
+              className="opacity-75 -mb-1 ml-5 flex-shrink-0"
               initial={{ rotate: 0, x: 0, y: 0, scale: 1 }}
               variants={{
                 hover: {
@@ -141,7 +142,7 @@ const Projects = () => {
         <div className="row-start-2 row-end-3 lg:row-start-1 lg:row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 lg:my-auto">
           <motion.a
             className="inline-flex items-center"
-            href="https://www.codeconductor.org/"
+            href="https://www.iwdsummit.com/"
             target="_blank"
             whileHover="hover"
           >
@@ -163,7 +164,7 @@ const Projects = () => {
             </div>
 
             <motion.div
-              className="opacity-75 -mb-1 ml-5"
+              className="opacity-75 -mb-1 ml-5 flex-shrink-0"
               initial={{ rotate: 0, x: 0, y: 0, scale: 1 }}
               variants={{
                 hover: {
@@ -226,7 +227,7 @@ const Projects = () => {
         <div className="row-start-2 row-end-3 lg:row-start-1 lg:row-end-2 col-start-1 col-end-2">
           <motion.a
             className="inline-flex items-center"
-            href="https://www.codeconductor.org/"
+            href="https://www.hackdearborn.org/"
             target="_blank"
             whileHover="hover"
           >
@@ -246,7 +247,7 @@ const Projects = () => {
             </div>
 
             <motion.div
-              className="opacity-75 -mb-1 ml-5 rounded-full"
+              className="opacity-75 -mb-1 ml-5 rounded-full flex-shrink-0"
               initial={{
                 rotate: 0,
                 x: 0,

@@ -18,13 +18,13 @@ export default function Home() {
     >
       <Hero />
 
+      {/* <Skills /> */}
+
       <Projects />
 
       <Experience />
 
-      {/* <Skills />
-
-    <Footer /> */}
+      <Footer />
     </motion.div>
   );
 }

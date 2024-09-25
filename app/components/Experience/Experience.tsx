@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import "./Experience.css";
 
@@ -27,40 +27,21 @@ const Experience: React.FC = () => {
     },
   ];
 
+  const { scrollY } = useScroll();
+
+  const scale = useTransform(
+    scrollY,
+    [3000, 4000, 6250, 7250],
+    [1, 1.162, 1.162, 1]
+  );
+
   return (
-    <div className="my-32 sm:mx-20">
-      <div className="grid grid-rows-2 sm:flex sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0 w-[250px] xs:w-[350px] sm:w-auto mx-auto">
-        <div className="row-start-2 row-end-3 bg-green-300 h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] sm:rotate-[3deg] rounded-md mx-auto"></div>
-
-        <div className="row-start-1 row-end-2 sm:rotate-[-1deg] mx-6 sm:w-[300px]">
-          <p className="text-3xl font-light">title</p>
-
-          <p className="text-xl font-bold">company</p>
-
-          <p className="text-lg font-extralight">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus
-            inceptos dignissim convallis phasellus luctus. Ullamcorper bibendum
-            lectus porttitor magnis vel venenatis nisi ultricies ac.
-          </p>
-        </div>
-      </div>
-
-      <div className="grid grid-rows-2 sm:flex sm:flex-row items-center justify-evenly my-24 gap-y-12 md:gap-y-0 w-[250px] xs:w-[350px] sm:w-auto mx-auto">
-        <div className="row-start-1 row-end-2 sm:rotate-[-1deg] mx-6 sm:w-[300px]">
-          <p className="text-3xl font-light">title</p>
-
-          <p className="text-xl font-bold">company</p>
-
-          <p className="text-lg font-extralight">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus
-            inceptos dignissim convallis phasellus luctus. Ullamcorper bibendum
-            lectus porttitor magnis vel venenatis nisi ultricies ac.
-          </p>
-        </div>
-
-        <div className="row-start-2 row-end-3 bg-blue-300 h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] sm:rotate-[3deg] rounded-md mx-auto"></div>
-      </div>
-    </div>
+    <motion.div
+      className="h-[3000px] mb-[3000px] bg-white text-black rounded-xl flex items-center justify-center"
+      style={{ scale }}
+    >
+      <p>EXPERIENCE</p>
+    </motion.div>
   );
 };
 
