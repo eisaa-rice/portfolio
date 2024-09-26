@@ -14,13 +14,13 @@ export default function Home() {
 
   const opacity = useTransform(
     scrollY,
-    [950, 1150, 1800, 1950, 2100, 2700, 2750, 2900, 3050],
-    [0, 1, 1, 0, 1, 1, 0, 0, 1]
+    [950, 1050, 1600, 1700, 1800, 2700, 2800, 2900, 3600, 3700, 3800],
+    [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1]
   );
   const text = useTransform(
     scrollY,
-    [0, 1950, 2900, 6000],
-    ["about 🧔🏼", "about 🧔🏼", "skills 🛠️", "experience 💼"]
+    [0, 1700, 2800, 3700, 9999],
+    ["about 🧔🏼", "about 🧔🏼", "skills 🛠️", "experience 💼", "projects 💻"]
   );
 
   return (
@@ -30,7 +30,7 @@ export default function Home() {
       animate={{ opacity: 100 }}
       transition={{ ease: "easeIn", duration: 1, delay: 2 }}
     >
-      <div className="fixed left-1/2 mt-5 z-50 flex-shrink-0">
+      <div className="fixed left-1/2 transform -translate-x-1/2 mt-5 z-50 flex-shrink-0">
         <motion.p
           initial={{ opacity: 0 }}
           style={{ opacity }}

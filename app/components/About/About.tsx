@@ -30,7 +30,7 @@ const About = () => {
             university of michigan - dearborn
           </span>
           , majoring in <span className="font-semibold">computer science</span>{" "}
-          💻
+          🖥️
         </p>
 
         <p>

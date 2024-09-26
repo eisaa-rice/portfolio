@@ -15,15 +15,3 @@ body {
 
   background-color: rgb(250, 250, 255);
 }
-
-@font-face {
-  font-family: "Century Gothic";
-  src: url("../public/fonts/centurygothic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-.century-gothic {
-  font-family: "Century Gothic", sans-serif;
-}

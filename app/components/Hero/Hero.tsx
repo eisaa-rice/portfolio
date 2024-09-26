@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = () => {
 
   return (
     <div className="flex flex-col items-center justify-start mb-72">
-      <div className="flex items-center justify-between w-full mt-5 mb-32 century-gothic">
+      <div className="flex items-center justify-between w-full mt-5 mb-32">
         <p className="text-sm py-1 px-3 rounded-md bg-white">jésus orozco</p>
 
         <div className="flex items-center gap-5">
@@ -24,8 +24,8 @@ const Hero: React.FC<HeroProps> = () => {
             whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
           >
             <Image
-              height={23.5}
-              width={23.5}
+              height={28}
+              width={28}
               src={"/linkedin.svg"}
               alt="LinkedIn"
             />
@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
           >
-            <Image height={22} width={22} src={"/github.svg"} alt="GitHub" />
+            <Image height={25} width={25} src={"/github.svg"} alt="GitHub" />
           </motion.a>
 
           <motion.a
@@ -46,18 +46,18 @@ const Hero: React.FC<HeroProps> = () => {
             initial={{ rotate: 0, scale: 1 }}
             whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
           >
-            <Image height={25} width={25} src={"/email.svg"} alt="Email" />
+            <Image height={26} width={26} src={"/email.svg"} alt="Email" />
           </motion.a>
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center mb-36">
-        <p className="text-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:mt-32 font-bold">
+        <p className="text-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold md:mt-32 lg:mt-16 2xl:mt-44">
           aspiring software engineer
         </p>
 
         <motion.div
-          className="mt-64 lg:mt-52 xl:mt-64 mx-auto flex flex-col items-center justify-center"
+          className="mt-20 md:mt-64 lg:mt-52 xl:mt-56 mx-auto flex flex-col items-center justify-center"
           initial={{ y: 500 }}
           animate={{ y: 15 }}
           transition={{ delay: 2.5, duration: 2.5, ease: "anticipate" }}
