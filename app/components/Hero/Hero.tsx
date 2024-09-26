@@ -51,13 +51,19 @@ const Hero: React.FC<HeroProps> = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center mb-36">
-        <p className="text-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold md:mt-32 lg:mt-16 2xl:mt-44">
+      <div className="flex flex-col items-start justify-center w-full mt-24">
+        <p className="text-center md:text-start text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold">
+          hi, i&apos;m <span className="text-emerald-400">jésus orozco</span>
+        </p>
+
+        <p className="text-center md:text-start text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-24">
           aspiring software engineer
         </p>
 
+        <p className="p-5 bg-white rounded-xl mt-16">résumé</p>
+
         <motion.div
-          className="mt-20 md:mt-64 lg:mt-52 xl:mt-56 mx-auto flex flex-col items-center justify-center"
+          className="mt-20 md:mt-64 lg:mt-32 mx-auto flex flex-col items-center justify-center"
           initial={{ y: 500 }}
           animate={{ y: 15 }}
           transition={{ delay: 2.5, duration: 2.5, ease: "anticipate" }}

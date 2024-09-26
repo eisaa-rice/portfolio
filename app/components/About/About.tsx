@@ -15,7 +15,7 @@ const About = () => {
 
       <div className="w-full max-w-xl flex flex-col justify-center gap-6 text-2xl font-light opacity-75">
         <p>
-          holá! 👋🏻 as you probably guessed, the name&apos;s{" "}
+          holá! 👋🏻 as you already know, the name&apos;s{" "}
           <span className="font-semibold">jésus orozco</span>!
         </p>
 

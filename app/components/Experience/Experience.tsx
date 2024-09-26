@@ -49,9 +49,50 @@ const Experience: React.FC = () => {
         </div>
 
         <div className="md:ml-16 mt-4">
-          <p className="text-xl font-normal text-center md:text-start opacity-75 mb-4">
-            google developer student club
-          </p>
+          <div className="flex">
+            <motion.a
+              className="inline-flex items-center mb-3 mx-auto md:mx-0"
+              whileHover="hover"
+              href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
+              target="_blank"
+            >
+              <div className="flex flex-col">
+                <p className="text-xl font-normal text-center md:text-start opacity-75">
+                  google developer groups
+                </p>
+
+                <motion.div
+                  className="h-[1px] bg-black opacity-50"
+                  initial={{ width: 0 }}
+                  variants={{
+                    hover: {
+                      width: "100%",
+                      transition: { duration: 0.3 },
+                    },
+                  }}
+                />
+              </div>
+
+              <motion.div
+                className="hidden xs:block -mb-1 ml-5 flex-shrink-0"
+                initial={{ x: 0, y: 0 }}
+                variants={{
+                  hover: {
+                    x: 3,
+                    y: -3,
+                    transition: { duration: 0.2 },
+                  },
+                }}
+              >
+                <Image
+                  height={30}
+                  width={30}
+                  src={"/external-link.svg"}
+                  alt=""
+                />
+              </motion.div>
+            </motion.a>
+          </div>
 
           <div className="flex flex-col items-center md:items-baseline justify-between mb-8 text-center md:text-start">
             <p className="font-semibold text-3xl mb-6">
@@ -59,15 +100,15 @@ const Experience: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <p className="font-extralight p-2 bg-white rounded-xl flex-shrink-0">
+              <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0">
                 feb 2024 - current
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl flex-shrink-0">
+              <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0">
                 dearborn, MI
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl flex-shrink-0">
+              <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0">
                 volunteer
               </p>
             </div>

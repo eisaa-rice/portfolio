@@ -54,7 +54,6 @@ const Projects = () => {
           className="row-start-1 row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 bg-white w-64 sm:w-96 h-96 m-auto rounded-2xl"
           href="https://www.codeconductor.org/"
           target="_blank"
-          whileHover={{}}
           style={{ y: y1, rotate: rotate1 }}
         />
 
@@ -152,7 +151,7 @@ const Projects = () => {
             target="_blank"
             whileHover="hover"
           >
-            <div className="flex flex-col ">
+            <div className="flex flex-col">
               <p className="font-semibold text-3xl">
                 👩 international women&apos;s day summit
               </p>
