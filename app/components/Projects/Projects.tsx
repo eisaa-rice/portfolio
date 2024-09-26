@@ -121,7 +121,7 @@ const Projects = () => {
               algorithm easy and simple
             </p>
 
-            <div className="flex flex-wrap gap-4 opacity-50 mt-4">
+            <div className="flex flex-wrap gap-4 mt-4">
               <p className="font-extralight p-2 bg-white rounded-xl">
                 react.js
               </p>
@@ -212,7 +212,7 @@ const Projects = () => {
               the application
             </p>
 
-            <div className="flex flex-wrap gap-4 opacity-50 mt-4">
+            <div className="flex flex-wrap gap-4 mt-4">
               <p className="font-extralight p-2 bg-white rounded-xl">
                 react.js
               </p>
@@ -306,7 +306,7 @@ const Projects = () => {
               and simple authentication features
             </p>
 
-            <div className="flex flex-wrap gap-4 opacity-50 mt-4">
+            <div className="flex flex-wrap gap-4 mt-4">
               <p className="font-extralight p-2 bg-white rounded-xl">
                 react native
               </p>

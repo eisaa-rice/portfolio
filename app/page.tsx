@@ -14,12 +14,12 @@ export default function Home() {
 
   const opacity = useTransform(
     scrollY,
-    [950, 1050, 1600, 1700, 1800, 2700, 2800, 2900, 3600, 3700, 3800],
+    [950, 1050, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700],
     [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1]
   );
   const text = useTransform(
     scrollY,
-    [0, 1700, 2800, 3700, 9999],
+    [0, 1700, 2700, 3600, 9999],
     ["about 🧔🏼", "about 🧔🏼", "skills 🛠️", "experience 💼", "projects 💻"]
   );
 
