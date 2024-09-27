@@ -33,7 +33,7 @@ export default function Home() {
   const rangeOne = isMobile
     ? [550, 650, 2000, 2100, 2200, 3800, 3900, 4000, 5700, 5800, 5900]
     : isTablet
-    ? [950, 1050, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700]
+    ? [1050, 1150, 2400, 2500, 2600, 3700, 3800, 3900, 5100, 5200, 5300]
     : [950, 1050, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700];
   const opacity = useTransform(
     scrollY,
@@ -44,7 +44,7 @@ export default function Home() {
   const rangeTwo = isMobile
     ? [0, 2100, 3900, 5800, 9999]
     : isTablet
-    ? [0, 1700, 2700, 3600, 9999]
+    ? [0, 2500, 3800, 5200, 9999]
     : [0, 1700, 2700, 3600, 9999];
   const text = useTransform(scrollY, rangeTwo, [
     "about 🧔🏼",
