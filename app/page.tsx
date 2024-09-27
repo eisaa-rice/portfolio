@@ -7,21 +7,52 @@ import Experience from "./components/Experience/Experience";
 import Skills from "./components/Skills/Skills";
 import Footer from "./components/Footer/Footer";
 
+import { useState, useEffect } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function Home() {
   const { scrollY } = useScroll();
 
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      const width = window.innerWidth;
+
+      setIsMobile(width <= 768);
+      setIsTablet(width > 768 && width <= 1024);
+    };
+
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
+
+  const rangeOne = isMobile
+    ? [550, 650, 2000, 2100, 2200, 3800, 3900, 4000, 5700, 5800, 5900]
+    : isTablet
+    ? [950, 1050, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700]
+    : [950, 1050, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700];
   const opacity = useTransform(
     scrollY,
-    [950, 1050, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700],
+    rangeOne,
     [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1]
   );
-  const text = useTransform(
-    scrollY,
-    [0, 1700, 2700, 3600, 9999],
-    ["about 🧔🏼", "about 🧔🏼", "skills 🛠️", "experience 💼", "projects 💻"]
-  );
+
+  const rangeTwo = isMobile
+    ? [0, 2100, 3900, 5800, 9999]
+    : isTablet
+    ? [0, 1700, 2700, 3600, 9999]
+    : [0, 1700, 2700, 3600, 9999];
+  const text = useTransform(scrollY, rangeTwo, [
+    "about 🧔🏼",
+    "about 🧔🏼",
+    "skills 🛠️",
+    "experience 💼",
+    "projects 💻",
+  ]);
 
   return (
     <motion.div
@@ -48,7 +79,7 @@ export default function Home() {
 
       <Experience />
 
-      <Projects />
+      <Projects isMobile={isMobile} isTablet={isTablet} />
 
       <Footer />
     </motion.div>

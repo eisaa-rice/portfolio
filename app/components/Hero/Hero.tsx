@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = () => {
         </motion.a>
       </div>
 
-      <div className="flex flex-col items-start justify-center w-full mt-16 md:mt-60">
+      <div className="flex flex-col items-start justify-center w-full mt-10 md:mt-60">
         <div className="inline-flex flex-col">
           <p className="text-center md:text-start text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold">
             hi, i&apos;m{" "}
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = () => {
 
           <motion.svg
             className="md:-ml-8 mt-3 w-full h-full"
-            viewBox="0 -5 1144 140"
+            viewBox="0 -10 1144 137"
             xmlns="http://www.w3.org/2000/svg"
           >
             <motion.path
@@ -63,16 +63,16 @@ const Hero: React.FC<HeroProps> = () => {
               strokeWidth="5"
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
-              transition={{ duration: 1, delay: 3 }}
+              transition={{ duration: 1, delay: 3, ease: "easeOut" }}
             />
           </motion.svg>
         </div>
 
-        <p className="text-center md:text-start text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-20">
+        <p className="text-center md:text-start text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-8 md:mt-20">
           aspiring <span className="font-bold">software engineer</span>
         </p>
 
-        <p className="p-4 text-xl bg-white rounded-xl mt-16 border border-black border-opacity-25 mx-auto md:mx-0">
+        <p className="p-4 text-xl bg-white rounded-xl mt-10 md:mt-16 border border-black border-opacity-25 mx-auto md:mx-0">
           résumé 📄
         </p>
 

@@ -6,25 +6,8 @@ import Image from "next/image";
 
 import "./Projects.css";
 
-const Projects = () => {
+const Projects = ({ isMobile, isTablet }) => {
   const { scrollY } = useScroll();
-
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-
-  useEffect(() => {
-    const updateScreenSize = () => {
-      const width = window.innerWidth;
-
-      setIsMobile(width <= 768);
-      setIsTablet(width > 768 && width <= 1024);
-    };
-
-    updateScreenSize();
-    window.addEventListener("resize", updateScreenSize);
-
-    return () => window.removeEventListener("resize", updateScreenSize);
-  }, []);
 
   const rangeOne = isMobile ? [550, 1350] : isTablet ? [75, 1675] : [700, 1500];
   const y1 = useTransform(scrollY, rangeOne, [300, -300]);

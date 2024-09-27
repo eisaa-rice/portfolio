@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion, useScroll } from "framer-motion";
+import { animate, easeOut, motion, useScroll } from "framer-motion";
 
 import "./About.css";
 
@@ -10,10 +10,34 @@ const About = () => {
   const { scrollY } = useScroll();
 
   return (
-    <div className="flex flex-col lg:flex-row justify-evenly gap-12 mb-24">
-      <div className="bg-white h-[400px] w-full max-w-96 mx-auto lg:mx-0 rounded-3xl mb-16 lg:mb-0"></div>
+    <div className="flex flex-col xl:flex-row gap-24 mb-24 mx-auto">
+      <div className="flex items-center justify-center xl:justify-start overflow-hidden relative xs:static mx-auto xl:mx-0 w-full max-w-[400px]">
+        <motion.svg
+          className="-ml-12 mt-3 xl:mt-14 w-[461px] h-[430px] z-50 absolute"
+          viewBox="0 -10 461 476"
+          xmlns="http://www.w3.org/2000/svg"
+          whileInView="squiggly"
+          viewport={{ once: true }}
+        >
+          <motion.path
+            d="M19.6759 1C24.4763 30.0738 22.6007 88.5505 19.6759 116.44C0.910865 295.372 -8.25346 387.082 19.6759 426.204C23.6035 439.244 48.9296 464.649 65.0612 439.672C89.4994 401.833 129.211 471.097 149.286 446.726C165.345 427.23 188.998 431.548 193.362 439.672C195.689 449.505 216.848 489.117 251.839 439.672C285.878 391.572 251.839 493.544 460 446.726"
+            stroke="black"
+            fill="none"
+            strokeWidth="5"
+            initial={{ pathLength: 0 }}
+            variants={{
+              squiggly: {
+                pathLength: 1,
+                transition: { duration: 1, delay: 1, ease: "easeIn" },
+              },
+            }}
+          />
+        </motion.svg>
 
-      <div className="w-full max-w-xl flex flex-col justify-center gap-6 text-2xl font-light opacity-75">
+        <div className="bg-red-300 h-[400px] w-full rounded-3xl mb-16 xl:mb-0"></div>
+      </div>
+
+      <div className="w-full flex flex-col mx-auto xl:mx-0 justify-center gap-6 text-2xl font-light opacity-75">
         <p>
           holá! 👋🏻 as you already know, the name&apos;s{" "}
           <span className="font-semibold">jésus orozco</span>!
@@ -43,16 +67,3 @@ const About = () => {
 };
 
 export default About;
-/*
- <div className="flex items-center">
-          <p className="opacity-25 text-xl font-extralight">résumé</p>
-
-          <Image
-            className="opacity-50 ml-1 flex-shrink-0"
-            height={30}
-            width={30}
-            src={"/arrow-circle-down.svg"}
-            alt=""
-          />
-  </div>
-*/

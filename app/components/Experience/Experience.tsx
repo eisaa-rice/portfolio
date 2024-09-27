@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
 
   return (
     <motion.div className="min-h-[700px] flex flex-col items-center justify-center gap-32 mb-96">
-      <div className="flex flex-col md:flex-row justify-center w-full rounded-xl">
+      <div className="flex flex-col md:flex-row md:-ml-20 justify-center w-full rounded-xl">
         <div className="flex flex-col items-center">
           <div className="bg-white h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 md:mb-0 flex items-center justify-center">
             <Image
