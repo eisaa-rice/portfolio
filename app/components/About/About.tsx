@@ -6,7 +6,11 @@ import { animate, easeOut, motion, useScroll } from "framer-motion";
 
 import "./About.css";
 
-const About = () => {
+interface AboutProps {
+  isMobile: boolean;
+  isTablet: boolean;
+}
+const About: React.FC<AboutProps> = ({ isMobile, isTablet }) => {
   const { scrollY } = useScroll();
 
   return (
@@ -28,7 +32,11 @@ const About = () => {
             variants={{
               squiggly: {
                 pathLength: 1,
-                transition: { duration: 1, delay: 1, ease: "easeIn" },
+                transition: {
+                  duration: 1,
+                  delay: isMobile ? 1.5 : isTablet ? 1 : 0.75,
+                  ease: "easeIn",
+                },
               },
             }}
           />
@@ -58,8 +66,9 @@ const About = () => {
         </p>
 
         <p>
-          i have a passion for technology and enjoy working on innovative
-          projects that make a difference
+          i currently volunteer as a developer for my university&apos;s{" "}
+          <span className="font-semibold">google developer group</span>
+          <span className="font-semibold"></span>
         </p>
       </div>
     </div>

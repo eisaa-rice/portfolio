@@ -34,7 +34,7 @@ export default function Home() {
     ? [550, 650, 2000, 2100, 2200, 3800, 3900, 4000, 5700, 5800, 5900]
     : isTablet
     ? [1050, 1150, 2400, 2500, 2600, 3700, 3800, 3900, 5100, 5200, 5300]
-    : [950, 1050, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700];
+    : [750, 850, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700];
   const opacity = useTransform(
     scrollY,
     rangeOne,
@@ -73,7 +73,7 @@ export default function Home() {
 
       <Hero />
 
-      <About />
+      <About isMobile={isMobile} isTablet={isTablet} />
 
       <Skills />
 
