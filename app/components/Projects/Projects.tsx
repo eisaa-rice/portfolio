@@ -6,7 +6,11 @@ import Image from "next/image";
 
 import "./Projects.css";
 
-const Projects = ({ isMobile, isTablet }) => {
+interface ProjectsProps {
+  isMobile: boolean;
+  isTablet: boolean;
+}
+const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
   const { scrollY } = useScroll();
 
   const rangeOne = isMobile ? [550, 1350] : isTablet ? [75, 1675] : [700, 1500];
