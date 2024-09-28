@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = () => {
       <div className="inline-flex flex-col items-center justify-center mx-auto">
         <div className="flex items-center justify-center h-[225px] w-[225px] md:h-[250px] md:w-[250px] bg-white rounded-full flex-shrink-0 mb-6 sm:mb-12 shadow-sm">
           <motion.svg
-            className="absolute h-[225px] w-[225px] md:h-[250px] md:w-[250px] z-50"
+            className="absolute h-[225px] w-[225px] md:h-[250px] md:w-[250px] z-30"
             viewBox="0 -10 311 340"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -63,12 +63,12 @@ const Hero: React.FC<HeroProps> = () => {
           />
         </motion.svg>
 
-        <p className="opacity-75 font-extralight italic -mt-3 xl:-mt-16">
+        <p className="rounded-3xl font-light text-xl sm:text-1xl md:text-2xl lg:text-3xl -mt-1">
           aspiring software developer
         </p>
       </div>
 
-      <p className="p-4 text-xl bg-white rounded-xl mt-28 border border-black border-opacity-25 mx-auto">
+      <p className="p-4 text-xl bg-white rounded-xl mt-16 border border-black border-opacity-25 mx-auto">
         résumé 📄
       </p>
     </div>

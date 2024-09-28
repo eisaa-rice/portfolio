@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = ({ isMobile, isTablet }) => {
     <div className="flex flex-col xl:flex-row gap-24 mb-24 mx-auto">
       <div className="flex items-center justify-center xl:justify-start overflow-hidden relative xs:static mx-auto xl:mx-0 w-full max-w-[400px]">
         <motion.svg
-          className="-ml-12 mt-3 xl:mt-14 w-[461px] h-[430px] z-50 absolute"
+          className="-ml-12 mt-3 xl:mt-14 w-[461px] h-[430px] z-30 absolute"
           viewBox="0 -10 461 476"
           xmlns="http://www.w3.org/2000/svg"
           whileInView="squiggly"
@@ -34,7 +34,7 @@ const About: React.FC<AboutProps> = ({ isMobile, isTablet }) => {
                 pathLength: 1,
                 transition: {
                   duration: 1,
-                  delay: isMobile ? 1.5 : isTablet ? 1 : 0.75,
+                  delay: isMobile ? 1 : isTablet ? 0.875 : 0.75,
                   ease: "easeIn",
                 },
               },
