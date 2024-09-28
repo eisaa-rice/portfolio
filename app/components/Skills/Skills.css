@@ -1,8 +1,0 @@
-.filter {
-  filter: grayscale(1) brightness(0); /* Makes the image fully black */
-  transition: filter 0.3s ease; /* Smooth transition on hover */
-}
-.filter:hover {
-  cursor: pointer;
-  filter: none;
-}
