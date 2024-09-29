@@ -31,10 +31,10 @@ export default function Home() {
   }, []);
 
   const rangeOne = isMobile
-    ? [550, 650, 2000, 2100, 2200, 3800, 3900, 4000, 5700, 5800, 5900]
+    ? [550, 650, 2000, 2100, 2200, 3700, 3800, 3900, 5600, 5700, 5800]
     : isTablet
     ? [1050, 1150, 2400, 2500, 2600, 3700, 3800, 3900, 5100, 5200, 5300]
-    : [750, 850, 1600, 1700, 1800, 2600, 2700, 2800, 3500, 3600, 3700];
+    : [900, 1000, 1600, 1700, 1800, 2800, 2900, 3000, 3800, 3900, 4000];
   const opacity = useTransform(
     scrollY,
     rangeOne,
@@ -42,10 +42,10 @@ export default function Home() {
   );
 
   const rangeTwo = isMobile
-    ? [0, 2100, 3900, 5800, 9999]
+    ? [0, 2100, 3800, 5700, 9999]
     : isTablet
     ? [0, 2500, 3800, 5200, 9999]
-    : [0, 1700, 2700, 3600, 9999];
+    : [0, 1700, 2900, 3900, 9999];
   const text = useTransform(scrollY, rangeTwo, [
     "about 🧔🏼",
     "about 🧔🏼",
@@ -59,7 +59,7 @@ export default function Home() {
       className="flex flex-col mx-4 xs:mx-16 sm:mx-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 100 }}
-      transition={{ ease: "easeIn", duration: 1, delay: 2 }}
+      transition={{ ease: "easeIn", duration: 1, delay: 3 }}
     >
       <div className="fixed left-1/2 transform -translate-x-1/2 mt-5 z-50 flex-shrink-0">
         <motion.p
@@ -73,7 +73,7 @@ export default function Home() {
 
       <Hero />
 
-      <About isMobile={isMobile} isTablet={isTablet} />
+      <About />
 
       <Skills />
 

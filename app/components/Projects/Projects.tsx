@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
@@ -13,23 +13,27 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
   const { scrollY } = useScroll();
 
-  const rangeOne = isMobile ? [550, 1350] : isTablet ? [75, 1675] : [700, 1500];
+  const rangeOne = isMobile
+    ? [5475, 6475]
+    : isTablet
+    ? [75, 1675]
+    : [3500, 4500];
   const y1 = useTransform(scrollY, rangeOne, [300, -300]);
   const rotate1 = useTransform(scrollY, rangeOne, [5, -5]);
 
   const rangeTwo = isMobile
-    ? [1950, 2950]
+    ? [7700, 8700]
     : isTablet
     ? [1250, 2850]
-    : [1450, 2450];
+    : [4050, 6050];
   const y2 = useTransform(scrollY, rangeTwo, [300, -300]);
   const rotate2 = useTransform(scrollY, rangeTwo, [-5, 5]);
 
   const rangeThree = isMobile
-    ? [3350, 4350]
+    ? [9700, 10700]
     : isTablet
     ? [2400, 4000]
-    : [2350, 3350];
+    : [5450, 6450];
   const y3 = useTransform(scrollY, rangeThree, [300, -300]);
   const rotate3 = useTransform(scrollY, rangeThree, [5, -5]);
 
@@ -38,7 +42,7 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-24">
         <motion.a
-          className="row-start-1 row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 bg-white w-64 sm:w-96 h-96 m-auto rounded-2xl"
+          className="row-start-1 row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 bg-blue-300 w-64 sm:w-96 h-96 m-auto rounded-2xl"
           href="https://www.codeconductor.org/"
           target="_blank"
           style={{ y: y1, rotate: rotate1 }}
@@ -127,7 +131,7 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
 
       <div className="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-24">
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 bg-white w-64 sm:w-96 h-96 m-auto rounded-2xl"
+          className="row-start-1 row-end-2 col-start-1 col-end-2 bg-red-300 w-64 sm:w-96 h-96 m-auto rounded-2xl"
           style={{ y: y2, rotate: rotate2 }}
         />
 
@@ -218,7 +222,7 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
 
       <div className="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-24 lg:my-auto">
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 bg-white w-64 sm:w-96 h-96 m-auto rounded-2xl"
+          className="row-start-1 row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 bg-emerald-300 w-64 sm:w-96 h-96 m-auto rounded-2xl"
           style={{ y: y3, rotate: rotate3 }}
         />
 

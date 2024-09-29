@@ -2,17 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { animate, easeOut, motion, useScroll } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 import "./About.css";
 
-interface AboutProps {
-  isMobile: boolean;
-  isTablet: boolean;
-}
-const About: React.FC<AboutProps> = ({ isMobile, isTablet }) => {
-  const { scrollY } = useScroll();
-
+const About = () => {
   return (
     <div className="flex flex-col xl:flex-row gap-24 mb-24 mx-auto">
       <div className="flex items-center justify-center xl:justify-start overflow-hidden relative xs:static mx-auto xl:mx-0 w-full max-w-[400px]">
@@ -34,7 +28,7 @@ const About: React.FC<AboutProps> = ({ isMobile, isTablet }) => {
                 pathLength: 1,
                 transition: {
                   duration: 1,
-                  delay: isMobile ? 1 : isTablet ? 0.875 : 0.75,
+                  delay: 0.5,
                   ease: "easeIn",
                 },
               },
@@ -42,7 +36,7 @@ const About: React.FC<AboutProps> = ({ isMobile, isTablet }) => {
           />
         </motion.svg>
 
-        <div className="bg-red-300 h-[400px] w-full rounded-3xl mb-16 xl:mb-0"></div>
+        <div className="bg-white h-[400px] w-full rounded-3xl mb-16 xl:mb-0"></div>
       </div>
 
       <div className="w-full flex flex-col mx-auto xl:mx-0 justify-center gap-6 text-2xl font-light opacity-75">
