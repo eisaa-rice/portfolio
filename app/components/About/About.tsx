@@ -36,7 +36,7 @@ const About = () => {
           />
         </motion.svg>
 
-        <div className="bg-white h-[400px] w-full rounded-3xl mb-16 xl:mb-0"></div>
+        <div className="bg-white shadow-sm h-[400px] w-full rounded-3xl mb-16 xl:mb-0"></div>
       </div>
 
       <div className="w-full flex flex-col mx-auto xl:mx-0 justify-center gap-6 text-2xl font-light opacity-75">

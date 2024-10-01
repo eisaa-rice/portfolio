@@ -15,13 +15,15 @@ export default function Home() {
 
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [isPC, setIsPC] = useState(false);
 
   useEffect(() => {
     const updateScreenSize = () => {
       const width = window.innerWidth;
 
       setIsMobile(width <= 768);
-      setIsTablet(width > 768 && width <= 1024);
+      setIsTablet(width > 768 && width < 1024);
+      setIsPC(width >= 1920);
     };
 
     updateScreenSize();
@@ -31,9 +33,9 @@ export default function Home() {
   }, []);
 
   const rangeOne = isMobile
-    ? [550, 650, 2000, 2100, 2200, 3700, 3800, 3900, 5600, 5700, 5800]
+    ? [550, 650, 2000, 2100, 2200, 3650, 3750, 3850, 5600, 5700, 5800]
     : isTablet
-    ? [1050, 1150, 2400, 2500, 2600, 3700, 3800, 3900, 5100, 5200, 5300]
+    ? [950, 1050, 2350, 2450, 2550, 3550, 3650, 3750, 5000, 5100, 5200]
     : [900, 1000, 1600, 1700, 1800, 2800, 2900, 3000, 3800, 3900, 4000];
   const opacity = useTransform(
     scrollY,
@@ -42,9 +44,9 @@ export default function Home() {
   );
 
   const rangeTwo = isMobile
-    ? [0, 2100, 3800, 5700, 9999]
+    ? [0, 2100, 3750, 5700, 9999]
     : isTablet
-    ? [0, 2500, 3800, 5200, 9999]
+    ? [0, 2450, 3650, 5100, 9999]
     : [0, 1700, 2900, 3900, 9999];
   const text = useTransform(scrollY, rangeTwo, [
     "about 🧔🏼",
@@ -59,13 +61,13 @@ export default function Home() {
       className="flex flex-col mx-4 xs:mx-16 sm:mx-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 100 }}
-      transition={{ ease: "easeIn", duration: 1, delay: 3 }}
+      transition={{ ease: "easeIn", duration: 1, delay: 2 }}
     >
       <div className="fixed left-1/2 transform -translate-x-1/2 mt-5 z-50 flex-shrink-0">
         <motion.p
           initial={{ opacity: 0 }}
           style={{ opacity }}
-          className="font-semibold p-3 rounded-xl bg-white"
+          className="font-semibold p-3 rounded-xl bg-white shadow-sm"
         >
           {text}
         </motion.p>
@@ -79,7 +81,7 @@ export default function Home() {
 
       <Experience />
 
-      <Projects isMobile={isMobile} isTablet={isTablet} />
+      <Projects />
 
       <Footer />
     </motion.div>

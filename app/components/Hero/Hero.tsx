@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = () => {
         </p>
       </div>
 
-      <p className="p-4 text-xl bg-white rounded-xl mt-16 border border-black border-opacity-25 mx-auto">
+      <p className="p-4 text-xl bg-white rounded-xl mt-16 shadow-sm mx-auto">
         résumé 📄
       </p>
     </div>

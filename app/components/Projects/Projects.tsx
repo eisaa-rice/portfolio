@@ -6,49 +6,14 @@ import Image from "next/image";
 
 import "./Projects.css";
 
-interface ProjectsProps {
-  isMobile: boolean;
-  isTablet: boolean;
-}
-const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
-  const { scrollY } = useScroll();
-
-  const rangeOne = isMobile
-    ? [5475, 6475]
-    : isTablet
-    ? [75, 1675]
-    : [3500, 4500];
-  const y1 = useTransform(scrollY, rangeOne, [300, -300]);
-  const rotate1 = useTransform(scrollY, rangeOne, [5, -5]);
-
-  const rangeTwo = isMobile
-    ? [7700, 8700]
-    : isTablet
-    ? [1250, 2850]
-    : [4050, 6050];
-  const y2 = useTransform(scrollY, rangeTwo, [300, -300]);
-  const rotate2 = useTransform(scrollY, rangeTwo, [-5, 5]);
-
-  const rangeThree = isMobile
-    ? [9700, 10700]
-    : isTablet
-    ? [2400, 4000]
-    : [5450, 6450];
-  const y3 = useTransform(scrollY, rangeThree, [300, -300]);
-  const rotate3 = useTransform(scrollY, rangeThree, [5, -5]);
-
+const Projects = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-y-[500px]">
+    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px]">
       {/* SELECTED PROJECTS */}
-      <div className="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-24">
-        <motion.a
-          className="row-start-1 row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 bg-blue-300 w-64 sm:w-96 h-96 m-auto rounded-2xl"
-          href="https://www.codeconductor.org/"
-          target="_blank"
-          style={{ y: y1, rotate: rotate1 }}
-        />
+      <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
+        <motion.div className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl mb-44 xl:my-auto" />
 
-        <div className="row-start-2 row-end-3 lg:row-start-1 lg:row-end-2 col-start-1 col-end-2 lg:my-auto">
+        <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:my-auto">
           <motion.a
             className="inline-flex items-center"
             href="https://www.codeconductor.org/"
@@ -113,15 +78,15 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-4">
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 react.js
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 typescript
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 material ui
               </p>
             </div>
@@ -129,13 +94,10 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
         </div>
       </div>
 
-      <div className="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-24">
-        <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 bg-red-300 w-64 sm:w-96 h-96 m-auto rounded-2xl"
-          style={{ y: y2, rotate: rotate2 }}
-        />
+      <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
+        <motion.div className="row-start-1 row-end-2 col-start-1 col-end-2 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl mb-44 xl:my-auto" />
 
-        <div className="row-start-2 row-end-3 lg:row-start-1 lg:row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 lg:my-auto">
+        <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 xl:my-auto">
           <motion.a
             className="inline-flex items-center"
             href="https://www.iwdsummit.com/"
@@ -204,15 +166,15 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-4">
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 react.js
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 javascript
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 tailwind css
               </p>
             </div>
@@ -220,13 +182,10 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
         </div>
       </div>
 
-      <div className="grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-24 lg:my-auto">
-        <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 lg:col-start-2 lg:col-end-3 bg-emerald-300 w-64 sm:w-96 h-96 m-auto rounded-2xl"
-          style={{ y: y3, rotate: rotate3 }}
-        />
+      <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
+        <motion.div className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl mb-44 xl:my-auto" />
 
-        <div className="row-start-2 row-end-3 lg:row-start-1 lg:row-end-2 col-start-1 col-end-2">
+        <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2">
           <motion.a
             className="inline-flex items-center"
             href="https://www.hackdearborn.org/"
@@ -298,15 +257,15 @@ const Projects: React.FC<ProjectsProps> = ({ isMobile, isTablet }) => {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-4">
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 react native
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 typescript
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl">
+              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
                 supabase
               </p>
             </div>
