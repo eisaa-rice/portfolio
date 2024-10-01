@@ -8,11 +8,11 @@ import "./Hero.css";
 
 interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
-  const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [0, 500], [0.75, 0]);
-
   return (
-    <div className="flex flex-col justify-center items-start w-full mt-4 md:mt-36 lg:mt-44 xl:mt-40 2xl:mt-44 mb-96">
+    <div
+      className="flex flex-col justify-center items-start w-full mb-96 h-screen lg:h-auto lg:mt-32
+        "
+    >
       <div className="inline-flex flex-col items-center justify-center mx-auto">
         <div className="flex items-center justify-center h-[225px] w-[225px] md:h-[250px] md:w-[250px] bg-white rounded-full flex-shrink-0 mb-6 sm:mb-12 shadow-sm">
           <motion.svg
