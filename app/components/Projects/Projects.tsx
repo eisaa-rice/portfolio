@@ -9,53 +9,33 @@ import "./Projects.css";
 const Projects = () => {
   const { scrollY } = useScroll();
 
-  const [range1, setRange1] = useState([0, 1000]);
+  const [scrollRange, setScrollRange] = useState([0, 1000]);
 
   useEffect(() => {
-    const updateScreenSize = () => {
-      const width = window.innerWidth;
+    // Function to calculate viewport height based pixel values from percentages
+    const getVHValue = (percentage: any) =>
+      window.innerHeight * (percentage / 100);
 
-      if (width <= 320) {
-        setRange1([500, 1500]);
-      } else if (width > 320 && width <= 344) {
-        setRange1([600, 1600]);
-      } else if (width > 344 && width <= 360) {
-        setRange1([700, 1700]);
-      } else if (width > 360 && width <= 380) {
-        setRange1([800, 1800]);
-      } else if (width > 380 && width <= 412) {
-        setRange1([900, 1900]);
-      } else if (width > 412 && width <= 540) {
-        setRange1([1000, 2000]);
-      } else if (width > 540 && width <= 768) {
-        setRange1([1100, 2100]);
-      } else if (width > 768 && width <= 820) {
-        setRange1([1200, 2200]);
-      } else if (width > 820 && width <= 912) {
-        setRange1([1300, 2300]);
-      } else if (width > 912 && width <= 1024) {
-        setRange1([1400, 2400]);
-      } else {
-        // desktop sizes > 1024
-        setRange1([3350, 4350]);
-      }
+    const updateRanges = () => {
+      setScrollRange([getVHValue(370), getVHValue(470)]);
     };
 
-    updateScreenSize();
-    window.addEventListener("resize", updateScreenSize);
+    updateRanges();
+    window.addEventListener("resize", updateRanges);
 
-    return () => window.removeEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateRanges);
   }, []);
 
-  const y1 = useTransform(scrollY, range1, [300, -300]);
-  const rotate1 = useTransform(scrollY, range1, [5, -5]);
+  const y1 = useTransform(scrollY, scrollRange, ["40%", "-40%"]);
+  const rotate1 = useTransform(scrollY, scrollRange, [5, -5]);
 
   return (
     <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px]">
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl mb-44 xl:my-auto"
+          // mb-44 xl:
+          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl my-auto"
           initial={{ y: -300, rotate: -5 }}
           style={{ y: y1, rotate: rotate1 }}
         />
@@ -142,7 +122,10 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
-        <motion.div className="row-start-1 row-end-2 col-start-1 col-end-2 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl mb-44 xl:my-auto" />
+        <motion.div
+          // mb-44 xl:
+          className="row-start-1 row-end-2 col-start-1 col-end-2 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl my-auto"
+        />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 xl:my-auto">
           <motion.a
@@ -230,7 +213,10 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
-        <motion.div className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl mb-44 xl:my-auto" />
+        <motion.div
+          // mb-44 xl:
+          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl my-auto"
+        />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2">
           <motion.a
