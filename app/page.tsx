@@ -22,7 +22,12 @@ export default function Home() {
     const updateScreenSize = () => {
       const width = window.innerWidth;
 
-      if (width <= 344) {
+      if (width <= 320) {
+        setOpacityRange([
+          900, 1000, 2600, 2700, 2800, 4150, 4250, 4350, 6400, 6500, 6600,
+        ]);
+        setHeaderRange([0, 2700, 4250, 6500, 9999]);
+      } else if (width > 320 && width <= 344) {
         setOpacityRange([
           800, 900, 2300, 2400, 2500, 3950, 4050, 4150, 5900, 6000, 6100,
         ]);
@@ -70,9 +75,9 @@ export default function Home() {
       } else {
         // desktop sizes > 1024
         setOpacityRange([
-          900, 1000, 1600, 1700, 1800, 2800, 2900, 3000, 3800, 3900, 4000,
+          900, 1000, 1600, 1700, 1800, 2700, 2800, 2900, 3800, 3900, 4000,
         ]);
-        setHeaderRange([0, 1700, 2900, 3900, 9999]);
+        setHeaderRange([0, 1700, 2800, 3900, 9999]);
       }
     };
 
