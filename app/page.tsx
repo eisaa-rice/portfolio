@@ -15,7 +15,6 @@ export default function Home() {
 
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [isPC, setIsPC] = useState(false);
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -23,7 +22,6 @@ export default function Home() {
 
       setIsMobile(width <= 768);
       setIsTablet(width > 768 && width < 1024);
-      setIsPC(width >= 1920);
     };
 
     updateScreenSize();

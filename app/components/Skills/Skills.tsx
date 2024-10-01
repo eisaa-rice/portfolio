@@ -11,36 +11,15 @@ interface SkillProps {
     alt: string;
     height: number;
     width: number;
-    yDelay: number;
-    rotateDelay: number;
     style?: React.CSSProperties;
   };
 }
 const Skill: React.FC<SkillProps> = ({
-  skills: { src, alt, height, width, yDelay, rotateDelay, style },
+  skills: { src, alt, height, width, style },
 }) => {
   return (
-    <motion.div
-      className="flex items-center justify-center flex-shrink-0 h-[100px] w-[100px] bg-white rounded-full shadow-md"
-      whileInView="circle"
-      initial={{ rotate: 0, scale: 1, y: 0 }}
-      whileHover={{ scale: 1.2 }}
-      animate={{
-        rotate: [-5, 5, -5],
-        y: [-10, 0, -10],
-      }}
-      transition={{
-        scale: { duration: 0.25 },
-        rotate: {
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: rotateDelay,
-        },
-        y: { duration: 5, repeat: Infinity, ease: "easeOut", delay: yDelay },
-      }}
-    >
-      <motion.div className="absolute">
+    <div className="flex items-center justify-center flex-shrink-0 h-[100px] w-[100px] bg-white rounded-full shadow-sm">
+      <div className="absolute">
         <Image
           src={src}
           alt={alt}
@@ -48,8 +27,8 @@ const Skill: React.FC<SkillProps> = ({
           width={width}
           style={style}
         />
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
