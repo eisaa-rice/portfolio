@@ -17,25 +17,15 @@ const Experience: React.FC = () => {
     },
   ];
 
-  const education = [
-    {
-      time: "SEP 2021 - CURRENT",
-      company: "university of michigan - dearborn",
-      link: "https://umdearborn.edu/",
-      title: "major in computer and information science",
-      desc: "Felis nascetur in tortor; odio feugiat interdum. Nulla id ad mi risus turpis consectetur cursus. Tincidunt euismod praesent ac pulvinar tempor eu. ",
-    },
-  ];
-
-  const { scrollY } = useScroll();
+  // const { scrollY } = useScroll();
 
   // const scaleX1 = useTransform(scrollY, [2600, 2900], [0, 1]);
 
   return (
     <motion.div className="min-h-[700px] flex flex-col items-center justify-center gap-32 mb-96">
-      <div className="flex flex-col md:flex-row md:-ml-20 justify-center w-full rounded-xl">
+      <div className="flex flex-col lg:flex-row lg:-ml-28 justify-center w-full rounded-xl">
         <div className="flex flex-col items-center">
-          <div className="bg-white shadow-sm h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 md:mb-0 flex items-center justify-center">
+          <div className="bg-white shadow-sm h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 lg:mb-0 flex items-center justify-center">
             <Image
               height={70}
               width={70}
@@ -45,19 +35,19 @@ const Experience: React.FC = () => {
             />
           </div>
 
-          <div className="hidden md:block h-full w-[1px] rounded-full bg-black opacity-50 p mt-4" />
+          <div className="hidden lg:block h-full w-[1px] rounded-full bg-black opacity-50 p mt-4" />
         </div>
 
-        <div className="md:ml-16 mt-4">
+        <div className="lg:ml-16 mt-4">
           <div className="flex">
             <motion.a
-              className="inline-flex items-center mb-3 mx-auto md:mx-0"
+              className="inline-flex items-center mb-3 mx-auto lg:mx-0"
               whileHover="hover"
               href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
               target="_blank"
             >
               <div className="flex flex-col">
-                <p className="text-xl font-normal text-center md:text-start opacity-75">
+                <p className="text-xl font-normal text-center lg:text-start opacity-75">
                   google developer groups
                 </p>
 
@@ -94,12 +84,12 @@ const Experience: React.FC = () => {
             </motion.a>
           </div>
 
-          <div className="flex flex-col items-center md:items-baseline justify-between mb-8 text-center md:text-start">
+          <div className="flex flex-col items-center lg:items-baseline justify-between mb-8 text-center lg:text-start">
             <p className="font-semibold text-3xl mb-6">
               volunteer software developer
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0 shadow-sm">
                 feb 2024 - current
               </p>
@@ -114,7 +104,7 @@ const Experience: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 px-2 lg:px-0">
             <p className="font-light opacity-75 text-2xl">
               i&apos;m assisting this university club with{" "}
               <span className="font-semibold">frontend</span> and{" "}

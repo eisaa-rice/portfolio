@@ -166,8 +166,10 @@ const Skills = () => {
   ];
 
   return (
-    // sm:max-w-none sm:justify-between [@media(min-width:745px)]:gap-12 [@media(min-width:817px)]:gap-24 [@media(min-width:1156px)]:gap-96
-    <div className="flex flex-wrap items-center justify-around my-96 mx-auto gap-y-12 gap-x-6 md:gap-20 xl:gap-32 max-w-[460px] sm:max-w-[470px] md:max-w-[630px] xl:max-w-[1230px]">
+    <div
+      className="flex flex-wrap items-center justify-around w-full max-w-[1200px] mb-96 mx-auto gap-y-12 
+      gap-x-6 xs:gap-16 sm:gap-20 xl:gap-32"
+    >
       {skills.map((skill, index) => (
         <Skill key={index} skills={skill} />
       ))}

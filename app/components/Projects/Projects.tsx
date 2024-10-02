@@ -34,10 +34,11 @@ const Projects = () => {
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
-          // mb-44 xl:
-          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl my-auto"
-          initial={{ y: -300, rotate: -5 }}
-          style={{ y: y1, rotate: rotate1 }}
+          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
+          bg-white shadow-sm m-auto rounded-2xl h-[400px]
+          w-[310px] sm:w-[400px]"
+          // initial={{ y: -300, rotate: -5 }}
+          // style={{ y: y1, rotate: rotate1 }}
         />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:my-auto">
@@ -123,8 +124,9 @@ const Projects = () => {
 
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
-          // mb-44 xl:
-          className="row-start-1 row-end-2 col-start-1 col-end-2 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl my-auto"
+          className="row-start-1 row-end-2 col-start-1 col-end-2  
+          bg-white shadow-sm m-auto rounded-2xl h-[400px]
+          w-[310px] sm:w-[400px]"
         />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 xl:my-auto">
@@ -214,8 +216,9 @@ const Projects = () => {
 
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
         <motion.div
-          // mb-44 xl:
-          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 bg-white shadow-sm w-full max-w-96 h-96 md:max-w-[500px] md:h-[500px] m-auto rounded-2xl my-auto"
+          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
+         bg-white shadow-sm m-auto rounded-2xl h-[400px]
+          w-[310px] sm:w-[400px]"
         />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2">
@@ -226,7 +229,10 @@ const Projects = () => {
             whileHover="hover"
           >
             <div className="flex flex-col ">
-              <p className="font-semibold text-3xl">🧑‍💻 hack dearborn 3</p>
+              <p className="font-semibold text-3xl">
+                🧑‍💻 hack{" "}
+                <span className="inline-flex flex-shrink-0">dearborn 3</span>
+              </p>
 
               <motion.div
                 className="h-[1px] bg-black opacity-50"
