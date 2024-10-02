@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import "./Hero.css";
@@ -9,14 +9,16 @@ import "./Hero.css";
 interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <div
-      className="flex flex-col justify-center items-start w-full mb-96 h-screen lg:h-auto lg:mt-32
-        "
-    >
+    <div className="flex flex-col justify-start items-start mb-96 mt-14 lg:mt-14 2xl:mt-24 h-[800px] w-full">
       <div className="inline-flex flex-col items-center justify-center mx-auto">
-        <div className="flex items-center justify-center h-[225px] w-[225px] md:h-[250px] md:w-[250px] bg-white rounded-full flex-shrink-0 mb-6 sm:mb-12 shadow-sm">
+        <div
+          className="flex items-center justify-center bg-white rounded-full flex-shrink-0 shadow-sm 
+          h-[225px] w-[225px] sm:h-[250px] sm:w-[250px]
+          mb-6 sm:mb-12"
+        >
           <motion.svg
-            className="absolute h-[225px] w-[225px] md:h-[250px] md:w-[250px] z-30"
+            className="absolute z-30
+            h-[225px] w-[225px] sm:h-[250px] sm:w-[250px]"
             viewBox="0 -10 311 340"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -32,7 +34,8 @@ const Hero: React.FC<HeroProps> = () => {
           </motion.svg>
 
           <Image
-            className="rounded-full flex-shrink-0 bg-white"
+            className="rounded-full flex-shrink-0 bg-white
+            sm:h-[175px] sm:w-[175px]"
             src={"/images/memoji.jpg"}
             alt="My Memoji"
             height={150}
@@ -40,15 +43,19 @@ const Hero: React.FC<HeroProps> = () => {
           />
         </div>
 
-        <p className="text-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold">
+        <p
+          className="text-center font-semibold 
+        text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl"
+        >
+          {/* sm:text-7xl md:text-8xl lg:text-9xl */}
           hi, i&apos;m{" "}
-          <span className="mt-4 xl:mt-0 text-transparent pb-3 bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600 font-extrabold inline-flex flex-shrink-0">
+          <span className="mt-4 text-transparent pb-3 bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600 font-extrabold inline-flex flex-shrink-0">
             jésus orozco
           </span>
         </p>
 
         <motion.svg
-          className="md:mt-3 w-full h-full"
+          className="w-full h-full"
           viewBox="0 -10 1144 137"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -63,7 +70,10 @@ const Hero: React.FC<HeroProps> = () => {
           />
         </motion.svg>
 
-        <p className="rounded-3xl font-light text-xl sm:text-1xl md:text-2xl lg:text-3xl -mt-1">
+        <p
+          className="rounded-3xl font-light text-center -mt-1
+        text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl"
+        >
           aspiring software developer
         </p>
       </div>

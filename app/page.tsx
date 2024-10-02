@@ -103,7 +103,8 @@ export default function Home() {
 
   return (
     <motion.div
-      className="flex flex-col mx-4 xs:mx-16 sm:mx-32"
+      className="flex flex-col justify-center items-center mx-auto bg-red-200
+      w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1200px] 2xl:w-[1500px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 100 }}
       transition={{ ease: "easeIn", duration: 1, delay: 2 }}
@@ -122,13 +123,13 @@ export default function Home() {
 
       <About />
 
-      <Skills />
+      {/* <Skills />
 
       <Experience />
 
       <Projects />
 
-      <Footer />
+      <Footer /> */}
     </motion.div>
   );
 }
