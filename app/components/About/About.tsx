@@ -14,7 +14,7 @@ const About = () => {
           className="z-40 overflow-hidden absolute mx-auto
           h-[430px]
           w
-          -ml-12 mt-2 xs:ml-6 sm:ml-20 lg:ml-40 xl:ml-6 2xl:ml-24"
+          -ml-12 mt-2 xs:ml-6 sm:ml-20 lg:ml-40 xl:ml-3 2xl:ml-16"
           viewBox="0 -10 461 486"
           xmlns="http://www.w3.org/2000/svg"
           whileInView="squiggly"

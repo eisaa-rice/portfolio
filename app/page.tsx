@@ -22,62 +22,37 @@ export default function Home() {
     const updateScreenSize = () => {
       const width = window.innerWidth;
 
-      if (width <= 320) {
+      if (width >= 320 && width < 500) {
         setOpacityRange([
-          900, 1000, 2400, 2500, 2600, 3950, 4050, 4150, 6200, 6300, 6400,
+          800, 900, 2300, 2400, 2500, 3850, 3950, 4050, 5900, 6000, 6100,
         ]);
-        setHeaderRange([0, 2500, 4050, 6300, 9999]);
-      } else if (width > 320 && width <= 344) {
+        setHeaderRange([0, 2400, 3950, 6000, 9999]);
+      } else if (width >= 500 && width < 640) {
         setOpacityRange([
-          800, 900, 2300, 2400, 2500, 3950, 4050, 4150, 5900, 6000, 6100,
+          850, 950, 2200, 2300, 2400, 3300, 3400, 3500, 4800, 4900, 5000,
         ]);
-        setHeaderRange([0, 2400, 4050, 6000, 9999]);
-      } else if (width > 344 && width <= 360) {
+        setHeaderRange([0, 2300, 3400, 4900, 9999]);
+      } else if (width >= 640 && width < 1024) {
         setOpacityRange([
-          700, 800, 2200, 2300, 2400, 3800, 3900, 4000, 5600, 5700, 5800,
+          900, 1000, 2100, 2200, 2300, 3350, 3450, 3550, 4700, 4800, 4900,
         ]);
-        setHeaderRange([0, 2300, 3900, 5700, 9999]);
-      } else if (width > 360 && width <= 380) {
+        setHeaderRange([0, 2200, 3450, 4800, 9999]);
+      } else if (width >= 1024 && width < 1280) {
         setOpacityRange([
-          700, 800, 2050, 2150, 2250, 3700, 3800, 3900, 5400, 5500, 5600,
+          800, 900, 2000, 2100, 2200, 3050, 3150, 3250, 4250, 4350, 4450,
         ]);
-        setHeaderRange([0, 2150, 3800, 5500, 9999]);
-      } else if (width > 380 && width <= 412) {
+        setHeaderRange([0, 2100, 3150, 4350, 9999]);
+      } else if (width >= 1280 && width < 1536) {
         setOpacityRange([
-          750, 850, 2300, 2400, 2500, 3400, 3500, 3600, 5100, 5200, 5300,
+          700, 800, 1600, 1700, 1800, 2550, 2650, 2750, 3600, 3700, 3800,
         ]);
-        setHeaderRange([0, 2400, 3500, 5200, 9999]);
-      } else if (width > 412 && width <= 540) {
-        setOpacityRange([
-          750, 850, 2100, 2200, 2300, 3200, 3300, 3400, 4550, 4650, 4750,
-        ]);
-        setHeaderRange([0, 2200, 3300, 4650, 9999]);
-      } else if (width > 540 && width <= 768) {
-        setOpacityRange([
-          900, 1000, 2250, 2350, 2450, 3600, 3700, 3800, 5150, 5250, 5350,
-        ]);
-        setHeaderRange([0, 2350, 3700, 5250, 9999]);
-      } else if (width > 768 && width <= 820) {
-        setOpacityRange([
-          1000, 1100, 2450, 2550, 2650, 3750, 3850, 3950, 5200, 5300, 5400,
-        ]);
-        setHeaderRange([0, 2550, 3850, 5300, 9999]);
-      } else if (width > 820 && width <= 912) {
-        setOpacityRange([
-          1050, 1250, 2500, 2600, 2700, 3850, 3950, 4050, 5100, 5200, 5300,
-        ]);
-        setHeaderRange([0, 2600, 3950, 5200, 9999]);
-      } else if (width > 912 && width <= 1024) {
-        setOpacityRange([
-          1050, 1250, 2350, 2450, 2550, 3600, 3700, 3800, 4800, 4900, 5000,
-        ]);
-        setHeaderRange([0, 2450, 3700, 4900, 9999]);
+        setHeaderRange([0, 1700, 2650, 3700, 9999]);
       } else {
-        // desktop sizes > 1024
+        // width >= 1536
         setOpacityRange([
-          900, 1000, 1600, 1700, 1800, 2700, 2800, 2900, 3800, 3900, 4000,
+          900, 1000, 1600, 1700, 1800, 2650, 2750, 2850, 3600, 3700, 3800,
         ]);
-        setHeaderRange([0, 1700, 2800, 3900, 9999]);
+        setHeaderRange([0, 1700, 2750, 3700, 9999]);
       }
     };
 
@@ -104,7 +79,7 @@ export default function Home() {
   return (
     <motion.div
       className="flex flex-col justify-center items-center mx-auto
-      w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1200px] 2xl:w-[1500px]"
+      w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 100 }}
       transition={{ ease: "easeIn", duration: 1, delay: 2 }}
