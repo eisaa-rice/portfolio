@@ -9,36 +9,47 @@ import "./Projects.css";
 const Projects = () => {
   const { scrollY } = useScroll();
 
-  const [scrollRange, setScrollRange] = useState([0, 1000]);
+  const [scrollRange1, setScrollRange1] = useState([0, 0]);
 
   useEffect(() => {
-    // Function to calculate viewport height based pixel values from percentages
-    const getVHValue = (percentage: any) =>
-      window.innerHeight * (percentage / 100);
+    const updateScreenSize = () => {
+      const width = window.innerWidth;
 
-    const updateRanges = () => {
-      setScrollRange([getVHValue(370), getVHValue(470)]);
+      // - 1600
+      if (width >= 320 && width < 500) {
+        setScrollRange1([5200, 6700]);
+      } else if (width >= 500 && width < 640) {
+        setScrollRange1([3900, 5500]);
+      } else if (width >= 640 && width < 1024) {
+        setScrollRange1([4000, 5600]);
+      } else if (width >= 1024 && width < 1280) {
+        setScrollRange1([3500, 5100]);
+      } else if (width >= 1280 && width < 1536) {
+        setScrollRange1([3000, 4600]);
+      } else {
+        // width >= 1536
+        setScrollRange1([2800, 4400]);
+      }
     };
 
-    updateRanges();
-    window.addEventListener("resize", updateRanges);
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
 
-    return () => window.removeEventListener("resize", updateRanges);
+    return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
-  const y1 = useTransform(scrollY, scrollRange, ["40%", "-40%"]);
-  const rotate1 = useTransform(scrollY, scrollRange, [5, -5]);
+  const y1 = useTransform(scrollY, scrollRange1, ["40%", "-40%"]);
+  const rotate1 = useTransform(scrollY, scrollRange1, [5, -5]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px]">
+    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-x-hidden">
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
           bg-white shadow-sm m-auto rounded-2xl h-[400px]
           w-[310px] sm:w-[400px]"
-          // initial={{ y: -300, rotate: -5 }}
-          // style={{ y: y1, rotate: rotate1 }}
+          style={{ y: y1, rotate: rotate1 }}
         />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:my-auto">
