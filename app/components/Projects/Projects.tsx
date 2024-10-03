@@ -10,6 +10,8 @@ const Projects = () => {
   const { scrollY } = useScroll();
 
   const [scrollRange1, setScrollRange1] = useState([0, 0]);
+  const [scrollRange2, setScrollRange2] = useState([0, 0]);
+  const [scrollRange3, setScrollRange3] = useState([0, 0]);
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -17,18 +19,42 @@ const Projects = () => {
 
       // - 1600
       if (width >= 320 && width < 500) {
-        setScrollRange1([5200, 6700]);
+        setScrollRange1([5400, 7000]);
+
+        setScrollRange2([7300, 8900]);
+
+        setScrollRange3([9100, 10700]);
       } else if (width >= 500 && width < 640) {
-        setScrollRange1([3900, 5500]);
+        setScrollRange1([4100, 5700]);
+
+        setScrollRange2([5700, 7400]);
+
+        setScrollRange3([7100, 8700]);
       } else if (width >= 640 && width < 1024) {
-        setScrollRange1([4000, 5600]);
+        setScrollRange1([3750, 5350]);
+
+        setScrollRange2([5200, 6800]);
+
+        setScrollRange3([6500, 8100]);
       } else if (width >= 1024 && width < 1280) {
         setScrollRange1([3500, 5100]);
+
+        setScrollRange2([4700, 6300]);
+
+        setScrollRange3([5850, 7450]);
       } else if (width >= 1280 && width < 1536) {
-        setScrollRange1([3000, 4600]);
+        setScrollRange1([3100, 4700]);
+
+        setScrollRange2([4350, 5950]);
+
+        setScrollRange3([5300, 6900]);
       } else {
         // width >= 1536
-        setScrollRange1([2800, 4400]);
+        setScrollRange1([3150, 4750]);
+
+        setScrollRange2([4250, 5850]);
+
+        setScrollRange3([5200, 6800]);
       }
     };
 
@@ -38,16 +64,22 @@ const Projects = () => {
     return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
-  const y1 = useTransform(scrollY, scrollRange1, ["40%", "-40%"]);
+  const y1 = useTransform(scrollY, scrollRange1, ["100%", "-100%"]);
   const rotate1 = useTransform(scrollY, scrollRange1, [5, -5]);
 
+  const y2 = useTransform(scrollY, scrollRange2, ["100%", "-100%"]);
+  const rotate2 = useTransform(scrollY, scrollRange2, [-5, 5]);
+
+  const y3 = useTransform(scrollY, scrollRange3, ["100%", "-100%"]);
+  const rotate3 = useTransform(scrollY, scrollRange3, [5, -5]);
+
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-x-hidden">
+    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-x-hidden pt-96">
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-          bg-white shadow-sm m-auto rounded-2xl h-[400px]
+          bg-white shadow-sm m-auto xs:my-0 rounded-2xl h-[400px]
           w-[310px] sm:w-[400px]"
           style={{ y: y1, rotate: rotate1 }}
         />
@@ -136,8 +168,9 @@ const Projects = () => {
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2  
-          bg-white shadow-sm m-auto rounded-2xl h-[400px]
+          bg-white shadow-sm m-auto xs:my-0 rounded-2xl h-[400px]
           w-[310px] sm:w-[400px]"
+          style={{ y: y2, rotate: rotate2 }}
         />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 xl:my-auto">
@@ -228,8 +261,9 @@ const Projects = () => {
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-         bg-white shadow-sm m-auto rounded-2xl h-[400px]
+         bg-white shadow-sm m-auto xs:my-0 rounded-2xl h-[400px]
           w-[310px] sm:w-[400px]"
+          style={{ y: y3, rotate: rotate3 }}
         />
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2">
