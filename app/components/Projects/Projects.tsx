@@ -79,7 +79,7 @@ const Projects = () => {
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         {/* items-center xl:items-start ml-auto mr-0 */}
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 overflow-clip
+          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
           flex justify-center items-center mx-auto
           -ml-12 xs:-ml-2 sm:ml-auto
           w-[800px] xs:w-[470px] sm:w-[580px] xl:w-[590px] 2xl:w-[715px]"
@@ -171,7 +171,7 @@ const Projects = () => {
 
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2  
+          className="row-start-1 row-end-2 col-start-1 col-end-2 
           flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0
           w-[310px] sm:w-[400px]"
           style={{ y: y2, rotate: rotate2 }}
@@ -267,7 +267,7 @@ const Projects = () => {
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0
+          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0 xl:-mr-0
           w-[310px] sm:w-[400px]"
           style={{ y: y3, rotate: rotate3 }}
         >
