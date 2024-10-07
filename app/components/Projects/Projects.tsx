@@ -74,15 +74,19 @@ const Projects = () => {
   const rotate3 = useTransform(scrollY, scrollRange3, [5, -5]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-x-hidden pt-96">
+    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-visible pt-96">
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
+        {/* items-center xl:items-start ml-auto mr-0 */}
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-          bg-white shadow-sm m-auto xs:my-0 rounded-2xl h-[400px]
-          w-[310px] sm:w-[400px]"
+          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 overflow-clip
+          flex justify-center items-center mx-auto
+          -ml-12 xs:-ml-2 sm:ml-auto
+          w-[800px] xs:w-[470px] sm:w-[580px] xl:w-[590px] 2xl:w-[715px]"
           style={{ y: y1, rotate: rotate1 }}
-        />
+        >
+          <Image src="/images/cc.png" alt="CC" height={1469} width={2432} />
+        </motion.div>
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:my-auto">
           <motion.a
@@ -168,10 +172,12 @@ const Projects = () => {
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2  
-          bg-white shadow-sm m-auto xs:my-0 rounded-2xl h-[400px]
+          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0
           w-[310px] sm:w-[400px]"
           style={{ y: y2, rotate: rotate2 }}
-        />
+        >
+          <Image src="/images/iwd.png" alt="IWD" height={360} width={360} />
+        </motion.div>
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 xl:my-auto">
           <motion.a
@@ -261,10 +267,12 @@ const Projects = () => {
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-         bg-white shadow-sm m-auto xs:my-0 rounded-2xl h-[400px]
+          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0
           w-[310px] sm:w-[400px]"
           style={{ y: y3, rotate: rotate3 }}
-        />
+        >
+          <Image src="/images/hd3.png" alt="HD3" height={360} width={360} />
+        </motion.div>
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2">
           <motion.a
