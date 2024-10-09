@@ -32,7 +32,8 @@ const Skill: React.FC<SkillProps> = ({
   );
 };
 
-const Skills = () => {
+interface SkillsProps {}
+const Skills: React.FC<SkillsProps> = () => {
   const skills = [
     {
       src: "/c++.svg",

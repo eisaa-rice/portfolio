@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import Image from "next/image";
 
 import "./Hero.css";
@@ -33,14 +33,19 @@ const Hero: React.FC<HeroProps> = () => {
             />
           </motion.svg>
 
-          <Image
-            className="rounded-full flex-shrink-0 bg-white
-            sm:h-[175px] sm:w-[175px]"
-            src={"/images/memoji.jpg"}
-            alt="My Memoji"
-            height={150}
-            width={150}
-          />
+          <div
+            className="rounded-full flex-shrink-0 bg-white relative
+            h-[150px] sm:h-[175px] 
+            w-[150px] sm:w-[175px]"
+          >
+            <Image
+              className="overflow-visible rounded-full p-3"
+              src={"/images/memoji.jpg"}
+              alt="memoji"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </div>
 
         <p
@@ -78,9 +83,18 @@ const Hero: React.FC<HeroProps> = () => {
         </p>
       </div>
 
-      <p className="p-4 text-xl bg-white rounded-xl mt-16 shadow-sm mx-auto">
+      <motion.a
+        href="/resume"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-4 text-xl bg-white rounded-xl mt-16 shadow-sm mx-auto"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{
+          scale: 0.95,
+        }}
+      >
         résumé 📄
-      </p>
+      </motion.a>
     </div>
   );
 };

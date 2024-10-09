@@ -6,7 +6,8 @@ import Image from "next/image";
 
 import "./Projects.css";
 
-const Projects = () => {
+interface ProjectsProps {}
+const Projects: React.FC<ProjectsProps> = () => {
   const { scrollY } = useScroll();
 
   const [scrollRange1, setScrollRange1] = useState([0, 0]);
@@ -50,11 +51,11 @@ const Projects = () => {
         setScrollRange3([5300, 6900]);
       } else {
         // width >= 1536
-        setScrollRange1([3150, 4750]);
+        setScrollRange1([3100, 4700]);
 
-        setScrollRange2([4250, 5850]);
+        setScrollRange2([4275, 5875]);
 
-        setScrollRange3([5200, 6800]);
+        setScrollRange3([5425, 7025]);
       }
     };
 
@@ -77,12 +78,11 @@ const Projects = () => {
     <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-visible pt-96">
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
-        {/* items-center xl:items-start ml-auto mr-0 */}
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
           flex justify-center items-center mx-auto
-          -ml-12 xs:-ml-2 sm:ml-auto
-          w-[800px] xs:w-[470px] sm:w-[580px] xl:w-[590px] 2xl:w-[715px]"
+          -ml-14 xs:-ml-2 sm:ml-auto
+          w-[800px] xs:w-[470px] sm:w-[580px] xl:w-[875px] 2xl:w-[975px]"
           style={{ y: y1, rotate: rotate1 }}
         >
           <Image src="/images/cc.png" alt="CC" height={1469} width={2432} />
@@ -93,6 +93,7 @@ const Projects = () => {
             className="inline-flex items-center"
             href="https://www.codeconductor.org/"
             target="_blank"
+            rel="noopener noreferrer"
             whileHover="hover"
           >
             <div className="flex flex-col ">
@@ -176,7 +177,7 @@ const Projects = () => {
           w-[310px] sm:w-[400px]"
           style={{ y: y2, rotate: rotate2 }}
         >
-          <Image src="/images/iwd.png" alt="IWD" height={360} width={360} />
+          <Image src="/images/iwd.png" alt="IWD" height={1716} width={814} />
         </motion.div>
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 xl:my-auto">
@@ -184,6 +185,7 @@ const Projects = () => {
             className="inline-flex items-center"
             href="https://www.iwdsummit.com/"
             target="_blank"
+            rel="noopener noreferrer"
             whileHover="hover"
           >
             <div className="flex flex-col">
@@ -227,7 +229,7 @@ const Projects = () => {
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8">
             <p className="font-light opacity-75 text-2xl">
-              for this conference, students at <span>GDSC</span> made a website
+              for this conference, students at <span>GDG</span> made a website
               using <span className="font-semibold">react</span>,{" "}
               <span className="font-semibold">git and github</span>, and{" "}
               <span className="font-semibold">tailwind css</span> to bundle
@@ -267,11 +269,11 @@ const Projects = () => {
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0 xl:-mr-0
+          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0 xl:-mr-0 xl:-mt-32
           w-[310px] sm:w-[400px]"
           style={{ y: y3, rotate: rotate3 }}
         >
-          <Image src="/images/hd3.png" alt="HD3" height={360} width={360} />
+          <Image src="/images/hd3.png" alt="HD3" height={1716} width={854} />
         </motion.div>
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2">
@@ -279,6 +281,7 @@ const Projects = () => {
             className="inline-flex items-center"
             href="https://www.hackdearborn.org/"
             target="_blank"
+            rel="noopener noreferrer"
             whileHover="hover"
           >
             <div className="flex flex-col ">

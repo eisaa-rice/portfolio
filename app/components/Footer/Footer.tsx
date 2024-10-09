@@ -6,13 +6,15 @@ import { motion } from "framer-motion";
 
 import "./Footer.css";
 
-const Footer = () => {
+interface FooterProps {}
+const Footer: React.FC<FooterProps> = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="w-full flex items-center gap-5 mt-5 justify-center">
         <motion.a
           href="https://www.linkedin.com/in/eisaa-orozco/"
           target="_blank"
+          rel="noopener noreferrer"
           initial={{ rotate: 0, scale: 1 }}
           whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
         >
@@ -22,6 +24,7 @@ const Footer = () => {
         <motion.a
           href="https://github.com/eisaarice"
           target="_blank"
+          rel="noopener noreferrer"
           initial={{ rotate: 0, scale: 1 }}
           whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
         >
@@ -31,6 +34,7 @@ const Footer = () => {
         <motion.a
           href="mailto:jesusorozco3690@gmail.com"
           target="_blank"
+          rel="noopener noreferrer"
           initial={{ rotate: 0, scale: 1 }}
           whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
         >

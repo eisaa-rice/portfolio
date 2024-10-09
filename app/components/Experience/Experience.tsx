@@ -6,13 +6,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import "./Experience.css";
 
-const Experience: React.FC = () => {
+interface ExperienceProps {}
+const Experience: React.FC<ExperienceProps> = () => {
   const workExperience = [
     {
       time: "FEB 2024 - CURRENT",
-      company: "google student developer clubs",
-      link: "https://gdsc.community.dev/university-of-michigan-dearborn-united-states/",
-      title: "volunteer frontend developer",
+      company: "google developer groups",
+      link: "https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/",
+      title: "club software developer",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
   ];
@@ -30,7 +31,7 @@ const Experience: React.FC = () => {
               height={70}
               width={70}
               alt=""
-              src={"/gdsc.svg"}
+              src={"/gdg.svg"}
               className="m-auto"
             />
           </div>
@@ -45,6 +46,7 @@ const Experience: React.FC = () => {
               whileHover="hover"
               href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="flex flex-col">
                 <p className="text-xl font-normal text-center lg:text-start opacity-75">
@@ -86,7 +88,7 @@ const Experience: React.FC = () => {
 
           <div className="flex flex-col items-center lg:items-baseline justify-between mb-8 text-center lg:text-start">
             <p className="font-semibold text-3xl mb-6">
-              volunteer software developer
+              club software developer
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -99,7 +101,7 @@ const Experience: React.FC = () => {
               </p>
 
               <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0 shadow-sm">
-                volunteer
+                club member
               </p>
             </div>
           </div>
