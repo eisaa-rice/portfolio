@@ -14,18 +14,17 @@ const About: React.FC<AboutProps> = () => {
         <motion.svg></motion.svg>
 
         <div
-          // flex-shrink-0
           className="rounded-full flex-shrink-0 bg-white shadow-sm relative overflow-hidden
-          mb-16 m-auto xl:-mt-28 
+          mb-16 m-auto xl:-mt-28
           h-[400px] xl:h-[440px] 2xl:h-[480px]
           w-[310px] xs:w-[370px] sm:w-[400px] xl:w-[440px] 2xl:w-[480px]"
         >
           <Image
-            className="rounded-full mt-4"
+            className="rounded-full mt-4 xs:"
             src="/images/animoji.png"
             alt="animoji"
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
           />
         </div>
       </div>
