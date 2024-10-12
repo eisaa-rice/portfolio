@@ -7,107 +7,9 @@ import { motion, useScroll } from "framer-motion";
 import "./About.css";
 import { Scada } from "next/font/google";
 
-// interface SkillProps {
-//   skills: {
-//     src: string;
-//     alt: string;
-//     height: number;
-//     width: number;
-//     style?: React.CSSProperties;
-//     classname: string;
-//   };
-// }
-// const Skill: React.FC<SkillProps> = ({
-//   skills: { src, alt, height, width, style, classname },
-// }) => {
-//   const clsnm = `flex items-center justify-center flex-shrink-0 h-[100px] w-[100px] bg-red-300
-//   rounded-full shadow-sm absolute ${classname}`;
-
-//   return (
-//     <div className={clsnm}>
-//       <div className="absolute">
-//         <Image
-//           src={src}
-//           alt={alt}
-//           height={height}
-//           width={width}
-//           style={style}
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
 interface AboutProps {}
 const About: React.FC<AboutProps> = () => {
   const skills = [
-    {
-      src: "/c++.svg",
-      alt: "C++",
-    },
-    {
-      src: "/csharp.svg",
-      alt: "C#",
-      height: 82.5,
-      width: 82.5,
-      yDelay: 1.74,
-      rotateDelay: 0.5,
-    },
-    {
-      src: "/java.svg",
-      alt: "Java",
-      height: 75,
-      width: 75,
-      yDelay: 0.29,
-      rotateDelay: 1.07,
-      style: { marginBottom: 5 },
-    },
-    {
-      src: "/python.svg",
-      alt: "Python",
-      height: 70,
-      width: 70,
-      yDelay: 2,
-      rotateDelay: 0.42,
-      style: { marginTop: 15 },
-    },
-    {
-      src: "/html.svg",
-      alt: "HTML",
-      height: 60,
-      width: 60,
-      yDelay: 0.78,
-      rotateDelay: 0.91,
-      style: { marginTop: 10 },
-    },
-    {
-      src: "/css.svg",
-      alt: "CSS",
-      height: 67.5,
-      width: 67.5,
-      yDelay: 1.44,
-      rotateDelay: 0.24,
-      style: { marginTop: 10 },
-    },
-    {
-      src: "/javascript.svg",
-      alt: "Javascript",
-      height: 65,
-      width: 65,
-      yDelay: 0.15,
-      rotateDelay: 1.45,
-      style: { borderRadius: 5, marginBottom: 2 },
-    },
-    {
-      src: "/typescript.svg",
-      alt: "Typescript",
-      height: 65,
-      width: 65,
-      yDelay: 1.21,
-      rotateDelay: 0.44,
-      style: { borderRadius: 5, marginBottom: 2 },
-    },
-
     {
       src: "/react.svg",
       alt: "React.js",
@@ -168,17 +70,24 @@ const About: React.FC<AboutProps> = () => {
     },
   ];
 
-  const [isCSharpVisible, setCSharpVisible] = useState(false);
+  const [areLangsVisible, setLangsVisible] = useState(false);
+  const [areFrmWrksVisible, setFrmWkrsVisible] = useState(false);
+  const [isTechVisible, setTechVisible] = useState(false);
 
-  const handleClickCpp = () => {
-    console.log(isCSharpVisible);
-    setCSharpVisible(true);
+  const showSkills = (x: number) => {
+    x == 1
+      ? setLangsVisible(true)
+      : x == 2
+      ? setFrmWkrsVisible(true)
+      : x == 3
+      ? setTechVisible(true)
+      : console.log("bruh are you dumb");
   };
 
   return (
     <div
       className="flex flex-col xl:flex-row items-center
-    gap-y-24 mb-96 w-full overflow-visible"
+    gap-24 mb-96 w-full overflow-visible"
     >
       <div
         className="flex flex-col gap-12 text-2xl font-light opacity-75
@@ -212,15 +121,11 @@ const About: React.FC<AboutProps> = () => {
       </div>
 
       <div
-        className="flex items-center justify-center flex-shrink-0 bg-orange-50
+        className="flex items-center justify-center flex-shrink-0 
         h-[650px] xl:h-[550px] 2xl:h-[700px] 
         w-full xl:w-[550px] 2xl:w-[700px]"
       >
-        {/* {skills.map((skill, index) => (
-          <Skill key={index} skills={skill} />
-        ))} */}
-
-        <p
+        {/* <p
           className="hiddden xl:absolute
           2xl:-mt-[30rem]
           "
@@ -234,48 +139,73 @@ const About: React.FC<AboutProps> = () => {
           2xl:-mr-32"
         >
           click to keep &apos;em out!
-        </p>
+        </p> */}
 
+        {/* LANGUAGES */}
         <motion.div
-          whileHover={isCSharpVisible ? "" : "cplusplus"}
-          whileTap="cplusplus"
-          onClick={handleClickCpp}
-          animate={isCSharpVisible ? "cplusplus" : ""}
+          className="flex items-center justify-center"
+          whileHover={areLangsVisible ? "" : "languages"}
+          onClick={() => showSkills(1)}
+          animate={areLangsVisible ? "languages" : ""}
         >
           <motion.div
-            className="flex items-center justify-center flex-shrink-0 bg-white
-          rounded-full shadow-sm absolute z-40
-          h-[100px] 2xl:h-[215px] 
-          w-[100px] 2xl:w-[215px]
-          2xl:-mt-72
-          2xl:-ml-72"
+            className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
+      2xl:h-[200px] 
+      2xl:w-[200px]
+      2xl:-mt-[30rem]
+      2xl:-ml-96"
             initial={{ scale: 1 }}
             variants={{
-              cplusplus: { scale: 1.1, transition: { ease: "easeOut" } },
+              languages: { scale: 1.1, transition: { ease: "easeOut" } },
             }}
           >
             <Image
               src="/c++.svg"
               alt="C++"
-              className="p-2"
+              className="p-1"
               layout="fill"
               objectFit="contain"
             />
           </motion.div>
 
           <motion.div
-            className="flex items-center justify-center flex-shrink-0 bg-white
-          rounded-full shadow-sm absolute
-          h-[100px] 2xl:h-[55px] 
-          w-[100px] 2xl:w-[55px]
-          2xl:-mt-52
-          2xl:-ml-52"
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+      2xl:-mt-[30rem]
+            2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
-              cplusplus: {
+              languages: {
                 scale: 1.1,
-                x: -115,
-                y: -115,
+                x: -140,
+                y: 90,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/python.svg"
+              alt="Python"
+              className="p-2 mt-1"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+      h-[100px] 2xl:h-[55px] 
+      w-[100px] 2xl:w-[55px]
+      2xl:-mt-[30rem]
+      2xl:-ml-96"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              languages: {
+                scale: 1.1,
+                x: -60,
+                y: 160,
                 rotate: 0,
                 transition: { ease: "easeOut" },
               },
@@ -291,18 +221,17 @@ const About: React.FC<AboutProps> = () => {
           </motion.div>
 
           <motion.div
-            className="flex items-center justify-center flex-shrink-0 bg-white
-          rounded-full shadow-sm absolute
-          h-[100px] 2xl:h-[55px] 
-          w-[100px] 2xl:w-[55px]
-          2xl:-mt-52
-          2xl:-ml-52"
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+             h-[100px] 2xl:h-[55px] 
+             w-[100px] 2xl:w-[55px]
+      2xl:-mt-[30rem]
+             2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
             variants={{
-              cplusplus: {
+              languages: {
                 scale: 1.1,
-                x: -20,
-                y: -160,
+                x: 50,
+                y: 160,
                 rotate: 0,
                 transition: { ease: "easeOut" },
               },
@@ -316,44 +245,322 @@ const About: React.FC<AboutProps> = () => {
               objectFit="contain"
             />
           </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+             h-[100px] 2xl:h-[55px] 
+             w-[100px] 2xl:w-[55px]
+      2xl:-mt-[30rem]
+             2xl:-ml-96"
+            initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
+            variants={{
+              languages: {
+                scale: 1.1,
+                x: 150,
+                y: 80,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/html.svg"
+              alt="HTML"
+              className="p-[0.55rem] mt-[0.125rem]"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+      2xl:-mt-[30rem]
+            2xl:-ml-96"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              languages: {
+                scale: 1.1,
+                x: 170,
+                y: 10,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/css.svg"
+              alt="CSS"
+              className="p-[0.55rem] mt-[0.125rem]"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+      2xl:-mt-[30rem]
+            2xl:-ml-96"
+            initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
+            variants={{
+              languages: {
+                scale: 1.1,
+                x: 160,
+                y: -60,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/javascript.svg"
+              alt="Javascript"
+              className="p-[0.625rem] rounded-2xl"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+             h-[100px] 2xl:h-[55px] 
+             w-[100px] 2xl:w-[55px]
+      2xl:-mt-[30rem]
+             2xl:-ml-96"
+            initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
+            variants={{
+              languages: {
+                scale: 1.1,
+                x: 120,
+                y: -120,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/typescript.svg"
+              alt="Typescript"
+              className="p-[0.625rem] rounded-2xl"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
         </motion.div>
 
+        {/* FRAMEWORKS */}
         <motion.div
-          className="flex items-center justify-center flex-shrink-0 bg-white
-          rounded-full shadow-sm absolute
-          h-[100px] 2xl:h-[245px] 
-          w-[100px] 2xl:w-[245px]
-          2xl:-mb-44
-          2xl:-mr-72"
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
+          className="flex items-center justify-center"
+          whileHover={areFrmWrksVisible ? "" : "frameworks"}
+          onClick={() => showSkills(2)}
+          animate={areFrmWrksVisible ? "frameworks" : ""}
         >
-          <Image
-            src="/react.svg"
-            alt="React.js"
-            className="p-2"
-            layout="fill"
-            objectFit="contain"
-          />
+          <motion.div
+            className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
+          2xl:h-[175px] 
+          2xl:w-[175px]
+          2xl:-mb-12
+          2xl:-mr-[30rem]"
+            initial={{ scale: 1 }}
+            variants={{
+              frameworks: { scale: 1.1, transition: { ease: "easeOut" } },
+            }}
+          >
+            <Image
+              src="/react.svg"
+              alt="Reactjs"
+              className="p-1"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+            2xl:-mb-12
+            2xl:-mr-[30rem]"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              frameworks: {
+                scale: 1.1,
+                x: -130,
+                y: -90,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/react-native.svg"
+              alt="React Native"
+              className="p-1"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+            2xl:-mb-12
+            2xl:-mr-[30rem]"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              frameworks: {
+                scale: 1.1,
+                x: -150,
+                y: -10,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/tailwind.svg"
+              alt="Tailwind CSS"
+              className="p-1"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+            2xl:-mb-12
+            2xl:-mr-[30rem]"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              frameworks: {
+                scale: 1.1,
+                x: -130,
+                y: 70,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/framer-motion.svg"
+              alt="Framer Motion"
+              className="p-3"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+            2xl:-mb-12
+            2xl:-mr-[30rem]"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              frameworks: {
+                scale: 1.1,
+                x: -70,
+                y: 130,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/nodejs.svg"
+              alt="Node.js"
+              className="p-1"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
         </motion.div>
 
+        {/* TECHNOLOGIES */}
         <motion.div
-          className="flex items-center justify-center flex-shrink-0 bg-white
-          rounded-full shadow-sm absolute
-          h-[100px] 2xl:h-[185px] 
-          w-[100px] 2xl:w-[185px]
-          2xl:-mb-96
-          2xl:-ml-96"
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
+          className="flex items-center justify-center"
+          whileHover={isTechVisible ? "" : "technologies"}
+          onClick={() => showSkills(3)}
+          animate={isTechVisible ? "technologies" : ""}
         >
-          <Image
-            src="/github.svg"
-            alt="GitHub"
-            className="p-2"
-            layout="fill"
-            objectFit="contain"
-          />
+          <motion.div
+            className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
+          2xl:h-[150px] 
+          2xl:w-[150px]
+          2xl:-mb-[30rem]
+          2xl:-ml-60"
+            initial={{ scale: 1 }}
+            variants={{
+              technologies: { scale: 1.1, transition: { ease: "easeOut" } },
+            }}
+          >
+            <Image
+              src="/github.svg"
+              alt="GitHub"
+              className="p-3"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+            2xl:-mb-[30rem]
+          2xl:-ml-60"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              technologies: {
+                scale: 1.1,
+                x: -40,
+                y: -130,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/git.svg"
+              alt="Git"
+              className="p-2"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
+
+          <motion.div
+            className="bg-white rounded-full shadow-sm absolute flex-shrink-0
+            h-[100px] 2xl:h-[55px] 
+            w-[100px] 2xl:w-[55px]
+            2xl:-mb-[30rem]
+          2xl:-ml-60"
+            initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
+            variants={{
+              technologies: {
+                scale: 1.1,
+                x: 40,
+                y: -130,
+                rotate: 0,
+                transition: { ease: "easeOut" },
+              },
+            }}
+          >
+            <Image
+              src="/docker.svg"
+              alt="Docker Desktop"
+              className="p-2 ml-[0.125rem]"
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
         </motion.div>
       </div>
     </div>
@@ -361,3 +568,5 @@ const About: React.FC<AboutProps> = () => {
 };
 
 export default About;
+
+/* */
