@@ -10,11 +10,7 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <div className="flex flex-col items-center">
-      <p className="text-5xl font-extralight">
-        wanna chat? you can hit me up through:
-      </p>
-
-      <div className="w-full flex items-center gap-12 mt-12 mb-16 justify-center">
+      <div className="w-full flex items-center gap-x-12 my-12">
         <motion.a
           href="https://www.linkedin.com/in/eisaa-rice/"
           target="_blank"
@@ -22,17 +18,17 @@ const Footer: React.FC<FooterProps> = () => {
           initial={{ rotate: 0, scale: 1 }}
           whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
         >
-          <Image height={58} width={58} src={"/linkedin.svg"} alt="LinkedIn" />
+          <Image height={38} width={38} src={"/linkedin.svg"} alt="LinkedIn" />
         </motion.a>
 
         <motion.a
-          href="https://github.com/eisaarice"
+          href="https://github.com/eisaa-rice"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ rotate: 0, scale: 1 }}
           whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
         >
-          <Image height={55} width={55} src={"/github.svg"} alt="GitHub" />
+          <Image height={35} width={35} src={"/github.svg"} alt="GitHub" />
         </motion.a>
 
         <motion.a
@@ -42,7 +38,7 @@ const Footer: React.FC<FooterProps> = () => {
           initial={{ rotate: 0, scale: 1 }}
           whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
         >
-          <Image height={56} width={56} src={"/email.svg"} alt="Email" />
+          <Image height={36} width={36} src={"/email.svg"} alt="Email" />
         </motion.a>
       </div>
 

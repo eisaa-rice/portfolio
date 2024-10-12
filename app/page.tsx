@@ -80,9 +80,6 @@ export default function Home() {
     <motion.div
       className="flex flex-col justify-center items-center mx-auto
       w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 100 }}
-      transition={{ ease: "easeIn", duration: 1, delay: 2 }}
     >
       <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
@@ -93,6 +90,30 @@ export default function Home() {
           {header}
         </motion.p>
       </div>
+
+      <motion.div
+        className="h-full w-screen bg-black z-[999]
+        fixed top-0 left-0 right-0"
+        initial={{ width: "100%" }}
+        animate={{ width: "0" }}
+        transition={{ ease: "easeIn", duration: 0.55, delay: 2 }}
+      />
+
+      <motion.div
+        className="h-full w-screen bg-teal-600 z-[666]
+        fixed top-0 left-0 right-0"
+        initial={{ width: "100%" }}
+        animate={{ width: "0" }}
+        transition={{ ease: "easeIn", duration: 0.425, delay: 2.25 }}
+      />
+
+      <motion.div
+        className="h-full w-screen bg-emerald-400 z-[333]
+        fixed top-0 left-0 right-0"
+        initial={{ width: "100%" }}
+        animate={{ width: "0" }}
+        transition={{ ease: "easeIn", duration: 0.3, delay: 2.5 }}
+      />
 
       <Hero />
 

@@ -145,6 +145,20 @@ const Experience: React.FC<ExperienceProps> = () => {
           </div>
         </div>
       </div>
+
+      <motion.a
+        href="/resume"
+        target="_blank"
+        rel="noopener noreferrer"
+        // mt-16 mx-auto xl:ml-0 mt-16
+        className="inline-block p-4 text-xl bg-white rounded-xl shadow-sm font-semibold opacity-75"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{
+          scale: 0.95,
+        }}
+      >
+        résumé 📄
+      </motion.a>
     </motion.div>
   );
 };
