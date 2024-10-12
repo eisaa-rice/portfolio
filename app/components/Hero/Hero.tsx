@@ -9,8 +9,88 @@ import "./Hero.css";
 interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <div className="flex flex-col justify-start items-start mb-96 mt-14 lg:mt-14 2xl:mt-24 h-[800px] w-full">
-      <div className="inline-flex flex-col items-center justify-center mx-auto">
+    //     lg:mt-14 2xl:mt-24
+    <div
+      className="flex flex-col items-center xl:grid xl:grid-cols-[2fr 1fr] xl:grid-rows-1 mb-96
+    w-full min-h-screen"
+    >
+      <div
+        className="m-auto relative md:static w-full flex-shrink-0 my-20
+      xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-2 overflow-visible"
+      >
+        <div
+          className="rounded-full flex-shrink-0 bg-white shadow-sm relative overflow-hidden m-auto
+          h-[400px] xl:h-[440px] 2xl:h-[480px]
+          w-[310px] xs:w-[370px] sm:w-[400px] xl:w-[440px] 2xl:w-[480px]"
+        >
+          <Image
+            className="rounded-full mt-4 xs:"
+            src="/images/animoji.png"
+            alt="animoji"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      </div>
+
+      <div
+        className="inline-flex flex-col justify-center items-center xl:items-start font-bold
+      mx-auto xl:mx-0 gap-8
+      xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2"
+      >
+        <p
+          className="text-center xl:text-start font-bold 
+        text-xl sm:text-2xl lg:text-3xl"
+        >
+          hi, i&apos;m
+        </p>
+
+        <p
+          // text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600
+          className="text-center xl:text-start inline-flex flex-shrink-0
+        text-6xl sm:text-7xl lg:text-8xl"
+        >
+          jésus orozco
+        </p>
+
+        <p
+          className="text-center xl:text-start inline-flex flex-shrink-0
+        text-5xl sm:text-6xl lg:text-7xl"
+        >
+          software developer
+        </p>
+
+        <p
+          className="text-center xl:text-start inline-flex flex-shrink-0
+        text-2xl sm:text-3xl lg:text-4xl"
+        >
+          currently a free agent
+        </p>
+
+        <motion.a
+          href="/resume"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block p-4 text-xl bg-white rounded-xl mt-16 shadow-sm mx-auto xl:ml-0"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{
+            scale: 0.95,
+          }}
+        >
+          résumé 📄
+        </motion.a>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
+
+/*
+
+*/
+
+/*
         <div
           className="flex items-center justify-center bg-white rounded-full flex-shrink-0 shadow-sm 
           h-[225px] w-[225px] sm:h-[250px] sm:w-[250px]
@@ -47,18 +127,9 @@ const Hero: React.FC<HeroProps> = () => {
             />
           </div>
         </div>
+*/
 
-        <p
-          className="text-center font-semibold 
-        text-6xl sm:text-7xl lg:text-8xl 2xl:text-9xl"
-        >
-          {/* sm:text-7xl md:text-8xl lg:text-9xl */}
-          hi, i&apos;m{" "}
-          <span className="mt-4 text-transparent pb-3 bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600 font-extrabold inline-flex flex-shrink-0">
-            jésus orozco
-          </span>
-        </p>
-
+/*
         <motion.svg
           className="w-full h-full"
           viewBox="0 -10 1144 137"
@@ -74,29 +145,4 @@ const Hero: React.FC<HeroProps> = () => {
             transition={{ duration: 1, delay: 4.5, ease: "easeOut" }}
           />
         </motion.svg>
-
-        <p
-          className="rounded-3xl font-light text-center -mt-1
-        text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl"
-        >
-          aspiring software developer
-        </p>
-      </div>
-
-      <motion.a
-        href="/resume"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-4 text-xl bg-white rounded-xl mt-16 shadow-sm mx-auto"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{
-          scale: 0.95,
-        }}
-      >
-        résumé 📄
-      </motion.a>
-    </div>
-  );
-};
-
-export default Hero;
+*/

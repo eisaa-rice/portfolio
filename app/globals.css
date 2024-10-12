@@ -10,10 +10,10 @@
 
 html,
 body {
-  background-color: #fafaff;
   overflow-x: hidden;
 }
 
 body {
   overflow-y: hidden;
+  background-color: #fafaff;
 }
