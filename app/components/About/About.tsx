@@ -91,7 +91,7 @@ const About: React.FC<AboutProps> = () => {
     >
       <div
         className="flex flex-col gap-12 text-2xl font-light opacity-75
-      px-2 sm:px-0"
+      px-2 sm:px-0 mb-12 xl:mb-0"
       >
         <p>
           holá! 👋🏻 as you already know, the name&apos;s{" "}
@@ -150,10 +150,10 @@ const About: React.FC<AboutProps> = () => {
         >
           <motion.div
             className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
-      2xl:h-[200px] 
-      2xl:w-[200px]
-      2xl:-mt-[30rem]
-      2xl:-ml-96"
+            sm:h-[200px] 
+            sm:w-[200px]
+            sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1 }}
             variants={{
               languages: { scale: 1.1, transition: { ease: "easeOut" } },
@@ -170,10 +170,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-      2xl:-mt-[30rem]
-            2xl:-ml-96"
+            h-[100px] sm:h-[55px] 
+            w-[100px] sm:w-[55px]
+            sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               languages: {
@@ -196,10 +196,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-      h-[100px] 2xl:h-[55px] 
-      w-[100px] 2xl:w-[55px]
-      2xl:-mt-[30rem]
-      2xl:-ml-96"
+             h-[100px] sm:h-[55px] 
+          w-[100px] sm:w-[55px]
+            sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               languages: {
@@ -222,10 +222,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-             h-[100px] 2xl:h-[55px] 
-             w-[100px] 2xl:w-[55px]
-      2xl:-mt-[30rem]
-             2xl:-ml-96"
+            h-[100px] sm:h-[55px] 
+          w-[100px] sm:w-[55px]
+           sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
             variants={{
               languages: {
@@ -248,10 +248,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-             h-[100px] 2xl:h-[55px] 
-             w-[100px] 2xl:w-[55px]
-      2xl:-mt-[30rem]
-             2xl:-ml-96"
+           h-[100px] sm:h-[55px] 
+          w-[100px] sm:w-[55px]
+         sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
             variants={{
               languages: {
@@ -274,10 +274,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-      2xl:-mt-[30rem]
-            2xl:-ml-96"
+           h-[100px] sm:h-[55px] 
+          w-[100px] sm:w-[55px]
+         sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               languages: {
@@ -300,10 +300,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-      2xl:-mt-[30rem]
-            2xl:-ml-96"
+              h-[100px] sm:h-[55px] 
+          w-[100px] sm:w-[55px]
+             sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
             variants={{
               languages: {
@@ -326,10 +326,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-             h-[100px] 2xl:h-[55px] 
-             w-[100px] 2xl:w-[55px]
-      2xl:-mt-[30rem]
-             2xl:-ml-96"
+            h-[100px] sm:h-[55px] 
+          w-[100px] sm:w-[55px]
+            sm:-mt-[28rem] xl:-mt-[30rem]
+            sm:-ml-[18rem] lg:-ml-[30rem] xl:-ml-80 2xl:-ml-96"
             initial={{ scale: 1, x: 0, y: 0, rotate: 90 }}
             variants={{
               languages: {
@@ -360,10 +360,10 @@ const About: React.FC<AboutProps> = () => {
         >
           <motion.div
             className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
-          2xl:h-[175px] 
-          2xl:w-[175px]
-          2xl:-mb-12
-          2xl:-mr-[30rem]"
+          sm:h-[175px] 
+          sm:w-[175px]
+          sm:-mb-14 lg:-mb-0
+          sm:-mr-[27rem] lg:-mr-[30rem]"
             initial={{ scale: 1 }}
             variants={{
               frameworks: { scale: 1.1, transition: { ease: "easeOut" } },
@@ -380,10 +380,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-            2xl:-mb-12
-            2xl:-mr-[30rem]"
+            h-[100px] sm:h-[55px] 
+            w-[100px] sm:w-[55px]
+          sm:-mb-14 lg:-mb-0
+          sm:-mr-[27rem] lg:-mr-[30rem]"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               frameworks: {
@@ -406,10 +406,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-            2xl:-mb-12
-            2xl:-mr-[30rem]"
+             h-[100px] sm:h-[55px] 
+            w-[100px] sm:w-[55px]
+          sm:-mb-14 lg:-mb-0
+          sm:-mr-[27rem] lg:-mr-[30rem]"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               frameworks: {
@@ -432,10 +432,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-            2xl:-mb-12
-            2xl:-mr-[30rem]"
+            h-[100px] sm:h-[55px] 
+            w-[100px] sm:w-[55px]
+          sm:-mb-14 lg:-mb-0
+          sm:-mr-[27rem] lg:-mr-[30rem]"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               frameworks: {
@@ -458,10 +458,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-            2xl:-mb-12
-            2xl:-mr-[30rem]"
+             h-[100px] sm:h-[55px] 
+            w-[100px] sm:w-[55px]
+          sm:-mb-14 lg:-mb-0
+          sm:-mr-[27rem] lg:-mr-[30rem]"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               frameworks: {
@@ -492,10 +492,10 @@ const About: React.FC<AboutProps> = () => {
         >
           <motion.div
             className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
-          2xl:h-[150px] 
-          2xl:w-[150px]
-          2xl:-mb-[30rem]
-          2xl:-ml-60"
+          sm:h-[150px] 
+          sm:w-[150px]
+          sm:-mb-[36rem] lg:-mb-[30rem] xl:-mb-[30rem]
+          sm:-ml-52 lg:-ml-72 xl:-ml-60"
             initial={{ scale: 1 }}
             variants={{
               technologies: { scale: 1.1, transition: { ease: "easeOut" } },
@@ -512,10 +512,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-            2xl:-mb-[30rem]
-          2xl:-ml-60"
+            h-[100px] sm:h-[55px] 
+            w-[100px] sm:w-[55px]
+            sm:-mb-[36rem] lg:-mb-[30rem] xl:-mb-[30rem]
+          sm:-ml-52 lg:-ml-72 xl:-ml-60"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               technologies: {
@@ -538,10 +538,10 @@ const About: React.FC<AboutProps> = () => {
 
           <motion.div
             className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[100px] 2xl:h-[55px] 
-            w-[100px] 2xl:w-[55px]
-            2xl:-mb-[30rem]
-          2xl:-ml-60"
+              h-[100px] sm:h-[55px] 
+            w-[100px] sm:w-[55px]
+            sm:-mb-[36rem] lg:-mb-[30rem] xl:-mb-[30rem]
+          sm:-ml-52 lg:-ml-72 xl:-ml-60"
             initial={{ scale: 1, x: 0, y: 0, rotate: -90 }}
             variants={{
               technologies: {
