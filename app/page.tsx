@@ -91,6 +91,7 @@ export default function Home() {
         </motion.p>
       </div>
 
+      {/* LOADING ANIMATION */}
       <motion.div
         className="h-full w-screen bg-black z-[999]
         fixed top-0 left-0 right-0"
@@ -104,7 +105,7 @@ export default function Home() {
         fixed top-0 left-0 right-0"
         initial={{ width: "100%" }}
         animate={{ width: "0" }}
-        transition={{ ease: "easeIn", duration: 0.425, delay: 2.25 }}
+        transition={{ ease: "easeIn", duration: 0.325, delay: 2.25 }}
       />
 
       <motion.div
@@ -112,14 +113,14 @@ export default function Home() {
         fixed top-0 left-0 right-0"
         initial={{ width: "100%" }}
         animate={{ width: "0" }}
-        transition={{ ease: "easeIn", duration: 0.3, delay: 2.5 }}
+        transition={{ ease: "easeIn", duration: 0.25, delay: 2.45 }}
       />
 
       <Hero />
 
       <About />
 
-      <Skills />
+      {/* <Skills /> */}
 
       <Experience />
 

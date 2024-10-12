@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = () => {
 
       <div
         className="inline-flex flex-col justify-center items-center xl:items-start
-        mx-auto xl:mx-0 gap-14 xl:mt-12
+        mx-auto xl:mx-0 gap-14 xl:mt-0
         xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2"
       >
         <p
