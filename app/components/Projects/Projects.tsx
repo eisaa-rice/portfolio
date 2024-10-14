@@ -40,9 +40,9 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       // - 1600
       if (width >= 320 && width < 500) {
-        setScrollRange1([5400, 7000]);
+        setScrollRange1([4900, 6500]);
 
-        setScrollRange2([7300, 8900]);
+        setScrollRange2([7000, 8600]);
 
         setScrollRange3([9100, 10700]);
       } else if (width >= 500 && width < 640) {
@@ -71,11 +71,11 @@ const Projects: React.FC<ProjectsProps> = () => {
         setScrollRange3([5300, 6900]);
       } else {
         // width >= 1536
-        setScrollRange1([3325, 4925]);
+        setScrollRange1([2400, 4000]);
 
-        setScrollRange2([4475, 6075]);
+        setScrollRange2([3600, 5100]);
 
-        setScrollRange3([5625, 7225]);
+        setScrollRange3([4700, 6300]);
       }
     };
 
