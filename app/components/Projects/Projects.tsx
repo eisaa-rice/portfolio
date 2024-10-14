@@ -6,6 +6,26 @@ import Image from "next/image";
 
 import "./Projects.css";
 
+interface OtherWorksProps {}
+const OtherWorks: React.FC<OtherWorksProps> = () => {
+  return (
+    <div
+      className="w-full flex flex-col items-center
+bg-black bg-opacity-5"
+    >
+      <p className="text-2xl font-light opacity-75 my-4">other works</p>
+
+      <div className="h-[1px] w-full bg-black opacity-25" />
+
+      <div className="flex flex-col w-full gap-12 items-center justify-center p-24">
+        <div className="bg-white h-[50px] w-full rounded-md">
+          <p> one day some shit will go here lol</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 interface ProjectsProps {}
 const Projects: React.FC<ProjectsProps> = () => {
   const { scrollY } = useScroll();
@@ -75,7 +95,10 @@ const Projects: React.FC<ProjectsProps> = () => {
   const rotate3 = useTransform(scrollY, scrollRange3, [5, -5]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-visible pt-96">
+    <div
+      className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-visible pt-96 pb-48
+    px-2"
+    >
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
@@ -153,17 +176,45 @@ const Projects: React.FC<ProjectsProps> = () => {
               algorithm easy and simple
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-4">
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+            <div className="flex flex-wrap gap-4 mt-4 mx-auto xl:mx-0">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 react.js
+                <Image
+                  src={"/react.svg"}
+                  alt="react.js"
+                  height={25}
+                  width={25}
+                />
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 typescript
+                <Image
+                  src={"/typescript.svg"}
+                  alt="typescript"
+                  className="rounded-sm"
+                  height={25}
+                  width={25}
+                />
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 material ui
+                <Image
+                  src={"/mui.svg"}
+                  alt="material ui"
+                  height={25}
+                  width={25}
+                />
               </p>
             </div>
           </div>
@@ -249,17 +300,45 @@ const Projects: React.FC<ProjectsProps> = () => {
               the application
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-4">
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+            <div className="flex flex-wrap gap-4 mt-4 mx-auto xl:mx-0">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 react.js
+                <Image
+                  src={"/react.svg"}
+                  alt="react.js"
+                  height={25}
+                  width={25}
+                />
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 javascript
+                <Image
+                  src={"/javascript.svg"}
+                  alt="javascript"
+                  className="rounded-sm"
+                  height={25}
+                  width={25}
+                />
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 tailwind css
+                <Image
+                  src={"/tailwind.svg"}
+                  alt="tailwind css"
+                  height={30}
+                  width={30}
+                />
               </p>
             </div>
           </div>
@@ -332,8 +411,9 @@ const Projects: React.FC<ProjectsProps> = () => {
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8">
             <p className="font-light opacity-75 text-2xl">
-              university club made an <span className="font-semibold">app</span>{" "}
-              and a <span className="font-semibold">website</span> for our
+              university club made a{" "}
+              <span className="font-semibold">fullstack app</span> and a{" "}
+              <span className="font-semibold">website</span> for our
               school&apos;s annual hackathon, which were used by over 250
               attendees for registration, information display, and check-in
             </p>
@@ -351,17 +431,45 @@ const Projects: React.FC<ProjectsProps> = () => {
               and simple authentication features
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-4">
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+            <div className="flex flex-wrap gap-3 xl:gap-4 mt-4 mx-auto xl:mx-0">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 react native
+                <Image
+                  src={"/react-native.svg"}
+                  alt="react native"
+                  height={35}
+                  width={35}
+                />
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 typescript
+                <Image
+                  src={"/typescript.svg"}
+                  alt="typescript"
+                  className="rounded-sm"
+                  height={25}
+                  width={25}
+                />
               </p>
 
-              <p className="font-extralight p-2 bg-white rounded-xl shadow-sm">
+              <p
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
+              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              >
                 supabase
+                <Image
+                  src={"/supabase.svg"}
+                  alt="supabase"
+                  height={25}
+                  width={25}
+                />
               </p>
             </div>
           </div>
@@ -369,7 +477,7 @@ const Projects: React.FC<ProjectsProps> = () => {
       </div>
 
       {/* OTHER WORKS */}
-      <div className="w-full flex flex-col items-center"></div>
+      {/* <OtherWorks /> */}
     </div>
   );
 };
