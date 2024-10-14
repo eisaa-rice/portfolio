@@ -176,7 +176,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               algorithm easy and simple
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-4 mx-auto xl:mx-0">
+            <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0">
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
               opacity-100 inline-flex items-center gap-2 flex-shrink-0"
@@ -300,7 +300,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               the application
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-4 mx-auto xl:mx-0">
+            <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0">
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
               opacity-100 inline-flex items-center gap-2 flex-shrink-0"
@@ -431,7 +431,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               and simple authentication features
             </p>
 
-            <div className="flex flex-wrap gap-3 xl:gap-4 mt-4 mx-auto xl:mx-0">
+            <div className="flex flex-wrap justify-center xl:justify-start gap-3 xl:gap-4 mt-4 mx-auto xl:mx-0">
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
               opacity-100 inline-flex items-center gap-2 flex-shrink-0"

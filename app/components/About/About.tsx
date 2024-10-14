@@ -52,7 +52,7 @@ const About: React.FC<AboutProps> = () => {
       </div>
 
       <div
-        className="flex flex-col items-start
+        className="flex flex-col items-center xl:items-start
         text-2xl font-light flex-shrink-0 gap-14
         xl:row-start-1 xl:row-end-2
         xl:col-start-1 xl:col-end-2"
@@ -62,7 +62,7 @@ const About: React.FC<AboutProps> = () => {
             i do lots of work with these
           </p>
 
-          <div className="flex items-start justify-center xl:justify-start flex-wrap gap-4">
+          <div className="flex items-start flex-wrap gap-4 justify-center xl:justify-start">
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
   text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
