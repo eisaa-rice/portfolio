@@ -1,13 +1,47 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import "./About.css";
 
 interface AboutProps {}
 const About: React.FC<AboutProps> = () => {
+  const { scrollY } = useScroll();
+
+  const [rotateRange, setRotateRange] = useState([0, 0]);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      const width = window.innerWidth;
+
+      if (width >= 320 && width < 500) {
+      } else if (width >= 500 && width < 640) {
+      } else if (width >= 640 && width < 1024) {
+      } else if (width >= 1024 && width < 1280) {
+      } else if (width >= 1280 && width < 1536) {
+      } else {
+        setRotateRange([400, 1900]);
+        // width >= 1536
+      }
+    };
+
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
+
+  const cppRotate = useTransform(scrollY, rotateRange, [-90, 90]);
+  const csharpRotate = useTransform(scrollY, rotateRange, [-90, 90]);
+
+  const htmlRotate = useTransform(scrollY, rotateRange, [360, -360]);
+
+  const reactRotate = useTransform(scrollY, rotateRange, [720, -720]);
+
+  const githubRotate = useTransform(scrollY, rotateRange, [180, -180]);
+
   return (
     <div
       className="flex flex-col items-center xl:grid xl:grid-rows-1 xl:grid-cols-[auto_auto]
@@ -61,10 +95,7 @@ const About: React.FC<AboutProps> = () => {
           w-[105px]     xl:w-[150px]
           -mt-[35rem]   xl:-mt-[24.5rem]
           -ml-[13rem]   xl:-ml-[24.5rem]"
-          initial={{ scale: 1 }}
-          variants={{
-            languages: { scale: 1.1, transition: { ease: "easeOut" } },
-          }}
+          style={{ rotate: cppRotate }}
         >
           <Image
             src="/c++.svg"
@@ -129,6 +160,7 @@ const About: React.FC<AboutProps> = () => {
           w-[80px]        xl:w-[125px]
           -mt-[10rem]     xl:-mt-[15rem]
           -mr-[12rem]     xl:-mr-[26rem]"
+          style={{ rotate: htmlRotate }}
         >
           <Image
             src="/html.svg"
@@ -194,6 +226,7 @@ const About: React.FC<AboutProps> = () => {
           w-[120px]       xl:w-[165px]
           -mb-[11rem]     xl:-mb-[8rem]
           -ml-[9rem]      xl:-ml-[18rem]"
+          style={{ rotate: reactRotate }}
         >
           <Image
             src="/react.svg"
@@ -214,7 +247,7 @@ const About: React.FC<AboutProps> = () => {
           <Image
             src="/framer-motion.svg"
             alt="Framer Motion"
-            className="p-3"
+            className="p-3 xl:p-4"
             layout="fill"
             objectFit="contain"
           />
@@ -275,6 +308,7 @@ const About: React.FC<AboutProps> = () => {
           w-[90px]      xl:w-[135px]
           -mb-[30rem]   xl:-mb-[17rem]
           -mr-[12rem]   xl:-mr-[23rem]"
+          style={{ rotate: githubRotate }}
         >
           <Image
             src="/github.svg"
