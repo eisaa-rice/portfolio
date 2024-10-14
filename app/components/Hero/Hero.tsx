@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = () => {
       w-full min-h-screen"
     >
       <div
-        className="m-auto relative md:static w-full flex-shrink-0 my-20
+        className="m-auto relative md:static w-full flex-shrink-0 mt-20 mb-4
         xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-2 overflow-visible"
       >
         <div
@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = () => {
       >
         <p
           className="text-center xl:text-start opacity-75
-          -mb-6 font-light
+          -mb-12 font-light
           text-xl sm:text-2xl lg:text-3xl"
         >
           hi, i&apos;m

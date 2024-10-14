@@ -5,18 +5,20 @@ import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 
 import "./About.css";
-import { Scada } from "next/font/google";
 
 interface AboutProps {}
 const About: React.FC<AboutProps> = () => {
   return (
     <div
-      className="flex flex-col xl:flex-row items-center
+      className="flex flex-col items-center xl:grid xl:grid-rows-1 xl:grid-cols-[auto_auto]
     gap-24 mb-96 w-full overflow-visible"
     >
       <div
-        className="flex flex-col gap-12 text-2xl font-light opacity-75
-      px-2 sm:px-0 mb-12 xl:mb-0"
+        className="flex flex-col text-2xl font-light opacity-75
+        xl:row-start-1 xl:row-end-2
+        xl:col-start-2 xl:col-end-3
+        gap-12 2xl:gap-20
+        px-2 sm:px-0 mb-12 xl:mb-0"
       >
         <p>
           holá! 👋🏻 as you already know, the name&apos;s{" "}
@@ -46,18 +48,19 @@ const About: React.FC<AboutProps> = () => {
       </div>
 
       <div
-        className="flex items-center justify-center flex-shrink-0 
-        h-[650px] xl:h-[550px] 2xl:h-[700px] 
-        w-full xl:w-[550px] 2xl:w-[700px]"
+        className="flex items-center justify-center flex-shrink-0
+        xl:row-start-1 xl:row-end-2
+        xl:col-start-1 xl:col-end-2
+        h-[750px] xl:h-[550px] 2xl:h-[600px] 
+        w-full xl:w-[550px] 2xl:w-[600px]"
       >
         {/* LANGUAGES */}
-
         <motion.div
           className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
-          h-[105px] 
-          w-[105px]
-          -mt-[38rem]
-          -ml-[13rem]"
+          h-[105px]     xl:h-[150px]
+          w-[105px]     xl:w-[150px]
+          -mt-[35rem]   xl:-mt-[24.5rem]
+          -ml-[13rem]   xl:-ml-[24.5rem]"
           initial={{ scale: 1 }}
           variants={{
             languages: { scale: 1.1, transition: { ease: "easeOut" } },
@@ -74,10 +77,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-          h-[70px] 
-          w-[70px]
-          -mt-[24rem]
-          -ml-[12rem]"
+          h-[70px]      xl:h-[80px]
+          w-[70px]      xl:w-[80px]
+          -mt-[19rem]   xl:-mt-[9rem]
+          -ml-[12rem]   xl:-ml-[29rem]"
         >
           <Image
             src="/python.svg"
@@ -90,10 +93,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-          h-[55px] 
-          w-[55px]
-          -mt-[44rem]
-          -ml-2"
+          h-[55px]        xl:h-[65px]
+          w-[55px]        xl:w-[65px]
+          -mt-[41rem]     xl:-mt-[30rem]
+          -ml-[0.5rem]    xl:-ml-[10rem]"
         >
           <Image
             src="/csharp.svg"
@@ -106,15 +109,15 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-          h-[60px] 
-          w-[60px]
-          -mt-[32rem]
-          -ml-[2rem]"
+          h-[60px]      xl:h-[70px] 
+          w-[60px]      xl:w-[70px]
+          -mt-[26rem]   xl:-mt-[15rem]
+          -ml-[2rem]    xl:-ml-[7rem]"
         >
           <Image
             src="/java.svg"
             alt="Java"
-            className="p-2"
+            className="p-2 xl:-mt-1"
             layout="fill"
             objectFit="contain"
           />
@@ -122,15 +125,15 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-          h-[80px] 
-          w-[80px]
-          -mt-[23rem]
-          -mr-[12rem]"
+          h-[80px]        xl:h-[125px]
+          w-[80px]        xl:w-[125px]
+          -mt-[10rem]     xl:-mt-[15rem]
+          -mr-[12rem]     xl:-mr-[26rem]"
         >
           <Image
             src="/html.svg"
             alt="HTML"
-            className="p-[0.75rem] mt-[0.25rem]"
+            className="p-3 mt-1 xl:p-4"
             layout="fill"
             objectFit="contain"
           />
@@ -138,10 +141,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-           h-[55px] 
-          w-[55px]
-          -mt-[34rem]
-          -mr-[10rem]"
+          h-[55px]        xl:h-[65px] 
+          w-[55px]        xl:w-[65px]
+          -mt-[21rem]     xl:-mt-[28rem]
+          -mr-[10rem]     xl:-mr-[17rem]"
         >
           <Image
             src="/css.svg"
@@ -154,15 +157,15 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-          h-[60px] 
-          w-[60px]
-          -mt-[12rem]
-          -mr-[8rem]"
+          h-[60px]        xl:h-[70px]
+          w-[60px]        xl:w-[70px]
+          -mb-[1rem]      xl:-mt-[2rem]
+          -mr-[8rem]      xl:-mr-[20rem]"
         >
           <Image
             src="/javascript.svg"
             alt="Javascript"
-            className="p-[0.625rem] rounded-2xl"
+            className="p-[0.625rem] rounded-2xl xl:p-3"
             layout="fill"
             objectFit="contain"
           />
@@ -170,15 +173,15 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-          h-[50px] 
-          w-[50px]
-          -mt-[18rem]
-          -mr-[2rem]"
+          h-[50px]        xl:h-[60px]
+          w-[50px]        xl:w-[60px]
+          -mt-[5rem]      xl:-mt-[9rem]
+          -mr-[2rem]      xl:-mr-[11rem]"
         >
           <Image
             src="/typescript.svg"
             alt="Typescript"
-            className="p-[0.625rem] rounded-2xl"
+            className="p-[0.625rem] rounded-2xl xl:p-3"
             layout="fill"
             objectFit="contain"
           />
@@ -187,10 +190,10 @@ const About: React.FC<AboutProps> = () => {
         {/* FRAMEWORKS */}
         <motion.div
           className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
-          h-[120px] 
-          w-[120px]
-          -mt-[3rem]
-          -ml-[10rem]"
+          h-[120px]       xl:h-[165px]
+          w-[120px]       xl:w-[165px]
+          -mb-[11rem]     xl:-mb-[8rem]
+          -ml-[9rem]      xl:-ml-[18rem]"
         >
           <Image
             src="/react.svg"
@@ -203,10 +206,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-         h-[60px] 
-          w-[60px]
-          -mb-[0rem]
-          -mr-[6rem]"
+          h-[60px]      xl:h-[70px] 
+          w-[60px]      xl:w-[70px]
+          -mb-[14rem]   xl:-mb-[]
+          -mr-[6rem]    xl:-mr-[3rem]"
         >
           <Image
             src="/framer-motion.svg"
@@ -219,10 +222,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[60px] 
-          w-[60px]
-       -mb-[8rem]
-          -ml-[1rem]"
+          h-[65px]      xl:h-[75px] 
+          w-[65px]      xl:w-[75px]
+          -mb-[24rem]   
+          -ml-[2rem]    xl:-ml-[7rem]"
         >
           <Image
             src="/tailwind.svg"
@@ -235,10 +238,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-            h-[50px] 
-          w-[50px]
-          -mb-[8rem]
-          -ml-[16rem]"
+          h-[50px]      xl:h-[60px]
+          w-[50px]      xl:w-[60px]
+          -mb-[22rem]   xl:-mb-[]
+          -ml-[16rem]   xl:-ml-[27rem]"
         >
           <Image
             src="/react-native.svg"
@@ -251,10 +254,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-             h-[45px] 
-          w-[45px]
-          -mb-[12rem]
-          -ml-[9rem]"
+          h-[45px]      xl:h-[55px] 
+          w-[45px]      xl:w-[55px]
+          -mb-[29rem]   xl:
+          -ml-[11rem]   xl:-ml-[21rem]"
         >
           <Image
             src="/nodejs.svg"
@@ -268,10 +271,10 @@ const About: React.FC<AboutProps> = () => {
         {/* TECHNOLOGIES */}
         <motion.div
           className="bg-white rounded-full shadow-sm z-40 absolute flex-shrink-0
-           h-[90px] 
-          w-[90px]
-          -mb-[16rem]
-          -mr-[12rem]"
+          h-[90px]      xl:h-[135px]
+          w-[90px]      xl:w-[135px]
+          -mb-[30rem]   xl:-mb-[17rem]
+          -mr-[12rem]   xl:-mr-[23rem]"
         >
           <Image
             src="/github.svg"
@@ -284,10 +287,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-             h-[55px] 
-          w-[55px]
-          -mb-[26rem]
-          -mr-[15rem]"
+          h-[55px]      xl:h-[65px]
+          w-[55px]      xl:w-[65px]
+          -mb-[41rem]   xl:-mb-[30rem]
+          -mr-[15rem]   xl:-mr-[11rem]"
         >
           <Image
             src="/git.svg"
@@ -300,10 +303,10 @@ const About: React.FC<AboutProps> = () => {
 
         <motion.div
           className="bg-white rounded-full shadow-sm absolute flex-shrink-0
-              h-[45px] 
-          w-[45px]
-          -mb-[22rem]
-          -mr-[4rem]"
+          h-[45px]      xl:h-[55px]
+          w-[45px]      xl:w-[55px]
+          -mb-[37rem]   xl:-mb-[29rem]
+          -mr-[4rem]    xl:-mr-[30rem]"
         >
           <Image
             src="/docker.svg"
