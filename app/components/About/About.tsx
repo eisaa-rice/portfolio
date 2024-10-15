@@ -16,7 +16,7 @@ const About: React.FC<AboutProps> = () => {
       <div
         className="flex flex-col text-2xl font-light opacity-75 gap-12
         xl:row-start-1 xl:row-end-2
-        xl:col-start-2 xl:col-end-3
+        xl:col-start-1 xl:col-end-2
         mb-12 xl:mb-0"
       >
         <p>
@@ -55,7 +55,7 @@ const About: React.FC<AboutProps> = () => {
         className="flex flex-col items-center xl:items-start
         text-2xl font-light flex-shrink-0 gap-14
         xl:row-start-1 xl:row-end-2
-        xl:col-start-1 xl:col-end-2"
+        xl:col-start-2 xl:col-end-3"
       >
         <div>
           <p className="opacity-75 mb-5 text-center xl:text-start text-xl">

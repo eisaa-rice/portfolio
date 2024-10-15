@@ -20,24 +20,24 @@ export default function Home() {
       const width = window.innerWidth;
 
       if (width >= 320 && width < 500) {
-        setOpacityRange([800, 900, 2300, 2400, 2500, 3850, 3950, 4050]);
-        setHeaderRange([0, 2400, 3950, 9999]);
+        setOpacityRange([1000, 1100, 3000, 3100, 3200, 5200, 5300, 5400]);
+        setHeaderRange([0, 3100, 5300, 9999]);
       } else if (width >= 500 && width < 640) {
-        setOpacityRange([850, 950, 2200, 2300, 2400, 3300, 3400, 3500]);
-        setHeaderRange([0, 2300, 3400, 9999]);
+        setOpacityRange([900, 1000, 2600, 2700, 2800, 4250, 4350, 4450]);
+        setHeaderRange([0, 2700, 4350, 9999]);
       } else if (width >= 640 && width < 1024) {
-        setOpacityRange([900, 1000, 2100, 2200, 2300, 3350, 3450, 3550]);
-        setHeaderRange([0, 2200, 3450, 9999]);
+        setOpacityRange([950, 1050, 2450, 2550, 2650, 3950, 4050, 4150]);
+        setHeaderRange([0, 2550, 4050, 9999]);
       } else if (width >= 1024 && width < 1280) {
-        setOpacityRange([800, 900, 2000, 2100, 2200, 3050, 3150, 3250]);
-        setHeaderRange([0, 2100, 3150, 9999]);
+        setOpacityRange([1000, 1100, 2450, 2550, 2650, 3800, 3900, 4000]);
+        setHeaderRange([0, 2550, 3900, 9999]);
       } else if (width >= 1280 && width < 1536) {
-        setOpacityRange([700, 800, 1600, 1700, 1800, 2550, 2650, 2750]);
-        setHeaderRange([0, 1700, 2650, 9999]);
+        setOpacityRange([900, 1000, 1700, 1800, 1900, 3000, 3100, 3200]);
+        setHeaderRange([0, 1800, 3100, 9999]);
       } else {
         // width >= 1536
-        setOpacityRange([900, 1000, 1600, 1700, 1800, 2650, 2750, 2850]);
-        setHeaderRange([0, 1700, 2750, 9999]);
+        setOpacityRange([900, 1000, 1850, 1950, 2050, 2900, 3000, 3100]);
+        setHeaderRange([0, 1950, 3000, 9999]);
       }
     };
 

@@ -9,7 +9,6 @@ import "./Hero.css";
 interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
   return (
-    //     lg:mt-14 2xl:mt-24
     <div
       className="flex flex-col items-center xl:grid xl:grid-cols-[2fr 1fr] xl:grid-rows-1 mb-96
       w-full min-h-screen"
@@ -20,11 +19,11 @@ const Hero: React.FC<HeroProps> = () => {
       >
         <div
           className="rounded-full flex-shrink-0 bg-white shadow-sm relative overflow-hidden m-auto
-          h-[400px] xl:h-[440px] 2xl:h-[480px]
-          w-[310px] xs:w-[370px] sm:w-[400px] xl:w-[440px] 2xl:w-[480px]"
+        h-[400px]                           xl:h-[440px] 2xl:h-[480px]
+        w-[310px] xs:w-[370px] sm:w-[400px] xl:w-[440px] 2xl:w-[480px]"
         >
           <Image
-            className="rounded-full mt-4 xs:"
+            className="rounded-full mt-4"
             src="/images/animoji.png"
             alt="animoji"
             layout="fill"

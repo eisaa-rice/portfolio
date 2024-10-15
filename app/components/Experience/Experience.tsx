@@ -18,10 +18,6 @@ const Experience: React.FC<ExperienceProps> = () => {
     },
   ];
 
-  // const { scrollY } = useScroll();
-
-  // const scaleX1 = useTransform(scrollY, [2600, 2900], [0, 1]);
-
   return (
     <motion.div className="min-h-[700px] flex flex-col items-center justify-center gap-32">
       <div className="flex flex-col lg:flex-row lg:-ml-20 justify-center w-full rounded-xl">

@@ -40,35 +40,30 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       // - 1600
       if (width >= 320 && width < 500) {
-        setScrollRange1([4900, 6500]);
+        setScrollRange1([4300, 6100]);
 
-        setScrollRange2([7000, 8600]);
+        setScrollRange2([6150, 7750]);
 
-        setScrollRange3([9100, 10700]);
+        setScrollRange3([8000, 9600]);
       } else if (width >= 500 && width < 640) {
-        setScrollRange1([4100, 5700]);
+        setScrollRange1([3400, 5000]);
 
-        setScrollRange2([5700, 7400]);
+        setScrollRange2([4600, 6200]);
 
-        setScrollRange3([7100, 8700]);
+        setScrollRange3([6400, 8000]);
       } else if (width >= 640 && width < 1024) {
-        setScrollRange1([3750, 5350]);
+        setScrollRange1([3350, 4950]);
 
-        setScrollRange2([5200, 6800]);
+        setScrollRange2([5425, 7025]);
 
-        setScrollRange3([6500, 8100]);
+        setScrollRange3([7200, 9000]);
       } else if (width >= 1024 && width < 1280) {
-        setScrollRange1([3500, 5100]);
-
-        setScrollRange2([4700, 6300]);
-
-        setScrollRange3([5850, 7450]);
       } else if (width >= 1280 && width < 1536) {
-        setScrollRange1([3100, 4700]);
+        setScrollRange1([2450, 4050]);
 
-        setScrollRange2([4350, 5950]);
+        setScrollRange2([3700, 5200]);
 
-        setScrollRange3([5300, 6900]);
+        setScrollRange3([4800, 6400]);
       } else {
         // width >= 1536
         setScrollRange1([2400, 4000]);
@@ -95,18 +90,14 @@ const Projects: React.FC<ProjectsProps> = () => {
   const rotate3 = useTransform(scrollY, scrollRange3, [5, -5]);
 
   return (
-    <div
-      className="w-full flex flex-col items-center justify-start gap-y-48 xl:gap-y-[500px] overflow-visible pt-96 pb-48
-    px-2"
-    >
+    <div className="w-full flex flex-col items-center justify-start gap-y-[500px] overflow-visible pt-96 pb-48 px-2">
       {/* SELECTED PROJECTS */}
-      <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
+      <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
-          flex justify-center items-center mx-auto
-          -ml-14 xs:-ml-2 sm:ml-auto
-          w-[800px] xs:w-[470px] sm:w-[580px] xl:w-[875px] 2xl:w-[975px]"
-          style={{ y: y1, rotate: rotate1 }}
+          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-12 xl:mt-12
+          w-[800px] xs:w-[1000px] sm:w-[1200px] xl:w-[875px] 2xl:w-[975px]"
+          // style={{ y: y1, rotate: rotate1 }}
         >
           <Image src="/images/cc.png" alt="CC" height={1469} width={2432} />
         </motion.div>
@@ -221,14 +212,19 @@ const Projects: React.FC<ProjectsProps> = () => {
         </div>
       </div>
 
-      <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
+      <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 
-          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0
-          w-[310px] sm:w-[400px]"
-          style={{ y: y2, rotate: rotate2 }}
+          relative 
+          h-[700px] xs:my-12"
+          // style={{ y: y2, rotate: rotate2 }}
         >
-          <Image src="/images/iwd.png" alt="IWD" height={1716} width={814} />
+          <Image
+            src="/images/iwd.png"
+            alt="IWD"
+            layout="fill"
+            objectFit="contain"
+          />
         </motion.div>
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 xl:my-auto">
@@ -345,17 +341,22 @@ const Projects: React.FC<ProjectsProps> = () => {
         </div>
       </div>
 
-      <div className="grid grid-rows-2 grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
+      <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-          flex justify-center items-center mx-auto -mt-20 sm:mb-12 xl:mb-0 xl:-mr-0 xl:-mt-32
-          w-[310px] sm:w-[400px]"
-          style={{ y: y3, rotate: rotate3 }}
+          relative 
+          h-[700px] xs:my-12"
+          // style={{ y: y3, rotate: rotate3 }}
         >
-          <Image src="/images/hd3.png" alt="HD3" height={1716} width={854} />
+          <Image
+            src="/images/hd3.png"
+            alt="HD3"
+            layout="fill"
+            objectFit="contain"
+          />
         </motion.div>
 
-        <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2">
+        <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:my-auto">
           <motion.a
             className="inline-flex items-center"
             href="https://www.hackdearborn.org/"
