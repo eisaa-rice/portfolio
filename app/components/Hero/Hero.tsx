@@ -45,7 +45,6 @@ const Hero: React.FC<HeroProps> = () => {
         </p>
 
         <p
-          // text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600
           className="text-center xl:text-start inline flex-shrink-0 font-extrabold 
           text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600
           text-7xl sm:text-8xl lg:text-9xl pb-2"
