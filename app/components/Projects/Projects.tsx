@@ -40,37 +40,42 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       // - 1600
       if (width >= 320 && width < 500) {
-        setScrollRange1([4300, 6100]);
+        setScrollRange1([4700, 6300]);
 
-        setScrollRange2([6150, 7750]);
+        setScrollRange2([6800, 8400]);
 
-        setScrollRange3([8000, 9600]);
+        setScrollRange3([9000, 10600]);
       } else if (width >= 500 && width < 640) {
-        setScrollRange1([3400, 5000]);
+        setScrollRange1([4000, 5600]);
 
-        setScrollRange2([4600, 6200]);
+        setScrollRange2([5950, 7550]);
 
-        setScrollRange3([6400, 8000]);
+        setScrollRange3([7950, 9550]);
       } else if (width >= 640 && width < 1024) {
-        setScrollRange1([3350, 4950]);
+        setScrollRange1([3800, 5400]);
 
-        setScrollRange2([5425, 7025]);
+        setScrollRange2([5625, 7225]);
 
-        setScrollRange3([7200, 9000]);
+        setScrollRange3([7500, 9100]);
       } else if (width >= 1024 && width < 1280) {
+        setScrollRange1([3700, 5300]);
+
+        setScrollRange2([5550, 7150]);
+
+        setScrollRange3([7350, 8950]);
       } else if (width >= 1280 && width < 1536) {
-        setScrollRange1([2450, 4050]);
+        setScrollRange1([2825, 4425]);
 
-        setScrollRange2([3700, 5200]);
+        setScrollRange2([4025, 5625]);
 
-        setScrollRange3([4800, 6400]);
+        setScrollRange3([5350, 6950]);
       } else {
         // width >= 1536
-        setScrollRange1([2400, 4000]);
+        setScrollRange1([2800, 4400]);
 
-        setScrollRange2([3600, 5100]);
+        setScrollRange2([4025, 5625]);
 
-        setScrollRange3([4700, 6300]);
+        setScrollRange3([5350, 6950]);
       }
     };
 
@@ -97,7 +102,7 @@ const Projects: React.FC<ProjectsProps> = () => {
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
           mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-12 xl:mt-12
           w-[800px] xs:w-[1000px] sm:w-[1200px] xl:w-[875px] 2xl:w-[975px]"
-          // style={{ y: y1, rotate: rotate1 }}
+          style={{ y: y1, rotate: rotate1 }}
         >
           <Image src="/images/cc.png" alt="CC" height={1469} width={2432} />
         </motion.div>
@@ -215,9 +220,8 @@ const Projects: React.FC<ProjectsProps> = () => {
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 
-          relative 
-          h-[700px] xs:my-12"
-          // style={{ y: y2, rotate: rotate2 }}
+          relative h-[700px] xs:my-12"
+          style={{ y: y2, rotate: rotate2 }}
         >
           <Image
             src="/images/iwd.png"
@@ -344,9 +348,8 @@ const Projects: React.FC<ProjectsProps> = () => {
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-          relative 
-          h-[700px] xs:my-12"
-          // style={{ y: y3, rotate: rotate3 }}
+          relative h-[700px] xs:my-12"
+          style={{ y: y3, rotate: rotate3 }}
         >
           <Image
             src="/images/hd3.png"
