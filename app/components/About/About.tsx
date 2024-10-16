@@ -11,7 +11,8 @@ const About: React.FC<AboutProps> = () => {
   return (
     <div
       className="flex flex-col items-center xl:grid xl:grid-rows-1 xl:grid-cols-2
-    gap-y-12 gap-x-20 mb-96 w-full overflow-visible px-2 sm:px-0"
+      gap-y-12 gap-x-20 mb-96 overflow-visible px-2 sm:px-0
+      w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
     >
       <div
         className="flex flex-col text-2xl font-light opacity-75 gap-12

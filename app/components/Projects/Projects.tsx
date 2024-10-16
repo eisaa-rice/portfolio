@@ -95,7 +95,10 @@ const Projects: React.FC<ProjectsProps> = () => {
   const rotate3 = useTransform(scrollY, scrollRange3, [5, -5]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-y-[500px] overflow-visible pt-96 pb-48 px-2">
+    <div
+      className="flex flex-col items-center justify-start gap-y-[500px] overflow-visible pt-96 pb-48 px-2
+    w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+    >
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div

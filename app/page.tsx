@@ -7,6 +7,7 @@ import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function Home() {
@@ -58,8 +59,8 @@ export default function Home() {
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center mx-auto
-      w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+      // w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]
+      className="flex flex-col justify-center items-center mx-auto"
     >
       <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
@@ -96,7 +97,19 @@ export default function Home() {
         transition={{ ease: "easeIn", duration: 0.25, delay: 2.45 }}
       />
 
-      <Hero />
+      <div className="relative flex flex-col items-center justify-start w-full">
+        <Hero />
+
+        <div className="bg-[#64815f] -z-50 absolute w-full h-full" />
+      </div>
+
+      <Image
+        className="w-full z-[30] mb-52"
+        src="/waves.svg"
+        alt=""
+        width={900}
+        height={600}
+      />
 
       <About />
 
