@@ -38,7 +38,7 @@ const Footer: React.FC<FooterProps> = () => {
           initial={{ rotate: 0, scale: 1 }}
           whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
         >
-          <Image height={36} width={36} src={"/email.svg"} alt="Email" />
+          <Image height={41} width={41} src={"/email.svg"} alt="Email" />
         </motion.a>
       </div>
 

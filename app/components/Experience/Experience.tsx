@@ -25,7 +25,7 @@ const Experience: React.FC<ExperienceProps> = () => {
     >
       <div className="flex flex-col lg:flex-row lg:-ml-20 justify-center w-full rounded-xl">
         <div className="flex flex-col items-center">
-          <div className="bg-white shadow-sm h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 lg:mb-0 flex items-center justify-center">
+          <div className="glass h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 lg:mb-0 flex items-center justify-center">
             <Image
               height={70}
               width={70}
