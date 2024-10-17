@@ -197,7 +197,7 @@ const About: React.FC<AboutProps> = () => {
         </div>
 
         <div>
-          <p className="mb-5 text-center xl:text-start text-xl">
+          <p className="text-gray-500 mb-5 text-center xl:text-start text-xl">
             i&apos;ve messed around with these before
           </p>
 
