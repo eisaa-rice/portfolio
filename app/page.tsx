@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <motion.div
       // w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]
-      className="flex flex-col justify-center items-center mx-auto"
+      className="flex flex-col justify-center items-center mx-auto gap-96"
     >
       <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
@@ -97,19 +97,7 @@ export default function Home() {
         transition={{ ease: "easeIn", duration: 0.25, delay: 2.45 }}
       />
 
-      <div className="relative flex flex-col items-center justify-start w-full">
-        <Hero />
-
-        <div className="bg-[#64815f] -z-50 absolute w-full h-full" />
-      </div>
-
-      <Image
-        className="w-full z-[30] mb-52"
-        src="/waves.svg"
-        alt=""
-        width={900}
-        height={600}
-      />
+      <Hero />
 
       <About />
 

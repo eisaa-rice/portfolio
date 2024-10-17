@@ -3,34 +3,77 @@
 import React from "react";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 import "./Hero.css";
 
 interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
   return (
     <div
-      // bg-[#64815f]
-      className="flex flex-col items-center bg-[#64815f] text-white
+      className="flex flex-col items-center
       w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
     >
       <div
-        className="h-24 w-full text-xl font-semibold
-        hidden xl:flex items-center justify-end gap-24"
+        className="h-24 w-full text-lg font- text-gray-400
+        hidden md:flex items-center justify-center gap-14"
       >
-        <p className="inline-flex items-center gap-2 flex-shrink-0">about</p>
+        <motion.p
+          className="inline-flex items-center gap-2 flex-shrink-0 
+          py-3 px-5 bg-white rounded-3xl shadow-sm
+          transition-colors duration-[500ms] ease-in-out"
+          initial={{ color: "#6b7280" }}
+          whileHover={{ color: "black", cursor: "pointer" }}
+          whileTap={{
+            scale: 0.95,
+          }}
+        >
+          about
+        </motion.p>
 
-        <p className="inline-flex items-center gap-2 flex-shrink-0">
+        <motion.p
+          className="inline-flex items-center gap-2 flex-shrink-0 
+          py-3 px-5 bg-white rounded-3xl shadow-sm
+          transition-colors duration-[500ms] ease-in-out"
+          initial={{ color: "#6b7280" }}
+          whileHover={{ color: "black", cursor: "pointer" }}
+          whileTap={{
+            scale: 0.95,
+          }}
+        >
           experience
-        </p>
+        </motion.p>
 
-        <p className="inline-flex items-center gap-2 flex-shrink-0">projects</p>
+        <motion.p
+          className="inline-flex items-center gap-2 flex-shrink-0 
+          py-3 px-5 bg-white rounded-3xl shadow-sm
+          transition-colors duration-[500ms] ease-in-out"
+          initial={{ color: "#6b7280" }}
+          whileHover={{ color: "black", cursor: "pointer" }}
+          whileTap={{
+            scale: 0.95,
+          }}
+        >
+          projects
+        </motion.p>
 
-        <p className="inline-flex items-center gap-2 flex-shrink-0">contact</p>
+        <motion.p
+          className="inline-flex items-center gap-2 flex-shrink-0 
+          py-3 px-5 bg-white rounded-3xl shadow-sm
+          transition-colors duration-[500ms] ease-in-out"
+          initial={{ color: "#6b7280" }}
+          whileHover={{ color: "black", cursor: "pointer" }}
+          whileTap={{
+            scale: 0.95,
+          }}
+        >
+          contact
+        </motion.p>
       </div>
 
       <div
-        className="flex flex-col items-center w-full mt-28
-        xl:grid xl:grid-cols-[1fr 1fr] xl:grid-rows-1 2xl:gap-32"
+        className="flex flex-col items-center w-full mt-28 md:mt-4 xl:mt-28
+        xl:grid xl:grid-cols-[auto_500px] xl:grid-rows-1 xl:gap-24 2xl:gap-12"
       >
         <div
           className="m-auto relative md:static w-full flex-shrink-0 mt-16 mb-8
@@ -58,7 +101,7 @@ const Hero: React.FC<HeroProps> = () => {
         >
           {/* text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600 */}
           <p
-            className="text-center xl:text-start opacity-75 font-semibold
+            className="text-gray-500 text-center xl:text-start font-medium
             text-4xl sm:text-5xl lg:text-6xl"
           >
             holá, i&apos;m
@@ -66,35 +109,98 @@ const Hero: React.FC<HeroProps> = () => {
 
           <p
             className="text-center xl:text-start inline flex-shrink-0 font-bold 
-        text-7xl sm:text-8xl lg:text-9xl p-2 inter"
+        text-6xl sm:text-7xl lg:text-8xl p-2"
           >
             jésus orozco
           </p>
 
           <p
-            className="text-center xl:text-start inline flex-shrink-0 font-semibold opacity-75
-        text-3xl sm:text-4xl lg:text-5xl"
+            className="text-gray-700 text-center xl:text-start inline flex-shrink-0
+        text-xl sm:text-2xl lg:text-3xl"
           >
-            a <span className="text-amber-200">software engineer</span> from{" "}
-            <span className="text-red-400">detroit</span>
+            aspiring software engineer from detroit, michigan
           </p>
 
           <p
             // flex flex-col xs:flex-row
-            className="text-center xl:text-start font-semibold
-            flex flex-col xs:block flex-shrink-0 
-            text-xl sm:text-2xl lg:text-3xl opacity-50"
+            className="text-gray-500 text-center xl:text-start
+            flex flex-col xs:block flex-shrink-0  
+            text-lg sm:text-xl lg:text-2xl"
           >
-            currently{" "}
-            <span className="font-semibold outline-text">
-              {" "}
-              open for positions
-            </span>{" "}
+            currently <span className="font-semibold">open for positions</span>{" "}
             🙋🏼
           </p>
 
-          <div>
-            <p>resume</p>
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center xl:justify-start
+            w-full gap-12 mx-auto"
+          >
+            <motion.a
+              href="/resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-5 px-9 rounded-full font-semibold outline outline-1
+               transition-colors duration-[500ms] ease-in-out"
+              initial={{
+                backgroundColor: "black",
+                color: "ghostwhite",
+                outlineColor: "black",
+              }}
+              whileHover={{
+                backgroundColor: "ghostwhite",
+                color: "black",
+                outlineColor: "black",
+
+                cursor: "pointer",
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+            >
+              résumé
+            </motion.a>
+
+            <div className="flex items-center justify-center gap-x-6">
+              <motion.a
+                href="https://www.linkedin.com/in/eisaa-rice/"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ rotate: 0, scale: 1 }}
+                whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
+              >
+                <Image
+                  height={23}
+                  width={23}
+                  src={"/linkedin.svg"}
+                  alt="LinkedIn"
+                />
+              </motion.a>
+
+              <motion.a
+                href="https://github.com/eisaa-rice"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ rotate: 0, scale: 1 }}
+                whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
+              >
+                <Image
+                  height={20}
+                  width={20}
+                  src={"/github.svg"}
+                  alt="GitHub"
+                />
+              </motion.a>
+
+              <motion.a
+                href="mailto:jesusorozco3690@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ rotate: 0, scale: 1 }}
+                whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
+              >
+                <Image height={23} width={23} src={"/email.svg"} alt="Email" />
+              </motion.a>
+            </div>
           </div>
         </div>
       </div>
