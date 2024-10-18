@@ -11,11 +11,11 @@ interface HeroProps {}
 const Hero: React.FC<HeroProps> = () => {
   return (
     <div
-      className="flex flex-col items-center 
+      className="flex flex-col items-center -mt-20 xl:-mt-0
       w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
     >
       <div
-        className="flex flex-col items-center w-full xl:mt-44
+        className="flex flex-col items-center w-full xl:mt-40
         xl:grid xl:grid-cols-[auto_450px] 2xl:grid-cols-[auto_500px] xl:grid-rows-1 xl:gap-20 2xl:gap-12"
       >
         <div
@@ -75,7 +75,7 @@ const Hero: React.FC<HeroProps> = () => {
 
           <div
             className="flex flex-col sm:flex-row items-center justify-center xl:justify-start
-            w-full gap-12 mx-auto"
+            w-full gap-12 mx-auto mt-10"
           >
             <motion.a
               href="/resume"

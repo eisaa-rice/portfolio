@@ -13,8 +13,15 @@ import { motion, useTransform, useScroll } from "framer-motion";
 export default function Home() {
   const { scrollY } = useScroll();
 
-  const [opacityRange, setOpacityRange] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
-  const [headerRange, setHeaderRange] = useState([0, 0, 0, 0]);
+  const [opacityRange, setOpacityRange] = useState([
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  ]);
+  const [headerRange, setHeaderRange] = useState([0, 0, 0, 0, 0]);
+
+  const [aboutScroll, setAboutScroll] = useState(0);
+  const [experienceScroll, setExperienceScroll] = useState(0);
+  const [projectsScroll, setProjectsScroll] = useState(0);
+  const [contactScroll, setContactScroll] = useState(0);
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -23,22 +30,56 @@ export default function Home() {
       if (width >= 320 && width < 500) {
         setOpacityRange([1000, 1100, 3000, 3100, 3200, 5200, 5300, 5400]);
         setHeaderRange([0, 3100, 5300, 9999]);
+
+        setAboutScroll(1.6);
+        setExperienceScroll(3.95);
+        setProjectsScroll(6.2);
+        setContactScroll(13.25);
       } else if (width >= 500 && width < 640) {
         setOpacityRange([900, 1000, 2600, 2700, 2800, 4250, 4350, 4450]);
         setHeaderRange([0, 2700, 4350, 9999]);
+
+        setAboutScroll(1.45);
+        setExperienceScroll(3.45);
+        setProjectsScroll(5.4);
+        setContactScroll(13.3);
       } else if (width >= 640 && width < 1024) {
         setOpacityRange([950, 1050, 2450, 2550, 2650, 3950, 4050, 4150]);
         setHeaderRange([0, 2550, 4050, 9999]);
+
+        setAboutScroll(1.4);
+        setExperienceScroll(3.175);
+        setProjectsScroll(5.075);
+        setContactScroll(13.3);
       } else if (width >= 1024 && width < 1280) {
         setOpacityRange([1000, 1100, 2450, 2550, 2650, 3800, 3900, 4000]);
         setHeaderRange([0, 2550, 3900, 9999]);
+
+        setAboutScroll(1.45);
+        setExperienceScroll(3.125);
+        setProjectsScroll(4.9);
+        setContactScroll(13.3);
       } else if (width >= 1280 && width < 1536) {
-        setOpacityRange([900, 1000, 1700, 1800, 1900, 3000, 3100, 3200]);
-        setHeaderRange([0, 1800, 3100, 9999]);
+        setOpacityRange([
+          900, 1000, 1700, 1800, 1900, 3000, 3100, 3200, 6200, 6300, 6400,
+        ]);
+        setHeaderRange([0, 1800, 3100, 6300, 9999]);
+
+        setAboutScroll(1.15);
+        setExperienceScroll(2.3);
+        setProjectsScroll(3.75);
+        setContactScroll(8);
       } else {
         // width >= 1536
-        setOpacityRange([900, 1000, 1850, 1950, 2050, 2900, 3000, 3100]);
-        setHeaderRange([0, 1950, 3000, 9999]);
+        setOpacityRange([
+          800, 900, 1700, 1800, 1900, 2800, 2900, 3000, 6100, 6200, 6300,
+        ]);
+        setHeaderRange([0, 1800, 2900, 6200, 9999]);
+
+        setAboutScroll(0.975);
+        setExperienceScroll(2);
+        setProjectsScroll(3.2);
+        setContactScroll(8);
       }
     };
 
@@ -48,20 +89,44 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
-  const opacity = useTransform(scrollY, opacityRange, [0, 1, 1, 0, 1, 1, 0, 1]);
+  const opacity = useTransform(
+    scrollY,
+    opacityRange,
+    [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1]
+  );
 
   const header = useTransform(scrollY, headerRange, [
     "about 🧔🏼",
     "about 🧔🏼",
     "experience 💼",
     "projects 💻",
+    "contact 📞",
   ]);
 
   const handleScroll = (x: number) => {
-    window.scrollTo({
-      top: window.innerHeight * x,
-      behavior: "smooth",
-    });
+    if (x === 1) {
+      window.scrollTo({
+        top: window.innerHeight * aboutScroll,
+        behavior: "smooth",
+      });
+    } else if (x === 2) {
+      window.scrollTo({
+        top: window.innerHeight * experienceScroll,
+        behavior: "smooth",
+      });
+    } else if (x === 3) {
+      window.scrollTo({
+        top: window.innerHeight * projectsScroll,
+        behavior: "smooth",
+      });
+    }
+    // x === 4
+    else {
+      window.scrollTo({
+        top: window.innerHeight * contactScroll,
+        behavior: "smooth",
+      });
+    }
   };
 
   const [hamburger, setHamburger] = useState(false);
@@ -106,18 +171,18 @@ export default function Home() {
         transition={{ ease: "easeIn", duration: 0.25, delay: 2.45 }}
       />
 
+      {/* HEADER */}
       <div className="flex flex-col items-center justify-center">
         <div className="h-24 w-screen">
           {/* HAMBURGER */}
           <motion.div className="flex xl:hidden items-center justify-end">
             <motion.div
               className="absolute top-3 right-1
-            h-[50px] w-[50px] rounded-3xl"
+            h-[50px] w-[50px] rounded-3xl z-50"
               whileHover={{ cursor: "pointer" }}
               whileTap={{ scale: 0.9 }}
               onClick={() => {
                 setHamburger(!hamburger);
-                console.log(hamburger);
               }}
             >
               <Image
@@ -131,45 +196,57 @@ export default function Home() {
 
             <motion.div
               className="glass rounded-bl-[4rem]
-              w-[400px] pt-12 pb-8 pr-[120px] flex-shrink-0
-              flex flex-col items-center justify-between z-50 
-              text-3xl text-gray-700 font-medium"
-              initial={{ x: 420 }}
+              w-[400px] pt-24 pb-8 pr-[160px] flex-shrink-0
+              flex flex-col items-center justify-between z-40"
+              initial={{ x: 500 }}
               animate={
                 hamburger
                   ? {
-                      x: "40%",
+                      x: "50%",
                       transition: { duration: 0.75, ease: "backInOut" },
                     }
                   : {
-                      x: 420,
+                      x: 500,
                       transition: { duration: 0.75, ease: "backInOut" },
                     }
               }
             >
-              <div className="flex flex-col items-end justify-center gap-8 flex-shrink-0">
-                <motion.p>about</motion.p>
-                <motion.p>experience</motion.p>
-                <motion.p>projects</motion.p>
-                <motion.p>contact</motion.p>
-
-                <motion.div
-                  className="relative h-[50px] w-[50px] ml-auto mr-0"
-                  whileHover={{ cursor: "pointer" }}
-                  whileTap={{ scale: 0.9 }}
+              <div
+                className="flex flex-col items-end justify-center gap-8 flex-shrink-0
+               text-2xl text-black font-medium"
+              >
+                <motion.p
                   onClick={() => {
+                    handleScroll(1);
                     setHamburger(!hamburger);
-                    console.log(hamburger);
                   }}
                 >
-                  <Image
-                    className="p-2 rotate-90"
-                    src="/arrow-up.svg"
-                    alt=""
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </motion.div>
+                  about
+                </motion.p>
+                <motion.p
+                  onClick={() => {
+                    handleScroll(2);
+                    setHamburger(!hamburger);
+                  }}
+                >
+                  experience
+                </motion.p>
+                <motion.p
+                  onClick={() => {
+                    handleScroll(3);
+                    setHamburger(!hamburger);
+                  }}
+                >
+                  projects
+                </motion.p>
+                <motion.p
+                  onClick={() => {
+                    handleScroll(4);
+                    setHamburger(!hamburger);
+                  }}
+                >
+                  contact
+                </motion.p>
               </div>
             </motion.div>
           </motion.div>
@@ -180,7 +257,7 @@ export default function Home() {
         hidden xl:flex items-center justify-center gap-14"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3, duration: 0.5 }}
+            transition={{ delay: 3.5, duration: 0.5 }}
           >
             <motion.p
               className="inline-flex items-center gap-2 flex-shrink-0 
@@ -219,7 +296,7 @@ export default function Home() {
               whileTap={{
                 scale: 0.95,
               }}
-              onClick={() => handleScroll(3.2)}
+              onClick={() => handleScroll(3)}
             >
               projects
             </motion.p>
@@ -233,13 +310,13 @@ export default function Home() {
               whileTap={{
                 scale: 0.95,
               }}
-              onClick={() => handleScroll(6.5)}
+              onClick={() => handleScroll(4)}
             >
               contact
             </motion.p>
           </motion.div>
         </div>
-        {/*  */}
+
         <Hero />
       </div>
 

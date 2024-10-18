@@ -104,7 +104,7 @@ const Projects: React.FC<ProjectsProps> = () => {
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
-          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-12 xl:mt-12
+          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-44 xl:mt-12
           w-[800px] xs:w-[1000px] sm:w-[1200px] xl:w-[875px] 2xl:w-[975px]"
           style={{ y: y1, rotate: rotate1 }}
         >
