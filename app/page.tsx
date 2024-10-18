@@ -57,10 +57,19 @@ export default function Home() {
     "projects 💻",
   ]);
 
+  const handleScroll = (x: number) => {
+    window.scrollTo({
+      top: window.innerHeight * x,
+      behavior: "smooth",
+    });
+  };
+
+  const [hamburger, setHamburger] = useState(false);
+
   return (
     <motion.div
       // w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]
-      className="flex flex-col justify-center items-center mx-auto gap-96"
+      className="flex flex-col justify-center items-center mx-auto gap-96 overflow-hidden"
     >
       <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
@@ -97,7 +106,143 @@ export default function Home() {
         transition={{ ease: "easeIn", duration: 0.25, delay: 2.45 }}
       />
 
-      <Hero />
+      <div className="flex flex-col items-center justify-center">
+        {" "}
+        <div className="h-24 w-screen">
+          {/* HAMBURGER */}
+          <motion.div className="flex xl:hidden items-center justify-end">
+            <motion.div
+              className="absolute top-3 right-1
+            h-[50px] w-[50px] rounded-3xl"
+              whileHover={{ cursor: "pointer" }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => {
+                setHamburger(!hamburger);
+                console.log(hamburger);
+              }}
+            >
+              <Image
+                className="p-2 mt-[2px] -ml-[1px]"
+                src="/burger.svg"
+                alt=""
+                layout="fill"
+                objectFit="contain"
+              />
+            </motion.div>
+
+            <motion.div
+              className="glass rounded-bl-[4rem]
+              w-[400px] py-12 pr-[120px] flex-shrink-0
+              flex flex-col items-center justify-between z-50 
+              text-3xl text-gray-700 font-medium"
+              initial={{ x: 420 }}
+              animate={
+                hamburger
+                  ? {
+                      x: "40%",
+                      transition: { duration: 0.75, ease: "backInOut" },
+                    }
+                  : {
+                      x: 420,
+                      transition: { duration: 0.75, ease: "backInOut" },
+                    }
+              }
+            >
+              <div className="flex flex-col items-end justify-center gap-8 flex-shrink-0">
+                <motion.p>about</motion.p>
+                <motion.p>experience</motion.p>
+                <motion.p>projects</motion.p>
+                <motion.p>contact</motion.p>
+
+                <motion.div
+                  className="relative h-[50px] w-[50px] ml-auto mr-0"
+                  whileHover={{ cursor: "pointer" }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => {
+                    setHamburger(!hamburger);
+                    console.log(hamburger);
+                  }}
+                >
+                  <Image
+                    className="p-2 rotate-90"
+                    src="/arrow-up.svg"
+                    alt=""
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </motion.div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* FULL WIDTH */}
+          <motion.div
+            className="hull w-full text-gray-400 mt-6
+        hidden xl:flex items-center justify-center gap-14"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3, duration: 0.5 }}
+          >
+            <motion.p
+              className="inline-flex items-center gap-2 flex-shrink-0 
+          glass py-3 px-5 rounded-3xl
+          transition-colors duration-[250ms] ease-in-out"
+              initial={{ color: "#6b7280" }}
+              whileHover={{ color: "black", cursor: "pointer" }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              onClick={() => handleScroll(1)}
+            >
+              about
+            </motion.p>
+
+            <motion.p
+              className="inline-flex items-center gap-2 flex-shrink-0 
+        glass py-3 px-5 rounded-3xl
+        transition-colors duration-[250ms] ease-in-out"
+              initial={{ color: "#6b7280" }}
+              whileHover={{ color: "black", cursor: "pointer" }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              onClick={() => handleScroll(2)}
+            >
+              experience
+            </motion.p>
+
+            <motion.p
+              className="inline-flex items-center gap-2 flex-shrink-0 
+         glass py-3 px-5 rounded-3xl
+         transition-colors duration-[250ms] ease-in-out"
+              initial={{ color: "#6b7280" }}
+              whileHover={{ color: "black", cursor: "pointer" }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              onClick={() => handleScroll(3.2)}
+            >
+              projects
+            </motion.p>
+
+            <motion.p
+              className="inline-flex items-center gap-2 flex-shrink-0 
+        glass py-3 px-5 rounded-3xl
+        transition-colors duration-[500ms] ease-in-out"
+              initial={{ color: "#6b7280" }}
+              whileHover={{ color: "black", cursor: "pointer" }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              onClick={() => handleScroll(6.5)}
+            >
+              contact
+            </motion.p>
+          </motion.div>
+        </div>
+        {/*  */}
+        <Hero />
+      </div>
 
       <About />
 
