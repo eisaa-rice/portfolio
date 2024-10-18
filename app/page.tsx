@@ -27,48 +27,57 @@ export default function Home() {
     const updateScreenSize = () => {
       const width = window.innerWidth;
 
+      // NEEDS PROJECTS SCROLL ADJUSTMENTS
       if (width >= 320 && width < 500) {
-        setOpacityRange([1000, 1100, 3000, 3100, 3200, 5200, 5300, 5400]);
-        setHeaderRange([0, 3100, 5300, 9999]);
-
-        setAboutScroll(1.6);
-        setExperienceScroll(3.95);
-        setProjectsScroll(6.2);
-        setContactScroll(13.25);
-      } else if (width >= 500 && width < 640) {
-        setOpacityRange([900, 1000, 2600, 2700, 2800, 4250, 4350, 4450]);
-        setHeaderRange([0, 2700, 4350, 9999]);
-
-        setAboutScroll(1.45);
-        setExperienceScroll(3.45);
-        setProjectsScroll(5.4);
-        setContactScroll(13.3);
-      } else if (width >= 640 && width < 1024) {
-        setOpacityRange([950, 1050, 2450, 2550, 2650, 3950, 4050, 4150]);
-        setHeaderRange([0, 2550, 4050, 9999]);
+        setOpacityRange([
+          1200, 1300, 3150, 3250, 3350, 5250, 5350, 5450, 11300, 11400, 11500,
+        ]);
+        setHeaderRange([0, 3250, 5350, 11400, 99999]);
 
         setAboutScroll(1.4);
-        setExperienceScroll(3.175);
-        setProjectsScroll(5.075);
-        setContactScroll(13.3);
-      } else if (width >= 1024 && width < 1280) {
-        setOpacityRange([1000, 1100, 2450, 2550, 2650, 3800, 3900, 4000]);
-        setHeaderRange([0, 2550, 3900, 9999]);
+        setExperienceScroll(3.44);
+        setProjectsScroll(5.5);
+        setContactScroll(11.53);
+      } else if (width >= 500 && width < 640) {
+        setOpacityRange([
+          900, 1000, 2600, 2700, 2800, 4250, 4350, 4450, 9900, 10000, 10100,
+        ]);
+        setHeaderRange([0, 2700, 4350, 10000, 99999]);
 
-        setAboutScroll(1.45);
-        setExperienceScroll(3.125);
-        setProjectsScroll(4.9);
-        setContactScroll(13.3);
+        setAboutScroll(1.26);
+        setExperienceScroll(3);
+        setProjectsScroll(4.73);
+        setContactScroll(10.09);
+      } else if (width >= 640 && width < 1024) {
+        setOpacityRange([
+          1050, 1150, 2450, 2550, 2650, 4050, 4150, 4250, 9250, 9350, 9450,
+        ]);
+        setHeaderRange([0, 2550, 4150, 9350, 99999]);
+
+        setAboutScroll(1.23);
+        setExperienceScroll(2.8);
+        setProjectsScroll(4.4);
+        setContactScroll(9.49);
+      } else if (width >= 1024 && width < 1280) {
+        setOpacityRange([
+          1050, 1150, 2450, 2550, 2650, 3950, 4050, 4150, 8950, 9050, 9150,
+        ]);
+        setHeaderRange([0, 2550, 4050, 9050, 99999]);
+
+        setAboutScroll(1.24);
+        setExperienceScroll(2.72);
+        setProjectsScroll(4.18);
+        setContactScroll(9.49);
       } else if (width >= 1280 && width < 1536) {
         setOpacityRange([
-          900, 1000, 1700, 1800, 1900, 3000, 3100, 3200, 6200, 6300, 6400,
+          800, 900, 1750, 1850, 1950, 2900, 3000, 3100, 6300, 6400, 6500,
         ]);
-        setHeaderRange([0, 1800, 3100, 6300, 9999]);
+        setHeaderRange([0, 1850, 3000, 6400, 9999]);
 
-        setAboutScroll(1.15);
-        setExperienceScroll(2.3);
-        setProjectsScroll(3.75);
-        setContactScroll(8);
+        setAboutScroll(0.98);
+        setExperienceScroll(1.97);
+        setProjectsScroll(3.22);
+        setContactScroll(6.5);
       } else {
         // width >= 1536
         setOpacityRange([
@@ -76,9 +85,9 @@ export default function Home() {
         ]);
         setHeaderRange([0, 1800, 2900, 6200, 9999]);
 
-        setAboutScroll(0.975);
-        setExperienceScroll(2);
-        setProjectsScroll(3.2);
+        setAboutScroll(0.93);
+        setExperienceScroll(1.9);
+        setProjectsScroll(3.1);
         setContactScroll(8);
       }
     };
@@ -106,24 +115,24 @@ export default function Home() {
   const handleScroll = (x: number) => {
     if (x === 1) {
       window.scrollTo({
-        top: window.innerHeight * aboutScroll,
+        top: 1000 * aboutScroll,
         behavior: "smooth",
       });
     } else if (x === 2) {
       window.scrollTo({
-        top: window.innerHeight * experienceScroll,
+        top: 1000 * experienceScroll,
         behavior: "smooth",
       });
     } else if (x === 3) {
       window.scrollTo({
-        top: window.innerHeight * projectsScroll,
+        top: 1000 * projectsScroll,
         behavior: "smooth",
       });
     }
     // x === 4
     else {
       window.scrollTo({
-        top: window.innerHeight * contactScroll,
+        top: 1000 * contactScroll,
         behavior: "smooth",
       });
     }

@@ -17,8 +17,8 @@ const Footer: React.FC<FooterProps> = () => {
       </p>
 
       <div
-        className="w-full flex flex-col lg:flex-row flex-wrap 
-      items-center gap-12 mt-20 mb-52 lg:mb-72"
+        className="w-full flex flex-col xl:flex-row flex-wrap 
+      items-center gap-12 mt-20 mb-52 xl:mb-72"
       >
         <motion.a
           className="flex items-center justify-center flex-col xs:flex-row
@@ -39,7 +39,7 @@ const Footer: React.FC<FooterProps> = () => {
             />
             :{" "}
           </span>
-          <span className="ml-2 flex-shrink-0 mt-2 lg:mt-0">
+          <span className="ml-2 flex-shrink-0 mt-2 xl:mt-0">
             linkedin.com/in/eisaa-rice/
           </span>
         </motion.a>
@@ -63,7 +63,7 @@ const Footer: React.FC<FooterProps> = () => {
             />
             :{" "}
           </span>
-          <span className="ml-2 flex-shrink-0 mt-2 lg:mt-0">
+          <span className="ml-2 flex-shrink-0 mt-2 xl:mt-0">
             github.com/eisaa-rice
           </span>
         </motion.a>
@@ -87,7 +87,7 @@ const Footer: React.FC<FooterProps> = () => {
             />
             :{" "}
           </span>
-          <span className="ml-2 flex-shrink-0 mt-2 lg:mt-0">
+          <span className="ml-2 flex-shrink-0 mt-2 xl:mt-0">
             jesusorozco3690@gmail.com
           </span>
         </motion.a>
