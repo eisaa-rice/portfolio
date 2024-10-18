@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import "./Hero.css";
 
@@ -17,6 +17,7 @@ const Hero: React.FC<HeroProps> = () => {
   };
 
   const [hamburger, setHamburger] = useState(false);
+  const controls = useAnimation(); // Create controls for the animation
 
   return (
     <div
@@ -25,35 +26,75 @@ const Hero: React.FC<HeroProps> = () => {
     >
       <div className="h-24 w-full">
         {/* HAMBURGER */}
-        <motion.div className="flex lg:hidden items-center justify-end mt-6">
+        <motion.div className="flex xl:hidden items-center justify-end mt-6">
           <motion.div
-            className="absolute top-10 right-10 glass
-            h-[50px] w-[50px] rounded-3xl z-50"
+            className="absolute top-3 right-1
+            h-[50px] w-[50px] rounded-3xl"
             whileHover={{ cursor: "pointer" }}
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               setHamburger(!hamburger);
               console.log(hamburger);
             }}
-          />
+          >
+            <Image
+              className="p-2 mt-[2px] -ml-[1px]"
+              src="/burger.svg"
+              alt=""
+              layout="fill"
+              objectFit="contain"
+            />
+          </motion.div>
 
           <motion.div
-            className="absolute top-0 -right-5 h-screen w-screen glass
-            flex flex-col items-end justify-start z-40 "
+            className="absolute -top-20 left-0 right-0 w-screen h-[60vh]
+            glass rounded-bl-[4rem]
+            flex flex-col items-center justify-between z-50 
+            pt-40 px-12 pb-6 text-3xl text-gray-700 font-medium"
+            initial={{ x: "150vw" }}
             animate={
               hamburger
-                ? { right: "-120vw", transition: { duration: 0.75 } }
-                : { right: "0vw", transition: { duration: 0.75 } }
+                ? {
+                    x: 5,
+                    transition: { duration: 0.75, ease: "backInOut" },
+                  }
+                : {
+                    x: "150vw",
+                    transition: { duration: 0.75, ease: "backInOut" },
+                  }
             }
           >
-            <p className="mr-12 mt-32">about</p>
+            <div className="flex flex-col items-center justify-center gap-8">
+              <motion.p>about</motion.p>
+              <motion.p>experience</motion.p>
+              <motion.p>projects</motion.p>
+              <motion.p>contact</motion.p>
+            </div>
+
+            <motion.div
+              className="relative h-[50px] w-[50px]"
+              whileHover={{ cursor: "pointer" }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => {
+                setHamburger(!hamburger);
+                console.log(hamburger);
+              }}
+            >
+              <Image
+                className="p-2 rotate-90"
+                src="/arrow-up.svg"
+                alt=""
+                layout="fill"
+                objectFit="contain"
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
 
         {/* FULL WIDTH */}
         <motion.div
           className="hull w-full text-gray-400 mt-6
-        hidden lg:flex items-center justify-center gap-14"
+        hidden xl:flex items-center justify-center gap-14"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 0.5 }}
@@ -61,7 +102,7 @@ const Hero: React.FC<HeroProps> = () => {
           <motion.p
             className="inline-flex items-center gap-2 flex-shrink-0 
           glass py-3 px-5 rounded-3xl
-          transition-colors duration-[500ms] ease-in-out"
+          transition-colors duration-[250ms] ease-in-out"
             initial={{ color: "#6b7280" }}
             whileHover={{ color: "black", cursor: "pointer" }}
             whileTap={{
@@ -75,7 +116,7 @@ const Hero: React.FC<HeroProps> = () => {
           <motion.p
             className="inline-flex items-center gap-2 flex-shrink-0 
         glass py-3 px-5 rounded-3xl
-        transition-colors duration-[500ms] ease-in-out"
+        transition-colors duration-[250ms] ease-in-out"
             initial={{ color: "#6b7280" }}
             whileHover={{ color: "black", cursor: "pointer" }}
             whileTap={{
@@ -89,7 +130,7 @@ const Hero: React.FC<HeroProps> = () => {
           <motion.p
             className="inline-flex items-center gap-2 flex-shrink-0 
          glass py-3 px-5 rounded-3xl
-         transition-colors duration-[500ms] ease-in-out"
+         transition-colors duration-[250ms] ease-in-out"
             initial={{ color: "#6b7280" }}
             whileHover={{ color: "black", cursor: "pointer" }}
             whileTap={{
@@ -117,11 +158,11 @@ const Hero: React.FC<HeroProps> = () => {
       </div>
 
       <div
-        className="flex flex-col items-center w-full xl:mt-28
+        className="flex flex-col items-center w-full xl:mt-44
         xl:grid xl:grid-cols-[auto_450px] 2xl:grid-cols-[auto_500px] xl:grid-rows-1 xl:gap-20 2xl:gap-12"
       >
         <div
-          className="m-auto relative md:static w-full flex-shrink-0 my-8 xl:mt-20 xl:mb-0
+          className="m-auto relative md:static w-full flex-shrink-0 my-8 xl:my-auto
       xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-2 overflow-visible"
         >
           <div
@@ -183,8 +224,9 @@ const Hero: React.FC<HeroProps> = () => {
               href="/resume"
               target="_blank"
               rel="noopener noreferrer"
-              className="py-5 px-9 rounded-full font-semibold inline-flex items-center justify-center gap-3
-               transition-colors duration-[500ms] ease-in-out flex-shrink-0"
+              className="py-5 px-9 rounded-full font-semibold 
+              inline-flex items-center justify-center gap-3 flex-shrink-0
+              transition-all duration-[100ms] ease-linear"
               initial={{
                 backgroundColor: "black",
                 color: "ghostwhite",
@@ -193,7 +235,7 @@ const Hero: React.FC<HeroProps> = () => {
               variants={{
                 resume: {
                   backgroundColor: "white",
-                  color: "black",
+                  rotate: 2,
                   boxShadow: "0 0 30px rgba(0, 0, 0, 0.1)",
 
                   cursor: "pointer",
@@ -203,9 +245,20 @@ const Hero: React.FC<HeroProps> = () => {
                 scale: 0.95,
               }}
             >
-              résumé
+              <motion.span
+                className="transition-all duration-[100ms] ease-linear"
+                variants={{
+                  resume: {
+                    scale: 1.1,
+                    color: "black",
+                  },
+                }}
+              >
+                résumé
+              </motion.span>
+
               <motion.svg
-                className="-mr-1"
+                className="-mr-1 overflow-visible"
                 width="28"
                 height="28"
                 viewBox="0 0 24 24"
@@ -213,12 +266,13 @@ const Hero: React.FC<HeroProps> = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <motion.path
-                  className="transition-colors duration-[500ms] ease-in-out"
+                  className="transition-all duration-[100ms] ease-linear"
                   initial={{ fill: "ghostwhite", scale: 1 }}
                   variants={{
                     resume: {
                       fill: "black",
-                      scale: 1.2,
+                      scale: 1.1,
+                      x: 5,
                     },
                   }}
                   d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18V15H6V18H18V15H20V18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20H6Z"
@@ -237,8 +291,8 @@ const Hero: React.FC<HeroProps> = () => {
                 whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
               >
                 <Image
-                  height={33}
-                  width={33}
+                  height={35}
+                  width={35}
                   src={"/linkedin.svg"}
                   alt="LinkedIn"
                 />
@@ -252,8 +306,8 @@ const Hero: React.FC<HeroProps> = () => {
                 whileHover={{ cursor: "pointer", rotate: -5, scale: 1.1 }}
               >
                 <Image
-                  height={32}
-                  width={32}
+                  height={34}
+                  width={34}
                   src={"/github.svg"}
                   alt="GitHub"
                 />

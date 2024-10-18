@@ -18,16 +18,4 @@ body {
   overflow-y: hidden;
 
   background: ghostwhite;
-
-  /* background: radial-gradient(
-      circle 750px at 60% 12%,
-      hsla(0, 100%, 50%, 0.05),
-      transparent 100%
-    ),
-    radial-gradient(
-      circle 500px at 30% 30%,
-      hsla(318, 100%, 50%, 0.05),
-      transparent 100%
-    ),
-    white; */
 }
