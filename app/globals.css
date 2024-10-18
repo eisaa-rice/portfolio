@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +7,6 @@
 * {
   margin: 0;
   padding: 0;
-  color: black;
 }
 
 html,
@@ -15,5 +16,6 @@ body {
 
 body {
   overflow-y: hidden;
-  background-color: #fafaff;
+
+  background: ghostwhite;
 }

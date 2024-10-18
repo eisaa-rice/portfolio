@@ -19,10 +19,13 @@ const Experience: React.FC<ExperienceProps> = () => {
   ];
 
   return (
-    <motion.div className="min-h-[700px] flex flex-col items-center justify-center gap-32 mb-96">
+    <motion.div
+      className="min-h-[700px] flex flex-col items-center justify-center gap-32
+    w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+    >
       <div className="flex flex-col lg:flex-row lg:-ml-20 justify-center w-full rounded-xl">
         <div className="flex flex-col items-center">
-          <div className="bg-white shadow-sm h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 lg:mb-0 flex items-center justify-center">
+          <div className="glass h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 lg:mb-0 flex items-center justify-center">
             <Image
               height={70}
               width={70}
@@ -32,7 +35,7 @@ const Experience: React.FC<ExperienceProps> = () => {
             />
           </div>
 
-          <div className="hidden lg:block h-full w-[1px] rounded-full bg-black opacity-50 p mt-4" />
+          <div className="hidden lg:block h-full w-[1px] rounded-full bg-gray-500 p mt-4" />
         </div>
 
         <div className="lg:ml-16 mt-4">
@@ -45,12 +48,12 @@ const Experience: React.FC<ExperienceProps> = () => {
               rel="noopener noreferrer"
             >
               <div className="flex flex-col">
-                <p className="text-xl font-normal text-center lg:text-start opacity-75">
+                <p className="text-xl font-normal text-center lg:text-start text-gray-600">
                   google developer groups
                 </p>
 
                 <motion.div
-                  className="h-[1px] bg-black opacity-50"
+                  className="h-[1px] bg-gray-600"
                   initial={{ width: 0 }}
                   variants={{
                     hover: {
@@ -103,7 +106,7 @@ const Experience: React.FC<ExperienceProps> = () => {
           </div>
 
           <div className="flex flex-col gap-4 px-2 lg:px-0">
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-gray-700 text-2xl">
               i&apos;m assisting this university club with{" "}
               <span className="font-semibold">frontend</span> and{" "}
               <span className="font-semibold">backend web</span> and{" "}
@@ -111,7 +114,7 @@ const Experience: React.FC<ExperienceProps> = () => {
               multiple regional events, like conferences and hackathons
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-gray-700 text-2xl">
               i&apos;ve <span className="font-semibold">converted</span> lots of
               provided <span className="font-semibold"> figma designs</span>{" "}
               into their equivalent functional{" "}
@@ -119,13 +122,13 @@ const Experience: React.FC<ExperienceProps> = () => {
               sure our clients were satisfied with final web app layouts
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-gray-700 text-2xl">
               every project incorporated{" "}
               <span className="font-semibold"> responsive design</span> to
               ensure seamless access from any device on any platform
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-gray-700 text-2xl">
               <span className="font-semibold"> best coding practices</span> were
               always withheld through the design of{" "}
               <span className="font-semibold">reusable components</span>,
@@ -133,7 +136,7 @@ const Experience: React.FC<ExperienceProps> = () => {
               user interfaces.
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-gray-700 text-2xl">
               <span className="font-semibold">user-acceptance testing</span> was
               performed on all assigned issues to guarantee client guidelines
               and specifications were met.
@@ -146,8 +149,7 @@ const Experience: React.FC<ExperienceProps> = () => {
         href="/resume"
         target="_blank"
         rel="noopener noreferrer"
-        // mt-16 mx-auto xl:ml-0 mt-16
-        className="inline-block p-4 text-xl bg-white rounded-xl shadow-sm font-semibold opacity-75"
+        className="inline-block p-4 text-xl bg-white rounded-xl shadow-sm font-semibold text-gray-700"
         whileHover={{ scale: 1.05 }}
         whileTap={{
           scale: 0.95,

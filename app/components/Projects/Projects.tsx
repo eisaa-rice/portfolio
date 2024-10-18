@@ -40,42 +40,42 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       // - 1600
       if (width >= 320 && width < 500) {
-        setScrollRange1([4700, 6300]);
+        setScrollRange1([4750, 6350]);
 
-        setScrollRange2([6800, 8400]);
+        setScrollRange2([6680, 8280]);
 
-        setScrollRange3([9000, 10600]);
+        setScrollRange3([8780, 10320]);
       } else if (width >= 500 && width < 640) {
-        setScrollRange1([4000, 5600]);
+        setScrollRange1([3880, 5480]);
 
-        setScrollRange2([5950, 7550]);
+        setScrollRange2([5690, 7290]);
 
-        setScrollRange3([7950, 9550]);
+        setScrollRange3([7550, 9150]);
       } else if (width >= 640 && width < 1024) {
-        setScrollRange1([3800, 5400]);
+        setScrollRange1([3420, 5020]);
 
-        setScrollRange2([5625, 7225]);
+        setScrollRange2([5140, 6740]);
 
-        setScrollRange3([7500, 9100]);
+        setScrollRange3([6930, 8530]);
       } else if (width >= 1024 && width < 1280) {
-        setScrollRange1([3700, 5300]);
+        setScrollRange1([3260, 4860]);
 
-        setScrollRange2([5550, 7150]);
+        setScrollRange2([4980, 6580]);
 
-        setScrollRange3([7350, 8950]);
+        setScrollRange3([6600, 8300]);
       } else if (width >= 1280 && width < 1536) {
-        setScrollRange1([2825, 4425]);
+        setScrollRange1([2360, 3960]);
 
-        setScrollRange2([4025, 5625]);
+        setScrollRange2([3440, 5040]);
 
-        setScrollRange3([5350, 6950]);
+        setScrollRange3([4620, 6220]);
       } else {
         // width >= 1536
-        setScrollRange1([2800, 4400]);
+        setScrollRange1([2170, 3770]);
 
-        setScrollRange2([4025, 5625]);
+        setScrollRange2([3230, 4830]);
 
-        setScrollRange3([5350, 6950]);
+        setScrollRange3([4480, 6080]);
       }
     };
 
@@ -95,13 +95,17 @@ const Projects: React.FC<ProjectsProps> = () => {
   const rotate3 = useTransform(scrollY, scrollRange3, [5, -5]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-y-[500px] overflow-visible pt-96 pb-48 px-2">
+    <div
+      // pt-96 pb-48
+      className="flex flex-col items-center justify-start gap-y-96 overflow-visible px-2
+    w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+    >
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
-          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-12 xl:mt-12
-          w-[800px] xs:w-[1000px] sm:w-[1200px] xl:w-[875px] 2xl:w-[975px]"
+          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-20 xs:mb-28 sm:mb-10 xl:my-auto
+          w-[1000px] xs:w-[1000px] sm:w-[1100px] xl:w-[975px]"
           style={{ y: y1, rotate: rotate1 }}
         >
           <Image src="/images/cc.png" alt="CC" height={1469} width={2432} />
@@ -115,11 +119,11 @@ const Projects: React.FC<ProjectsProps> = () => {
             rel="noopener noreferrer"
             whileHover="hover"
           >
-            <div className="flex flex-col ">
+            <div className="flex flex-col">
               <p className="font-semibold text-3xl">🤖 code conductor</p>
 
               <motion.div
-                className="h-[1px] bg-black opacity-50"
+                className="h-[1px] bg-black"
                 initial={{ width: 0 }}
                 variants={{
                   hover: {
@@ -152,21 +156,21 @@ const Projects: React.FC<ProjectsProps> = () => {
             </motion.div>
           </motion.a>
 
-          <div className="flex flex-col mt-10 mb-0 gap-y-8">
-            <p className="font-light opacity-75 text-2xl">
+          <div className="flex flex-col mt-10 mb-0 gap-y-8 text-gray-700">
+            <p className="font-light text-2xl">
               for a group project, some classmates and i made an{" "}
               <span className="font-semibold">online platform</span> that lets
               people brainstorm and visualize custom algorithms easily
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-2xl">
               we used <span className="font-semibold">git</span> and{" "}
               <span className="font-semibold">github</span> to work
               simultaneously and and our leader assigned issues to each of us so
               that we could progress incrementally
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-2xl">
               blocks consisting of code type and description are properly
               indented and are drag-and-drop-able to make designing the
               algorithm easy and simple
@@ -174,8 +178,8 @@ const Projects: React.FC<ProjectsProps> = () => {
 
             <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0">
               <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px] text-gray-500
+                inline-flex items-center gap-2 flex-shrink-0"
               >
                 react.js
                 <Image
@@ -188,7 +192,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+               inline-flex items-center gap-2 flex-shrink-0"
               >
                 typescript
                 <Image
@@ -202,7 +206,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+               inline-flex items-center gap-2 flex-shrink-0"
               >
                 material ui
                 <Image
@@ -245,7 +249,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               </p>
 
               <motion.div
-                className="h-[1px] bg-black opacity-50"
+                className="h-[1px] bg-black"
                 initial={{ width: 0 }}
                 variants={{
                   hover: {
@@ -278,8 +282,8 @@ const Projects: React.FC<ProjectsProps> = () => {
             </motion.div>
           </motion.a>
 
-          <div className="flex flex-col mt-10 mb-0 gap-y-8">
-            <p className="font-light opacity-75 text-2xl">
+          <div className="flex flex-col mt-10 mb-0 gap-y-8 text-gray-700">
+            <p className="font-light text-2xl">
               for this conference, students at <span>GDG</span> made a website
               using <span className="font-semibold">react</span>,{" "}
               <span className="font-semibold">git and github</span>, and{" "}
@@ -287,23 +291,23 @@ const Projects: React.FC<ProjectsProps> = () => {
               registration and information for over 200 conference attendees
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-2xl">
               <span className="font-semibold">responsive design</span> was
               applied to make sure that a smooth experience was present across
               various devices and screen sizes
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-2xl">
               to follow best coding practices,{" "}
               <span className="font-semibold">reusable components</span> were
               designed and give us an easier time maintening consistency across
               the application
             </p>
 
-            <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0">
+            <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0 text-gray-500">
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+               inline-flex items-center gap-2 flex-shrink-0"
               >
                 react.js
                 <Image
@@ -316,7 +320,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              inline-flex items-center gap-2 flex-shrink-0"
               >
                 javascript
                 <Image
@@ -330,7 +334,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              inline-flex items-center gap-2 flex-shrink-0"
               >
                 tailwind css
                 <Image
@@ -374,7 +378,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               </p>
 
               <motion.div
-                className="h-[1px] bg-black opacity-50"
+                className="h-[1px] bg-black"
                 initial={{ width: 0 }}
                 variants={{
                   hover: {
@@ -413,8 +417,8 @@ const Projects: React.FC<ProjectsProps> = () => {
             </motion.div>
           </motion.a>
 
-          <div className="flex flex-col mt-10 mb-0 gap-y-8">
-            <p className="font-light opacity-75 text-2xl">
+          <div className="flex flex-col mt-10 mb-0 gap-y-8 text-gray-700">
+            <p className="font-light text-2xl">
               university club made a{" "}
               <span className="font-semibold">fullstack app</span> and a{" "}
               <span className="font-semibold">website</span> for our
@@ -422,23 +426,23 @@ const Projects: React.FC<ProjectsProps> = () => {
               attendees for registration, information display, and check-in
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-2xl">
               wireframe mockups were translated into{" "}
               <span className="font-semibold">responsive</span>,{" "}
               <span className="font-semibold">user-friendly interfaces</span>{" "}
               with appealing and engaging designs
             </p>
 
-            <p className="font-light opacity-75 text-2xl">
+            <p className="font-light text-2xl">
               <span className="font-semibold">supabase</span> was used for the
               backend to take advantage of its database tables, edge functions,
               and simple authentication features
             </p>
 
-            <div className="flex flex-wrap justify-center xl:justify-start gap-3 xl:gap-4 mt-4 mx-auto xl:mx-0">
+            <div className="flex flex-wrap justify-center xl:justify-start gap-3 xl:gap-4 mt-4 mx-auto xl:mx-0 text-gray-500">
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+              inline-flex items-center gap-2 flex-shrink-0"
               >
                 react native
                 <Image
@@ -451,7 +455,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+               inline-flex items-center gap-2 flex-shrink-0"
               >
                 typescript
                 <Image
@@ -465,7 +469,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
               <p
                 className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+               inline-flex items-center gap-2 flex-shrink-0"
               >
                 supabase
                 <Image

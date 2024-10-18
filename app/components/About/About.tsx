@@ -11,10 +11,11 @@ const About: React.FC<AboutProps> = () => {
   return (
     <div
       className="flex flex-col items-center xl:grid xl:grid-rows-1 xl:grid-cols-2
-    gap-y-12 gap-x-20 mb-96 w-full overflow-visible px-2 sm:px-0"
+      gap-y-12 gap-x-20 overflow-visible px-2 sm:px-0
+      w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
     >
       <div
-        className="flex flex-col text-2xl font-light opacity-75 gap-12
+        className="flex flex-col text-2xl font-light text-gray-700 gap-12
         xl:row-start-1 xl:row-end-2
         xl:col-start-1 xl:col-end-2
         mb-12 xl:mb-0"
@@ -58,14 +59,14 @@ const About: React.FC<AboutProps> = () => {
         xl:col-start-2 xl:col-end-3"
       >
         <div>
-          <p className="opacity-75 mb-5 text-center xl:text-start text-xl">
+          <p className="text-gray-500 mb-5 text-center xl:text-start text-xl">
             i do lots of work with these
           </p>
 
           <div className="flex items-start flex-wrap gap-4 justify-center xl:justify-start">
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               react.js
               <Image src={"/react.svg"} alt="react.js" height={25} width={25} />
@@ -73,7 +74,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               tailwind css
               <Image
@@ -86,7 +87,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               github
               <Image src={"/github.svg"} alt="github" height={25} width={25} />
@@ -94,7 +95,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               typescript
               <Image
@@ -109,14 +110,14 @@ const About: React.FC<AboutProps> = () => {
         </div>
 
         <div>
-          <p className="opacity-75 mb-5 text-center xl:text-start text-xl">
+          <p className="text-gray-500 mb-5 text-center xl:text-start text-xl">
             i&apos;m pretty comfortable with these
           </p>
 
           <div className="flex items-start flex-wrap gap-4 justify-center xl:justify-start">
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               framer motion
               <Image
@@ -129,7 +130,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               node.js
               <Image src={"/nodejs.svg"} alt="node.js" height={30} width={30} />
@@ -137,7 +138,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               c++
               <Image src={"/c++.svg"} alt="c++" height={35} width={35} />
@@ -145,7 +146,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               c#
               <Image src={"/csharp.svg"} alt="c#" height={30} width={30} />
@@ -153,7 +154,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               java
               <Image
@@ -167,7 +168,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               python
               <Image
@@ -181,7 +182,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               javascript
               <Image
@@ -196,14 +197,14 @@ const About: React.FC<AboutProps> = () => {
         </div>
 
         <div>
-          <p className="opacity-75 mb-5 text-center xl:text-start text-xl">
+          <p className="text-gray-500 mb-5 text-center xl:text-start text-xl">
             i&apos;ve messed around with these before
           </p>
 
           <div className="flex items-start flex-wrap gap-4 justify-center xl:justify-start">
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               next.js
               <Image src={"/nextjs.svg"} alt="next.js" height={25} width={25} />
@@ -211,7 +212,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               react native
               <Image
@@ -224,7 +225,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               figma
               <Image src={"/figma.svg"} alt="figma" height={20} width={20} />
@@ -232,7 +233,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               docker
               <Image src={"/docker.svg"} alt="docker" height={25} width={25} />
@@ -240,7 +241,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               git
               <Image src={"/git.svg"} alt="git" height={25} width={25} />
@@ -248,7 +249,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               html
               <Image src={"/html.svg"} alt="html" height={25} width={25} />
@@ -256,7 +257,7 @@ const About: React.FC<AboutProps> = () => {
 
             <p
               className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-  text-lg opacity-100 inline-flex items-center gap-2 flex-shrink-0"
+  text-lg inline-flex items-center gap-2 flex-shrink-0"
             >
               css
               <Image src={"/css.svg"} alt="css" height={25} width={25} />
