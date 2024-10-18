@@ -27,67 +27,66 @@ export default function Home() {
     const updateScreenSize = () => {
       const width = window.innerWidth;
 
-      // NEEDS PROJECTS SCROLL ADJUSTMENTS
       if (width >= 320 && width < 500) {
         setOpacityRange([
-          1200, 1300, 3150, 3250, 3350, 5250, 5350, 5450, 11300, 11400, 11500,
+          1200, 1300, 3150, 3250, 3350, 5200, 5300, 5400, 11300, 11400, 11500,
         ]);
-        setHeaderRange([0, 3250, 5350, 11400, 99999]);
+        setHeaderRange([0, 3250, 5300, 11400, 99999]);
 
         setAboutScroll(1.4);
         setExperienceScroll(3.44);
-        setProjectsScroll(5.5);
+        setProjectsScroll(5.54);
         setContactScroll(11.53);
       } else if (width >= 500 && width < 640) {
         setOpacityRange([
-          900, 1000, 2600, 2700, 2800, 4250, 4350, 4450, 9900, 10000, 10100,
+          900, 1000, 2600, 2700, 2800, 4300, 4400, 4500, 9800, 9900, 10000,
         ]);
-        setHeaderRange([0, 2700, 4350, 10000, 99999]);
+        setHeaderRange([0, 2700, 4400, 9900, 99999]);
 
         setAboutScroll(1.26);
         setExperienceScroll(3);
-        setProjectsScroll(4.73);
+        setProjectsScroll(4.66);
         setContactScroll(10.09);
       } else if (width >= 640 && width < 1024) {
         setOpacityRange([
-          1050, 1150, 2450, 2550, 2650, 4050, 4150, 4250, 9250, 9350, 9450,
+          1050, 1150, 2450, 2550, 2650, 3950, 4050, 4150, 9050, 9150, 9250,
         ]);
-        setHeaderRange([0, 2550, 4150, 9350, 99999]);
+        setHeaderRange([0, 2550, 4050, 9150, 99999]);
 
         setAboutScroll(1.23);
         setExperienceScroll(2.8);
-        setProjectsScroll(4.4);
+        setProjectsScroll(4.24);
         setContactScroll(9.49);
       } else if (width >= 1024 && width < 1280) {
         setOpacityRange([
-          1050, 1150, 2450, 2550, 2650, 3950, 4050, 4150, 8950, 9050, 9150,
+          1050, 1150, 2450, 2550, 2650, 3850, 3950, 4050, 8800, 8900, 9000,
         ]);
-        setHeaderRange([0, 2550, 4050, 9050, 99999]);
+        setHeaderRange([0, 2550, 3950, 8900, 99999]);
 
         setAboutScroll(1.24);
         setExperienceScroll(2.72);
-        setProjectsScroll(4.18);
+        setProjectsScroll(4.08);
         setContactScroll(9.49);
       } else if (width >= 1280 && width < 1536) {
         setOpacityRange([
-          800, 900, 1750, 1850, 1950, 2900, 3000, 3100, 6300, 6400, 6500,
+          800, 900, 1750, 1850, 1950, 2900, 3000, 3100, 6100, 6200, 6300,
         ]);
-        setHeaderRange([0, 1850, 3000, 6400, 9999]);
+        setHeaderRange([0, 1850, 3000, 6200, 9999]);
 
         setAboutScroll(0.98);
         setExperienceScroll(1.97);
-        setProjectsScroll(3.22);
+        setProjectsScroll(3.16);
         setContactScroll(6.5);
       } else {
         // width >= 1536
         setOpacityRange([
-          800, 900, 1700, 1800, 1900, 2800, 2900, 3000, 6100, 6200, 6300,
+          800, 900, 1650, 1750, 1850, 2750, 2850, 2950, 5900, 6000, 6100,
         ]);
-        setHeaderRange([0, 1800, 2900, 6200, 9999]);
+        setHeaderRange([0, 1750, 2850, 6000, 9999]);
 
         setAboutScroll(0.93);
         setExperienceScroll(1.9);
-        setProjectsScroll(3.1);
+        setProjectsScroll(2.96);
         setContactScroll(8);
       }
     };

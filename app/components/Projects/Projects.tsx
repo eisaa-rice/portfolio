@@ -40,42 +40,42 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       // - 1600
       if (width >= 320 && width < 500) {
-        setScrollRange1([4700, 6300]);
+        setScrollRange1([4750, 6350]);
 
-        setScrollRange2([6800, 8400]);
+        setScrollRange2([6680, 8280]);
 
-        setScrollRange3([9000, 10600]);
+        setScrollRange3([8780, 10320]);
       } else if (width >= 500 && width < 640) {
-        setScrollRange1([4000, 5600]);
+        setScrollRange1([3880, 5480]);
 
-        setScrollRange2([5950, 7550]);
+        setScrollRange2([5690, 7290]);
 
-        setScrollRange3([7950, 9550]);
+        setScrollRange3([7550, 9150]);
       } else if (width >= 640 && width < 1024) {
-        setScrollRange1([3800, 5400]);
+        setScrollRange1([3420, 5020]);
 
-        setScrollRange2([5625, 7225]);
+        setScrollRange2([5140, 6740]);
 
-        setScrollRange3([7500, 9100]);
+        setScrollRange3([6930, 8530]);
       } else if (width >= 1024 && width < 1280) {
-        setScrollRange1([3700, 5300]);
+        setScrollRange1([3260, 4860]);
 
-        setScrollRange2([5550, 7150]);
+        setScrollRange2([4980, 6580]);
 
-        setScrollRange3([7350, 8950]);
+        setScrollRange3([6600, 8300]);
       } else if (width >= 1280 && width < 1536) {
-        setScrollRange1([2825, 4425]);
+        setScrollRange1([2360, 3960]);
 
-        setScrollRange2([4025, 5625]);
+        setScrollRange2([3440, 5040]);
 
-        setScrollRange3([5350, 6950]);
+        setScrollRange3([4620, 6220]);
       } else {
         // width >= 1536
-        setScrollRange1([2800, 4400]);
+        setScrollRange1([2170, 3770]);
 
-        setScrollRange2([4025, 5625]);
+        setScrollRange2([3230, 4830]);
 
-        setScrollRange3([5350, 6950]);
+        setScrollRange3([4480, 6080]);
       }
     };
 
@@ -104,8 +104,8 @@ const Projects: React.FC<ProjectsProps> = () => {
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
-          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-44 xl:mt-12
-          w-[800px] xs:w-[1000px] sm:w-[1200px] xl:w-[875px] 2xl:w-[975px]"
+          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-20 xs:mb-28 sm:mb-10 xl:my-auto
+          w-[1000px] xs:w-[1000px] sm:w-[1100px] xl:w-[975px]"
           style={{ y: y1, rotate: rotate1 }}
         >
           <Image src="/images/cc.png" alt="CC" height={1469} width={2432} />
