@@ -107,7 +107,6 @@ export default function Home() {
       />
 
       <div className="flex flex-col items-center justify-center">
-        {" "}
         <div className="h-24 w-screen">
           {/* HAMBURGER */}
           <motion.div className="flex xl:hidden items-center justify-end">
@@ -132,7 +131,7 @@ export default function Home() {
 
             <motion.div
               className="glass rounded-bl-[4rem]
-              w-[400px] py-12 pr-[120px] flex-shrink-0
+              w-[400px] pt-12 pb-8 pr-[120px] flex-shrink-0
               flex flex-col items-center justify-between z-50 
               text-3xl text-gray-700 font-medium"
               initial={{ x: 420 }}
