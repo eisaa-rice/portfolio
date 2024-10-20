@@ -36,7 +36,7 @@ export default function Home() {
         setAboutScroll(1.4);
         setExperienceScroll(3.44);
         setProjectsScroll(5.54);
-        setContactScroll(11.53);
+        setContactScroll(11.6);
       } else if (width >= 500 && width < 640) {
         setOpacityRange([
           900, 1000, 2600, 2700, 2800, 4300, 4400, 4500, 9800, 9900, 10000,
