@@ -30,14 +30,16 @@ const Hero: React.FC<HeroProps> = () => {
       <p
         className="text-center font-bold my-6
         bg-clip-text text-transparent bg-gradient-to-tr from-teal-500 to-lime-300
-        text-6xl sm:text-7xl lg:text-8xl"
+        text-6xl sm:text-7xl lg:text-8xl
+        w-[390px] xs:w-auto"
       >
         Jésus Orozco
       </p>
 
       <p
         className="text-center xl:text-start
-        text-lg sm:text-xl lg:text-2xl"
+        text-lg sm:text-xl lg:text-2xl
+        w-[215px] xs:w-auto"
       >
         Fullstack Software Engineer and Developer
       </p>
