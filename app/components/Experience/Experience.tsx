@@ -35,7 +35,7 @@ const Experience = () => {
               height={70}
               width={70}
               alt=""
-              src={"/gdg.svg"}
+              src={"/svgs/gdg.svg"}
               className="m-auto"
             />
           </div>
@@ -83,7 +83,7 @@ const Experience = () => {
                 <Image
                   height={30}
                   width={30}
-                  src={"/external-link.svg"}
+                  src={"/svgs/external-link.svg"}
                   alt=""
                 />
               </motion.div>
@@ -132,12 +132,12 @@ const Experience = () => {
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-              <Skill name="HTML" src="/html.svg" />
-              <Skill name="CSS" src="/css.svg" style={{ width: 30 }} />
-              <Skill name="JavaScript" src="/javascript.svg" />
+              <Skill name="HTML" src="/svgs/html.svg" />
+              <Skill name="CSS" src="/svgs/css.svg" style={{ width: 30 }} />
+              <Skill name="JavaScript" src="/svgs/javascript.svg" />
 
-              <Skill name="React.js" src="/react.svg" />
-              <Skill name="Tailwind CSS" src="/tailwind.svg" />
+              <Skill name="React.js" src="/svgs/react.svg" />
+              <Skill name="Tailwind CSS" src="/svgs/tailwind.svg" />
             </div>
           </div>
         </div>

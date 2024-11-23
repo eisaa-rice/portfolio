@@ -26,47 +26,51 @@ export const Skill = ({
 
 const Skills = () => {
   const languages = [
-    { name: "C++", src: "/c++.svg", style: { width: 30 } },
-    { name: "C#", src: "/csharp.svg", style: {} },
+    { name: "C++", src: "/svgs/c++.svg", style: { width: 30 } },
+    { name: "C#", src: "/svgs/csharp.svg", style: {} },
 
-    { name: "Java", src: "/java.svg", style: {} },
-    { name: "Python", src: "/python.svg", style: { marginTop: 7.5 } },
+    { name: "Java", src: "/svgs/java.svg", style: {} },
+    { name: "Python", src: "/svgs/python.svg", style: { marginTop: 7.5 } },
 
-    { name: "HTML", src: "/html.svg", style: {} },
-    { name: "CSS", src: "/css.svg", style: { width: 30 } },
+    { name: "HTML", src: "/svgs/html.svg", style: {} },
+    { name: "CSS", src: "/svgs/css.svg", style: { width: 30 } },
     {
       name: "JavaScript",
-      src: "/javascript.svg",
+      src: "/svgs/javascript.svg",
       style: { borderRadius: 2.5 },
     },
     {
       name: "TypeScript",
-      src: "/typescript.svg",
+      src: "/svgs/typescript.svg",
       style: { borderRadius: 2.5 },
     },
 
-    { name: "SQL", src: "/sql.svg", style: {} },
+    { name: "SQL", src: "/svgs/sql.svg", style: {} },
   ];
 
   const frameworks = [
-    { name: "React.js", src: "/react.svg", style: {} },
-    { name: "React Native", src: "/react-native.svg", style: { height: 35 } },
-    { name: "Next.js", src: "/nextjs.svg", style: {} },
+    { name: "React.js", src: "/svgs/react.svg", style: {} },
+    {
+      name: "React Native",
+      src: "/svgs/react-native.svg",
+      style: { height: 35 },
+    },
+    { name: "Next.js", src: "/svgs/nextjs.svg", style: {} },
 
-    { name: "Tailwind CSS", src: "/tailwind.svg", style: {} },
-    { name: "Framer Motion", src: "/framer-motion.svg", style: {} },
+    { name: "Tailwind CSS", src: "/svgs/tailwind.svg", style: {} },
+    { name: "Framer Motion", src: "/svgs/framer-motion.svg", style: {} },
 
-    { name: "Node.js", src: "/nodejs.svg", style: {} },
+    { name: "Node.js", src: "/svgs/nodejs.svg", style: {} },
   ];
 
   const tools = [
-    { name: "Git", src: "/git.svg", style: {} },
-    { name: "GitHub", src: "/github.svg", style: {} },
+    { name: "Git", src: "/svgs/git.svg", style: {} },
+    { name: "GitHub", src: "/svgs/github.svg", style: {} },
 
-    { name: "MySQL", src: "/mysql.svg", style: {} },
+    { name: "MySQL", src: "/svgs/mysql.svg", style: {} },
 
-    { name: "Docker", src: "/docker.svg", style: {} },
-    { name: "AWS", src: "/aws.svg", style: { marginTop: 5 } },
+    { name: "Docker", src: "/svgs/docker.svg", style: {} },
+    { name: "AWS", src: "/svgs/aws.svg", style: { marginTop: 5 } },
   ];
 
   return (

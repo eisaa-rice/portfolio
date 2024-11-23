@@ -8,22 +8,46 @@ import { Skill } from "../Skills/Skills";
 
 import "./Projects.css";
 
-const OtherProject = () => {
+const OtherProject = ({
+  name,
+  desc,
+  link,
+  skills,
+}: {
+  name: string;
+  desc: string;
+  link: string;
+  skills: { name: string; src: string; style?: React.CSSProperties }[];
+}) => {
   return (
-    <div
-      className="w-full flex flex-col items-center
-bg-black bg-opacity-5"
+    <motion.a
+      className="lg:h-[480px] w-[300px] xs:w-[450px] lg:w-[360px]
+      flex flex-col flex-shrink-0 items-start justify-start 
+      bg-white shadow-md rounded-md p-10"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.05, cursor: "pointer" }}
+      whileTap={{ scale: 0.95 }}
     >
-      <p className="text-2xl font-light opacity-75 my-4">other works</p>
+      <p className="text-2xl font-semibold ">{name}</p>
 
-      <div className="h-[1px] w-full bg-black opacity-25" />
+      <p className="font-light text-xl text-gray-700 my-6">{desc}</p>
 
-      <div className="flex flex-col w-full gap-12 items-center justify-center p-24">
-        <div className="bg-white h-[50px] w-full rounded-md">
-          <p> one day some shit will go here lol</p>
-        </div>
+      <div
+        className="flex flex-wrap gap-2 mt-auto mb-0
+        items-center justify-center xs:justify-start"
+      >
+        {skills.map((skill, index) => (
+          <Skill
+            key={index}
+            name={skill.name}
+            src={skill.src}
+            style={skill.style}
+          />
+        ))}
       </div>
-    </div>
+    </motion.a>
   );
 };
 
@@ -154,7 +178,7 @@ const Projects = () => {
               <Image
                 height={35}
                 width={35}
-                src={"/arrow-circle-right.svg"}
+                src={"/svgs/arrow-circle-right.svg"}
                 alt=""
               />
             </motion.div>
@@ -181,13 +205,13 @@ const Projects = () => {
             </p>
 
             <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0">
-              <Skill name="React.js" src="/react.svg" />
+              <Skill name="React.js" src="/svgs/react.svg" />
 
-              <Skill name="Material UI" src="/mui.svg" />
+              <Skill name="Material UI" src="/svgs/mui.svg" />
 
               <Skill
                 name="TypeScript"
-                src="/typescript.svg"
+                src="/svgs/typescript.svg"
                 style={{ borderRadius: 2.5 }}
               />
             </div>
@@ -250,7 +274,7 @@ const Projects = () => {
               <Image
                 height={35}
                 width={35}
-                src={"/arrow-circle-right.svg"}
+                src={"/svgs/arrow-circle-right.svg"}
                 alt=""
               />
             </motion.div>
@@ -279,13 +303,13 @@ const Projects = () => {
             </p>
 
             <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0 text-gray-500">
-              <Skill name="React.js" src="/react.svg" />
+              <Skill name="React.js" src="/svgs/react.svg" />
 
-              <Skill name="Tailwind CSS" src="/tailwind.svg" />
+              <Skill name="Tailwind CSS" src="/svgs/tailwind.svg" />
 
               <Skill
                 name="JavaScript"
-                src="/javascript.svg"
+                src="/svgs/javascript.svg"
                 style={{ borderRadius: 2.5 }}
               />
             </div>
@@ -355,7 +379,7 @@ const Projects = () => {
               <Image
                 height={35}
                 width={35}
-                src={"/arrow-circle-right.svg"}
+                src={"/svgs/arrow-circle-right.svg"}
                 alt=""
               />
             </motion.div>
@@ -386,15 +410,15 @@ const Projects = () => {
             <div className="flex flex-wrap justify-center xl:justify-start gap-3 xl:gap-4 mt-4 mx-auto xl:mx-0 text-gray-500">
               <Skill
                 name="React Native"
-                src="/react-native.svg"
+                src="/svgs/react-native.svg"
                 style={{ height: 35 }}
               />
 
-              <Skill name="Supabase" src="/supabase.svg" />
+              <Skill name="Supabase" src="/svgs/supabase.svg" />
 
               <Skill
                 name="TypeScript"
-                src="/typescript.svg"
+                src="/svgs/typescript.svg"
                 style={{ borderRadius: 2.5 }}
               />
             </div>
@@ -403,6 +427,82 @@ const Projects = () => {
       </div>
 
       {/* OTHER WORKS */}
+      <p className="text-3xl text-center -mt-28">And some others.</p>
+
+      <div
+        className="flex flex-col items-center justify-center -mt-56
+        w-full lg:justify-evenly
+        gap-y-20 lg:flex-row lg:flex-wrap"
+      >
+        <div className="mx-auto">
+          <OtherProject
+            name="CPU Simulator"
+            desc="Simulate how a CPU would schedule jobs as it runs! Consists of a file generator full of ordered, organized data and a simulator that uses that data file."
+            link=""
+            skills={[
+              { name: "C++", src: "/svgs/c++.svg" },
+              { name: "Visual Studio", src: "/svgs/visual-studio.svg" },
+            ]}
+          />
+        </div>
+
+        <div className="mx-auto">
+          <OtherProject
+            name="Boolean Algebraic Calculator"
+            desc="Assembly program capable of performing various algebraic and logical operations on hexadecimal integers."
+            link=""
+            skills={[
+              {
+                name: "Assembly",
+                src: "/svgs/asm.svg",
+                style: { width: 40, marginRight: -5 },
+              },
+              { name: "Visual Studio", src: "/svgs/visual-studio.svg" },
+            ]}
+          />
+        </div>
+
+        <div className="mx-auto">
+          <OtherProject
+            name="Portfolio"
+            desc="This website right here! It's a responsive, user-friendly, and engaging portfolio that showcases my skills and projects."
+            link=""
+            skills={[
+              { name: "Next.js", src: "/svgs/nextjs.svg" },
+              { name: "Tailwind CSS", src: "/svgs/tailwind.svg" },
+              { name: "Framer Motion", src: "/svgs/framer-motion.svg" },
+            ]}
+          />
+        </div>
+
+        <div className="mx-auto">
+          <OtherProject
+            name="The Home Depot Relational Database"
+            desc="..."
+            link=""
+            skills={[
+              { name: "MySQL", src: "/svgs/mysql.svg" },
+              { name: "SQL", src: "/svgs/sql.svg" },
+              { name: "AWS", src: "/svgs/aws.svg", style: { marginTop: 5 } },
+            ]}
+          />
+        </div>
+
+        <div className="mx-auto">
+          <OtherProject
+            name="Natural Language Processing"
+            desc="..."
+            link=""
+            skills={[
+              {
+                name: "Python",
+                src: "/svgs/python.svg",
+                style: { marginTop: 7.5 },
+              },
+            ]}
+          />
+        </div>
+      </div>
     </div>
   );
 };

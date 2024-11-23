@@ -19,29 +19,30 @@ const Contact = ({
 }) => {
   return link ? (
     <motion.a
-      className="flex items-center justify-center flex-col xs:flex-row
-glass rounded-2xl py-3 px-4 flex-shrink-0"
+      className="flex items-center justify-center flex-row
+      glass rounded-2xl py-3 px-4 flex-shrink-0"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ rotate: 0, scale: 1 }}
       whileHover={{ cursor: "pointer", rotate: -1, scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
     >
       <span className="flex items-center justify-center">
         <Image className="mr-1" height={38} width={38} src={icon} alt={alt} />{" "}
       </span>
 
-      <span className="ml-2 flex-shrink-0 mt-2 xl:mt-0">{text}</span>
+      <span className="ml-2 flex-shrink-0">{text}</span>
     </motion.a>
   ) : (
     <motion.p
-      className="flex items-center justify-center flex-col xs:flex-row
+      className="flex items-center justify-center flex-row
       glass rounded-2xl py-3 px-4 flex-shrink-0"
     >
       <span className="flex items-center justify-center">
         <Image className="mr-1" height={38} width={38} src={icon} alt={alt} />{" "}
       </span>
-      <span className="ml-2 flex-shrink-0 mt-2 xl:mt-0">{text}</span>
+      <span className="ml-2 flex-shrink-0">{text}</span>
     </motion.p>
   );
 };
@@ -52,31 +53,32 @@ const Footer = () => {
       <p className="text-3xl text-center mb-24">Wanna talk?</p>
 
       <div
-        className="w-full flex flex-col xl:flex-row flex-wrap 
-      items-center gap-12 mt-20 mb-52 xl:mb-72"
+        className="w-full flex flex-col sm:flex-row flex-wrap 
+      items-center justify-center gap-12 mt-20 mb-52 xl:mb-72
+      sm:w-[680px] lg:w-auto"
       >
         <Contact
           alt="LinkedIn"
-          icon="/linkedin.svg"
+          icon="/svgs/linkedin.svg"
           text="eisaa-rice"
           link="https://linkedin.com/in/eisaa-rice/"
         />
 
         <Contact
           alt="GitHub"
-          icon="/github.svg"
+          icon="/svgs/github.svg"
           text="eisaa-rice"
           link="https://github.com/eisaa-rice"
         />
 
         <Contact
-          alt="Email"
-          icon="/email.svg"
+          alt="Gmail"
+          icon="/svgs/gmail.svg"
           text="jesusorozco3690@gmail.com"
-          // link="mailto:jesusorozco3690@gmail.com"
+          link="mailto:jesusorozco3690@gmail.com"
         />
 
-        <Contact alt="Location" icon="/location.svg" text="Detroit, MI" />
+        <Contact alt="Location" icon="/svgs/location.svg" text="Detroit, MI" />
       </div>
 
       <p className="century-gothic mb-7 font-thin text-lg text-center">

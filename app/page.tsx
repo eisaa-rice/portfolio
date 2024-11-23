@@ -143,7 +143,7 @@ export default function Home() {
   return (
     <motion.div
       // w-[320px] xs:w-[450px] sm:w-[600px] md:w-[] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]
-      className="flex flex-col justify-center items-center mx-auto overflow-hidden gap-48"
+      className="flex flex-col justify-center items-center mx-auto overflow-hidden gap-64"
     >
       <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
