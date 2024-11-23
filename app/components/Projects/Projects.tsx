@@ -4,10 +4,11 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
+import { Skill } from "../Skills/Skills";
+
 import "./Projects.css";
 
-interface OtherWorksProps {}
-const OtherWorks: React.FC<OtherWorksProps> = () => {
+const OtherProject = () => {
   return (
     <div
       className="w-full flex flex-col items-center
@@ -26,8 +27,7 @@ bg-black bg-opacity-5"
   );
 };
 
-interface ProjectsProps {}
-const Projects: React.FC<ProjectsProps> = () => {
+const Projects = () => {
   const { scrollY } = useScroll();
 
   const [scrollRange1, setScrollRange1] = useState([0, 0]);
@@ -97,9 +97,13 @@ const Projects: React.FC<ProjectsProps> = () => {
   return (
     <div
       // pt-96 pb-48
-      className="flex flex-col items-center justify-start gap-y-96 overflow-visible px-2
+      className="flex flex-col items-center justify-start gap-y-80 overflow-visible px-2
     w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
     >
+      <p className="text-3xl text-center -mb-56">
+        Some things I&apos;ve worked on.
+      </p>
+
       {/* SELECTED PROJECTS */}
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
@@ -120,7 +124,7 @@ const Projects: React.FC<ProjectsProps> = () => {
             whileHover="hover"
           >
             <div className="flex flex-col">
-              <p className="font-semibold text-3xl">🤖 code conductor</p>
+              <p className="font-semibold text-3xl">🤖 Code Conductor</p>
 
               <motion.div
                 className="h-[1px] bg-black"
@@ -158,64 +162,34 @@ const Projects: React.FC<ProjectsProps> = () => {
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8 text-gray-700">
             <p className="font-light text-2xl">
-              for a group project, some classmates and i made an{" "}
+              For a group project, some classmates and i made an{" "}
               <span className="font-semibold">online platform</span> that lets
-              people brainstorm and visualize custom algorithms easily
+              people brainstorm and visualize custom algorithms easily.
             </p>
 
             <p className="font-light text-2xl">
-              we used <span className="font-semibold">git</span> and{" "}
+              We used <span className="font-semibold">git</span> and{" "}
               <span className="font-semibold">github</span> to work
               simultaneously and and our leader assigned issues to each of us so
-              that we could progress incrementally
+              that we could progress incrementally.
             </p>
 
             <p className="font-light text-2xl">
-              blocks consisting of code type and description are properly
+              Blocks consisting of code type and description are properly
               indented and are drag-and-drop-able to make designing the
-              algorithm easy and simple
+              algorithm easy and simple.
             </p>
 
             <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0">
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px] text-gray-500
-                inline-flex items-center gap-2 flex-shrink-0"
-              >
-                react.js
-                <Image
-                  src={"/react.svg"}
-                  alt="react.js"
-                  height={25}
-                  width={25}
-                />
-              </p>
+              <Skill name="React.js" src="/react.svg" />
 
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-               inline-flex items-center gap-2 flex-shrink-0"
-              >
-                typescript
-                <Image
-                  src={"/typescript.svg"}
-                  alt="typescript"
-                  className="rounded-sm"
-                  height={25}
-                  width={25}
-                />
-              </p>
+              <Skill name="Material UI" src="/mui.svg" />
 
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-               inline-flex items-center gap-2 flex-shrink-0"
-              >
-                material ui
-                <Image
-                  src={"/mui.svg"}
-                  alt="material ui"
-                  height={25}
-                  width={25}
-                />
-              </p>
+              <Skill
+                name="TypeScript"
+                src="/typescript.svg"
+                style={{ borderRadius: 2.5 }}
+              />
             </div>
           </div>
         </div>
@@ -245,7 +219,7 @@ const Projects: React.FC<ProjectsProps> = () => {
           >
             <div className="flex flex-col">
               <p className="font-semibold text-3xl">
-                👩 international women&apos;s day summit
+                👩 International Women&apos;s Day Summit
               </p>
 
               <motion.div
@@ -284,66 +258,36 @@ const Projects: React.FC<ProjectsProps> = () => {
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8 text-gray-700">
             <p className="font-light text-2xl">
-              for this conference, students at <span>GDG</span> made a website
+              For this conference, students at <span>GDG</span> made a website
               using <span className="font-semibold">react</span>,{" "}
               <span className="font-semibold">git and github</span>, and{" "}
               <span className="font-semibold">tailwind css</span> to bundle
-              registration and information for over 200 conference attendees
+              registration and information for over 200 conference attendees.
             </p>
 
             <p className="font-light text-2xl">
-              <span className="font-semibold">responsive design</span> was
+              <span className="font-semibold">Responsive design</span> was
               applied to make sure that a smooth experience was present across
-              various devices and screen sizes
+              various devices and screen sizes.
             </p>
 
             <p className="font-light text-2xl">
-              to follow best coding practices,{" "}
+              To follow best coding practices,{" "}
               <span className="font-semibold">reusable components</span> were
               designed and give us an easier time maintening consistency across
-              the application
+              the application.
             </p>
 
             <div className="flex flex-wrap justify-center xl:justify-start gap-4 mt-4 mx-auto xl:mx-0 text-gray-500">
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-               inline-flex items-center gap-2 flex-shrink-0"
-              >
-                react.js
-                <Image
-                  src={"/react.svg"}
-                  alt="react.js"
-                  height={25}
-                  width={25}
-                />
-              </p>
+              <Skill name="React.js" src="/react.svg" />
 
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              inline-flex items-center gap-2 flex-shrink-0"
-              >
-                javascript
-                <Image
-                  src={"/javascript.svg"}
-                  alt="javascript"
-                  className="rounded-sm"
-                  height={25}
-                  width={25}
-                />
-              </p>
+              <Skill name="Tailwind CSS" src="/tailwind.svg" />
 
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              inline-flex items-center gap-2 flex-shrink-0"
-              >
-                tailwind css
-                <Image
-                  src={"/tailwind.svg"}
-                  alt="tailwind css"
-                  height={30}
-                  width={30}
-                />
-              </p>
+              <Skill
+                name="JavaScript"
+                src="/javascript.svg"
+                style={{ borderRadius: 2.5 }}
+              />
             </div>
           </div>
         </div>
@@ -373,8 +317,8 @@ const Projects: React.FC<ProjectsProps> = () => {
           >
             <div className="flex flex-col ">
               <p className="font-semibold text-3xl">
-                🧑‍💻 hack{" "}
-                <span className="inline-flex flex-shrink-0">dearborn 3</span>
+                🧑‍💻 Hack{" "}
+                <span className="inline-flex flex-shrink-0">Dearborn 3</span>
               </p>
 
               <motion.div
@@ -419,73 +363,46 @@ const Projects: React.FC<ProjectsProps> = () => {
 
           <div className="flex flex-col mt-10 mb-0 gap-y-8 text-gray-700">
             <p className="font-light text-2xl">
-              university club made a{" "}
+              University club made a{" "}
               <span className="font-semibold">fullstack app</span> and a{" "}
               <span className="font-semibold">website</span> for our
               school&apos;s annual hackathon, which were used by over 250
-              attendees for registration, information display, and check-in
+              attendees for registration, information display, and check-in.
             </p>
 
             <p className="font-light text-2xl">
-              wireframe mockups were translated into{" "}
+              Wireframe mockups were translated into{" "}
               <span className="font-semibold">responsive</span>,{" "}
               <span className="font-semibold">user-friendly interfaces</span>{" "}
-              with appealing and engaging designs
+              with appealing and engaging designs.
             </p>
 
             <p className="font-light text-2xl">
-              <span className="font-semibold">supabase</span> was used for the
+              <span className="font-semibold">Supabase</span> was used for the
               backend to take advantage of its database tables, edge functions,
-              and simple authentication features
+              and simple authentication features.
             </p>
 
             <div className="flex flex-wrap justify-center xl:justify-start gap-3 xl:gap-4 mt-4 mx-auto xl:mx-0 text-gray-500">
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-              inline-flex items-center gap-2 flex-shrink-0"
-              >
-                react native
-                <Image
-                  src={"/react-native.svg"}
-                  alt="react native"
-                  height={35}
-                  width={35}
-                />
-              </p>
+              <Skill
+                name="React Native"
+                src="/react-native.svg"
+                style={{ height: 35 }}
+              />
 
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-               inline-flex items-center gap-2 flex-shrink-0"
-              >
-                typescript
-                <Image
-                  src={"/typescript.svg"}
-                  alt="typescript"
-                  className="rounded-sm"
-                  height={25}
-                  width={25}
-                />
-              </p>
+              <Skill name="Supabase" src="/supabase.svg" />
 
-              <p
-                className="font-extralight px-2 py-auto bg-white rounded-xl shadow-sm h-[45px]
-               inline-flex items-center gap-2 flex-shrink-0"
-              >
-                supabase
-                <Image
-                  src={"/supabase.svg"}
-                  alt="supabase"
-                  height={25}
-                  width={25}
-                />
-              </p>
+              <Skill
+                name="TypeScript"
+                src="/typescript.svg"
+                style={{ borderRadius: 2.5 }}
+              />
             </div>
           </div>
         </div>
       </div>
 
       {/* OTHER WORKS */}
-      {/* <OtherWorks /> */}
     </div>
   );
 };

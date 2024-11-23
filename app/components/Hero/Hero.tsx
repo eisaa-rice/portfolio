@@ -7,8 +7,7 @@ import { motion, useAnimation } from "framer-motion";
 
 import "./Hero.css";
 
-interface HeroProps {}
-const Hero: React.FC<HeroProps> = () => {
+const Hero = () => {
   return (
     <div
       className="flex flex-col justify-center items-center text-neutral-300 

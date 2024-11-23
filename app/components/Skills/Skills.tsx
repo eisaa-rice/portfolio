@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -69,9 +71,13 @@ const Skills = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center
+      className="flex flex-col items-center justify-center px-2
       w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
     >
+      <p className="text-3xl text-center mb-24">
+        I&apos;ve worked with these before.
+      </p>
+
       <div
         className="flex flex-col items-center xl:items-start justify-center w-full gap-y-16 gap-x-6
         xl:grid xl:grid-rows-1 xl:grid-cols-3"
@@ -79,7 +85,7 @@ const Skills = () => {
         <div className="lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-2">
           <p
             className="font-light text-center mb-4
-          text-2xl"
+          text-2xl text-gray-600"
           >
             Languages
           </p>
@@ -99,7 +105,7 @@ const Skills = () => {
         <div className="lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3">
           <p
             className="font-light text-center mb-4
-          text-2xl"
+          text-2xl text-gray-600"
           >
             Frameworks
           </p>
@@ -119,7 +125,7 @@ const Skills = () => {
         <div className="lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-4">
           <p
             className="font-light text-center mb-4
-          text-2xl"
+          text-2xl text-gray-600"
           >
             Tools
           </p>

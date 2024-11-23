@@ -8,8 +8,7 @@ import { Skill } from "../Skills/Skills";
 
 import "./Experience.css";
 
-interface ExperienceProps {}
-const Experience: React.FC<ExperienceProps> = () => {
+const Experience = () => {
   const workExperience = [
     {
       time: "FEB 2024 - CURRENT",
@@ -22,9 +21,13 @@ const Experience: React.FC<ExperienceProps> = () => {
 
   return (
     <motion.div
-      className="min-h-[700px] flex flex-col items-center justify-center gap-32 px-2
+      className="min-h-[700px] flex flex-col items-center justify-center px-2
     w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
     >
+      <p className="text-3xl text-center mb-24">
+        Here&apos;s where I&apos;ve been.
+      </p>
+
       <div className="flex flex-col lg:flex-row lg:-ml-20 justify-center w-full rounded-xl">
         <div className="flex flex-col items-center">
           <div className="glass h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 lg:mb-0 flex items-center justify-center">
@@ -129,10 +132,11 @@ const Experience: React.FC<ExperienceProps> = () => {
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
+              <Skill name="HTML" src="/html.svg" />
+              <Skill name="CSS" src="/css.svg" style={{ width: 30 }} />
               <Skill name="JavaScript" src="/javascript.svg" />
 
-              <Skill name="React" src="/react.svg" />
-
+              <Skill name="React.js" src="/react.svg" />
               <Skill name="Tailwind CSS" src="/tailwind.svg" />
             </div>
           </div>
