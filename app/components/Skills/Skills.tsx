@@ -146,6 +146,10 @@ const Skills = () => {
           </div>
         </div>
       </div>
+
+      <p className="text-2xl font-light text-slate-500 mt-24 text-center">
+        But of course, I&apos;ll learn and work with just about anything.
+      </p>
     </div>
   );
 };

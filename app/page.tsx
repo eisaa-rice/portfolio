@@ -8,7 +8,6 @@ import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function Home() {
@@ -128,8 +127,13 @@ export default function Home() {
         top: 1000 * projectsScroll,
         behavior: "smooth",
       });
+    } else if (x === 4) {
+      window.scrollTo({
+        top: 1000 * projectsScroll,
+        behavior: "smooth",
+      });
     }
-    // x === 4
+    // x === 5
     else {
       window.scrollTo({
         top: 1000 * contactScroll,
@@ -145,16 +149,6 @@ export default function Home() {
       // w-[320px] xs:w-[450px] sm:w-[600px] md:w-[] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]
       className="flex flex-col justify-center items-center mx-auto overflow-hidden gap-64"
     >
-      <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
-        <motion.p
-          initial={{ opacity: 0 }}
-          style={{ opacity }}
-          className="font-semibold p-3 rounded-xl bg-white shadow-sm"
-        >
-          {header}
-        </motion.p>
-      </div>
-
       {/* LOADING ANIMATION */}
       <motion.div
         className="h-full w-screen bg-black z-[999]
@@ -181,6 +175,66 @@ export default function Home() {
       />
 
       {/* HEADER */}
+      <div
+        className="h-16 z-[60] absolute top-0 left-1/2 transform -translate-x-1/2
+        hidden sm:flex items-center justify-between text-neutral-400
+        w-[320px] xs:w-[450px] sm:w-[600px] md:w-[] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+      >
+        <div
+          className="flex items-center justify-center h-full 
+          mx-auto gap-12 lg:gap-16 xl:gap-24"
+        >
+          <motion.p
+            initial={{ fontWeight: 500 }}
+            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
+            onClick={() => handleScroll(1)}
+          >
+            About
+          </motion.p>
+
+          <motion.p
+            initial={{ fontWeight: 500 }}
+            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
+            onClick={() => handleScroll(2)}
+          >
+            Skills
+          </motion.p>
+
+          <motion.p
+            initial={{ fontWeight: 500 }}
+            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
+            onClick={() => handleScroll(3)}
+          >
+            Experience
+          </motion.p>
+
+          <motion.p
+            initial={{ fontWeight: 500 }}
+            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
+            onClick={() => handleScroll(4)}
+          >
+            Projects
+          </motion.p>
+
+          <motion.p
+            initial={{ fontWeight: 500 }}
+            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
+            onClick={() => handleScroll(5)}
+          >
+            Contact
+          </motion.p>
+        </div>
+      </div>
+
+      <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
+        <motion.p
+          initial={{ opacity: 0 }}
+          style={{ opacity }}
+          className="font-semibold p-3 rounded-xl bg-white shadow-sm"
+        >
+          {header}
+        </motion.p>
+      </div>
 
       <Hero />
 

@@ -23,7 +23,7 @@ const OtherProject = ({
     <motion.a
       className="lg:h-[480px] w-[300px] xs:w-[450px] lg:w-[360px]
       flex flex-col flex-shrink-0 items-start justify-start 
-      bg-white shadow-md rounded-md p-10"
+      bg-[#fcfdff] shadow-md rounded-md p-10"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
@@ -110,13 +110,13 @@ const Projects = () => {
   }, []);
 
   const y1 = useTransform(scrollY, scrollRange1, ["100%", "-100%"]);
-  const rotate1 = useTransform(scrollY, scrollRange1, [5, -5]);
+  const rotate1 = useTransform(scrollY, scrollRange1, [2, -2]);
 
   const y2 = useTransform(scrollY, scrollRange2, ["100%", "-100%"]);
-  const rotate2 = useTransform(scrollY, scrollRange2, [-5, 5]);
+  const rotate2 = useTransform(scrollY, scrollRange2, [-2, 2]);
 
   const y3 = useTransform(scrollY, scrollRange3, ["100%", "-100%"]);
-  const rotate3 = useTransform(scrollY, scrollRange3, [5, -5]);
+  const rotate3 = useTransform(scrollY, scrollRange3, [2, -2]);
 
   return (
     <div
@@ -475,7 +475,7 @@ const Projects = () => {
           />
         </div>
 
-        <div className="mx-auto">
+        {/* <div className="mx-auto">
           <OtherProject
             name="The Home Depot Relational Database"
             desc="..."
@@ -486,9 +486,9 @@ const Projects = () => {
               { name: "AWS", src: "/svgs/aws.svg", style: { marginTop: 5 } },
             ]}
           />
-        </div>
+        </div> */}
 
-        <div className="mx-auto">
+        {/* <div className="mx-auto">
           <OtherProject
             name="Natural Language Processing"
             desc="..."
@@ -501,8 +501,25 @@ const Projects = () => {
               },
             ]}
           />
-        </div>
+        </div> */}
       </div>
+
+      <p className="text-2xl -mt-56 font-light text-slate-500 text-center">
+        And obviously, the source for these and more are all on my{" "}
+        <motion.a
+          href="https://github.com/eisaa-rice"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ fontWeight: 600 }}
+          whileHover={{
+            cursor: "pointer",
+            fontWeight: 900,
+          }}
+        >
+          GitHub
+        </motion.a>
+        .
+      </p>
     </div>
   );
 };

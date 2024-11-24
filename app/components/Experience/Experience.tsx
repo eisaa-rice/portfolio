@@ -100,7 +100,7 @@ const Experience = () => {
               <span className="font-semibold">frontend</span> and{" "}
               <span className="font-semibold">backend web</span> and{" "}
               <span className="font-semibold">app development</span> for
-              multiple regional events, like conferences and hackathons
+              multiple regional events, like conferences and hackathons.
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
@@ -108,13 +108,13 @@ const Experience = () => {
               provided <span className="font-semibold"> figma designs</span>{" "}
               into their equivalent functional{" "}
               <span className="font-semibold"> react components</span>, making
-              sure our clients were satisfied with final web app layouts
+              sure our clients were satisfied with final web app layouts.
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
               Every project incorporated{" "}
               <span className="font-semibold"> responsive design</span> to
-              ensure simple and clear access from any device, on any platform
+              ensure simple and clear access from any device, on any platform.
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
