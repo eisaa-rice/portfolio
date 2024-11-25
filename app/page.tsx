@@ -14,11 +14,12 @@ export default function Home() {
   const { scrollY } = useScroll();
 
   const [opacityRange, setOpacityRange] = useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
-  const [headerRange, setHeaderRange] = useState([0, 0, 0, 0, 0]);
+  const [headerRange, setHeaderRange] = useState([0, 0, 0, 0, 0, 0]);
 
   const [aboutScroll, setAboutScroll] = useState(0);
+  const [skillScroll, setSkillScroll] = useState(0);
   const [experienceScroll, setExperienceScroll] = useState(0);
   const [projectsScroll, setProjectsScroll] = useState(0);
   const [contactScroll, setContactScroll] = useState(0);
@@ -29,64 +30,43 @@ export default function Home() {
 
       if (width >= 320 && width < 500) {
         setOpacityRange([
-          1200, 1300, 3150, 3250, 3350, 5200, 5300, 5400, 11300, 11400, 11500,
+          850, 950, 2600, 2700, 2800, 4500, 4600, 4700, 6450, 6550, 6650, 14800,
+          14900, 15000,
         ]);
-        setHeaderRange([0, 3250, 5300, 11400, 99999]);
+        setHeaderRange([0, 2700, 4600, 6550, 14900, 99999]);
 
-        setAboutScroll(1.4);
-        setExperienceScroll(3.44);
-        setProjectsScroll(5.54);
-        setContactScroll(11.53);
+        setAboutScroll(1.04);
+        setSkillScroll(2.1);
+        setExperienceScroll(2.96);
+        setProjectsScroll(3.96);
+        setContactScroll(8.16);
       } else if (width >= 500 && width < 640) {
-        setOpacityRange([
-          900, 1000, 2600, 2700, 2800, 4300, 4400, 4500, 9800, 9900, 10000,
-        ]);
-        setHeaderRange([0, 2700, 4400, 9900, 99999]);
-
-        setAboutScroll(1.26);
-        setExperienceScroll(3);
-        setProjectsScroll(4.66);
-        setContactScroll(10.09);
       } else if (width >= 640 && width < 1024) {
-        setOpacityRange([
-          1050, 1150, 2450, 2550, 2650, 3950, 4050, 4150, 9050, 9150, 9250,
-        ]);
-        setHeaderRange([0, 2550, 4050, 9150, 99999]);
-
-        setAboutScroll(1.23);
-        setExperienceScroll(2.8);
-        setProjectsScroll(4.24);
-        setContactScroll(9.49);
       } else if (width >= 1024 && width < 1280) {
-        setOpacityRange([
-          1050, 1150, 2450, 2550, 2650, 3850, 3950, 4050, 8800, 8900, 9000,
-        ]);
-        setHeaderRange([0, 2550, 3950, 8900, 99999]);
-
-        setAboutScroll(1.24);
-        setExperienceScroll(2.72);
-        setProjectsScroll(4.08);
-        setContactScroll(9.49);
       } else if (width >= 1280 && width < 1536) {
         setOpacityRange([
-          800, 900, 1750, 1850, 1950, 2900, 3000, 3100, 6100, 6200, 6300,
+          850, 950, 1900, 2000, 2100, 2700, 2800, 2900, 3700, 3800, 3900, 7925,
+          8025, 8125,
         ]);
-        setHeaderRange([0, 1850, 3000, 6200, 9999]);
+        setHeaderRange([0, 2000, 2800, 3800, 8025, 9999]);
 
-        setAboutScroll(0.98);
-        setExperienceScroll(1.97);
-        setProjectsScroll(3.16);
-        setContactScroll(6.5);
+        setAboutScroll(1.04);
+        setSkillScroll(2.1);
+        setExperienceScroll(2.96);
+        setProjectsScroll(3.96);
+        setContactScroll(8.16);
       } else {
         // width >= 1536
         setOpacityRange([
-          800, 900, 1650, 1750, 1850, 2750, 2850, 2950, 5900, 6000, 6100,
+          950, 1050, 1900, 2000, 2100, 2650, 2750, 2850, 3600, 3700, 3800, 7750,
+          7850, 7950,
         ]);
-        setHeaderRange([0, 1750, 2850, 6000, 9999]);
+        setHeaderRange([0, 2000, 2750, 3700, 7850, 9999]);
 
-        setAboutScroll(0.93);
-        setExperienceScroll(1.9);
-        setProjectsScroll(2.96);
+        setAboutScroll(1.1);
+        setSkillScroll(2.1);
+        setExperienceScroll(2.88);
+        setProjectsScroll(3.84);
         setContactScroll(8);
       }
     };
@@ -100,12 +80,13 @@ export default function Home() {
   const opacity = useTransform(
     scrollY,
     opacityRange,
-    [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1]
+    [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1]
   );
 
   const header = useTransform(scrollY, headerRange, [
     "about 🧔🏼",
     "about 🧔🏼",
+    "skills 🛠️",
     "experience 💼",
     "projects 💻",
     "contact 📞",
@@ -119,12 +100,12 @@ export default function Home() {
       });
     } else if (x === 2) {
       window.scrollTo({
-        top: 1000 * experienceScroll,
+        top: 1000 * skillScroll,
         behavior: "smooth",
       });
     } else if (x === 3) {
       window.scrollTo({
-        top: 1000 * projectsScroll,
+        top: 1000 * experienceScroll,
         behavior: "smooth",
       });
     } else if (x === 4) {
@@ -174,56 +155,77 @@ export default function Home() {
         transition={{ ease: "easeIn", duration: 0.25, delay: 2.45 }}
       />
 
-      {/* HEADER */}
+      {/* HEADERS */}
       <div
-        className="h-16 z-[60] absolute top-0 left-1/2 transform -translate-x-1/2
-        hidden sm:flex items-center justify-between text-neutral-400
-        w-[320px] xs:w-[450px] sm:w-[600px] md:w-[] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+        className="h-16 z-[60] absolute top-0 left-1/2 transform -translate-x-1/2 
+        hidden md:flex items-center justify-evenly mx-auto gap-12
+        text-sm px-6 transition-all duration-[25ms] ease-in-out
+        w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
       >
-        <div
-          className="flex items-center justify-center h-full 
-          mx-auto gap-12 lg:gap-16 xl:gap-24"
+        <motion.p
+          className="py-2 "
+          initial={{ color: "#a3a3a3", fontWeight: 300 }}
+          whileHover={{
+            color: "white",
+            fontWeight: 500,
+            cursor: "pointer",
+          }}
+          onClick={() => handleScroll(1)}
         >
-          <motion.p
-            initial={{ fontWeight: 500 }}
-            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
-            onClick={() => handleScroll(1)}
-          >
-            About
-          </motion.p>
+          ABOUT
+        </motion.p>
 
-          <motion.p
-            initial={{ fontWeight: 500 }}
-            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
-            onClick={() => handleScroll(2)}
-          >
-            Skills
-          </motion.p>
+        <motion.p
+          className="py-2 "
+          initial={{ color: "#a3a3a3", fontWeight: 300 }}
+          whileHover={{
+            color: "white",
+            fontWeight: 500,
+            cursor: "pointer",
+          }}
+          onClick={() => handleScroll(2)}
+        >
+          SKILLS
+        </motion.p>
 
-          <motion.p
-            initial={{ fontWeight: 500 }}
-            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
-            onClick={() => handleScroll(3)}
-          >
-            Experience
-          </motion.p>
+        <motion.p
+          className="py-2 "
+          initial={{ color: "#a3a3a3", fontWeight: 300 }}
+          whileHover={{
+            color: "white",
+            fontWeight: 500,
+            cursor: "pointer",
+          }}
+          onClick={() => handleScroll(3)}
+        >
+          EXPERIENCE
+        </motion.p>
 
-          <motion.p
-            initial={{ fontWeight: 500 }}
-            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
-            onClick={() => handleScroll(4)}
-          >
-            Projects
-          </motion.p>
+        <motion.p
+          className="py-2 "
+          initial={{ color: "#a3a3a3", fontWeight: 300 }}
+          whileHover={{
+            color: "white",
+            fontWeight: 500,
+            cursor: "pointer",
+          }}
+          onClick={() => handleScroll(4)}
+        >
+          PROJECTS
+        </motion.p>
 
-          <motion.p
-            initial={{ fontWeight: 500 }}
-            whileHover={{ fontWeight: 800, color: "white", cursor: "pointer" }}
-            onClick={() => handleScroll(5)}
-          >
-            Contact
-          </motion.p>
-        </div>
+        <motion.p
+          className="py-2 "
+          initial={{ color: "#a3a3a3", fontWeight: 300 }}
+          whileHover={{
+            color: "white",
+            fontWeight: 500,
+            cursor: "pointer",
+          }}
+          onClick={() => handleScroll(5)}
+        >
+          CONTACT
+        </motion.p>
       </div>
 
       <div className="fixed top-0 mt-5 z-50 flex-shrink-0">

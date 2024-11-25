@@ -23,14 +23,37 @@ const OtherProject = ({
     <motion.a
       className="lg:h-[480px] w-[300px] xs:w-[450px] lg:w-[360px]
       flex flex-col flex-shrink-0 items-start justify-start 
-      bg-[#fcfdff] shadow-md rounded-md p-10"
+      bg-[#fdfdff] shadow-md rounded-lg p-10 relative"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.05, cursor: "pointer" }}
+      initial={{ scale: 1 }}
+      whileHover="hover"
       whileTap={{ scale: 0.95 }}
+      variants={{
+        hover: { scale: 1.05, cursor: "pointer" },
+      }}
     >
-      <p className="text-2xl font-semibold ">{name}</p>
+      <motion.div
+        className="h-10 w-10 rounded-full flex-shrink-0 absolute top-2 right-2"
+        initial={{ scale: 1, opacity: 0.5 }}
+        variants={{
+          hover: {
+            scale: 1.2,
+            opacity: 1,
+          },
+        }}
+      >
+        <Image
+          className="-rotate-12"
+          src={"/svgs/arrow-circle-right.svg"}
+          alt=""
+          layout="fill"
+          objectFit="contain"
+        />
+      </motion.div>
+
+      <p className="text-2xl font-semibold pr-6">{name}</p>
 
       <p className="font-light text-xl text-gray-700 my-6">{desc}</p>
 
@@ -64,42 +87,27 @@ const Projects = () => {
 
       // - 1600
       if (width >= 320 && width < 500) {
-        setScrollRange1([4750, 6350]);
+        setScrollRange1([6000, 7600]);
 
-        setScrollRange2([6680, 8280]);
+        setScrollRange2([7850, 9450]);
 
-        setScrollRange3([8780, 10320]);
+        setScrollRange3([9850, 11450]);
       } else if (width >= 500 && width < 640) {
-        setScrollRange1([3880, 5480]);
-
-        setScrollRange2([5690, 7290]);
-
-        setScrollRange3([7550, 9150]);
       } else if (width >= 640 && width < 1024) {
-        setScrollRange1([3420, 5020]);
-
-        setScrollRange2([5140, 6740]);
-
-        setScrollRange3([6930, 8530]);
       } else if (width >= 1024 && width < 1280) {
-        setScrollRange1([3260, 4860]);
-
-        setScrollRange2([4980, 6580]);
-
-        setScrollRange3([6600, 8300]);
       } else if (width >= 1280 && width < 1536) {
-        setScrollRange1([2360, 3960]);
+        setScrollRange1([3250, 4950]);
 
-        setScrollRange2([3440, 5040]);
+        setScrollRange2([4250, 5850]);
 
-        setScrollRange3([4620, 6220]);
+        setScrollRange3([5400, 7000]);
       } else {
         // width >= 1536
-        setScrollRange1([2170, 3770]);
+        setScrollRange1([3100, 4700]);
 
-        setScrollRange2([3230, 4830]);
+        setScrollRange2([4100, 5700]);
 
-        setScrollRange3([4480, 6080]);
+        setScrollRange3([5200, 6800]);
       }
     };
 
@@ -109,13 +117,13 @@ const Projects = () => {
     return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
 
-  const y1 = useTransform(scrollY, scrollRange1, ["100%", "-100%"]);
+  const y1 = useTransform(scrollY, scrollRange1, ["50%", "-50%"]);
   const rotate1 = useTransform(scrollY, scrollRange1, [2, -2]);
 
-  const y2 = useTransform(scrollY, scrollRange2, ["100%", "-100%"]);
+  const y2 = useTransform(scrollY, scrollRange2, ["50%", "-50%"]);
   const rotate2 = useTransform(scrollY, scrollRange2, [-2, 2]);
 
-  const y3 = useTransform(scrollY, scrollRange3, ["100%", "-100%"]);
+  const y3 = useTransform(scrollY, scrollRange3, ["50%", "-50%"]);
   const rotate3 = useTransform(scrollY, scrollRange3, [2, -2]);
 
   return (
@@ -132,7 +140,7 @@ const Projects = () => {
       <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
         <motion.div
           className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
-          mx-auto -ml-14 xs:-ml-20 sm:-ml-24 mb-20 xs:mb-28 sm:mb-10 xl:my-auto
+          mx-auto -ml-24 xs:-ml-32 sm:-ml-24 mb-20 xs:mb-28 sm:mb-10 xl:my-auto
           w-[1000px] xs:w-[1000px] sm:w-[1100px] xl:w-[975px]"
           style={{ y: y1, rotate: rotate1 }}
         >
@@ -436,9 +444,9 @@ const Projects = () => {
       >
         <div className="mx-auto">
           <OtherProject
-            name="CPU Simulator"
+            name="🖥️ CPU Simulator"
             desc="Simulate how a CPU would schedule jobs as it runs! Consists of a file generator full of ordered, organized data and a simulator that uses that data file."
-            link=""
+            link="https://github.com/eisaa-rice/processor-simulator"
             skills={[
               { name: "C++", src: "/svgs/c++.svg" },
               { name: "Visual Studio", src: "/svgs/visual-studio.svg" },
@@ -448,9 +456,9 @@ const Projects = () => {
 
         <div className="mx-auto">
           <OtherProject
-            name="Boolean Algebraic Calculator"
+            name="🟰 Boolean & Algebraic Calculator"
             desc="Assembly program capable of performing various algebraic and logical operations on hexadecimal integers."
-            link=""
+            link="https://github.com/eisaa-rice/boolean-algebraic-calculator"
             skills={[
               {
                 name: "Assembly",
@@ -464,9 +472,9 @@ const Projects = () => {
 
         <div className="mx-auto">
           <OtherProject
-            name="Portfolio"
-            desc="This website right here! It's a responsive, user-friendly, and engaging portfolio that showcases my skills and projects."
-            link=""
+            name="🔗 Portfolio"
+            desc="This website right here! It's a responsive, user-friendly, and (hopefully) engaging portfolio that showcases my skills and projects."
+            link="https://jesusorozco.dev/"
             skills={[
               { name: "Next.js", src: "/svgs/nextjs.svg" },
               { name: "Tailwind CSS", src: "/svgs/tailwind.svg" },

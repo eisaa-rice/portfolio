@@ -97,16 +97,15 @@ const Experience = () => {
           <div className="flex flex-col gap-4 lg:px-0">
             <p className="font-light text-gray-700 text-2xl">
               I&apos;m assisting this university club with{" "}
-              <span className="font-semibold">frontend</span> and{" "}
-              <span className="font-semibold">backend web</span> and{" "}
+              <span className="font-semibold">frontend web</span> and{" "}
               <span className="font-semibold">app development</span> for
               multiple regional events, like conferences and hackathons.
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
-              I&apos;ve <span className="font-semibold">converted</span> lots of
-              provided <span className="font-semibold"> figma designs</span>{" "}
-              into their equivalent functional{" "}
+              I&apos;ve converted lots of provided{" "}
+              <span className="font-semibold"> figma designs</span> into their
+              equivalent functional{" "}
               <span className="font-semibold"> react components</span>, making
               sure our clients were satisfied with final web app layouts.
             </p>

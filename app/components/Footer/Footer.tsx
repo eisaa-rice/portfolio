@@ -49,13 +49,13 @@ const Contact = ({
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items- px-2 xs:px-0">
-      <p className="text-3xl text-center mb-24">Wanna talk?</p>
+    <div className="flex flex-col items-center px-2 xs:px-0">
+      <p className="text-3xl text-center mb-12">Wanna talk?</p>
 
       <div
         className="w-full flex flex-col sm:flex-row flex-wrap 
-      items-center justify-center gap-12 mt-20 mb-52 xl:mb-72
-      sm:w-[680px] lg:w-auto"
+      items-center justify-center gap-12 mt-20
+      sm:w-[680px] lg:w-auto max-w-[600px]"
       >
         <Contact
           alt="LinkedIn"
@@ -75,14 +75,19 @@ const Footer = () => {
           alt="Gmail"
           icon="/svgs/gmail.svg"
           text="jesusorozco3690@gmail.com"
-          link="mailto:jesusorozco3690@gmail.com"
+          // link="mailto:jesusorozco3690@gmail.com"
         />
 
         <Contact alt="Location" icon="/svgs/location.svg" text="Detroit, MI" />
       </div>
 
-      <p className="century-gothic mb-7 font-thin text-lg text-center">
-        jesus orozco {new Date().getFullYear()}
+      <p className="text-2xl font-light text-slate-500 text-center mt-24 mb-64 px-1">
+        I&apos;m open to chat about basically anything, so don&apos;t be afraid
+        to drop me a line!
+      </p>
+
+      <p className="century-gothic mb-10 font-thin text-lg text-center">
+        © {new Date().getFullYear()} Jesus Orozco
       </p>
     </div>
   );

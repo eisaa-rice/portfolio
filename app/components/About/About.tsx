@@ -8,13 +8,15 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div
+      className="flex flex-col items-center justify-center
+      w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+    >
       <p className="text-3xl text-center mb-24">What&apos;s up?</p>
 
       <div
         className="flex flex-col items-center justify-center gap-y-20 
-     xl:grid xl:grid-rows-1 xl:grid-cols-2 gap-x-16 px-2
-     w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+        xl:grid xl:grid-rows-1 xl:grid-cols-2 gap-x-16 px-2"
       >
         <div
           className="rounded-full flex-shrink-0 bg-white shadow-lg 
