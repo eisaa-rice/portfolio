@@ -474,7 +474,7 @@ const Projects = () => {
           <OtherProject
             name="🔗 Portfolio"
             desc="This website right here! It's a responsive, user-friendly, and (hopefully) engaging portfolio that showcases my skills and projects."
-            link="https://jesusorozco.dev/"
+            link="/"
             skills={[
               { name: "Next.js", src: "/svgs/nextjs.svg" },
               { name: "Tailwind CSS", src: "/svgs/tailwind.svg" },

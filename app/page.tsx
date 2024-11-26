@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 import { useState, useEffect } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -155,7 +156,48 @@ export default function Home() {
         transition={{ ease: "easeIn", duration: 0.25, delay: 2.45 }}
       />
 
-      {/* HEADERS */}
+      {/* HAMBURGER */}
+      <Image
+        className="flex md:hidden items-center justify-center
+        rounded-3xl flex-shrink-0 absolute top-3 left-3"
+        src="/svgs/hamburger.svg"
+        alt=""
+        height={32}
+        width={32}
+        onClick={() => setHamburger(!hamburger)}
+      />
+
+      <motion.div
+        className="absolute w-full top-0 bg-[#f8f8ff] shadow-lg z-50
+        flex md:hidden flex-col items-center justify-start 
+        pt-12 pb-6 rounded-bl-xl rounded-br-xl"
+        initial={{ y: "-100%" }}
+        animate={hamburger ? { y: "-12.4%" } : { y: "-100%" }}
+        transition={{ ease: "backInOut", duration: 0.5 }}
+      >
+        <Image
+          className="flex-shrink-0
+          ml-3 mr-auto mt-3"
+          src="/svgs/x.svg"
+          alt=""
+          height={32}
+          width={32}
+          onClick={() => setHamburger(!hamburger)}
+        />
+
+        <div
+          className="w-full h-full flex flex-col items-start justify-start 
+        gap-6 text-lg font-medium mt-8 pl-10"
+        >
+          <p onClick={() => handleScroll(1)}>About 🧔🏼</p>
+          <p onClick={() => handleScroll(2)}>Skills 🛠️</p>
+          <p onClick={() => handleScroll(3)}>Experience 💼</p>
+          <p onClick={() => handleScroll(4)}>Projects 💻</p>
+          <p onClick={() => handleScroll(5)}>Contact 📞</p>
+        </div>
+      </motion.div>
+
+      {/* NAVBAR */}
       <div
         className="h-16 z-[60] absolute top-0 left-1/2 transform -translate-x-1/2 
         hidden md:flex items-center justify-evenly mx-auto gap-12
@@ -228,6 +270,7 @@ export default function Home() {
         </motion.p>
       </div>
 
+      {/* HEADER */}
       <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
           initial={{ opacity: 0 }}
