@@ -77,6 +77,7 @@ const Skills = () => {
     <div
       className="flex flex-col items-center justify-center px-2
       w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+      id="skills"
     >
       <p className="text-3xl text-center mb-24">
         I&apos;ve worked with these before.

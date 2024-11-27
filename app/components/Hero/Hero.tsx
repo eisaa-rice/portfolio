@@ -12,6 +12,7 @@ const Hero = () => {
     <div
       className="flex flex-col justify-center items-center text-neutral-300 
       hero w-screen h-screen"
+      id="hero"
     >
       <div
         className="rounded-full flex-shrink-0 bg-white

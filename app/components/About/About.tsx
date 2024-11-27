@@ -11,6 +11,7 @@ const About = () => {
     <div
       className="flex flex-col items-center justify-center
       w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+      id="about"
     >
       <p className="text-3xl text-center mb-24">What&apos;s up?</p>
 

@@ -23,6 +23,7 @@ const Experience = () => {
     <motion.div
       className="min-h-[700px] flex flex-col items-center justify-center px-2
     w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+      id="experience"
     >
       <p className="text-3xl text-center mb-24">
         Here&apos;s where I&apos;ve been.

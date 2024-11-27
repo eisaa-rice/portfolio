@@ -49,7 +49,7 @@ const Contact = ({
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center px-2 xs:px-0">
+    <div className="flex flex-col items-center px-2 xs:px-0" id="footer">
       <p className="text-3xl text-center mb-12">Wanna talk?</p>
 
       <div
@@ -86,7 +86,7 @@ const Footer = () => {
         to drop me a line!
       </p>
 
-      <p className="century-gothic mb-10 font-thin text-lg text-center">
+      <p className="century-gothic mb-20 font-thin text-lg text-center">
         © {new Date().getFullYear()} Jesus Orozco
       </p>
     </div>

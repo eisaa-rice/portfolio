@@ -11,118 +11,10 @@ import { useState, useEffect } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import Image from "next/image";
 
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
 export default function Home() {
   const { scrollY } = useScroll();
-
-  const [opacityRange, setOpacityRange] = useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  ]);
-  const [headerRange, setHeaderRange] = useState([0, 0, 0, 0, 0, 0]);
-
-  const [aboutScroll, setAboutScroll] = useState(0);
-  const [skillScroll, setSkillScroll] = useState(0);
-  const [experienceScroll, setExperienceScroll] = useState(0);
-  const [projectsScroll, setProjectsScroll] = useState(0);
-  const [contactScroll, setContactScroll] = useState(0);
-
-  useEffect(() => {
-    const updateScreenSize = () => {
-      const width = window.innerWidth;
-
-      if (width >= 320 && width < 500) {
-        setOpacityRange([
-          850, 950, 2600, 2700, 2800, 4500, 4600, 4700, 6450, 6550, 6650, 14800,
-          14900, 15000,
-        ]);
-        setHeaderRange([0, 2700, 4600, 6550, 14900, 99999]);
-
-        setAboutScroll(1.04);
-        setSkillScroll(2.1);
-        setExperienceScroll(2.96);
-        setProjectsScroll(3.96);
-        setContactScroll(8.16);
-      } else if (width >= 500 && width < 640) {
-      } else if (width >= 640 && width < 1024) {
-      } else if (width >= 1024 && width < 1280) {
-      } else if (width >= 1280 && width < 1536) {
-        setOpacityRange([
-          850, 950, 1900, 2000, 2100, 2700, 2800, 2900, 3700, 3800, 3900, 7925,
-          8025, 8125,
-        ]);
-        setHeaderRange([0, 2000, 2800, 3800, 8025, 9999]);
-
-        setAboutScroll(1.04);
-        setSkillScroll(2.1);
-        setExperienceScroll(2.96);
-        setProjectsScroll(3.96);
-        setContactScroll(8.16);
-      } else {
-        // width >= 1536
-        setOpacityRange([
-          950, 1050, 1900, 2000, 2100, 2650, 2750, 2850, 3600, 3700, 3800, 7750,
-          7850, 7950,
-        ]);
-        setHeaderRange([0, 2000, 2750, 3700, 7850, 9999]);
-
-        setAboutScroll(1.1);
-        setSkillScroll(2.1);
-        setExperienceScroll(2.88);
-        setProjectsScroll(3.84);
-        setContactScroll(8);
-      }
-    };
-
-    updateScreenSize();
-    window.addEventListener("resize", updateScreenSize);
-
-    return () => window.removeEventListener("resize", updateScreenSize);
-  }, []);
-
-  const opacity = useTransform(
-    scrollY,
-    opacityRange,
-    [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1]
-  );
-
-  const header = useTransform(scrollY, headerRange, [
-    "about 🧔🏼",
-    "about 🧔🏼",
-    "skills 🛠️",
-    "experience 💼",
-    "projects 💻",
-    "contact 📞",
-  ]);
-
-  const handleScroll = (x: number) => {
-    if (x === 1) {
-      window.scrollTo({
-        top: 1000 * aboutScroll,
-        behavior: "smooth",
-      });
-    } else if (x === 2) {
-      window.scrollTo({
-        top: 1000 * skillScroll,
-        behavior: "smooth",
-      });
-    } else if (x === 3) {
-      window.scrollTo({
-        top: 1000 * experienceScroll,
-        behavior: "smooth",
-      });
-    } else if (x === 4) {
-      window.scrollTo({
-        top: 1000 * projectsScroll,
-        behavior: "smooth",
-      });
-    }
-    // x === 5
-    else {
-      window.scrollTo({
-        top: 1000 * contactScroll,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const [hamburger, setHamburger] = useState(false);
 
@@ -177,23 +69,67 @@ export default function Home() {
       >
         <Image
           className="flex-shrink-0
-          ml-3 mr-auto mt-3"
+          ml-4 mr-auto mt-4"
           src="/svgs/x.svg"
           alt=""
-          height={32}
-          width={32}
+          height={24}
+          width={24}
           onClick={() => setHamburger(!hamburger)}
         />
 
         <div
           className="w-full h-full flex flex-col items-start justify-start 
-        gap-6 text-lg font-medium mt-8 pl-10"
+        gap-8 text-lg font-medium mt-8 pl-10"
         >
-          <p onClick={() => handleScroll(1)}>About 🧔🏼</p>
-          <p onClick={() => handleScroll(2)}>Skills 🛠️</p>
-          <p onClick={() => handleScroll(3)}>Experience 💼</p>
-          <p onClick={() => handleScroll(4)}>Projects 💻</p>
-          <p onClick={() => handleScroll(5)}>Contact 📞</p>
+          <ScrollLink
+            to="about"
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={() => setHamburger(false)}
+          >
+            <motion.p>About 🧔🏼</motion.p>
+          </ScrollLink>
+
+          <ScrollLink
+            to="skills"
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={() => setHamburger(false)}
+          >
+            <motion.p>Skills 🛠️</motion.p>
+          </ScrollLink>
+
+          <ScrollLink
+            to="experience"
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={() => setHamburger(false)}
+          >
+            <motion.p>Experience 💼</motion.p>
+          </ScrollLink>
+
+          <ScrollLink
+            to="projects"
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={() => setHamburger(false)}
+          >
+            <motion.p>Projects 💻</motion.p>
+          </ScrollLink>
+
+          <ScrollLink
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={() => setHamburger(false)}
+          >
+            <motion.p>Contact 📞</motion.p>
+          </ScrollLink>
         </div>
       </motion.div>
 
@@ -204,74 +140,79 @@ export default function Home() {
         text-sm px-6 transition-all duration-[25ms] ease-in-out
         w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
       >
-        <motion.p
-          className="py-2 "
-          initial={{ color: "#a3a3a3", fontWeight: 300 }}
-          whileHover={{
-            color: "white",
-            fontWeight: 500,
-            cursor: "pointer",
-          }}
-          onClick={() => handleScroll(1)}
-        >
-          ABOUT
-        </motion.p>
+        <ScrollLink to="about" smooth={true} duration={500} offset={-40}>
+          <motion.p
+            className="py-2"
+            initial={{ color: "#a3a3a3", fontWeight: 300 }}
+            whileHover={{
+              color: "white",
+              fontWeight: 500,
+              cursor: "pointer",
+            }}
+          >
+            ABOUT
+          </motion.p>
+        </ScrollLink>
 
-        <motion.p
-          className="py-2 "
-          initial={{ color: "#a3a3a3", fontWeight: 300 }}
-          whileHover={{
-            color: "white",
-            fontWeight: 500,
-            cursor: "pointer",
-          }}
-          onClick={() => handleScroll(2)}
-        >
-          SKILLS
-        </motion.p>
+        <ScrollLink to="skills" smooth={true} duration={500} offset={-40}>
+          <motion.p
+            className="py-2"
+            initial={{ color: "#a3a3a3", fontWeight: 300 }}
+            whileHover={{
+              color: "white",
+              fontWeight: 500,
+              cursor: "pointer",
+            }}
+          >
+            SKILLS
+          </motion.p>
+        </ScrollLink>
 
-        <motion.p
-          className="py-2 "
-          initial={{ color: "#a3a3a3", fontWeight: 300 }}
-          whileHover={{
-            color: "white",
-            fontWeight: 500,
-            cursor: "pointer",
-          }}
-          onClick={() => handleScroll(3)}
-        >
-          EXPERIENCE
-        </motion.p>
+        <ScrollLink to="experience" smooth={true} duration={500} offset={-40}>
+          <motion.p
+            className="py-2"
+            initial={{ color: "#a3a3a3", fontWeight: 300 }}
+            whileHover={{
+              color: "white",
+              fontWeight: 500,
+              cursor: "pointer",
+            }}
+          >
+            EXPERIENCE
+          </motion.p>
+        </ScrollLink>
 
-        <motion.p
-          className="py-2 "
-          initial={{ color: "#a3a3a3", fontWeight: 300 }}
-          whileHover={{
-            color: "white",
-            fontWeight: 500,
-            cursor: "pointer",
-          }}
-          onClick={() => handleScroll(4)}
-        >
-          PROJECTS
-        </motion.p>
+        <ScrollLink to="projects" smooth={true} duration={500} offset={-40}>
+          <motion.p
+            className="py-2"
+            initial={{ color: "#a3a3a3", fontWeight: 300 }}
+            whileHover={{
+              color: "white",
+              fontWeight: 500,
+              cursor: "pointer",
+            }}
+          >
+            PROJECTS
+          </motion.p>
+        </ScrollLink>
 
-        <motion.p
-          className="py-2 "
-          initial={{ color: "#a3a3a3", fontWeight: 300 }}
-          whileHover={{
-            color: "white",
-            fontWeight: 500,
-            cursor: "pointer",
-          }}
-          onClick={() => handleScroll(5)}
-        >
-          CONTACT
-        </motion.p>
+        <ScrollLink to="contact" smooth={true} duration={500} offset={-40}>
+          <motion.p
+            className="py-2"
+            initial={{ color: "#a3a3a3", fontWeight: 300 }}
+            whileHover={{
+              color: "white",
+              fontWeight: 500,
+              cursor: "pointer",
+            }}
+          >
+            CONTACT
+          </motion.p>
+        </ScrollLink>
       </div>
 
       {/* HEADER */}
-      <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
+      {/* <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
           initial={{ opacity: 0 }}
           style={{ opacity }}
@@ -279,7 +220,7 @@ export default function Home() {
         >
           {header}
         </motion.p>
-      </div>
+      </div> */}
 
       <Hero />
 
