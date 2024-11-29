@@ -18,10 +18,7 @@ export default function Home() {
 
   const [hamburger, setHamburger] = useState(false);
 
-  const [height, setHeight] = useState(window.innerHeight);
-
-  const [header, setHeader] = useState("");
-  const opacity = useTransform(scrollY, [height, height + 50], [0, 1]);
+  const [height, setHeight] = useState(0);
 
   const aboutRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -30,8 +27,12 @@ export default function Home() {
   const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setHeight(window.innerHeight);
+    console.log(`HEIGHT: ${height}`);
+
     const handleResize = () => {
       setHeight(window.innerHeight);
+      console.log(`HEIGHT: ${height}`);
     };
 
     window.addEventListener("resize", handleResize);
@@ -87,7 +88,10 @@ export default function Home() {
 
       observers.forEach((observer) => observer.disconnect());
     };
-  }, []);
+  }, [height]);
+
+  const [header, setHeader] = useState("");
+  const opacity = useTransform(scrollY, [height, height + 50], [0, 1]);
 
   return (
     <motion.div
