@@ -4,10 +4,11 @@ import React from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import { Skill } from "../Skills/Skills";
+
 import "./Experience.css";
 
-interface ExperienceProps {}
-const Experience: React.FC<ExperienceProps> = () => {
+const Experience = () => {
   const workExperience = [
     {
       time: "FEB 2024 - CURRENT",
@@ -20,9 +21,14 @@ const Experience: React.FC<ExperienceProps> = () => {
 
   return (
     <motion.div
-      className="min-h-[700px] flex flex-col items-center justify-center gap-32
+      className="min-h-[700px] flex flex-col items-center justify-center px-2
     w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
+      id="experience"
     >
+      <p className="text-3xl text-center mb-24">
+        Here&apos;s where I&apos;ve been.
+      </p>
+
       <div className="flex flex-col lg:flex-row lg:-ml-20 justify-center w-full rounded-xl">
         <div className="flex flex-col items-center">
           <div className="glass h-[100px] w-[100px] rounded-full flex-shrink-0 mb-4 lg:mb-0 flex items-center justify-center">
@@ -30,7 +36,7 @@ const Experience: React.FC<ExperienceProps> = () => {
               height={70}
               width={70}
               alt=""
-              src={"/gdg.svg"}
+              src={"/svgs/gdg.svg"}
               className="m-auto"
             />
           </div>
@@ -49,7 +55,7 @@ const Experience: React.FC<ExperienceProps> = () => {
             >
               <div className="flex flex-col">
                 <p className="text-xl font-normal text-center lg:text-start text-gray-600">
-                  google developer groups
+                  Google Developer Groups
                 </p>
 
                 <motion.div
@@ -78,58 +84,41 @@ const Experience: React.FC<ExperienceProps> = () => {
                 <Image
                   height={30}
                   width={30}
-                  src={"/external-link.svg"}
+                  src={"/svgs/external-link.svg"}
                   alt=""
                 />
               </motion.div>
             </motion.a>
           </div>
 
-          <div className="flex flex-col items-center lg:items-baseline justify-between mb-8 text-center lg:text-start">
-            <p className="font-semibold text-3xl mb-6">
-              club software developer
-            </p>
+          <p className="font-semibold text-3xl mb-6 text-center lg:text-start">
+            Software Developer
+          </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0 shadow-sm">
-                feb 2024 - current
-              </p>
-
-              <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0 shadow-sm">
-                dearborn, MI
-              </p>
-
-              <p className="font-extralight p-3 bg-white rounded-xl flex-shrink-0 shadow-sm">
-                club member
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-4 px-2 lg:px-0">
+          <div className="flex flex-col gap-4 lg:px-0">
             <p className="font-light text-gray-700 text-2xl">
-              i&apos;m assisting this university club with{" "}
-              <span className="font-semibold">frontend</span> and{" "}
-              <span className="font-semibold">backend web</span> and{" "}
+              I&apos;m assisting this university club with{" "}
+              <span className="font-semibold">frontend web</span> and{" "}
               <span className="font-semibold">app development</span> for
-              multiple regional events, like conferences and hackathons
+              multiple regional events, like conferences and hackathons.
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
-              i&apos;ve <span className="font-semibold">converted</span> lots of
-              provided <span className="font-semibold"> figma designs</span>{" "}
-              into their equivalent functional{" "}
+              I&apos;ve converted lots of provided{" "}
+              <span className="font-semibold"> figma designs</span> into their
+              equivalent functional{" "}
               <span className="font-semibold"> react components</span>, making
-              sure our clients were satisfied with final web app layouts
+              sure our clients were satisfied with final web app layouts.
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
-              every project incorporated{" "}
+              Every project incorporated{" "}
               <span className="font-semibold"> responsive design</span> to
-              ensure seamless access from any device on any platform
+              ensure simple and clear access from any device, on any platform.
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
-              <span className="font-semibold"> best coding practices</span> were
+              <span className="font-semibold"> Best coding practices</span> were
               always withheld through the design of{" "}
               <span className="font-semibold">reusable components</span>,
               allowing individual code blocks to be reused throughout multiple
@@ -137,26 +126,22 @@ const Experience: React.FC<ExperienceProps> = () => {
             </p>
 
             <p className="font-light text-gray-700 text-2xl">
-              <span className="font-semibold">user-acceptance testing</span> was
+              <span className="font-semibold">User-acceptance testing</span> was
               performed on all assigned issues to guarantee client guidelines
               and specifications were met.
             </p>
+
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
+              <Skill name="HTML" src="/svgs/html.svg" />
+              <Skill name="CSS" src="/svgs/css.svg" style={{ width: 30 }} />
+              <Skill name="JavaScript" src="/svgs/javascript.svg" />
+
+              <Skill name="React.js" src="/svgs/react.svg" />
+              <Skill name="Tailwind CSS" src="/svgs/tailwind.svg" />
+            </div>
           </div>
         </div>
       </div>
-
-      <motion.a
-        href="/resume"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block p-4 text-xl bg-white rounded-xl shadow-sm font-semibold text-gray-700"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{
-          scale: 0.95,
-        }}
-      >
-        résumé 📄
-      </motion.a>
     </motion.div>
   );
 };
