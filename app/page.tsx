@@ -20,18 +20,6 @@ export default function Home() {
 
   const [height, setHeight] = useState(window.innerHeight);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setHeight(window.innerHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const [header, setHeader] = useState("");
   const opacity = useTransform(scrollY, [height, height + 50], [0, 1]);
 
@@ -42,6 +30,12 @@ export default function Home() {
   const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const handleResize = () => {
+      setHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
     const isMobile = window.innerWidth <= 768;
 
     // Define thresholds for each section
@@ -53,9 +47,8 @@ export default function Home() {
       contact: isMobile ? 0.35 : 0.8,
     };
 
-    const observers: IntersectionObserver[] = []; // To store all observers for cleanup
+    const observers: IntersectionObserver[] = [];
 
-    // Create and observe individual sections
     const createObserver = (
       ref: React.RefObject<HTMLDivElement>,
       name: string,
@@ -83,15 +76,15 @@ export default function Home() {
       observers.push(observer);
     };
 
-    // Initialize observers for each section
     createObserver(aboutRef, "About 🧔🏼", thresholds.about);
     createObserver(skillsRef, "Skills 🛠️", thresholds.skills);
     createObserver(experienceRef, "Experience 💼", thresholds.experience);
     createObserver(projectsRef, "Projects 💻", thresholds.projects);
     createObserver(footerRef, "Contact 📞", thresholds.contact);
 
-    // Cleanup all observers
     return () => {
+      window.removeEventListener("resize", handleResize);
+
       observers.forEach((observer) => observer.disconnect());
     };
   }, []);
@@ -129,9 +122,10 @@ export default function Home() {
       {/* HAMBURGER */}
       <Image
         className="flex md:hidden items-center justify-center
-        rounded-3xl flex-shrink-0 absolute top-3 left-3"
+        rounded-3xl flex-shrink-0 absolute top-3 left-3 
+        filter invert opacity-60"
         src="/svgs/hamburger.svg"
-        alt=""
+        alt="hamburger"
         height={32}
         width={32}
         onClick={() => setHamburger(!hamburger)}
