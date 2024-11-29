@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
@@ -75,60 +75,8 @@ const OtherProject = ({
 };
 
 const Projects = () => {
-  const { scrollY } = useScroll();
-
-  const [scrollRange1, setScrollRange1] = useState([0, 0]);
-  const [scrollRange2, setScrollRange2] = useState([0, 0]);
-  const [scrollRange3, setScrollRange3] = useState([0, 0]);
-
-  useEffect(() => {
-    const updateScreenSize = () => {
-      const width = window.innerWidth;
-
-      // - 1600
-      if (width >= 320 && width < 500) {
-        setScrollRange1([6000, 7600]);
-
-        setScrollRange2([7850, 9450]);
-
-        setScrollRange3([9850, 11450]);
-      } else if (width >= 500 && width < 640) {
-      } else if (width >= 640 && width < 1024) {
-      } else if (width >= 1024 && width < 1280) {
-      } else if (width >= 1280 && width < 1536) {
-        setScrollRange1([3250, 4950]);
-
-        setScrollRange2([4250, 5850]);
-
-        setScrollRange3([5400, 7000]);
-      } else {
-        // width >= 1536
-        setScrollRange1([3100, 4700]);
-
-        setScrollRange2([4100, 5700]);
-
-        setScrollRange3([5200, 6800]);
-      }
-    };
-
-    updateScreenSize();
-    window.addEventListener("resize", updateScreenSize);
-
-    return () => window.removeEventListener("resize", updateScreenSize);
-  }, []);
-
-  const y1 = useTransform(scrollY, scrollRange1, ["50%", "-50%"]);
-  const rotate1 = useTransform(scrollY, scrollRange1, [2, -2]);
-
-  const y2 = useTransform(scrollY, scrollRange2, ["50%", "-50%"]);
-  const rotate2 = useTransform(scrollY, scrollRange2, [-2, 2]);
-
-  const y3 = useTransform(scrollY, scrollRange3, ["50%", "-50%"]);
-  const rotate3 = useTransform(scrollY, scrollRange3, [2, -2]);
-
   return (
     <div
-      // pt-96 pb-48
       className="flex flex-col items-center justify-start gap-y-80 overflow-visible px-2
     w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
       id="projects"
@@ -138,15 +86,26 @@ const Projects = () => {
       </p>
 
       {/* SELECTED PROJECTS */}
-      <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
+      <div
+        className="grid grid-rows-[auto_auto] grid-cols-1
+                   xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24"
+      >
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3
-          mx-auto -ml-24 xs:-ml-32 sm:-ml-24 mb-20 xs:mb-28 sm:mb-10 xl:my-auto
-          w-[1000px] xs:w-[1000px] sm:w-[1100px] xl:w-[975px]"
-          style={{ y: y1, rotate: rotate1 }}
+          className="one mx-auto overflow-visible
+          h-[800px] relative
+          w-[1000px] xs:w-[1000px] xl:w-[975px] 2xl:w-[1100px]
+          -ml-24 xs:-ml-32 sm:-ml-24"
         >
-          <Image src="/images/cc.png" alt="CC" height={1469} width={2432} />
+          <Image
+            src="/images/cc.png"
+            alt="Code Conductor"
+            layout="fill"
+            objectFit="contain"
+          />
         </motion.div>
+
+        {/* mx-auto -ml-24 xs:-ml-32 sm:-ml-24 mb-20 xs:mb-28 sm:mb-10 xl:my-auto
+          w-[1000px] xs:w-[1000px] sm:w-[1100px] xl:w-[975px] */}
 
         <div className="row-start-2 row-end-3 xl:row-start-1 xl:row-end-2 col-start-1 col-end-2 xl:my-auto">
           <motion.a
@@ -228,17 +187,21 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24">
+      <div
+        className="grid grid-rows-[auto_auto] grid-cols-1
+                   xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24"
+      >
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 
-          relative h-[700px] xs:my-12"
-          style={{ y: y2, rotate: rotate2 }}
+          className="two mx-auto overflow-visible
+          h-[800px] relative flex items-center justify-center
+          mr-auto w-full"
         >
           <Image
             src="/images/iwd.png"
-            alt="IWD"
-            layout="fill"
-            objectFit="contain"
+            alt="International Women's Day Summit"
+            height={800}
+            width={300}
+            className="xl:w-[400px]"
           />
         </motion.div>
 
@@ -326,17 +289,21 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="grid grid-rows-[auto_auto] grid-cols-1 xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto">
+      <div
+        className="grid grid-rows-[auto_auto] grid-cols-1
+                   xl:grid-rows-1 xl:grid-cols-2 xl:gap-x-24 xl:my-auto"
+      >
         <motion.div
-          className="row-start-1 row-end-2 col-start-1 col-end-2 xl:col-start-2 xl:col-end-3 
-          relative h-[700px] xs:my-12"
-          style={{ y: y3, rotate: rotate3 }}
+          className="three mx-auto overflow-visible
+          h-[800px] relative flex items-center justify-center
+          mr-auto w-full"
         >
           <Image
             src="/images/hd3.png"
-            alt="HD3"
-            layout="fill"
-            objectFit="contain"
+            alt="Hack Dearborn 3"
+            height={800}
+            width={300}
+            className="xl:w-[400px]"
           />
         </motion.div>
 
@@ -436,7 +403,7 @@ const Projects = () => {
       </div>
 
       {/* OTHER WORKS */}
-      <p className="text-3xl text-center -mt-28">And some others.</p>
+      <p className="text-2xl text-center -mt-28">And some others.</p>
 
       <div
         className="flex flex-col items-center justify-center -mt-56

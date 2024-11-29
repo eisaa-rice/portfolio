@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       className="flex flex-col justify-center items-center text-neutral-300 
-      hero w-screen h-screen"
+      hero w-screen h-screen min-h-[550px]"
       id="hero"
     >
       <div

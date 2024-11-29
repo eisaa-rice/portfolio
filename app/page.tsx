@@ -7,16 +7,94 @@ import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import Image from "next/image";
 
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Home() {
   const { scrollY } = useScroll();
 
   const [hamburger, setHamburger] = useState(false);
+
+  const [height, setHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const [header, setHeader] = useState("");
+  const opacity = useTransform(scrollY, [height, height + 50], [0, 1]);
+
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+
+    // Define thresholds for each section
+    const thresholds = {
+      about: isMobile ? 0.35 : 0.8,
+      skills: isMobile ? 0.35 : 0.9,
+      experience: isMobile ? 0.35 : 0.8,
+      projects: isMobile ? 0.06 : 0.15,
+      contact: isMobile ? 0.35 : 0.8,
+    };
+
+    const observers: IntersectionObserver[] = []; // To store all observers for cleanup
+
+    // Create and observe individual sections
+    const createObserver = (
+      ref: React.RefObject<HTMLDivElement>,
+      name: string,
+      threshold: number
+    ) => {
+      if (!ref.current) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setHeader(name);
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold,
+        }
+      );
+
+      ref.current.dataset.name = name;
+      observer.observe(ref.current);
+      observers.push(observer);
+    };
+
+    // Initialize observers for each section
+    createObserver(aboutRef, "About 🧔🏼", thresholds.about);
+    createObserver(skillsRef, "Skills 🛠️", thresholds.skills);
+    createObserver(experienceRef, "Experience 💼", thresholds.experience);
+    createObserver(projectsRef, "Projects 💻", thresholds.projects);
+    createObserver(footerRef, "Contact 📞", thresholds.contact);
+
+    // Cleanup all observers
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
 
   return (
     <motion.div
@@ -85,7 +163,7 @@ export default function Home() {
             to="about"
             smooth={true}
             duration={500}
-            offset={-40}
+            offset={-80}
             onClick={() => setHamburger(false)}
           >
             <motion.p>About 🧔🏼</motion.p>
@@ -95,7 +173,7 @@ export default function Home() {
             to="skills"
             smooth={true}
             duration={500}
-            offset={-40}
+            offset={-80}
             onClick={() => setHamburger(false)}
           >
             <motion.p>Skills 🛠️</motion.p>
@@ -105,7 +183,7 @@ export default function Home() {
             to="experience"
             smooth={true}
             duration={500}
-            offset={-40}
+            offset={-80}
             onClick={() => setHamburger(false)}
           >
             <motion.p>Experience 💼</motion.p>
@@ -115,7 +193,7 @@ export default function Home() {
             to="projects"
             smooth={true}
             duration={500}
-            offset={-40}
+            offset={-80}
             onClick={() => setHamburger(false)}
           >
             <motion.p>Projects 💻</motion.p>
@@ -125,7 +203,7 @@ export default function Home() {
             to="contact"
             smooth={true}
             duration={500}
-            offset={-40}
+            offset={-80}
             onClick={() => setHamburger(false)}
           >
             <motion.p>Contact 📞</motion.p>
@@ -140,7 +218,7 @@ export default function Home() {
         text-sm px-6 transition-all duration-[25ms] ease-in-out
         w-[320px] xs:w-[450px] sm:w-[600px] lg:w-[750px] xl:w-[1150px] 2xl:w-[1400px]"
       >
-        <ScrollLink to="about" smooth={true} duration={500} offset={-40}>
+        <ScrollLink to="about" smooth={true} duration={500} offset={-80}>
           <motion.p
             className="py-2"
             initial={{ color: "#a3a3a3", fontWeight: 300 }}
@@ -154,7 +232,7 @@ export default function Home() {
           </motion.p>
         </ScrollLink>
 
-        <ScrollLink to="skills" smooth={true} duration={500} offset={-40}>
+        <ScrollLink to="skills" smooth={true} duration={500} offset={-80}>
           <motion.p
             className="py-2"
             initial={{ color: "#a3a3a3", fontWeight: 300 }}
@@ -168,7 +246,7 @@ export default function Home() {
           </motion.p>
         </ScrollLink>
 
-        <ScrollLink to="experience" smooth={true} duration={500} offset={-40}>
+        <ScrollLink to="experience" smooth={true} duration={500} offset={-80}>
           <motion.p
             className="py-2"
             initial={{ color: "#a3a3a3", fontWeight: 300 }}
@@ -182,7 +260,7 @@ export default function Home() {
           </motion.p>
         </ScrollLink>
 
-        <ScrollLink to="projects" smooth={true} duration={500} offset={-40}>
+        <ScrollLink to="projects" smooth={true} duration={500} offset={-80}>
           <motion.p
             className="py-2"
             initial={{ color: "#a3a3a3", fontWeight: 300 }}
@@ -196,7 +274,7 @@ export default function Home() {
           </motion.p>
         </ScrollLink>
 
-        <ScrollLink to="contact" smooth={true} duration={500} offset={-40}>
+        <ScrollLink to="contact" smooth={true} duration={500} offset={-80}>
           <motion.p
             className="py-2"
             initial={{ color: "#a3a3a3", fontWeight: 300 }}
@@ -212,7 +290,7 @@ export default function Home() {
       </div>
 
       {/* HEADER */}
-      {/* <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
+      <div className="fixed top-0 mt-5 z-50 flex-shrink-0">
         <motion.p
           initial={{ opacity: 0 }}
           style={{ opacity }}
@@ -220,19 +298,29 @@ export default function Home() {
         >
           {header}
         </motion.p>
-      </div> */}
+      </div>
 
       <Hero />
 
-      <About />
+      <div ref={aboutRef} data-name="About 🧔🏼">
+        <About />
+      </div>
 
-      <Skills />
+      <div ref={skillsRef} data-name="Skills 🛠️">
+        <Skills />
+      </div>
 
-      <Experience />
+      <div ref={experienceRef} data-name="Experience 💼">
+        <Experience />
+      </div>
 
-      <Projects />
+      <div ref={projectsRef} data-name="Projects 💻">
+        <Projects />
+      </div>
 
-      <Footer />
+      <div ref={footerRef} data-name="Contact 📞">
+        <Footer />
+      </div>
     </motion.div>
   );
 }

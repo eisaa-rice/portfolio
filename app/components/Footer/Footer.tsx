@@ -49,7 +49,7 @@ const Contact = ({
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center px-2 xs:px-0" id="footer">
+    <div className="flex flex-col items-center px-2 xs:px-0" id="contact">
       <p className="text-3xl text-center mb-12">Wanna talk?</p>
 
       <div
