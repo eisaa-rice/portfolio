@@ -403,9 +403,9 @@ const Projects = () => {
       </div>
 
       {/* OTHER WORKS */}
-      <p className="text-2xl text-center -mt-28">And some others.</p>
+      {/* <p className="text-2xl text-center -mt-28">And some others.</p> */}
 
-      <div
+      {/* <div
         className="flex flex-col items-center justify-center -mt-56
         w-full lg:justify-evenly
         gap-y-20 lg:flex-row lg:flex-wrap"
@@ -451,7 +451,7 @@ const Projects = () => {
           />
         </div>
 
-        {/* <div className="mx-auto">
+        <div className="mx-auto">
           <OtherProject
             name="The Home Depot Relational Database"
             desc="..."
@@ -462,9 +462,9 @@ const Projects = () => {
               { name: "AWS", src: "/svgs/aws.svg", style: { marginTop: 5 } },
             ]}
           />
-        </div> */}
+        </div>
 
-        {/* <div className="mx-auto">
+        <div className="mx-auto">
           <OtherProject
             name="Natural Language Processing"
             desc="..."
@@ -477,8 +477,8 @@ const Projects = () => {
               },
             ]}
           />
-        </div> */}
-      </div>
+        </div>
+      </div> */}
 
       <p className="text-2xl -mt-56 font-light text-slate-500 text-center">
         And obviously, the source for these and more are all on my{" "}
