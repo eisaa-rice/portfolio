@@ -9,13 +9,11 @@
   padding: 0;
 }
 
-html,
 body {
-  overflow-x: hidden;
-}
-
-body {
-  overflow-y: hidden;
-
-  background: ghostwhite;
+  /* height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; */
 }
