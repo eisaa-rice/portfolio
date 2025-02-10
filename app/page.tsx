@@ -5,8 +5,9 @@ import { useState } from "react";
 import Navbar from "./navbar";
 import Home from "./home";
 import About from "./about";
+import Experience from "./experience";
+import Projects from "./projects";
 import Resume from "./resume";
-import Work from "./work";
 
 export default function App() {
   const [active, setActive] = useState(0);
@@ -20,7 +21,9 @@ export default function App() {
       ) : active === 1 ? (
         <About />
       ) : active === 2 ? (
-        <Work />
+        <Experience />
+      ) : active === 3 ? (
+        <Projects />
       ) : (
         <Resume />
       )}

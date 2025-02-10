@@ -26,13 +26,13 @@ const Home = ({
         />
       </div>
 
-      <p className="text-4xl font-extralight mt-12">
+      <p className="text-4xl mt-12">
         holá 👋🏻 i&apos;m <span className="font-bold">jesus orozco</span>
       </p>
 
       <p className="text-7xl font-extrabold my-8">software developer</p>
 
-      <div className="flex items-center justify-center gap-12">
+      <div className="flex items-center justify-center gap-12 my-6">
         <motion.button
           className="border border-lime-300 text-black 
           relative rounded-full py-4 px-6 flex items-center justify-center gap-3"
@@ -59,9 +59,11 @@ const Home = ({
         </button>
       </div>
 
-      <p className="text-xl font-extralight mt-10">
+      <p className="text-xl mt-10">
         currently: <span className="font-normal">open for positions</span>
       </p>
+
+      <p className="mt-44 mb-4">© {new Date().getFullYear()} jesus orozco</p>
     </div>
   );
 };
