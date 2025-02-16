@@ -34,6 +34,9 @@ const Home = ({}: {}) => {
           onClick={() => {
             navigator.clipboard.writeText("jesusoro@umich.edu");
           }}
+          initial={{ scale: 1, rotate: 2 }}
+          whileHover={{ scale: 1.1, rotate: 1 }}
+          whileTap={{ scale: 1 }}
         >
           jesusoro@umich.edu
           <Image
@@ -45,12 +48,18 @@ const Home = ({}: {}) => {
           />
         </motion.button>
 
-        <button
+        <motion.button
           className="bg-lime-300 text-black font-semibold
         rounded-full py-4 px-6"
+          initial={{ scale: 1, rotate: -2 }}
+          whileHover={{
+            scale: 1.05,
+            rotate: 1,
+          }}
+          whileTap={{ scale: 1 }}
         >
           résumé
-        </button>
+        </motion.button>
       </div>
 
       <p className="text-xl mt-10">

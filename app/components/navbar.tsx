@@ -3,17 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const tabs = ["home", "about", "experience", "projects"];
+const tabs = ["home", "about", "skills", "experience", "projects"];
 
 const Navbar = ({}: {}) => {
   return (
     <div
-      className="flex  m-12 items-center justify-center
-      font-light  rounded-full relative"
+      className="flex m-12 items-center justify-center
+      font-light rounded-full relative"
     >
       <ul
         className="flex gap-6 absolute mx-auto px-8 py-3 
-      border border-black rounded-full"
+      border border-black border-opacity-35 rounded-full"
       >
         {tabs.map((tab, i) => (
           <React.Fragment key={i}>
