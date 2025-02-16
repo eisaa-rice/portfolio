@@ -5,27 +5,20 @@ import { motion } from "framer-motion";
 
 const tabs = ["home", "about", "experience", "projects"];
 
-const Navbar = ({
-  active,
-  onActive,
-}: {
-  active: number;
-  onActive: React.Dispatch<React.SetStateAction<number>>; // wtf is this
-}) => {
+const Navbar = ({}: {}) => {
   return (
     <div
-      className="flex px-8 py-3 m-6 items-center justify-center
-      font-light bg-black text-white rounded-full relative"
+      className="flex  m-12 items-center justify-center
+      font-light  rounded-full relative"
     >
-      <ul className="flex gap-6 absolute mx-auto">
-        {tabs.map((s, i) => (
+      <ul
+        className="flex gap-6 absolute mx-auto px-8 py-3 
+      border border-black rounded-full"
+      >
+        {tabs.map((tab, i) => (
           <React.Fragment key={i}>
-            <motion.li
-              animate={{ opacity: active === i ? 1 : 0.75 }}
-              whileHover={{ cursor: "pointer", opacity: 1 }}
-              onClick={() => onActive(i)}
-            >
-              {s}
+            <motion.li whileHover={{ cursor: "pointer", opacity: 1 }}>
+              {tab}
             </motion.li>
 
             {i < tabs.length - 1 && <li className="opacity-75">·</li>}
@@ -33,7 +26,10 @@ const Navbar = ({
         ))}
       </ul>
 
-      <ul className="flex gap-6 ml-auto mr-0">
+      <ul
+        className="flex gap-6 ml-auto mr-0 px-8 py-3
+      bg-black text-white rounded-full"
+      >
         <motion.a
           initial={{ opacity: 0.75 }}
           whileHover={{ cursor: "pointer", opacity: 1 }}

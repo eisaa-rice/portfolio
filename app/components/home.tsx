@@ -1,15 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-const Home = ({
-  onActive,
-}: {
-  onActive: React.Dispatch<React.SetStateAction<number>>; // wtf is this
-}) => {
+const Home = ({}: {}) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div
@@ -53,7 +48,6 @@ const Home = ({
         <button
           className="bg-lime-300 text-black font-semibold
         rounded-full py-4 px-6"
-          onClick={() => onActive(-1)}
         >
           résumé
         </button>
@@ -62,8 +56,6 @@ const Home = ({
       <p className="text-xl mt-10">
         currently: <span className="font-normal">open for positions</span>
       </p>
-
-      <p className="mt-44 mb-4">© {new Date().getFullYear()} jesus orozco</p>
     </div>
   );
 };

@@ -1,32 +1,29 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 
-import Navbar from "./navbar";
-import Home from "./home";
-import About from "./about";
-import Experience from "./experience";
-import Projects from "./projects";
-import Resume from "./resume";
+import Navbar from "./components/navbar";
+import Home from "./components/home";
+import About from "./components/about";
+import Experience from "./components/experience";
+import Projects from "./components/projects";
+import Resume from "./components/resume";
+import Footer from "./components/footer";
 
 export default function App() {
-  const [active, setActive] = useState(0);
-
   return (
     <>
-      <Navbar active={active} onActive={setActive} />
+      <Navbar />
 
-      {active === 0 ? (
-        <Home onActive={setActive} />
-      ) : active === 1 ? (
-        <About />
-      ) : active === 2 ? (
-        <Experience />
-      ) : active === 3 ? (
-        <Projects />
-      ) : (
-        <Resume />
-      )}
+      <Home />
+
+      <About />
+
+      <Experience />
+
+      <Projects />
+
+      <Footer />
     </>
   );
 }
