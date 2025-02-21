@@ -100,13 +100,21 @@ export const Skill = ({
 
 const Skills = () => {
   return (
-    <div className="flex flex-col items-center justify-start">
-      <motion.p className="text-4xl font-bold rotate-2">
+    <div className="flex flex-col justify-center">
+      <motion.p
+        className="text-3xl font-bold"
+        initial={{ rotate: "-2deg", transformOrigin: "bottom left" }}
+        whileInView={{
+          rotate: ["-2deg", "0deg", "-1deg", "0deg"],
+          transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
+        }}
+        viewport={{ once: true }}
+      >
         🛠️ i&apos;ve worked with these before.
       </motion.p>
 
-      <div className="grid grid-rows-1 grid-cols-3 my-24 mx-48">
-        <div className="row-start-1 row-end-2 col-start-1 col-end-2 mt-8">
+      <div className="flex flex-col justify-center my-24">
+        <div className="row-start-1 row-end-2 col-start-1 col-end-2">
           <p className="rotate-1 text-center text-3xl font-light">
             languages 🔣
           </p>
