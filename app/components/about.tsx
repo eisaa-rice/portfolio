@@ -33,6 +33,24 @@ const About = () => {
         </p>
 
         <p>
+          i&apos;ve worked with my university&apos;s 🧑🏻‍💻{" "}
+          <motion.a
+            className="font-semibold decoration-lime-300"
+            whileHover={{
+              textDecoration: "underline",
+              textDecorationColor: "#bef264",
+            }}
+            href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            google developer group
+          </motion.a>{" "}
+          to make apps for multiple events, like conferences, workshops, and
+          hackathons.
+        </p>
+
+        <p>
           when i&apos;m not coding, you can probably find me 🎮{" "}
           <span className="font-semibold">grinding ranked</span> or 🎨{" "}
           <span className="font-semibold">drawing something</span>.

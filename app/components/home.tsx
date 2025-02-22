@@ -31,15 +31,15 @@ const tabs = [
 const Home = ({}: {}) => {
   return (
     <header
-      className="flex flex-col items-center justify-center 
+      className="flex flex-col items-center justify-center min-h-[800px]
       max-h-screen max-w-[50%] sticky top-0 left-0 pb-12"
     >
       {/* navbar */}
-      <div className="mt-20 mb-auto flex gap-12">
+      <div className="mt-10 mb-auto flex gap-12">
         {tabs.map(({ emoji, link }, i) => (
           <motion.button
             key={i}
-            className="rounded-full bg-white p-1 text-lg shadow-sm"
+            className="rounded-full bg-white p-1 text-sm shadow-sm text-center"
             initial={{}}
             whileHover={{ scale: 1.1 }}
           >
@@ -52,7 +52,7 @@ const Home = ({}: {}) => {
 
       <div
         className="rounded-full h-52 w-52 bg-white 
-        relative overflow-hidden
+        relative overflow-hidden flex-shrink-0
         border-2 border-white shadow-md"
       >
         <Image
@@ -71,7 +71,11 @@ const Home = ({}: {}) => {
 
       <p className="text-4xl font-normal mt-4">software engineer</p>
 
-      <div className="flex items-center justify-center gap-12 mt-28">
+      <p className="text-md mt-6 mb-14">
+        currently @ <span className="font-medium">free agent</span> 🟢
+      </p>
+
+      <div className="flex items-center justify-center gap-12">
         <motion.button
           className="border border-lime-300 text-black bg-white
   relative rounded-full py-4 px-6 flex items-center justify-center gap-3"
@@ -105,10 +109,6 @@ rounded-full py-4 px-6"
           résumé
         </motion.button>
       </div>
-
-      {/* <p className="text-md mt-10">
-        currently: <span className="font-medium">looking for positions</span> 🟢
-      </p> */}
 
       <ul className="mt-auto mb-0 flex items-center justify-center gap-6">
         <a

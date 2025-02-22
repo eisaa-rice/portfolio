@@ -14,7 +14,6 @@ const Footer = () => {
         this website&apos;s layout was heavily inspired by{" "}
         <motion.a
           className="font-medium"
-          initial={{}}
           whileHover={{ textDecoration: "underline" }}
           href="https://brittanychiang.com/"
           target="_blank"
