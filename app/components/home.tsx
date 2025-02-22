@@ -22,10 +22,10 @@ const tabs = [
     emoji: "💻",
     link: "projects",
   },
-  {
-    emoji: "📞",
-    link: "contact",
-  },
+  // {
+  //   emoji: "📞",
+  //   link: "contact",
+  // },
 ];
 
 const Home = ({}: {}) => {
@@ -41,7 +41,10 @@ const Home = ({}: {}) => {
             key={i}
             className="rounded-full bg-white p-1 text-sm shadow-sm text-center"
             initial={{}}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{
+              scale: 1.1,
+              ...(i % 2 === 0 ? { rotate: "-4deg" } : { rotate: "4deg" }),
+            }}
           >
             <ScrollLink to={link} smooth={true} duration={500} offset={-80}>
               {emoji}

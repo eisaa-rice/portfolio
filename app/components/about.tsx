@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-col justify-center">
+    <div id="about" className="flex flex-col justify-center w-full">
       <motion.p
         className="text-3xl font-bold mb-8"
         initial={{ rotate: "0deg", transformOrigin: "bottom left" }}
