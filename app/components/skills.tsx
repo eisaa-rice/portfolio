@@ -1,5 +1,6 @@
-import React from "react";
+"use client";
 
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -100,7 +101,7 @@ export const Skill = ({
 
 const Skills = () => {
   return (
-    <div className="flex flex-col justify-center">
+    <div id="skills" className="flex flex-col justify-center">
       <motion.p
         className="text-3xl font-bold"
         initial={{ rotate: "-2deg", transformOrigin: "bottom left" }}
@@ -110,7 +111,7 @@ const Skills = () => {
         }}
         viewport={{ once: true }}
       >
-        🛠️ i&apos;ve worked with these before.
+        🛠️ i&apos;ve worked with these before
       </motion.p>
 
       <div className="flex flex-col justify-center my-24">

@@ -3,8 +3,30 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 
-const tabs = ["home", "about", "skills", "experience", "projects"];
+const tabs = [
+  {
+    emoji: "👋🏻",
+    link: "about",
+  },
+  {
+    emoji: "🛠️",
+    link: "skills",
+  },
+  {
+    emoji: "💼",
+    link: "experience",
+  },
+  {
+    emoji: "💻",
+    link: "projects",
+  },
+  {
+    emoji: "📞",
+    link: "contact",
+  },
+];
 
 const Home = ({}: {}) => {
   return (
@@ -12,8 +34,24 @@ const Home = ({}: {}) => {
       className="flex flex-col items-center justify-center 
       max-h-screen max-w-[50%] sticky top-0 left-0 pb-12"
     >
+      {/* navbar */}
+      <div className="mt-20 mb-auto flex gap-12">
+        {tabs.map(({ emoji, link }, i) => (
+          <motion.button
+            key={i}
+            className="rounded-full bg-white p-1 text-lg shadow-sm"
+            initial={{}}
+            whileHover={{ scale: 1.1 }}
+          >
+            <ScrollLink to={link} smooth={true} duration={500} offset={-80}>
+              {emoji}
+            </ScrollLink>
+          </motion.button>
+        ))}
+      </div>
+
       <div
-        className="rounded-full h-52 w-52 bg-white mt-auto
+        className="rounded-full h-52 w-52 bg-white 
         relative overflow-hidden
         border-2 border-white shadow-md"
       >
@@ -33,7 +71,7 @@ const Home = ({}: {}) => {
 
       <p className="text-4xl font-normal mt-4">software engineer</p>
 
-      <div className="flex items-center justify-center gap-12 mt-12">
+      <div className="flex items-center justify-center gap-12 mt-28">
         <motion.button
           className="border border-lime-300 text-black bg-white
   relative rounded-full py-4 px-6 flex items-center justify-center gap-3"

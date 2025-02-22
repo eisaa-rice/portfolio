@@ -1,15 +1,16 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-center">
+    <div id="about" className="flex flex-col justify-center">
       <motion.p
         className="text-3xl font-bold mb-8"
         initial={{ rotate: "0deg", transformOrigin: "bottom left" }}
         whileInView={{
-          rotate: ["0deg", "-2deg", "-1deg", "-2deg"],
+          scale: 1.1,
           transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
         }}
         viewport={{ once: true }}

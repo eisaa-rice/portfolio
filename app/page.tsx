@@ -23,11 +23,11 @@ export default function App() {
 
         <Skills />
 
-        {/* <Experience />
+        <Experience />
 
         <Projects />
 
-        <Footer /> */}
+        <Footer />
       </main>
     </div>
   );
