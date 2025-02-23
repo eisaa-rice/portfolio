@@ -12,12 +12,15 @@ import Skills from "./components/skills";
 
 export default function App() {
   return (
-    <div className="flex gap-44 mx-auto min-h-screen max-w-screen-xl">
+    <div
+      className="mx-auto min-h-screen max-w-screen-xl px-4
+    lg:flex lg:justify-between lg:gap-4"
+    >
       <Home />
 
       <main
         className="flex flex-col items-center justify-start 
-      max-w-[50%] pt-24 gap-20"
+          lg:w-[50%] pt-24 lg:pb-24"
       >
         <About />
 

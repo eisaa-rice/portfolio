@@ -9,10 +9,10 @@ const About = () => {
       <motion.p
         className="text-3xl font-bold mb-8"
         initial={{ rotate: "0deg", transformOrigin: "bottom left" }}
-        whileInView={{
-          scale: 1.1,
-          transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
-        }}
+        // whileInView={{
+        //   scale: 1.1,
+        //   transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
+        // }}
         viewport={{ once: true }}
       >
         👋🏻 sup!

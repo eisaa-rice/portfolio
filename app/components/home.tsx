@@ -31,11 +31,13 @@ const tabs = [
 const Home = ({}: {}) => {
   return (
     <header
-      className="flex flex-col items-center justify-center min-h-[800px]
-      max-h-screen max-w-[50%] sticky top-0 left-0 pb-12"
+      className="flex flex-col items-center justify-between
+      lg:h-screen lg:max-w-[50%] 
+      lg:sticky lg:top-0"
+      // lg:max-h-screen
     >
       {/* navbar */}
-      <div className="mt-10 mb-auto flex gap-12">
+      <div className="mt-3 flex gap-12 pb-12">
         {tabs.map(({ emoji, link }, i) => (
           <motion.button
             key={i}
@@ -54,8 +56,8 @@ const Home = ({}: {}) => {
       </div>
 
       <div
-        className="rounded-full h-52 w-52 bg-white 
-        relative overflow-hidden flex-shrink-0
+        className="rounded-full h-52 w-52 bg-white
+        relative overflow-hidden flex-shrink-0 mt-auto mb-4
         border-2 border-white shadow-md"
       >
         <Image
@@ -67,18 +69,23 @@ const Home = ({}: {}) => {
         />
       </div>
 
-      <div className="flex space-x-6">
-        <p className="text-7xl font-extrabold mt-6 rotate-2">jesus</p>
-        <p className="text-7xl font-extrabold mt-6 -rotate-2">orozco</p>
+      <div
+        className="flex flex-col items-center
+      lg:flex-row lg:space-x-6 lg:gap-0 px-8"
+      >
+        <p className="text-7xl font-extrabold rotate-2">jesus</p>
+        <p className="text-7xl font-extrabold -rotate-2">orozco</p>
       </div>
 
-      <p className="text-4xl font-normal mt-4">software engineer</p>
+      <p className="text-center px-8 text-4xl font-normal mt-6">
+        software engineer
+      </p>
 
       <p className="text-md mt-6 mb-14">
         currently @ <span className="font-medium">free agent</span> 🟢
       </p>
 
-      <div className="flex items-center justify-center gap-12">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12">
         <motion.button
           className="border border-lime-300 text-black bg-white
   relative rounded-full py-4 px-6 flex items-center justify-center gap-3"
@@ -113,7 +120,7 @@ rounded-full py-4 px-6"
         </motion.button>
       </div>
 
-      <ul className="mt-auto mb-0 flex items-center justify-center gap-6">
+      <ul className="lg:mt-auto mb-0 flex items-center justify-center gap-6 pt-8 pb-4">
         <a
           href="https://www.linkedin.com/in/eisaa-rice/"
           target="_blank"
