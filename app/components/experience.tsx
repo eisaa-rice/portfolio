@@ -13,6 +13,7 @@ const experience = [
     time: "FEB 2024 - PRESENT",
     desc: "i developed scalable front-end web and app components for various regional events.",
     img: "/svgs/gdg.svg",
+    style: { paddingLeft: "0.5rem", paddingRight: "0.5rem" },
   },
 ];
 
@@ -22,35 +23,50 @@ export const Job = ({
   time,
   desc,
   img,
+  style,
 }: {
   title: string;
   company: string;
   time: string;
   desc: string;
   img: string;
+  style?: React.CSSProperties;
 }) => {
   return (
     <div className="flex items-center gap-6">
       <div
-        className="rounded-full h-20 w-20 bg-white relative 
+        className="rounded-full h-20 w-20 bg-white relative
         flex-shrink-0 border-2 border-white shadow-md"
       >
         <Image
-          className="mt-1 px-2"
           src={img}
           alt={company}
           fill={true}
           objectFit="contain"
+          style={style}
         />
       </div>
 
       <div className="flex flex-col justify-center">
-        <p className="text-neutral-600 text-sm">{time}</p>
-
-        <p className="text-xl font-semibold mb-3">
-          {title} <span className="opacity-50">·</span>{" "}
-          <span className="font-normal text-neutral-800"> {company}</span>
+        <p
+          className="text-xl font-semibold
+        inline-flex items-center justify-between"
+        >
+          <span>{title}</span>
+          <span className="text-sm font-normal text-neutral-400">{time}</span>
         </p>
+
+        <motion.a
+          className="text-lg font-normal text-neutral-600 mb-3 w-fit"
+          whileHover={{
+            textDecoration: "underline",
+          }}
+          href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {company}
+        </motion.a>
 
         <p className="text-neutral-500">{desc}</p>
       </div>
@@ -76,7 +92,7 @@ const Experience = () => {
       </motion.p>
 
       <div className="flex flex-col justify-center mt-12">
-        {experience.map(({ title, company, time, desc, img }, i) => (
+        {experience.map(({ title, company, time, desc, img, style }, i) => (
           <Job
             key={i}
             title={title}
@@ -84,6 +100,7 @@ const Experience = () => {
             time={time}
             desc={desc}
             img={img}
+            style={style}
           />
         ))}
       </div>

@@ -58,7 +58,7 @@ const About = () => {
           .
         </p>
 
-        <span className="font-bold"></span>
+        {/* <span className="font-bold text-black"></span> */}
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ const Home = ({}: {}) => {
     >
       <p className="text-2xl text-neutral-800 font-medium"> hi 👋🏻, i&apos;m</p>
 
-      <div className="text-5xl font-bold">jésus orozco</div>
+      <div className="text-5xl font-bold my-4">jésus orozco</div>
 
       <p className="text-neutral-500">
         currently a{" "}

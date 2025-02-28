@@ -39,7 +39,7 @@ const frameworks = [
   {
     skill: "React Native",
     src: "/svgs/react-native.svg",
-    style: { height: 35 },
+    style: { height: 30 },
     rotate: "3deg",
   },
   { skill: "Next.js", src: "/svgs/nextjs.svg", style: {}, rotate: "1deg" },
@@ -91,11 +91,11 @@ export const Skill = ({
       style={{ rotate: rotate }}
       className="inline-flex flex-shrink-0 items-center justify-center 
       text-neutral-600 rounded-xl py-2 px-3 gap-2
-      bg-white shadow-sm"
+      bg-white shadow-sm text-sm"
     >
       {skill}
 
-      <Image src={src} alt={skill} height={25} width={25} style={style} />
+      <Image src={src} alt={skill} height={20} width={20} style={style} />
     </p>
   );
 };
@@ -115,11 +115,13 @@ const Skills = () => {
         🛠️ i&apos;ve worked with these before
       </motion.p>
 
-      <div className="flex flex-col justify-center mt-8">
+      <div className="flex flex-col justify-center mt-8 gap-12">
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <p className="text-xl font-normal text-neutral-500">languages 🔣</p>
+          <p className="text-xl font-normal text-neutral-500 mb-6">
+            languages 🔣
+          </p>
 
-          <div className="flex flex-wrap gap-8 items-center justify-center py-12 px-2">
+          <div className="flex flex-wrap gap-8 items-center justify-center px-2">
             {languages.map((language, index) => (
               <Skill
                 key={index}
@@ -133,9 +135,11 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-2 col-end-3">
-          <p className="text-xl font-normal text-neutral-500">frameworks 🚧</p>
+          <p className="text-xl font-normal text-neutral-500 mb-6">
+            frameworks 🚧
+          </p>
 
-          <div className="flex flex-wrap gap-8 items-center justify-center py-12 px-2">
+          <div className="flex flex-wrap gap-8 items-center justify-center px-2">
             {frameworks.map((framework, index) => (
               <Skill
                 key={index}
@@ -149,9 +153,9 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
-          <p className="text-xl font-normal text-neutral-500">tools ⛏️</p>
+          <p className="text-xl font-normal text-neutral-500 mb-6">tools ⛏️</p>
 
-          <div className="flex flex-wrap gap-8 items-center justify-center py-12 px-2">
+          <div className="flex flex-wrap gap-8 items-center justify-center px-2">
             {tools.map((tool, index) => (
               <Skill
                 key={index}
