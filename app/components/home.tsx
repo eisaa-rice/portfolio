@@ -32,7 +32,7 @@ const Home = ({}: {}) => {
   return (
     <header
       className="flex flex-col items-center justify-between
-      lg:h-screen lg:max-w-[50%] 
+      lg:h-screen lg:max-w-[40%] 
       lg:sticky lg:top-0"
       // lg:max-h-screen
     >

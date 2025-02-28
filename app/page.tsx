@@ -14,13 +14,13 @@ export default function App() {
   return (
     <div
       className="mx-auto min-h-screen max-w-screen-xl px-4
-    lg:flex lg:justify-between lg:gap-4"
+    lg:flex lg:justify-between lg:gap-32"
     >
       <Home />
 
       <main
         className="flex flex-col items-center justify-start 
-          lg:w-[50%] pt-24 lg:pb-24"
+          lg:w-[70%] pt-24 lg:pb-24 gap-44"
       >
         <About />
 
