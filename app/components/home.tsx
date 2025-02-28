@@ -31,13 +31,80 @@ const tabs = [
 const Home = ({}: {}) => {
   return (
     <header
-      className="flex flex-col items-center justify-between
-      lg:h-screen lg:max-w-[40%] 
-      lg:sticky lg:top-0"
+      className="flex flex-col justify-between
+      lg:h-screen lg:w-1/2 lg:sticky lg:top-0 lg:py-24"
       // lg:max-h-screen
     >
-      {/* navbar */}
-      <div className="mt-3 flex gap-12 pb-12">
+      <p className="text-2xl text-neutral-800 font-medium"> hi 👋🏻, i&apos;m</p>
+
+      <div className="text-5xl font-bold">jésus orozco</div>
+
+      <p className="text-neutral-500">
+        currently a{" "}
+        <span className="font-medium text-black">software engineer</span> @{" "}
+        <span className="font-medium text-black">free agent</span> 🟢
+      </p>
+
+      <ul className="lg:mt-auto flex items-center gap-6">
+        <motion.button
+          className=""
+          onClick={() => {
+            navigator.clipboard.writeText("jesusoro@umich.edu");
+          }}
+        >
+          <Image
+            className=""
+            src="/svgs/gmail.svg"
+            alt="copy email"
+            height={30}
+            width={30}
+          />
+        </motion.button>
+
+        <motion.a
+          href="https://www.linkedin.com/in/eisaa-rice/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            className=""
+            src="/svgs/linkedin.svg"
+            alt="copy email"
+            height={30}
+            width={30}
+          />
+        </motion.a>
+
+        <motion.a
+          href="https://github.com/eisaa-rice"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            className=""
+            src="/svgs/github.svg"
+            alt="copy email"
+            height={30}
+            width={30}
+          />
+        </motion.a>
+
+        <motion.a
+          href="https://github.com/eisaa-rice"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CV
+        </motion.a>
+      </ul>
+    </header>
+  );
+};
+
+export default Home;
+
+/* navbar */
+/* <div className="mt-3 flex gap-12 pb-12">
         {tabs.map(({ emoji, link }, i) => (
           <motion.button
             key={i}
@@ -53,11 +120,11 @@ const Home = ({}: {}) => {
             </ScrollLink>
           </motion.button>
         ))}
-      </div>
+      </div> */
 
-      <div
-        className="rounded-full h-52 w-52 bg-white
-        relative overflow-hidden flex-shrink-0 mt-auto mb-4
+/* <div
+        className="rounded-full h-44 w-44 bg-white
+        relative overflow-hidden flex-shrink-0 my-4
         border-2 border-white shadow-md"
       >
         <Image
@@ -67,78 +134,4 @@ const Home = ({}: {}) => {
           fill={true}
           objectFit="contain"
         />
-      </div>
-
-      <div
-        className="flex flex-col items-center
-      lg:flex-row lg:space-x-6 lg:gap-0 px-8"
-      >
-        <p className="text-7xl font-extrabold rotate-2">jesus</p>
-        <p className="text-7xl font-extrabold -rotate-2">orozco</p>
-      </div>
-
-      <p className="text-center px-8 text-4xl font-normal mt-6">
-        software engineer
-      </p>
-
-      <p className="text-md mt-6 mb-14">
-        currently @ <span className="font-medium">free agent</span> 🟢
-      </p>
-
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12">
-        <motion.button
-          className="border border-lime-300 text-black bg-white
-  relative rounded-full py-4 px-6 flex items-center justify-center gap-3"
-          onClick={() => {
-            navigator.clipboard.writeText("jesusoro@umich.edu");
-          }}
-          initial={{ scale: 1, rotate: 2 }}
-          whileHover={{ scale: 1.1, rotate: 1 }}
-          whileTap={{ scale: 1 }}
-        >
-          jesusoro@umich.edu
-          <Image
-            className=""
-            src="/svgs/copy.svg"
-            alt="copy email"
-            height={30}
-            width={30}
-          />
-        </motion.button>
-
-        <motion.button
-          className="bg-lime-300 text-black font-semibold
-rounded-full py-4 px-6"
-          initial={{ scale: 1, rotate: -2 }}
-          whileHover={{
-            scale: 1.05,
-            rotate: 1,
-          }}
-          whileTap={{ scale: 1 }}
-        >
-          résumé
-        </motion.button>
-      </div>
-
-      <ul className="lg:mt-auto mb-0 flex items-center justify-center gap-6 pt-8 pb-4">
-        <a
-          href="https://www.linkedin.com/in/eisaa-rice/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          linkedin
-        </a>
-
-        <a
-          href="https://github.com/eisaa-rice"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github
-        </a>
-      </ul>
-    </header>
-  );
-};
-
-export default Home;
+      </div> */

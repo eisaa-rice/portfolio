@@ -20,7 +20,7 @@ export default function App() {
 
       <main
         className="flex flex-col items-center justify-start 
-          lg:w-[70%] pt-24 lg:pb-24 gap-44"
+        lg:w-2/3 lg:py-24 gap-12"
       >
         <About />
 

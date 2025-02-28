@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div id="projects" className="flex flex-col justify-center w-full">
       <motion.p
-        className="text-3xl font-bold mb-8"
+        className="text-2xl text-neutral-800 font-medium"
         initial={{ rotate: "-2deg", transformOrigin: "bottom left" }}
         whileInView={{
           rotate: ["-2deg", "0deg", "-1deg", "0deg"],

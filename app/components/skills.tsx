@@ -89,8 +89,9 @@ export const Skill = ({
   return (
     <p
       style={{ rotate: rotate }}
-      className="inline-flex flex-shrink-0 p-3 gap-3 items-center justify-center
-      bg-white shadow-sm rounded-xl text-lg"
+      className="inline-flex flex-shrink-0 items-center justify-center 
+      text-neutral-600 rounded-xl py-2 px-3 gap-2
+      bg-white shadow-sm"
     >
       {skill}
 
@@ -103,7 +104,7 @@ const Skills = () => {
   return (
     <div id="skills" className="flex flex-col justify-center w-full">
       <motion.p
-        className="text-3xl font-bold"
+        className="text-2xl text-neutral-800 font-medium"
         initial={{ rotate: "-2deg", transformOrigin: "bottom left" }}
         whileInView={{
           rotate: ["-2deg", "0deg", "-1deg", "0deg"],
@@ -114,11 +115,11 @@ const Skills = () => {
         🛠️ i&apos;ve worked with these before
       </motion.p>
 
-      <div className="flex flex-col justify-center mt-12">
+      <div className="flex flex-col justify-center mt-8">
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <p className="text-2xl font-normal">languages 🔣</p>
+          <p className="text-xl font-normal text-neutral-500">languages 🔣</p>
 
-          <div className="flex flex-wrap gap-12 items-center justify-center py-12 px-2">
+          <div className="flex flex-wrap gap-8 items-center justify-center py-12 px-2">
             {languages.map((language, index) => (
               <Skill
                 key={index}
@@ -131,10 +132,10 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className="row-start-1 row-end-2 col-start-2 col-end-3 mt-4">
-          <p className="text-2xl font-normal">frameworks 🚧</p>
+        <div className="row-start-1 row-end-2 col-start-2 col-end-3">
+          <p className="text-xl font-normal text-neutral-500">frameworks 🚧</p>
 
-          <div className="flex flex-wrap gap-12 items-center justify-center py-12 px-2">
+          <div className="flex flex-wrap gap-8 items-center justify-center py-12 px-2">
             {frameworks.map((framework, index) => (
               <Skill
                 key={index}
@@ -148,9 +149,9 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
-          <p className="text-2xl font-normal">tools ⛏️</p>
+          <p className="text-xl font-normal text-neutral-500">tools ⛏️</p>
 
-          <div className="flex flex-wrap gap-12 items-center justify-center py-12 px-2">
+          <div className="flex flex-wrap gap-8 items-center justify-center py-12 px-2">
             {tools.map((tool, index) => (
               <Skill
                 key={index}
