@@ -5,20 +5,16 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-col justify-center w-full">
-      <motion.p
-        className="text-2xl text-neutral-800 font-medium mb-8"
-        initial={{ rotate: "0deg", transformOrigin: "bottom left" }}
-        // whileInView={{
-        //   scale: 1.1,
-        //   transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
-        // }}
-        viewport={{ once: true }}
-      >
-        👋🏻 sup!
-      </motion.p>
+    <div
+      id="about"
+      // backdrop-blur-sm border border-gray-100 shadow-md rounded-3xl p-8
+      className="flex flex-col justify-center w-full"
+    >
+      <p className="text-3xl text-neutral-800 font-medium text-center">
+        🤟🏻 sup!
+      </p>
 
-      <div className="flex flex-col items-start justify-start gap-6 text-neutral-500">
+      <div className="flex flex-col items-start justify-start gap-6 text-neutral-500 mt-8">
         <p>
           as you already know, the name&apos;s 🤟🏻{" "}
           <span className="font-semibold text-black">jesus orozco</span>. i was

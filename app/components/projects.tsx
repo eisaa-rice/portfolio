@@ -6,17 +6,9 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <div id="projects" className="flex flex-col justify-center w-full">
-      <motion.p
-        className="text-2xl text-neutral-800 font-medium"
-        initial={{ rotate: "-2deg", transformOrigin: "bottom left" }}
-        whileInView={{
-          rotate: ["-2deg", "0deg", "-1deg", "0deg"],
-          transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
-        }}
-        viewport={{ once: true }}
-      >
+      <p className="text-3xl text-neutral-800 font-medium text-center">
         💻 here&apos;s what i&apos;ve done
-      </motion.p>
+      </p>
     </div>
   );
 };

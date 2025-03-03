@@ -90,8 +90,8 @@ export const Skill = ({
     <p
       style={{ rotate: rotate }}
       className="inline-flex flex-shrink-0 items-center justify-center 
-      text-neutral-600 rounded-xl py-2 px-3 gap-2
-      bg-white shadow-sm text-sm"
+      text-neutral-600 rounded-xl py-2 px-3 gap-2 h-[40px]
+      backdrop-blur-sm border border-gray-100 shadow-sm text-sm"
     >
       {skill}
 
@@ -103,21 +103,16 @@ export const Skill = ({
 const Skills = () => {
   return (
     <div id="skills" className="flex flex-col justify-center w-full">
-      <motion.p
-        className="text-2xl text-neutral-800 font-medium"
-        initial={{ rotate: "-2deg", transformOrigin: "bottom left" }}
-        whileInView={{
-          rotate: ["-2deg", "0deg", "-1deg", "0deg"],
-          transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
-        }}
-        viewport={{ once: true }}
-      >
+      <p className="text-3xl text-neutral-800 font-medium text-center">
         🛠️ i&apos;ve worked with these before
-      </motion.p>
+      </p>
 
-      <div className="flex flex-col justify-center mt-8 gap-12">
+      <div className="flex flex-col lg:flex-row justify-center mt-8 pb-6 gap-12">
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <p className="text-xl font-normal text-neutral-500 mb-6">
+          <p
+            className="text-lg font-normal text-neutral-500 mb-6
+          lg:text-center"
+          >
             languages 🔣
           </p>
 
@@ -135,7 +130,10 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-2 col-end-3">
-          <p className="text-xl font-normal text-neutral-500 mb-6">
+          <p
+            className="text-lg font-normal text-neutral-500 mb-6
+          lg:text-center"
+          >
             frameworks 🚧
           </p>
 
@@ -153,7 +151,12 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
-          <p className="text-xl font-normal text-neutral-500 mb-6">tools ⛏️</p>
+          <p
+            className="text-lg font-normal text-neutral-500 mb-6
+          lg:text-center"
+          >
+            tools ⛏️
+          </p>
 
           <div className="flex flex-wrap gap-8 items-center justify-center px-2">
             {tools.map((tool, index) => (

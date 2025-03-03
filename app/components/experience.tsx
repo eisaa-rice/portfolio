@@ -34,9 +34,13 @@ export const Job = ({
 }) => {
   return (
     <div className="flex items-center gap-6">
-      <div
-        className="rounded-full h-20 w-20 bg-white relative
-        flex-shrink-0 border-2 border-white shadow-md"
+      <motion.a
+        className="rounded-full h-20 w-20 relative
+        flex-shrink-0 backdrop-blur-sm border border-gray-100 shadow-md"
+        whileHover={{ scale: 1.05, cursor: "pointer" }}
+        href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <Image
           src={img}
@@ -45,7 +49,7 @@ export const Job = ({
           objectFit="contain"
           style={style}
         />
-      </div>
+      </motion.a>
 
       <div className="flex flex-col justify-center">
         <p
@@ -79,17 +83,9 @@ export const Job = ({
 const Experience = () => {
   return (
     <div id="experience" className="flex flex-col justify-center w-full">
-      <motion.p
-        className="text-2xl text-neutral-800 font-medium"
-        initial={{ rotate: "-2deg", transformOrigin: "bottom left" }}
-        whileInView={{
-          rotate: ["-2deg", "0deg", "-1deg", "0deg"],
-          transition: { ease: "backIn", duration: 0.4, delay: 0.25 },
-        }}
-        viewport={{ once: true }}
-      >
+      <p className="text-3xl text-neutral-800 font-medium text-center">
         💼 here&apos;s where i&apos;ve been
-      </motion.p>
+      </p>
 
       <div className="flex flex-col justify-center mt-12">
         {experience.map(({ title, company, time, desc, img, style }, i) => (

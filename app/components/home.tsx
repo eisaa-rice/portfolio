@@ -3,104 +3,34 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
-
-const tabs = [
-  {
-    emoji: "👋🏻",
-    link: "about",
-  },
-  {
-    emoji: "🛠️",
-    link: "skills",
-  },
-  {
-    emoji: "💼",
-    link: "experience",
-  },
-  {
-    emoji: "💻",
-    link: "projects",
-  },
-  // {
-  //   emoji: "📞",
-  //   link: "contact",
-  // },
-];
 
 const Home = ({}: {}) => {
   return (
-    <header
-      className="flex flex-col justify-between
-      lg:h-screen lg:w-1/2 lg:sticky lg:top-0 lg:py-24"
-      // lg:max-h-screen
-    >
-      <p className="text-2xl text-neutral-800 font-medium"> hi 👋🏻, i&apos;m</p>
+    <div className="flex flex-col items-center justify-between gap-8">
+      <p className="text-2xl font-medium text-gray-500">hola 👋🏻, i&apos;m</p>
 
-      <div className="text-5xl font-bold my-4">jésus orozco</div>
+      <div
+        className="rounded-full h-60 w-60 m-auto
+        relative overflow-hidden flex-shrink-0
+        backdrop-blur-sm shadow-md border-t border-gray-100"
+      >
+        <Image
+          className="mt-6 ml-4 scale-125"
+          src="/images/animoji.png"
+          alt="literally me"
+          fill={true}
+          objectFit="contain"
+        />
+      </div>
 
-      <p className="text-neutral-500">
-        currently a{" "}
-        <span className="font-medium text-black">software engineer</span> @{" "}
-        <span className="font-medium text-black">free agent</span> 🟢
-      </p>
+      <div className="text-6xl font-bold flex space-x-4 -mr-1">
+        <p className="rotate-2">jésus</p> <p className="-rotate-2">orozco</p>
+      </div>
 
-      <ul className="lg:mt-auto flex items-center gap-6">
-        <motion.button
-          whileHover={{ rotate: "2deg", scale: 1.1 }}
-          onClick={() => {
-            navigator.clipboard.writeText("jesusoro@umich.edu");
-          }}
-        >
-          <Image
-            className=""
-            src="/svgs/gmail.svg"
-            alt="copy email"
-            height={30}
-            width={30}
-          />
-        </motion.button>
-
-        <motion.a
-          href="https://www.linkedin.com/in/eisaa-rice/"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ rotate: "-2deg", scale: 1.1 }}
-        >
-          <Image
-            className=""
-            src="/svgs/linkedin.svg"
-            alt="copy email"
-            height={30}
-            width={30}
-          />
-        </motion.a>
-
-        <motion.a
-          href="https://github.com/eisaa-rice"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ rotate: "2deg", scale: 1.1 }}
-        >
-          <Image
-            className=""
-            src="/svgs/github.svg"
-            alt="copy email"
-            height={30}
-            width={30}
-          />
-        </motion.a>
-
-        <motion.a
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ rotate: "-2deg", scale: 1.1 }}
-        >
-          CV
-        </motion.a>
-      </ul>
-    </header>
+      <div className="text-4xl font-semibold text-gray-600">
+        software developer
+      </div>
+    </div>
   );
 };
 

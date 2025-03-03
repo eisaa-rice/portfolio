@@ -9,29 +9,28 @@ import Projects from "./components/projects";
 import Resume from "./components/resume";
 import Footer from "./components/footer";
 import Skills from "./components/skills";
+import Navbar from "./components/navbar";
 
 export default function App() {
   return (
     <div
-      className="mx-auto min-h-screen max-w-screen-xl px-4
-    lg:flex lg:justify-between lg:gap-32"
+      className="flex flex-col items-center
+    max-w-screen-xl mx-auto gap-36 
+    lg:mt-32"
     >
+      <Navbar />
+
       <Home />
 
-      <main
-        className="flex flex-col items-center justify-start 
-        lg:w-2/3 lg:py-24 gap-24"
-      >
-        <About />
+      <About />
 
-        <Skills />
+      <Skills />
 
-        <Experience />
+      <Experience />
 
-        <Projects />
+      <Projects />
 
-        <Footer />
-      </main>
+      <Footer />
     </div>
   );
 }
