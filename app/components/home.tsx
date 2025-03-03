@@ -47,7 +47,7 @@ const Home = ({}: {}) => {
 
       <ul className="lg:mt-auto flex items-center gap-6">
         <motion.button
-          className=""
+          whileHover={{ rotate: "2deg", scale: 1.1 }}
           onClick={() => {
             navigator.clipboard.writeText("jesusoro@umich.edu");
           }}
@@ -65,6 +65,7 @@ const Home = ({}: {}) => {
           href="https://www.linkedin.com/in/eisaa-rice/"
           target="_blank"
           rel="noopener noreferrer"
+          whileHover={{ rotate: "-2deg", scale: 1.1 }}
         >
           <Image
             className=""
@@ -79,6 +80,7 @@ const Home = ({}: {}) => {
           href="https://github.com/eisaa-rice"
           target="_blank"
           rel="noopener noreferrer"
+          whileHover={{ rotate: "2deg", scale: 1.1 }}
         >
           <Image
             className=""
@@ -90,9 +92,10 @@ const Home = ({}: {}) => {
         </motion.a>
 
         <motion.a
-          href="https://github.com/eisaa-rice"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
+          whileHover={{ rotate: "-2deg", scale: 1.1 }}
         >
           CV
         </motion.a>
