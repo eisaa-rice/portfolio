@@ -7,7 +7,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const tabs = [
   {
-    emoji: "👋🏻",
+    emoji: "🤟🏻",
     link: "about",
   },
   {
