@@ -5,15 +5,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { Skill } from "./skills";
+import { Smokum } from "next/font/google";
 
 const experience = [
   {
     title: "frontend developer",
     company: "google developer groups",
-    time: "FEB 2024 - PRESENT",
+    time: "feb 2024 - present",
     desc: "i developed scalable front-end web and app components for various regional events.",
     img: "/svgs/gdg.svg",
     style: { paddingLeft: "0.5rem", paddingRight: "0.5rem" },
+    skills: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
   },
 ];
 
@@ -24,6 +26,7 @@ export const Job = ({
   desc,
   img,
   style,
+  skills,
 }: {
   title: string;
   company: string;
@@ -31,17 +34,11 @@ export const Job = ({
   desc: string;
   img: string;
   style?: React.CSSProperties;
+  skills: string[];
 }) => {
   return (
-    <div className="flex items-center gap-6">
-      <motion.a
-        className="rounded-full h-20 w-20 relative
-        flex-shrink-0 backdrop-blur-sm border border-gray-100 shadow-md"
-        whileHover={{ scale: 1.05, cursor: "pointer" }}
-        href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+    <div className="flex items-center gap-12">
+      <div className="rounded-full h-24 w-24 relative flex-shrink-0 border border-gray-300">
         <Image
           src={img}
           alt={company}
@@ -49,19 +46,19 @@ export const Job = ({
           objectFit="contain"
           style={style}
         />
-      </motion.a>
+      </div>
 
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center w-full">
         <p
-          className="text-xl font-semibold
+          className="text-2xl font-bold
         inline-flex items-center justify-between"
         >
           <span>{title}</span>
-          <span className="text-sm font-normal text-neutral-400">{time}</span>
+          <span className="text-base font-normal text-gray-400">{time}</span>
         </p>
 
         <motion.a
-          className="text-lg font-normal text-neutral-600 mb-3 w-fit"
+          className="text-xl font-normal text-gray-600 mb-3 w-fit"
           whileHover={{
             textDecoration: "underline",
           }}
@@ -72,10 +69,20 @@ export const Job = ({
           {company}
         </motion.a>
 
-        <p className="text-neutral-500">{desc}</p>
-      </div>
+        <p className="text-gray-500 text-lg">{desc}</p>
 
-      {/* skills */}
+        <div className="flex gap-2 mt-4">
+          {skills.map((skill, i) => (
+            <div
+              key={i}
+              className="text-gray-400 text-sm
+              rounded-full border border-gray-300 px-2 py-1"
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
@@ -83,22 +90,28 @@ export const Job = ({
 const Experience = () => {
   return (
     <div id="experience" className="flex flex-col justify-center w-full">
-      <p className="text-3xl text-neutral-800 font-medium text-center">
-        💼 here&apos;s where i&apos;ve been
+      <p
+        className="text-3xl text-gray-800 font-medium text-center
+      border-b border-gray-300 w-fit mx-auto px-6 pb-2"
+      >
+        💼 experience
       </p>
 
       <div className="flex flex-col justify-center mt-12">
-        {experience.map(({ title, company, time, desc, img, style }, i) => (
-          <Job
-            key={i}
-            title={title}
-            company={company}
-            time={time}
-            desc={desc}
-            img={img}
-            style={style}
-          />
-        ))}
+        {experience.map(
+          ({ title, company, time, desc, img, style, skills }, i) => (
+            <Job
+              key={i}
+              title={title}
+              company={company}
+              time={time}
+              desc={desc}
+              img={img}
+              style={style}
+              skills={skills}
+            />
+          )
+        )}
       </div>
     </div>
   );

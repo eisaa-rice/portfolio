@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 
 const languages = [
   { skill: "C++", src: "/svgs/c++.svg", style: { width: 30 }, rotate: "2deg" },
-  { skill: "C#", src: "/svgs/csharp.svg", style: {}, rotate: "-3deg" },
+  {
+    skill: "C#",
+    src: "/svgs/csharp.svg",
+    style: { width: 25 },
+    rotate: "-3deg",
+  },
 
   { skill: "Java", src: "/svgs/java.svg", style: {}, rotate: "-2deg" },
   {
@@ -17,7 +22,7 @@ const languages = [
   },
 
   { skill: "HTML", src: "/svgs/html.svg", style: {}, rotate: "1deg" },
-  { skill: "CSS", src: "/svgs/css.svg", style: { width: 30 }, rotate: "2deg" },
+  { skill: "CSS", src: "/svgs/css.svg", style: { width: 25 }, rotate: "2deg" },
   {
     skill: "JavaScript",
     src: "/svgs/javascript.svg",
@@ -90,12 +95,12 @@ export const Skill = ({
     <p
       style={{ rotate: rotate }}
       className="inline-flex flex-shrink-0 items-center justify-center 
-      text-neutral-600 rounded-xl py-2 px-3 gap-2 h-[40px]
-      backdrop-blur-sm border border-gray-100 shadow-sm text-sm"
+      text-gray-500 rounded-xl py-2 px-3 gap-2 h-[40px] text-sm
+      border border-gray-300 font-light"
     >
       {skill}
 
-      <Image src={src} alt={skill} height={20} width={20} style={style} />
+      <Image style={style} src={src} alt={skill} height={20} width={20} />
     </p>
   );
 };
@@ -103,14 +108,17 @@ export const Skill = ({
 const Skills = () => {
   return (
     <div id="skills" className="flex flex-col justify-center w-full">
-      <p className="text-3xl text-neutral-800 font-medium text-center">
-        🛠️ i&apos;ve worked with these before
+      <p
+        className="text-3xl text-gray-800 font-medium text-center
+      border-b border-gray-300 w-fit mx-auto px-6 pb-2"
+      >
+        🛠️ skills
       </p>
 
-      <div className="flex flex-col lg:flex-row justify-center mt-8 pb-6 gap-12">
+      <div className="flex flex-col lg:flex-row justify-center mt-10 pb-6 gap-12">
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
           <p
-            className="text-lg font-normal text-neutral-500 mb-6
+            className="text-lg font-normal text-gray-400 mb-10
           lg:text-center"
           >
             languages 🔣
@@ -131,7 +139,7 @@ const Skills = () => {
 
         <div className="row-start-1 row-end-2 col-start-2 col-end-3">
           <p
-            className="text-lg font-normal text-neutral-500 mb-6
+            className="text-lg font-normal text-gray-400 mb-10
           lg:text-center"
           >
             frameworks 🚧
@@ -152,7 +160,7 @@ const Skills = () => {
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
           <p
-            className="text-lg font-normal text-neutral-500 mb-6
+            className="text-lg font-normal text-gray-400 mb-10
           lg:text-center"
           >
             tools ⛏️

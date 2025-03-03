@@ -1,27 +1,13 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Home = ({}: {}) => {
   return (
-    <div className="flex flex-col items-center justify-between gap-8">
+    <div className="flex flex-col justify-center w-full gap-8 min-h-screen">
       <p className="text-2xl font-medium text-gray-500">hola 👋🏻, i&apos;m</p>
-
-      <div
-        className="rounded-full h-60 w-60 m-auto
-        relative overflow-hidden flex-shrink-0
-        backdrop-blur-sm shadow-md border-t border-gray-100"
-      >
-        <Image
-          className="mt-6 ml-4 scale-125"
-          src="/images/animoji.png"
-          alt="literally me"
-          fill={true}
-          objectFit="contain"
-        />
-      </div>
 
       <div className="text-6xl font-bold flex space-x-4 -mr-1">
         <p className="rotate-2">jésus</p> <p className="-rotate-2">orozco</p>

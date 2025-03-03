@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
 
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Link as ScrollLink } from "react-scroll";
@@ -22,10 +22,6 @@ const tabs = [
     emoji: "💻",
     link: "projects",
   },
-  // {
-  //   emoji: "📞",
-  //   link: "contact",
-  // },
 ];
 
 const Navbar = () => {
@@ -33,14 +29,13 @@ const Navbar = () => {
     <header
       // border-b border-b-gray-100
       className="w-full fixed top-0 z-50
-      backdrop-blur-sm shadow-sm 
+      backdrop-blur-sm shadow-sm bg-white/30
       p-4"
     >
-      <div className="max-w-screen-2xl mx-auto flex items-center justify-center">
-        <ul
-          className="flex items-center justify-center gap-16
-        mx-auto absolute"
-        >
+      <div className="max-w-screen-xl mx-auto flex items-center justify-center">
+        <p>jesus orozco</p>
+
+        <ul className="flex items-center justify-center gap-8 mx-auto absolute">
           {tabs.map(({ emoji, link }, i) => (
             <motion.button
               key={i}
@@ -73,7 +68,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <ul className="flex items-center gap-8 ml-auto mr-0">
+        <ul className="flex items-center gap-6 ml-auto mr-0">
           <motion.button
             whileHover={{ rotate: "2deg", scale: 1.1 }}
             onClick={() => {
