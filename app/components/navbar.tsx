@@ -52,7 +52,7 @@ const Navbar = () => {
                 className="-z-50"
                 initial={{
                   opacity: 0,
-                  x: -20,
+                  x: -10,
                 }}
                 variants={{
                   hover: {

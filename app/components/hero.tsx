@@ -4,9 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const Home = ({}: {}) => {
+const Hero = ({}: {}) => {
   return (
-    <div className="flex flex-col justify-center w-full gap-8 min-h-screen">
+    <div className="flex flex-col justify-center w-full mt-96 mb-64 gap-8">
       <p className="text-2xl font-medium text-gray-500">hola 👋🏻, i&apos;m</p>
 
       <div className="text-6xl font-bold flex space-x-4 -mr-1">
@@ -20,7 +20,7 @@ const Home = ({}: {}) => {
   );
 };
 
-export default Home;
+export default Hero;
 
 /* navbar */
 /* <div className="mt-3 flex gap-12 pb-12">

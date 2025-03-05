@@ -40,7 +40,7 @@ const languages = [
 ];
 
 const frameworks = [
-  { skill: "React.js", src: "/svgs/react.svg", style: {}, rotate: "1deg" },
+  { skill: "React", src: "/svgs/react.svg", style: {}, rotate: "1deg" },
   {
     skill: "React Native",
     src: "/svgs/react-native.svg",
@@ -92,16 +92,17 @@ export const Skill = ({
   rotate: string;
 }) => {
   return (
-    <p
+    <motion.p
       style={{ rotate: rotate }}
       className="inline-flex flex-shrink-0 items-center justify-center 
       text-gray-500 rounded-xl py-2 px-3 gap-2 h-[40px] text-sm
       border border-gray-300 font-light"
+      whileHover="skill"
     >
       {skill}
 
       <Image style={style} src={src} alt={skill} height={20} width={20} />
-    </p>
+    </motion.p>
   );
 };
 
@@ -115,7 +116,10 @@ const Skills = () => {
         🛠️ skills
       </p>
 
-      <div className="flex flex-col lg:flex-row justify-center mt-10 pb-6 gap-12">
+      <div
+        className="flex flex-col justify-center mt-10 pb-6 gap-12
+      lg:grid lg:grid-cols-3 lg:grid-rows-1"
+      >
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
           <p
             className="text-lg font-normal text-gray-400 mb-10

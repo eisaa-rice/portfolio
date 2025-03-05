@@ -4,9 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { Skill } from "./skills";
-import { Smokum } from "next/font/google";
-
 const experience = [
   {
     title: "frontend developer",
@@ -15,7 +12,7 @@ const experience = [
     desc: "i developed scalable front-end web and app components for various regional events.",
     img: "/svgs/gdg.svg",
     style: { paddingLeft: "0.5rem", paddingRight: "0.5rem" },
-    skills: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
   },
 ];
 
@@ -69,7 +66,7 @@ export const Job = ({
           {company}
         </motion.a>
 
-        <p className="text-gray-500 text-lg">{desc}</p>
+        <p className="text-gray-400 text-lg">{desc}</p>
 
         <div className="flex gap-2 mt-4">
           {skills.map((skill, i) => (
