@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: "iwd summit",
-    desc: "information hub for a 2024 women’s day conference held in detroit.",
+    desc: "information hub for a 2024 international women’s day conference held in detroit.",
     img: "/images/iwd.png",
     link: "https://www.codeconductor.org/",
     skills: ["React", "JavaScript", "Tailwind CSS"],
@@ -50,15 +50,15 @@ const Project = ({
 }) => {
   return (
     <div
-      className="w-72 lg:w-[36rem] h-[500px] lg:h-72 border border-gray-300 rounded-3xl
+      className="w-full border border-gray-300 rounded-3xl
     flex flex-col lg:flex-row overflow-hidden"
     >
-      <div className="relative h-72 w-72 lg:w-[500px] bg-white">
+      <div className="relative h-72 lg:h-52 w-72 lg:w-52 flex-shrink-0 bg-white">
         <Image src={img} alt={title} fill={true} objectFit="cover" />
       </div>
 
       <div
-        className="flex flex-col p-4 h-[212px] lg:h-full mt-auto lg:mt-0 mb-0
+        className="flex flex-col p-4 lg:h-full
       border-t lg:border-t-0 lg:border-l border-gray-300"
       >
         <motion.a
@@ -106,7 +106,7 @@ const Project = ({
 
         <p className="text-gray-400 text-lg">{desc}</p>
 
-        <div className="flex flex-wrap justify-between lg:justify-start lg:gap-2 mt-auto">
+        <div className="flex flex-wrap justify-start gap-2 pt-4 mt-auto">
           {skills.map((s, i) => (
             <div
               key={i}
@@ -126,13 +126,16 @@ const Projects = () => {
   return (
     <div id="projects" className="flex flex-col justify-center w-full">
       <p
-        className="text-3xl text-gray-800 font-medium text-center
-        border-b border-gray-300 w-fit mx-auto px-6 pb-2"
+        className="text-3xl text-gray-800 font-medium
+        border-b border-gray-300 w-fit pr-6 pb-2"
       >
         💻 projects
       </p>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-20 mt-12 flex-wrap">
+      <div
+        className="flex flex-col gap-y-6 sm:gap-4 mt-4
+        sm:grid sm:grid-cols-2"
+      >
         {projects.map((p, i) => (
           <Project
             key={i}

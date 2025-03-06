@@ -12,27 +12,14 @@ const About = () => {
       className="flex flex-col justify-center w-full"
     >
       <p
-        className="text-3xl text-gray-800 font-medium text-center
-        border-b border-gray-300 w-fit mx-auto px-6 pb-2"
+        className="text-3xl text-gray-800 font-medium
+        border-b border-gray-300 w-fit pr-6 pb-2"
       >
-        🤟🏻 sup!
+        🤟🏻 about
       </p>
 
-      <div className="flex items-center justify-center gap-24 mt-10">
-        <div className="rounded-full h-72 w-72 m-auto relative overflow-hidden flex-shrink-0 border border-gray-300">
-          <Image
-            className="mt-3 ml-4 scale-125"
-            src="/images/animoji.png"
-            alt="literally me"
-            fill={true}
-            objectFit="contain"
-          />
-        </div>
-
-        <div
-          className="flex flex-col items-start gap-6 
-      text-gray-400 text-lg mt-4"
-        >
+      <div className="flex flex-col items-center justify-center mt-4">
+        <div className="flex flex-col items-start gap-6 text-gray-400 text-lg">
           <p>
             as you already know, the name&apos;s 🤟🏻{" "}
             <span className="font-semibold text-black">jesus orozco</span>. i
@@ -71,8 +58,6 @@ const About = () => {
             🎨{" "}
             <span className="font-semibold text-black">drawing something</span>.
           </p>
-
-          {/* <span className="font-bold text-black"></span> */}
         </div>
       </div>
     </div>

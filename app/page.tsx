@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div
       className="flex flex-col items-center
-    max-w-screen-xl mx-auto gap-60"
+    max-w-screen-xl mx-auto gap-28 px-6 pt-32"
     >
       <Navbar />
 

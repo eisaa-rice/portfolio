@@ -108,27 +108,24 @@ export const Skill = ({
 
 const Skills = () => {
   return (
-    <div id="skills" className="flex flex-col justify-center w-full">
+    <div id="skills" className="flex flex-col justify-center w-full p-2">
       <p
-        className="text-3xl text-gray-800 font-medium text-center
-      border-b border-gray-300 w-fit mx-auto px-6 pb-2"
+        className="text-3xl text-gray-800 font-medium
+        border-b border-gray-300 w-fit pr-6 pb-2"
       >
         🛠️ skills
       </p>
 
       <div
-        className="flex flex-col justify-center mt-10 pb-6 gap-12
+        className="flex flex-col justify-center mt-4 pb-6 gap-12
       lg:grid lg:grid-cols-3 lg:grid-rows-1"
       >
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <p
-            className="text-lg font-normal text-gray-400 mb-10
-          lg:text-center"
-          >
+          <p className="text-lg font-normal text-gray-400 mb-4 lg:text-center">
             languages 🔣
           </p>
 
-          <div className="flex flex-wrap gap-8 items-center justify-center px-2">
+          <div className="flex flex-wrap gap-2 items-center justify-center px-2">
             {languages.map((language, index) => (
               <Skill
                 key={index}
@@ -142,14 +139,11 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-2 col-end-3">
-          <p
-            className="text-lg font-normal text-gray-400 mb-10
-          lg:text-center"
-          >
+          <p className="text-lg font-normal text-gray-400 mb-4 lg:text-center">
             frameworks 🚧
           </p>
 
-          <div className="flex flex-wrap gap-8 items-center justify-center px-2">
+          <div className="flex flex-wrap gap-2 items-center justify-center px-2">
             {frameworks.map((framework, index) => (
               <Skill
                 key={index}
@@ -163,14 +157,11 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
-          <p
-            className="text-lg font-normal text-gray-400 mb-10
-          lg:text-center"
-          >
+          <p className="text-lg font-normal text-gray-400 mb-4 lg:text-center">
             tools ⛏️
           </p>
 
-          <div className="flex flex-wrap gap-8 items-center justify-center px-2">
+          <div className="flex flex-wrap gap-2 items-center justify-center px-2">
             {tools.map((tool, index) => (
               <Skill
                 key={index}
