@@ -14,12 +14,6 @@ const languages = [
   },
 
   { skill: "Java", src: "/svgs/java.svg", style: {}, rotate: "-2deg" },
-  {
-    skill: "Python",
-    src: "/svgs/python.svg",
-    style: { marginTop: 7.5 },
-    rotate: "-2deg",
-  },
 
   { skill: "HTML", src: "/svgs/html.svg", style: {}, rotate: "1deg" },
   { skill: "CSS", src: "/svgs/css.svg", style: { width: 25 }, rotate: "2deg" },
@@ -35,7 +29,12 @@ const languages = [
     style: { borderRadius: 2.5 },
     rotate: "3deg",
   },
-
+  {
+    skill: "Python",
+    src: "/svgs/python.svg",
+    style: { marginTop: 7.5 },
+    rotate: "-2deg",
+  },
   { skill: "SQL", src: "/svgs/sql.svg", style: {}, rotate: "-1deg" },
 ];
 
@@ -125,7 +124,7 @@ const Skills = () => {
             languages 🔣
           </p>
 
-          <div className="flex flex-wrap gap-2 items-center justify-center px-2">
+          <div className="flex flex-wrap gap-4 items-center justify-evenly px-2">
             {languages.map((language, index) => (
               <Skill
                 key={index}
@@ -143,7 +142,7 @@ const Skills = () => {
             frameworks 🚧
           </p>
 
-          <div className="flex flex-wrap gap-2 items-center justify-center px-2">
+          <div className="flex flex-wrap gap-4 items-center justify-evenly px-2">
             {frameworks.map((framework, index) => (
               <Skill
                 key={index}
@@ -161,7 +160,7 @@ const Skills = () => {
             tools ⛏️
           </p>
 
-          <div className="flex flex-wrap gap-2 items-center justify-center px-2">
+          <div className="flex flex-wrap gap-4 items-center justify-evenly px-2">
             {tools.map((tool, index) => (
               <Skill
                 key={index}

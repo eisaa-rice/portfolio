@@ -14,18 +14,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-{
-  /* <p className="text-lg text-start italic text-stone-400 mb-8">
-this website&apos;s layout was heavily inspired by{" "}
-<motion.a
-  className="font-medium"
-  whileHover={{ textDecoration: "underline" }}
-  href="https://brittanychiang.com/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  brittany chang.
-</motion.a>
-</p> */
-}
