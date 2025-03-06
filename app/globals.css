@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,13 +7,6 @@
   padding: 0;
 }
 
-html,
 body {
-  overflow-x: hidden;
-}
-
-body {
-  overflow-y: hidden;
-
   background: ghostwhite;
 }
