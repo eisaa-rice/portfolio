@@ -55,7 +55,8 @@ export const Job = ({
         </p>
 
         <motion.a
-          className="text-xl font-normal text-gray-600 my-3 lg:my-1"
+          className="text-xl font-normal text-gray-600 my-1
+          mx-auto sm:mx-0"
           whileHover={{
             textDecoration: "underline",
           }}
@@ -66,7 +67,7 @@ export const Job = ({
           {company}
         </motion.a>
 
-        <p className="text-gray-400 text-lg">{desc}</p>
+        <p className="text-gray-400 text-lg mt-1">{desc}</p>
 
         <div className="flex flex-wrap justify-start gap-2 mt-4">
           {skills.map((skill, i) => (

@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "code conductor",
-    desc: "an interactive platform where anyone can design and visualize custom algorithms.",
+    desc: "an interactive platform where anyone can design and visualize algorithms.",
     img: "/images/cc.png",
     link: "https://www.iwdsummit.com/",
     skills: ["React", "TypeScript", "Material UI"],
@@ -53,7 +53,7 @@ const Project = ({
       className="w-full border border-gray-300 rounded-3xl
     flex flex-col lg:flex-row overflow-hidden"
     >
-      <div className="relative h-72 lg:h-52 w-72 lg:w-52 flex-shrink-0 bg-white">
+      <div className="relative h-52 w-full lg:h-full lg:w-52 flex-shrink-0 bg-white">
         <Image src={img} alt={title} fill={true} objectFit="cover" />
       </div>
 
