@@ -8,12 +8,13 @@ const Hero = ({}: {}) => {
   return (
     <div
       className="flex flex-col justify-center w-full
-      md:grid md:grid-cols-2 md:grid-rows-1"
+      sm:grid sm:grid-cols-2 sm:grid-rows-1"
     >
+      {/* [@media(min-width:400px)]: */}
       <div
-        className="rounded-full h-48 md:h-72 w-48 md:w-72 
-        -mt-8 mb-8 m-auto md:my-auto
-        md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2 
+        className="rounded-full h-48 sm:h-72 w-48 sm:w-72 
+        -mt-8 mb-8 m-auto sm:my-auto
+        sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 
         relative overflow-hidden flex-shrink-0 border border-gray-300"
       >
         <Image
@@ -27,13 +28,13 @@ const Hero = ({}: {}) => {
 
       <div
         className="flex flex-col justify-center gap-6
-      md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2"
+      sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2"
       >
-        <p className="text-2xl font-medium text-gray-500">hola 👋🏻, i&apos;m</p>
+        <p className="text-3xl font-medium text-gray-500">hola 👋🏻, i&apos;m</p>
 
-        <p className="text-4xl sm:text-6xl font-bold">jésus orozco</p>
+        <p className="text-7xl font-bold">jésus orozco</p>
 
-        <p className="text-2xl sm:text-4xl font-semibold text-gray-600">
+        <p className="text-5xl font-semibold text-gray-600">
           software developer
         </p>
 
@@ -111,18 +112,3 @@ const Hero = ({}: {}) => {
 };
 
 export default Hero;
-
-{
-  /* <div
-          className="rounded-3xl h-72 lg:h-96 w-72 lg:w-96 px-10 m-auto 
-          relative overflow-hidden flex-shrink-0 border border-gray-300
-      lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2"
-        >
-          <Image
-            src="/images/me.jpg"
-            alt="me"
-            fill={true}
-            objectFit="contain"
-          />
-        </div> */
-}
