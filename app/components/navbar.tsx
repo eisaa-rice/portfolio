@@ -42,7 +42,13 @@ const Navbar = () => {
               className="flex"
               initial={{ opacity: 0.5 }}
               whileHover="hover"
-              variants={{ hover: { scale: 1.05, opacity: 1 } }}
+              variants={{
+                hover: {
+                  scale: 1.05,
+                  opacity: 1,
+                },
+              }}
+              transition={{ duration: 0.25, ease: "anticipate" }}
             >
               <ScrollLink to={link} smooth={true} duration={500} offset={-80}>
                 {link}
@@ -57,10 +63,10 @@ const Navbar = () => {
                 variants={{
                   hover: {
                     opacity: 1,
-                    x: 10,
+                    x: 5,
                   },
                 }}
-                transition={{ duration: 0.25 }}
+                transition={{ duration: 0.25, ease: "anticipate" }}
               >
                 {emoji}
               </motion.p>

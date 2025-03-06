@@ -67,14 +67,48 @@ const Project = ({
         className="flex flex-col p-4 h-[212px] mt-auto mb-0
       border-t border-gray-300"
       >
-        <a
-          className="font-bold text-xl mb-3"
+        <motion.a
+          className="w-full flex flex-col mb-2"
           href={link}
           target="_blank"
           rel="noopener noreferrer"
+          whileHover="link"
         >
-          {title}
-        </a>
+          <div className="flex items-center justify-between">
+            <p className="font-bold text-2xl inline-flex flex-col">
+              {title}
+
+              <motion.span
+                className="h-px w-full bg-gray-500 -mt-1"
+                initial={{ scaleX: 0, transformOrigin: "left" }}
+                variants={{
+                  link: {
+                    scaleX: 1,
+                    transition: { duration: 0.2, ease: "linear" },
+                  },
+                }}
+              />
+            </p>
+
+            <motion.div
+              initial={{ x: 0, y: 0 }}
+              variants={{
+                link: {
+                  x: 2,
+                  y: -2,
+                  transition: { duration: 0.2, ease: "linear" },
+                },
+              }}
+            >
+              <Image
+                src="/svgs/external-link.svg"
+                alt={title}
+                height={25}
+                width={25}
+              />
+            </motion.div>
+          </div>
+        </motion.a>
 
         <p className="text-gray-400 text-lg">{desc}</p>
 

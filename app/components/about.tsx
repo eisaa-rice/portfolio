@@ -19,10 +19,7 @@ const About = () => {
       </p>
 
       <div className="flex items-center justify-center gap-24 mt-10">
-        <div
-          className="rounded-full h-72 w-72 m-auto
-        relative overflow-hidden flex-shrink-0 border border-gray-300"
-        >
+        <div className="rounded-full h-72 w-72 m-auto relative overflow-hidden flex-shrink-0 border border-gray-300">
           <Image
             className="mt-3 ml-4 scale-125"
             src="/images/animoji.png"
