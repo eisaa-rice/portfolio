@@ -16,7 +16,7 @@ const projects = [
     title: "code conductor",
     desc: "an interactive platform where anyone can design and visualize algorithms.",
     img: "/images/cc.png",
-    link: "https://www.iwdsummit.com/",
+    link: "https://www.codeconductor.org/",
     skills: ["React", "TypeScript", "Material UI"],
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     title: "iwd summit",
     desc: "information hub for a 2024 international women’s day conference held in detroit.",
     img: "/images/iwd.png",
-    link: "https://www.codeconductor.org/",
+    link: "https://www.iwdsummit.com/",
     skills: ["React", "JavaScript", "Tailwind CSS"],
   },
 ];
