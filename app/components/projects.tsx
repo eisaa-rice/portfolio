@@ -51,17 +51,13 @@ const Project = ({
   return (
     <div
       className="w-full border border-gray-300 rounded-3xl
-    flex flex-col overflow-hidden" // lg:flex-row
+    flex flex-col overflow-hidden"
     >
-      <div
-        className="relative h-52 w-full flex-shrink-0 bg-white" // lg:h-full lg:w-52
-      >
+      <div className="relative h-52 w-full flex-shrink-0 bg-white">
         <Image src={img} alt={title} fill={true} objectFit="cover" />
       </div>
 
-      <div
-        className="flex flex-col p-4 border-t border-gray-300" // lg:h-full lg:border-t-0 lg:border-l
-      >
+      <div className="flex flex-col p-4 border-t border-gray-300">
         <motion.a
           className="w-full flex flex-col mb-2"
           href={link}
