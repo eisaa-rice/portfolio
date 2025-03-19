@@ -9,12 +9,12 @@ const Hero = ({}: {}) => {
     <div
       className="flex flex-col justify-center w-full
       sm:grid sm:grid-cols-2 sm:grid-rows-1
-      mt-10 sm:mt-48"
+      mt-10 sm:mt-24 lg:mt-48"
     >
       {/* [@media(min-width:400px)]: */}
       <div
         className="rounded-full h-48 sm:h-72 w-48 sm:w-72 
-        -mt-8 mb-12 mx-auto sm:my-auto sm:ml-auto
+        -mt-8 mb-12 mx-auto sm:my-auto sm:ml-auto sm:mr-0
         sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 
         relative overflow-hidden flex-shrink-0 border border-gray-300"
       >
@@ -31,11 +31,11 @@ const Hero = ({}: {}) => {
         className="flex flex-col justify-center gap-6
       sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2"
       >
-        <p className="text-2xl sm:text-3xl text-gray-500">hola 👋🏻, i&apos;m</p>
+        <p className="text-2xl lg:text-3xl text-gray-500">hola 👋🏻, i&apos;m</p>
 
-        <p className="text-6xl sm:text-7xl font-semibold">jésus orozco</p>
+        <p className="text-6xl lg:text-7xl font-semibold">jésus orozco</p>
 
-        <p className="text-4xl sm:text-5xl text-gray-700">software developer</p>
+        <p className="text-4xl lg:text-5xl text-gray-700">software developer</p>
 
         <p className="text-xl text-gray-600 inline-flex items-center gap-2">
           <span>

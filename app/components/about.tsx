@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const About = () => {
   return (
@@ -11,7 +10,7 @@ const About = () => {
       // backdrop-blur-sm border border-gray-100 shadow-md rounded-3xl p-8
       className="flex flex-col justify-center w-full"
     >
-      <p className="text-2xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
+      <p className="text-3xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
         🤟🏻 about
       </p>
 

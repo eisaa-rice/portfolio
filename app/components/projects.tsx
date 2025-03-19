@@ -6,28 +6,28 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "hack dearborn 3",
+    title: "👾 hack dearborn 3",
     desc: "the webpage and mobile app for UofM - Dearborn's 3rd annual hackathon.",
     img: "/images/hd3.png",
     link: "https://www.hackdearborn.org/",
     skills: ["React", "React Native", "Supabase"],
   },
   {
-    title: "code conductor",
+    title: "🤖 code conductor",
     desc: "an interactive platform where anyone can design and visualize algorithms.",
     img: "/images/cc.png",
     link: "https://www.codeconductor.org/",
     skills: ["React", "TypeScript", "Material UI"],
   },
   {
-    title: "bhm summit",
+    title: "👨🏿‍💻 bhm summit",
     desc: "information hub for a 2025 black history month conference held in detroit.",
     img: "/images/bhm.png",
     link: "https://gdg-summit-webiste.vercel.app/",
     skills: ["React", "JavaScript", "Tailwind CSS"],
   },
   {
-    title: "iwd summit",
+    title: "👩🏼‍💻 iwd summit",
     desc: "information hub for a 2024 international women’s day conference held in detroit.",
     img: "/images/iwd.png",
     link: "https://www.iwdsummit.com/",
@@ -70,7 +70,7 @@ const Project = ({
           whileHover="link"
         >
           <div className="flex items-center justify-between">
-            <p className="text-xl text-gray-800 inline-flex flex-col">
+            <p className="text-xl text-gray-800 font-medium inline-flex flex-col">
               {title}
 
               <motion.span
@@ -126,7 +126,7 @@ const Project = ({
 const Projects = () => {
   return (
     <div id="projects" className="flex flex-col justify-center w-full">
-      <p className="text-2xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
+      <p className="text-3xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
         💻 projects
       </p>
 

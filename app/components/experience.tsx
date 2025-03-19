@@ -46,12 +46,12 @@ export const Job = ({
       </div>
 
       <div className="flex flex-col justify-center w-full">
-        <p className="text-xl text-gray-800">{title}</p>
+        <p className="text-xl text-gray-800 font-medium">{title}</p>
 
         {/* <span className="text-base font-normal text-gray-400">{time}</span> */}
 
         <motion.a
-          className="text-xl font-normal text-gray-600 my-1"
+          className="text-lg font-normal text-gray-600 my-1"
           whileHover={{
             textDecoration: "underline",
           }}
@@ -59,7 +59,7 @@ export const Job = ({
           target="_blank"
           rel="noopener noreferrer"
         >
-          {company}
+          @ {company}
         </motion.a>
 
         <p className="text-gray-500 mt-1">{desc}</p>
@@ -83,7 +83,7 @@ export const Job = ({
 const Experience = () => {
   return (
     <div id="experience" className="flex flex-col justify-center w-full">
-      <p className="text-2xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
+      <p className="text-3xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
         💼 experience
       </p>
 

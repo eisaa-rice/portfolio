@@ -96,7 +96,7 @@ export const Skill = ({
 const Skills = () => {
   return (
     <div id="skills" className="flex flex-col justify-center w-full p-2">
-      <p className="text-2xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
+      <p className="text-3xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
         🛠️ skills
       </p>
 
@@ -105,7 +105,7 @@ const Skills = () => {
       lg:grid lg:grid-cols-3 lg:grid-rows-1"
       >
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <p className="text-xl text-gray-700 mb-4">languages 🔣</p>
+          <p className="text-xl text-gray-800 font-medium mb-4">languages 🔣</p>
 
           <div className="flex flex-wrap gap-2">
             {languages.map((language, index) => (
@@ -120,7 +120,9 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-2 col-end-3">
-          <p className="text-xl text-gray-700 mb-4">frameworks 🚧</p>
+          <p className="text-xl text-gray-800 font-medium mb-4">
+            frameworks 🚧
+          </p>
 
           <div className="flex flex-wrap gap-2">
             {frameworks.map((framework, index) => (
@@ -135,7 +137,7 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
-          <p className="text-xl text-gray-700 mb-4">tools ⛏️</p>
+          <p className="text-xl text-gray-800 font-medium mb-4">tools ⛏️</p>
 
           <div className="flex flex-wrap gap-2">
             {tools.map((tool, index) => (
