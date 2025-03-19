@@ -11,25 +11,25 @@ const About = () => {
       // backdrop-blur-sm border border-gray-100 shadow-md rounded-3xl p-8
       className="flex flex-col justify-center w-full"
     >
-      <p
-        className="text-3xl text-gray-800 font-medium
-        border-b border-gray-300 w-fit pr-6 pb-2"
-      >
+      <p className="text-2xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
         🤟🏻 about
       </p>
 
-      <div className="flex flex-col items-center justify-center mt-4">
-        <div className="flex flex-col items-start gap-6 text-gray-400 text-lg">
+      <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-start gap-6 text-gray-500">
           <p>
             as you already know, the name&apos;s 🤟🏻{" "}
-            <span className="font-semibold text-black">jesus orozco</span>. i
+            <span className="font-semibold text-gray-700">jesus orozco</span>. i
             was born, raised, and am currently based in 🌮{" "}
-            <span className="font-semibold text-black">detroit, michigan</span>.
+            <span className="font-semibold text-gray-700">
+              detroit, michigan
+            </span>
+            .
           </p>
 
           <p>
             i&apos;m currently a fourth year 🖥️{" "}
-            <span className="font-semibold text-black">
+            <span className="font-semibold text-gray-700">
               computer science major
             </span>{" "}
             at the 🎓 university of michigan - dearborn.
@@ -38,7 +38,7 @@ const About = () => {
           <p>
             i&apos;ve worked with my university&apos;s 🧑🏻‍💻{" "}
             <motion.a
-              className="font-semibold text-black"
+              className="font-semibold text-gray-700"
               whileHover={{
                 textDecoration: "underline",
               }}
@@ -54,9 +54,12 @@ const About = () => {
 
           <p>
             when i&apos;m not coding, you can probably find me 🎮{" "}
-            <span className="font-semibold text-black">grinding ranked</span> or
-            🎨{" "}
-            <span className="font-semibold text-black">drawing something</span>.
+            <span className="font-semibold text-gray-700">grinding ranked</span>{" "}
+            or 🎨{" "}
+            <span className="font-semibold text-gray-700">
+              drawing something
+            </span>
+            .
           </p>
         </div>
       </div>

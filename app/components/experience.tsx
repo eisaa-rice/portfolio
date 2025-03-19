@@ -46,17 +46,12 @@ export const Job = ({
       </div>
 
       <div className="flex flex-col justify-center w-full">
-        <p
-          className="text-2xl font-bold
-        inline-flex flex-col sm:flex-row items-center justify-between"
-        >
-          <span>{title}</span>
-          <span className="text-base font-normal text-gray-400">{time}</span>
-        </p>
+        <p className="text-xl text-gray-800">{title}</p>
+
+        {/* <span className="text-base font-normal text-gray-400">{time}</span> */}
 
         <motion.a
-          className="text-xl font-normal text-gray-600 my-1
-          mx-auto sm:mx-0"
+          className="text-xl font-normal text-gray-600 my-1"
           whileHover={{
             textDecoration: "underline",
           }}
@@ -67,7 +62,7 @@ export const Job = ({
           {company}
         </motion.a>
 
-        <p className="text-gray-400 text-lg mt-1">{desc}</p>
+        <p className="text-gray-500 mt-1">{desc}</p>
 
         <div className="flex flex-wrap justify-start gap-2 mt-4">
           {skills.map((skill, i) => (
@@ -88,14 +83,11 @@ export const Job = ({
 const Experience = () => {
   return (
     <div id="experience" className="flex flex-col justify-center w-full">
-      <p
-        className="text-3xl text-gray-800 font-medium
-        border-b border-gray-300 w-fit pr-6 pb-2"
-      >
+      <p className="text-2xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
         💼 experience
       </p>
 
-      <div className="flex flex-col justify-center mt-4">
+      <div className="flex flex-col justify-center">
         {experience.map(
           ({ title, company, time, desc, img, style, skills }, i) => (
             <Job

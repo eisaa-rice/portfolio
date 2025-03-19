@@ -71,9 +71,9 @@ const Navbar = () => {
           </button>
 
           {tabs.map(({ emoji, link }, i) => (
-            <button key={i} className="flex">
+            <button key={i} className="flex ">
               <ScrollLink to={link} smooth={true} duration={500} offset={-80}>
-                {link} {emoji}
+                {emoji} {link}
               </ScrollLink>
             </button>
           ))}

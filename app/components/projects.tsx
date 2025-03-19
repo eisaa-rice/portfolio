@@ -51,15 +51,16 @@ const Project = ({
   return (
     <div
       className="w-full border border-gray-300 rounded-3xl
-    flex flex-col lg:flex-row overflow-hidden"
+    flex flex-col overflow-hidden" // lg:flex-row
     >
-      <div className="relative h-52 w-full lg:h-full lg:w-52 flex-shrink-0 bg-white">
+      <div
+        className="relative h-52 w-full flex-shrink-0 bg-white" // lg:h-full lg:w-52
+      >
         <Image src={img} alt={title} fill={true} objectFit="cover" />
       </div>
 
       <div
-        className="flex flex-col p-4 lg:h-full
-      border-t lg:border-t-0 lg:border-l border-gray-300"
+        className="flex flex-col p-4 border-t border-gray-300" // lg:h-full lg:border-t-0 lg:border-l
       >
         <motion.a
           className="w-full flex flex-col mb-2"
@@ -69,7 +70,7 @@ const Project = ({
           whileHover="link"
         >
           <div className="flex items-center justify-between">
-            <p className="font-bold text-2xl inline-flex flex-col">
+            <p className="text-xl text-gray-800 inline-flex flex-col">
               {title}
 
               <motion.span
@@ -104,7 +105,7 @@ const Project = ({
           </div>
         </motion.a>
 
-        <p className="text-gray-400 text-lg">{desc}</p>
+        <p className="text-gray-500">{desc}</p>
 
         <div className="flex flex-wrap justify-start gap-2 pt-4 mt-auto">
           {skills.map((s, i) => (
@@ -125,15 +126,12 @@ const Project = ({
 const Projects = () => {
   return (
     <div id="projects" className="flex flex-col justify-center w-full">
-      <p
-        className="text-3xl text-gray-800 font-medium
-        border-b border-gray-300 w-fit pr-6 pb-2"
-      >
+      <p className="text-2xl border-b border-gray-300 w-fit pr-6 pb-2 mb-8">
         💻 projects
       </p>
 
       <div
-        className="flex flex-col gap-y-6 sm:gap-4 mt-4
+        className="flex flex-col gap-y-6 sm:gap-4 md:gap-8
         sm:grid sm:grid-cols-2"
       >
         {projects.map((p, i) => (
