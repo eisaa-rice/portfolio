@@ -46,14 +46,21 @@ export const Job = ({
       </div>
 
       <div className="flex flex-col justify-center w-full">
-        <p className="text-xl text-gray-800 font-medium">{title}</p>
-
-        {/* <span className="text-base font-normal text-gray-400">{time}</span> */}
+        <p
+          className="text-xl text-gray-800 font-medium flex-shrink-0 
+        inline-flex flex-col sm:flex-row items-start sm:items-center justify-between"
+        >
+          {title}{" "}
+          <span className="text-base font-light text-gray-400 flex-shrink-0">
+            {time}
+          </span>
+        </p>
 
         <motion.a
-          className="text-lg font-normal text-gray-600 my-1"
+          className="text-lg text-gray-600 flex-shrink-0 w-fit"
           whileHover={{
             textDecoration: "underline",
+            underlineThickness: 0.5,
           }}
           href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
           target="_blank"
