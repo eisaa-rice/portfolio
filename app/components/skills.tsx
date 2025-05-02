@@ -47,11 +47,6 @@ const frameworks = [
     src: "/svgs/tailwind.svg",
     style: {},
   },
-  {
-    skill: "Framer Motion",
-    src: "/svgs/framer-motion.svg",
-    style: {},
-  },
 
   { skill: "Node.js", src: "/svgs/nodejs.svg", style: {} },
 ];
@@ -61,6 +56,7 @@ const tools = [
   { skill: "GitHub", src: "/svgs/github.svg", style: {} },
 
   { skill: "MySQL", src: "/svgs/mysql.svg", style: {} },
+  { skill: "PostgreSQL", src: "/svgs/postgresql.svg", style: {} },
 
   { skill: "Docker", src: "/svgs/docker.svg", style: {} },
   {
