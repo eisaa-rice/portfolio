@@ -6,9 +6,25 @@ import { motion } from "framer-motion";
 
 const experience = [
   {
+    title: "development lead",
+    company: "university of michigan - dearborn",
+    time: "may 2025 - dec 2025",
+    desc: "i led a 4-person team in building a cross-platform mobile app for local coffee shops integrated with Clover POS, engineered for scalability and reuse across different clients.",
+    img: "",
+    style: {},
+    skills: [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "Express",
+      "Postman",
+      "PostgreSQL",
+    ],
+  },
+  {
     title: "frontend developer",
     company: "google developer groups",
-    time: "feb 2024 - present",
+    time: "feb 2024 - feb 2025",
     desc: "i developed scalable front-end web and app components for various regional events.",
     img: "/svgs/gdg.svg",
     style: { paddingLeft: "0.5rem", paddingRight: "0.5rem" },
@@ -94,7 +110,7 @@ const Experience = () => {
         💼 experience
       </p>
 
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center gap-20">
         {experience.map(
           ({ title, company, time, desc, img, style, skills }, i) => (
             <Job

@@ -49,6 +49,7 @@ const frameworks = [
   },
 
   { skill: "Node.js", src: "/svgs/nodejs.svg", style: {} },
+  { skill: "Express", src: "/svgs/express.svg", style: {} },
 ];
 
 const tools = [
@@ -63,6 +64,10 @@ const tools = [
     skill: "AWS",
     src: "/svgs/aws.svg",
     style: { marginTop: 5 },
+  },
+  {
+    skill: "Postman",
+    src: "/svgs/postman.svg",
   },
 ];
 

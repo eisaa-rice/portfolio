@@ -27,11 +27,15 @@ const About = () => {
           </p>
 
           <p>
-            i&apos;m currently a fourth year 🖥️{" "}
+            i recently graduated from the{" "}
             <span className="font-semibold text-gray-700">
-              computer science major
+              🎓 university of michigan - dearborn
             </span>{" "}
-            at the 🎓 university of michigan - dearborn.
+            with a bachelor&apos;s in 🖥️{" "}
+            <span className="font-semibold text-gray-700">
+              computer & information science
+            </span>
+            .
           </p>
 
           <p>
