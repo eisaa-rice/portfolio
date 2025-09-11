@@ -6,6 +6,13 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "🍵 brew buzz",
+    desc: "mobile app for local coffee shops integrated with Clover POS.",
+    img: "/images/bb.png",
+    link: "",
+    skills: ["React Native", "Express", "PostgreSQL"],
+  },
+  {
     title: "👾 hack dearborn 3",
     desc: "the webpage and mobile app for UofM - Dearborn's 3rd annual hackathon.",
     img: "/images/hd3.png",
@@ -28,7 +35,7 @@ const projects = [
   },
   {
     title: "👩🏼‍💻 iwd summit",
-    desc: "information hub for a 2024 international women’s day conference held in detroit.",
+    desc: "information hub for a 2024 international women's day conference held in detroit.",
     img: "/images/iwd.png",
     link: "https://www.iwdsummit.com/",
     skills: ["React", "JavaScript", "Tailwind CSS"],
@@ -54,7 +61,7 @@ const Project = ({
     flex flex-col overflow-hidden"
     >
       <div className="relative h-52 w-full flex-shrink-0 bg-white">
-        <Image src={img} alt={title} fill={true} objectFit="cover" />
+        <Image className="object-cover" src={img} alt={title} fill={true} />
       </div>
 
       <div className="flex flex-col p-4 border-t border-gray-300">

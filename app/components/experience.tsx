@@ -10,16 +10,12 @@ const experience = [
     company: "university of michigan - dearborn",
     time: "may 2025 - dec 2025",
     desc: "i led a 4-person team in building a cross-platform mobile app for local coffee shops integrated with Clover POS, engineered for scalability and reuse across different clients.",
-    img: "",
-    style: {},
-    skills: [
-      "React Native",
-      "TypeScript",
-      "Expo",
-      "Express",
-      "Postman",
-      "PostgreSQL",
-    ],
+    img: "/svgs/umd.svg",
+    style: {
+      transform: "scale(1.05)",
+    },
+    link: "https://umdearborn.edu/cecs/life-cecs/events/senior-design-day",
+    skills: ["React Native", "TypeScript", "Express", "Postman", "PostgreSQL"],
   },
   {
     title: "frontend developer",
@@ -28,6 +24,7 @@ const experience = [
     desc: "i developed scalable front-end web and app components for various regional events.",
     img: "/svgs/gdg.svg",
     style: { paddingLeft: "0.5rem", paddingRight: "0.5rem" },
+    link: "https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/",
     skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
   },
 ];
@@ -39,6 +36,7 @@ export const Job = ({
   desc,
   img,
   style,
+  link,
   skills,
 }: {
   title: string;
@@ -47,16 +45,20 @@ export const Job = ({
   desc: string;
   img: string;
   style?: React.CSSProperties;
+  link: string;
   skills: string[];
 }) => {
   return (
     <div className="flex flex-col sm:flex-row items-center gap-6">
-      <div className="rounded-full h-24 w-24 relative flex-shrink-0 border border-gray-300">
+      <div
+        className="rounded-full h-24 w-24 relative flex-shrink-0 border border-gray-300
+      overflow-hidden"
+      >
         <Image
+          className="object-contain"
           src={img}
           alt={company}
           fill={true}
-          objectFit="contain"
           style={style}
         />
       </div>
@@ -78,7 +80,7 @@ export const Job = ({
             textDecoration: "underline",
             underlineThickness: 0.5,
           }}
-          href="https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/"
+          href={link}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -112,7 +114,7 @@ const Experience = () => {
 
       <div className="flex flex-col justify-center gap-20">
         {experience.map(
-          ({ title, company, time, desc, img, style, skills }, i) => (
+          ({ title, company, time, desc, img, style, link, skills }, i) => (
             <Job
               key={i}
               title={title}
@@ -121,6 +123,7 @@ const Experience = () => {
               desc={desc}
               img={img}
               style={style}
+              link={link}
               skills={skills}
             />
           )

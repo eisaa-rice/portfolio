@@ -19,11 +19,10 @@ const Hero = ({}: {}) => {
         relative overflow-hidden flex-shrink-0 border border-gray-300"
       >
         <Image
-          className="mt-3 ml-4 scale-125"
+          className="mt-3 ml-4 scale-125 object-contain"
           src="/images/animoji.png"
           alt="literally me"
           fill={true}
-          objectFit="contain"
         />
       </div>
 
