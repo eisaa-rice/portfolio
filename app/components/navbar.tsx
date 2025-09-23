@@ -34,7 +34,7 @@ const Navbar = () => {
       backdrop-blur-sm shadow-sm bg-white/30"
     >
       <div className="max-w-screen-xl px-6 py-4 mx-auto flex items-center justify-between lg:justify-center">
-        <p className="font-medium">jesus orozco</p>
+        <p className="font-medium">jésus orozco</p>
 
         {/* hamburger */}
         <button className="lg:hidden h-8 w-8" onClick={() => setOpen(!open)}>
