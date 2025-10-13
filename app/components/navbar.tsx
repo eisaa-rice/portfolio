@@ -167,7 +167,7 @@ const Navbar = () => {
 
           <motion.a
             className="font-bold text-lg -mx-1"
-            href="/documents/jesus_orozco.pdf"
+            href="/documents/jesus_orozco_software.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ rotate: "-2deg", scale: 1.1 }}

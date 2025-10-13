@@ -13,8 +13,8 @@ const projects = [
     skills: ["React Native", "Express", "PostgreSQL"],
   },
   {
-    title: "👾 hack dearborn 3",
-    desc: "the webpage and mobile app for UofM - Dearborn's 3rd annual hackathon.",
+    title: "👾 hack dearborn",
+    desc: "the webpage and mobile app for UofM - Dearborn's annual hackathon.",
     img: "/images/hd3.png",
     link: "https://www.hackdearborn.org/",
     skills: ["React", "React Native", "Supabase"],
