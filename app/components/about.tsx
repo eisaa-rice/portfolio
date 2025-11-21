@@ -48,8 +48,9 @@ const About = () => {
               <span className="font-semibold text-gray-700">
                 📚 senior design capstone project
               </span>
-              , i led development of a mobile app integrated with Clover for
-              coffee shops engineered as a reusable solution across businesses.
+              , i led the development of a mobile app for coffee shops
+              integrated with clover, engineered as a reusable solution across
+              businesses.
               <span className="font-semibold text-gray-700"></span>
             </p>
 

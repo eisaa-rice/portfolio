@@ -9,7 +9,7 @@ const experience = [
     title: "development lead",
     company: "university of michigan - dearborn",
     time: "may 2025 - dec 2025",
-    desc: "i led a 4-person team in building a cross-platform mobile app for local coffee shops integrated with Clover POS, engineered for scalability and reuse across different clients.",
+    desc: "i led a 4-person team in building a cross-platform mobile app for local coffee shops integrated with clover pos, engineered for scalability and reuse across different clients.",
     img: "/svgs/umd.svg",
     style: {
       transform: "scale(1.05)",
