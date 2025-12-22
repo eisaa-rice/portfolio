@@ -9,7 +9,7 @@ const mainProjects = [
     title: "🍵 brew buzz",
     desc: "mobile app for local coffee shops integrated with clover's point-of-sales system.",
     img: "/images/bb.png",
-    link: "",
+    link: "https://umdearborn.edu/cecs/life-cecs/events/senior-design-day",
     skills: ["React Native", "Express", "PostgreSQL"],
   },
   {

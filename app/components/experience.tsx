@@ -12,7 +12,8 @@ const experience = [
     desc: "i led a 4-person team in building a cross-platform mobile app for local coffee shops integrated with clover pos, engineered for scalability and reuse across different clients.",
     img: "/svgs/umd.svg",
     style: {
-      transform: "scale(1.05)",
+      padding: "0.5rem",
+      backgroundColor: "#0b2b53",
     },
     link: "https://umdearborn.edu/cecs/life-cecs/events/senior-design-day",
     skills: ["React Native", "TypeScript", "Express", "Postman", "PostgreSQL"],
