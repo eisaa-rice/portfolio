@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header>
+    <header className="flex items-center justify-between">
       <p>jésus orozco.</p>
 
       <nav></nav>

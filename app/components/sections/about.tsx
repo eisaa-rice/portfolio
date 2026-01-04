@@ -5,20 +5,17 @@ import SectionHeader from "../ui/sectionHeader";
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <SectionHeader emoji="🤟🏻" title="about." />
 
-      <div className="flex flex-col items-start gap-10 text-neutral-700">
+      <div className="flex flex-col items-start gap-10">
         {/* overview */}
         <div className="flex flex-col items-start gap-3">
           <p>
             as you already know, the name&apos;s 🤟🏻{" "}
-            <span className="font-semibold text-neutral-700">jesus orozco</span>
-            . i was born, raised, and am currently based in 🌮{" "}
-            <span className="font-semibold text-neutral-700">
-              detroit, michigan
-            </span>
-            .
+            <span className="font-semibold">jesus orozco</span>. i was born,
+            raised, and am currently based in 🌮{" "}
+            <span className="font-semibold">detroit, michigan</span>.
           </p>
         </div>
 
@@ -26,11 +23,11 @@ const About = () => {
         <div className="flex flex-col items-start gap-3">
           <p>
             i recently graduated from the{" "}
-            <span className="font-semibold text-neutral-700">
+            <span className="font-semibold">
               🎓 university of michigan - dearborn
             </span>{" "}
-            with a bachelor&apos;s in 🖥️{" "}
-            <span className="font-semibold text-neutral-700">
+            with a bachelor&apos;s degree in 🖥️{" "}
+            <span className="font-semibold">
               computer & information science
             </span>
             .
@@ -38,18 +35,18 @@ const About = () => {
 
           <p>
             for my{" "}
-            <span className="font-semibold text-neutral-700">
+            <span className="font-semibold">
               📚 senior design capstone project
             </span>
             , i led the development of a mobile app for coffee shops integrated
             with clover, engineered as a reusable solution across businesses.
-            <span className="font-semibold text-neutral-700"></span>
+            <span className="font-semibold"></span>
           </p>
 
           <p>
             during my time there, i also worked with my university&apos;s 🧑🏻‍💻{" "}
             <motion.a
-              className="font-semibold text-neutral-700"
+              className="font-semibold"
               whileHover={{
                 textDecoration: "underline",
               }}
@@ -68,32 +65,25 @@ const About = () => {
         <div className="flex flex-col items-start gap-3">
           <p>
             i&apos;m currently looking for my first 💼{" "}
-            <span className="font-semibold text-neutral-700">
+            <span className="font-semibold">
               professional software engineering role
             </span>{" "}
             where i can work with others to build real-world software.
           </p>
         </div>
 
-        {/* other life */}
+        {/* personal life */}
         <div className="flex flex-col items-start gap-3">
           <p>
             when i&apos;m not coding, you can probably find me 🎮{" "}
-            <span className="font-semibold text-neutral-700">
-              grinding ranked
-            </span>{" "}
-            or 🎨{" "}
-            <span className="font-semibold text-neutral-700">
-              drawing something
-            </span>
-            .
+            <span className="font-semibold">grinding ranked</span> or 🎨{" "}
+            <span className="font-semibold">drawing something</span>.
           </p>
 
           <p>
             but regardless of what i&apos;m doing, you can expect there to be
-            some 🎸{" "}
-            <span className="font-semibold text-neutral-700">rock music</span>{" "}
-            blaring in the background.
+            some 🎸 <span className="font-semibold">rock music</span> blaring in
+            the background.
           </p>
         </div>
       </div>

@@ -23,55 +23,92 @@ const Hero = () => {
 
       <h1 className="text-8xl font-bold">jésus orozco.</h1>
 
-      <p className="text-3xl">new-grad software engineer.</p>
+      <p className="text-3xl font-extralight">new-grad software engineer.</p>
 
-      <p className="text-neutral-500">📌 detroit, mi.</p>
+      <p className="text- ">📌 detroit, mi.</p>
 
-      <div className="flex items-center gap-3">
-        <motion.a
-          className="mx-px"
-          href="https://www.linkedin.com/in/eisaa-rice/"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ rotate: "-2deg", scale: 1.1 }}
+      <div className="flex items-center gap-2">
+        <p className="font-sour italic font-extralight text-lg">contact me!</p>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40px"
+          height="40px"
+          viewBox="0 0 400 400"
+          fill="none"
         >
-          <Image
-            src="/icons/linkedin.svg"
-            alt="linkedin"
-            height={25}
-            width={25}
+          <path
+            d="M49 200.913C99.7842 198.157 150.377 196.78 200.778 196.78C276.38 196.78 336.003 200.913 351.598 200.913"
+            stroke="#000000"
+            strokeOpacity="0.9"
+            strokeWidth="16"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
-        </motion.a>
+          <path
+            d="M297.858 148C311.416 151.811 342.206 190.498 350.385 194.54C358.564 198.581 323.305 244.831 307.119 253"
+            stroke="#000000"
+            strokeOpacity="0.9"
+            strokeWidth="16"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
 
-        <motion.a
-          className="mx-px"
-          href="https://github.com/eisaa-rice"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ rotate: "2deg", scale: 1.1 }}
+        <div
+          className="flex items-center gap-3 p-2 w-fit
+      border border-neutral-500 rounded-xl"
         >
-          <Image src="/icons/github.svg" alt="github" height={25} width={25} />
-        </motion.a>
+          <motion.a
+            className="mx-px"
+            href="https://www.linkedin.com/in/eisaa-rice/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ rotate: "-2deg", scale: 1.1 }}
+          >
+            <Image
+              src="/icons/linkedin.svg"
+              alt="linkedin"
+              height={25}
+              width={25}
+            />
+          </motion.a>
 
-        <motion.a
-          className="text-2xl"
-          href="mailto:jesusoro@umich.edu"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ rotate: "-2deg", scale: 1.1 }}
-        >
-          ✉️
-        </motion.a>
+          <motion.a
+            className="mx-px"
+            href="https://github.com/eisaa-rice"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ rotate: "2deg", scale: 1.1 }}
+          >
+            <Image
+              src="/icons/github.svg"
+              alt="github"
+              height={25}
+              width={25}
+            />
+          </motion.a>
 
-        <motion.a
-          className="text-2xl"
-          href="/documents/jesus_orozco.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ rotate: "2deg", scale: 1.1 }}
-        >
-          📄
-        </motion.a>
+          <motion.a
+            className="text-2xl"
+            href="mailto:jesusoro@umich.edu"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ rotate: "-2deg", scale: 1.1 }}
+          >
+            ✉️
+          </motion.a>
+
+          <motion.a
+            className="text-2xl"
+            href="/documents/jesus_orozco.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ rotate: "2deg", scale: 1.1 }}
+          >
+            📄
+          </motion.a>
+        </div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const SectionHeader = ({ emoji, title }: { emoji: string; title: string }) => {
   return (
     <motion.h2
-      className="text-3xl my-2 inline-block"
+      className="text-3xl my-6 inline-block"
       whileInView="section"
       viewport={{ once: true }}
     >
@@ -14,7 +14,7 @@ const SectionHeader = ({ emoji, title }: { emoji: string; title: string }) => {
         variants={{
           section: {
             scale: [1, 1.25],
-            transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
+            transition: { duration: 0.25, ease: "easeOut", delay: 0.2 },
           },
         }}
       >
@@ -26,7 +26,7 @@ const SectionHeader = ({ emoji, title }: { emoji: string; title: string }) => {
         variants={{
           section: {
             width: "100%",
-            transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
+            transition: { duration: 0.25, ease: "easeOut", delay: 0.2 },
           },
         }}
       />
