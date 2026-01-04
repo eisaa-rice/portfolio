@@ -6,13 +6,16 @@ import About from "./components/sections/about";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center font-light">
+    <div
+      className="flex flex-col min-h-screen items-center justify-center 
+    font-light"
+    >
       <Header />
 
       <main
         className="min-h-screen w-full max-w-6xl 
       flex flex-col items-center sm:items-start gap-23
-      py-32 px-16 bg-white dark:bg-black"
+      py-32 px-16 bg-white/50"
       >
         <Hero />
 
