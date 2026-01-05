@@ -13,9 +13,9 @@ export default function Home() {
       <Header />
 
       <main
-        className="min-h-screen w-full max-w-6xl 
-      flex flex-col items-center sm:items-start gap-23
-      py-32 px-16 bg-white/50"
+        className="min-h-screen w-full max-w-6xl
+      flex flex-col items-center sm:items-start gap-96
+      p-6 bg-white/50"
       >
         <Hero />
 

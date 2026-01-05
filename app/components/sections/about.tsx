@@ -12,7 +12,7 @@ const About = () => {
         {/* overview */}
         <div className="flex flex-col items-start gap-3">
           <p>
-            as you already know, the name&apos;s 🤟🏻{" "}
+            as you already know, my name is 🤟🏻{" "}
             <span className="font-semibold">jesus orozco</span>. i was born,
             raised, and am currently based in 🌮{" "}
             <span className="font-semibold">detroit, michigan</span>.
