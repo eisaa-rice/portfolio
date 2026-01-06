@@ -20,7 +20,7 @@ const SectionHeader = ({ emoji, title }: { emoji: string; title: string }) => {
       >
         {emoji}
       </motion.span>{" "}
-      {title}
+      {title}.
       <motion.div
         className="w-0 h-px bg-neutral-500 mt-1"
         variants={{

@@ -6,7 +6,7 @@ import SectionHeader from "../ui/sectionHeader";
 const About = () => {
   return (
     <div id="about">
-      <SectionHeader emoji="🤟🏻" title="about." />
+      <SectionHeader emoji="🤟🏻" title="about" />
 
       <div className="flex flex-col items-start gap-10">
         {/* overview */}

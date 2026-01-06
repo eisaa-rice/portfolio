@@ -27,73 +27,78 @@ const Header = () => {
 
   return (
     <header
-      className="flex items-center justify-between
-      fixed top-0 backdrop-blur-sm z-50
-    w-full max-w-6xl p-6"
+      className="flex items-center justify-center
+      fixed top-0 z-50 bg-white
+      w-full shadow-xs"
     >
-      <p className="font-semibold text-xl">jésus orozco.</p>
+      <div
+        className="flex items-center justify-between
+        w-full max-w-6xl p-6"
+      >
+        <p className="font-semibold text-xl">jésus orozco.</p>
 
-      <div className="relative">
-        <button
-          className="sm:hidden hover:cursor-pointer"
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          menu
-        </button>
-
-        {open && (
-          <nav
-            className="sm:hidden border border-black rounded-lg
-            flex flex-col justify-center gap-2
-            absolute top-[150%] right-0 p-2 bg-white"
+        <div className="relative">
+          <button
+            className="sm:hidden hover:cursor-pointer"
+            onClick={() => setOpen((prev) => !prev)}
           >
+            menu
+          </button>
+
+          {open && (
+            <nav
+              className="sm:hidden border border-black/5 rounded-lg
+            flex flex-col justify-center gap-2 z-50 bg-white/50
+            absolute top-[240%] -right-4 p-2 backdrop-blur-xl"
+            >
+              {tabs.map((m, i) => (
+                <a
+                  key={i}
+                  onClick={() => setOpen(closed)}
+                  className="inline-block text-nowrap"
+                  href={`#${m.text}`}
+                >
+                  <span className="inline-block">{m.emoji}</span> {m.text}.
+                </a>
+              ))}
+            </nav>
+          )}
+
+          <nav className="hidden sm:flex gap-4">
             {tabs.map((m, i) => (
-              <a
+              <motion.a
                 key={i}
-                onClick={() => setOpen(closed)}
                 className="inline-block text-nowrap"
                 href={`#${m.text}`}
-              >
-                <span className="inline-block">{m.emoji}</span> {m.text}.
-              </a>
-            ))}
-          </nav>
-        )}
-
-        <nav className="hidden sm:flex gap-4">
-          {tabs.map((m, i) => (
-            <motion.a
-              key={i}
-              className="inline-block text-nowrap"
-              href={`#${m.text}`}
-              whileHover="header"
-              initial={{ opacity: 0.5, scale: 1 }}
-              variants={{
-                header: {
-                  opacity: 1,
-                  scale: 1.1,
-                  transition: { duration: 0.1, ease: "linear" },
-                },
-              }}
-            >
-              <motion.span
-                className="inline-block"
-                initial={{ opacity: 0, scale: 1, x: 5 }}
+                whileHover="header"
+                initial={{ opacity: 0.5, scale: 1 }}
                 variants={{
                   header: {
                     opacity: 1,
-                    scale: 1.05,
-                    x: 0,
+                    scale: 1.1,
                     transition: { duration: 0.1, ease: "linear" },
                   },
                 }}
               >
-                {m.emoji}
-              </motion.span>{" "}
-              {m.text}.
-            </motion.a>
-          ))}
-        </nav>
+                <motion.span
+                  className="inline-block"
+                  initial={{ opacity: 0, scale: 1, x: 5 }}
+                  variants={{
+                    header: {
+                      opacity: 1,
+                      scale: 1.05,
+                      x: 0,
+                      transition: { duration: 0.1, ease: "linear" },
+                    },
+                  }}
+                >
+                  {m.emoji}
+                </motion.span>{" "}
+                {m.text}.
+              </motion.a>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );

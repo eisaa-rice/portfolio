@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const Hero = () => {
   return (
     <div className="flex flex-col gap-12 my-44">
-      <p className="text-neutral-700 text-xl">
+      <p className="text-xl">
         hola{" "}
         <motion.span
           className="inline-block z-10"
