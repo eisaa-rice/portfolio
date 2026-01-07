@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
 
 import SectionHeader from "../ui/sectionHeader";
@@ -9,29 +8,27 @@ const mainProjects = [
   {
     title: "🍵 brew buzz",
     desc: "mobile app for local coffee shops integrated with clover's point-of-sales system.",
-    img: "/images/bb.png",
-    link: "https://umdearborn.edu/cecs/life-cecs/events/senior-design-day",
+    link: "",
     skills: ["React Native", "Express", "PostgreSQL"],
   },
   {
     title: "👾 hack dearborn",
     desc: "the webpage and mobile app for uofm - dearborn's annual hackathon.",
-    img: "/images/hd3.png",
     link: "https://www.hackdearborn.org/",
     skills: ["React", "React Native", "Supabase"],
   },
   {
-    title: "🤖 code conductor",
-    desc: "an interactive platform where anyone can design and visualize algorithms.",
-    img: "/images/cc.png",
-    link: "https://www.codeconductor.org/",
-    skills: ["React", "TypeScript", "Material UI"],
-  },
-  {
-    title: "🗣️ conference websites",
+    title: "👨🏿‍💻 bhm summit",
     desc: "information hub for a 2025 black history month conference held in detroit.",
     img: "/images/bhm.png",
     link: "https://gdg-summit-webiste.vercel.app/",
+    skills: ["React", "JavaScript", "Tailwind CSS"],
+  },
+  {
+    title: "👩🏼‍💻 iwd summit",
+    desc: "information hub for a 2024 international women's day conference held in detroit.",
+    img: "/images/iwd.png",
+    link: "https://www.iwdsummit.com/",
     skills: ["React", "JavaScript", "Tailwind CSS"],
   },
 ];
@@ -39,17 +36,27 @@ const mainProjects = [
 const MainProject = ({
   title,
   desc,
-  img,
   link,
   skills,
 }: {
   title: string;
   desc: string;
-  img: string;
   link: string;
   skills: string[];
 }) => {
-  return <div></div>;
+  return (
+    <motion.a
+      className="border border-neutral-300 rounded-lg
+      min-h-48"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ scale: 1 }}
+      whileHover={{ scale: 1.025, cursor: "pointer" }}
+    >
+      <p>{title}</p>
+    </motion.a>
+  );
 };
 
 const subProjects = [
@@ -139,7 +146,17 @@ const Projects = () => {
     <section id="projects">
       <SectionHeader emoji="💻" title="projects" />
 
-      <div className="flex flex-col gap-6"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12">
+        {mainProjects.map((mp, i) => (
+          <MainProject
+            key={i}
+            title={mp.title}
+            desc={mp.desc}
+            link={mp.link}
+            skills={mp.skills}
+          />
+        ))}
+      </div>
 
       <div className="flex flex-col gap-6">
         {subProjects.map((sp, i) => (
