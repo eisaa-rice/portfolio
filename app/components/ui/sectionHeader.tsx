@@ -22,7 +22,7 @@ const SectionHeader = ({
         variants={{
           section: {
             scale: [1, 1.25],
-            transition: { duration: 0.25, ease: "easeOut", delay: 0.5 },
+            transition: { duration: 0.25, delay: 0.5 },
           },
         }}
         style={emojiStyle}
@@ -35,7 +35,7 @@ const SectionHeader = ({
         variants={{
           section: {
             width: "100%",
-            transition: { duration: 0.25, ease: "easeOut", delay: 0.5 },
+            transition: { duration: 0.25, delay: 0.5 },
           },
         }}
       />

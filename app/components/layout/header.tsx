@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 
 const tabs = [
   {
@@ -39,30 +39,87 @@ const Header = () => {
 
         <div className="relative">
           <button
-            className="sm:hidden hover:cursor-pointer"
+            key="menu-btn"
+            className="sm:hidden hover:cursor-pointer text-xl"
             onClick={() => setOpen((prev) => !prev)}
           >
-            menu
+            <AnimatePresence mode="wait" initial={false}>
+              {open ? (
+                <motion.span
+                  key="close"
+                  className="inline-block"
+                  initial={{ rotate: -90, opacity: 0, scale: 0.75 }}
+                  animate={{
+                    rotate: 0,
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.1 },
+                  }}
+                  exit={{
+                    rotate: -90,
+                    opacity: 0,
+                    scale: 0.75,
+                    transition: { duration: 0.1 },
+                  }}
+                >
+                  ✕
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="open"
+                  className="inline-block"
+                  initial={{ rotate: 90, opacity: 0, scale: 0.75 }}
+                  animate={{
+                    rotate: 0,
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.05 },
+                  }}
+                  exit={{
+                    rotate: 90,
+                    opacity: 0,
+                    scale: 0.75,
+                    transition: { duration: 0.05 },
+                  }}
+                >
+                  ☰
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
 
-          {open && (
-            <nav
-              className="sm:hidden border border-black/5 rounded-lg
-            flex flex-col justify-center gap-2 z-50 bg-white
-            absolute top-[240%] -right-4 p-2"
-            >
-              {tabs.map((m, i) => (
-                <a
-                  key={i}
-                  onClick={() => setOpen(closed)}
-                  className="inline-block text-nowrap"
-                  href={`#${m.text}`}
-                >
-                  <span className="inline-block">{m.emoji}</span> {m.text}.
-                </a>
-              ))}
-            </nav>
-          )}
+          <AnimatePresence>
+            {open && (
+              <motion.nav
+                key="menu-nav"
+                className="sm:hidden border border-black/5 rounded-lg
+                flex flex-col justify-center gap-2 z-50 bg-white
+                absolute top-[220%] -right-4 p-2 origin-top-right"
+                initial={{ opacity: 0, y: -5 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.1, ease: "easeOut" },
+                }}
+                exit={{
+                  opacity: 0,
+                  y: -5,
+                  transition: { duration: 0.1, ease: "easeIn" },
+                }}
+              >
+                {tabs.map((m, i) => (
+                  <a
+                    key={i}
+                    onClick={() => setOpen(false)}
+                    className="inline-block text-nowrap"
+                    href={`#${m.text}`}
+                  >
+                    <span className="inline-block">{m.emoji}</span> {m.text}.
+                  </a>
+                ))}
+              </motion.nav>
+            )}
+          </AnimatePresence>
 
           <nav className="hidden sm:flex gap-6">
             {tabs.map((m, i) => (
@@ -76,7 +133,7 @@ const Header = () => {
                   header: {
                     opacity: 1,
                     scale: 1.05,
-                    transition: { duration: 0.1, ease: "linear" },
+                    transition: { duration: 0.1 },
                   },
                 }}
               >
@@ -90,7 +147,7 @@ const Header = () => {
                     header: {
                       opacity: 1,
                       x: 2,
-                      transition: { duration: 0.1, ease: "linear" },
+                      transition: { duration: 0.1 },
                     },
                   }}
                 >
