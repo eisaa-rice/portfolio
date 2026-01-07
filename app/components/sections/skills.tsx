@@ -84,8 +84,8 @@ export const Skill = ({
   return (
     <motion.p
       className="inline-flex shrink-0 items-center justify-center 
-      rounded-xl py-2 px-3 gap-2 h-10 text-sm bg-white
-      border border-gray-300 font-light"
+      rounded-lg py-2 px-3 gap-2 h-10 text-sm
+      border border-neutral-300 font-light"
       whileHover="skill"
     >
       {skill}
@@ -97,14 +97,18 @@ export const Skill = ({
 
 const Skills = () => {
   return (
-    <div id="skills">
-      <SectionHeader emoji="🛠️" title="skills" />
+    <section id="skills">
+      <SectionHeader
+        emoji="🛠️"
+        title="skills"
+        emojiStyle={{ marginLeft: "-0.25rem" }}
+      />
       <div
         className="flex flex-col justify-center pb-6 gap-12
       lg:grid lg:grid-cols-3 lg:grid-rows-1"
       >
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <p className="text-xl mb-4">languages 🔣</p>
+          <p className="text-xl mb-4 font-medium">languages 🔣</p>
 
           <div className="flex flex-wrap gap-2">
             {languages.map((language, index) => (
@@ -119,7 +123,7 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-2 col-end-3">
-          <p className="text-xl mb-4">frameworks 🚧</p>
+          <p className="text-xl mb-4 font-medium">frameworks 🚧</p>
 
           <div className="flex flex-wrap gap-2">
             {frameworks.map((framework, index) => (
@@ -134,7 +138,7 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
-          <p className="text-xl mb-4">tools ⛏️</p>
+          <p className="text-xl mb-4 font-medium">tools ⛏️</p>
 
           <div className="flex flex-wrap gap-2">
             {tools.map((tool, index) => (
@@ -148,7 +152,7 @@ const Skills = () => {
           </div>
         </div>
       </div>{" "}
-    </div>
+    </section>
   );
 };
 

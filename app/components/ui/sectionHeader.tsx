@@ -2,7 +2,15 @@
 
 import { motion } from "motion/react";
 
-const SectionHeader = ({ emoji, title }: { emoji: string; title: string }) => {
+const SectionHeader = ({
+  emoji,
+  title,
+  emojiStyle,
+}: {
+  emoji: string;
+  title: string;
+  emojiStyle?: React.CSSProperties;
+}) => {
   return (
     <motion.h2
       className="text-3xl my-6 inline-block"
@@ -10,13 +18,14 @@ const SectionHeader = ({ emoji, title }: { emoji: string; title: string }) => {
       viewport={{ once: true }}
     >
       <motion.span
-        className="inline-block z-10 -ml-1"
+        className="inline-block"
         variants={{
           section: {
             scale: [1, 1.25],
             transition: { duration: 0.25, ease: "easeOut", delay: 0.5 },
           },
         }}
+        style={emojiStyle}
       >
         {emoji}
       </motion.span>{" "}

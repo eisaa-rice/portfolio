@@ -1,21 +1,26 @@
 "use client";
 
 import { motion } from "motion/react";
+
 import SectionHeader from "../ui/sectionHeader";
 
 const About = () => {
   return (
-    <div id="about">
-      <SectionHeader emoji="🤟🏻" title="about" />
+    <section id="about">
+      <SectionHeader
+        emoji="🤟🏻"
+        title="about"
+        emojiStyle={{ marginLeft: "-0.25rem" }}
+      />
 
       <div className="flex flex-col items-start gap-10">
         {/* overview */}
         <div className="flex flex-col items-start gap-3">
           <p>
             as you already know, my name is 🤟🏻{" "}
-            <span className="font-semibold">jesus orozco</span>. i was born,
+            <span className="font-medium">jesus orozco</span>. i was born,
             raised, and am currently based in 🌮{" "}
-            <span className="font-semibold">detroit, michigan</span>.
+            <span className="font-medium">detroit, michigan</span>.
           </p>
         </div>
 
@@ -23,30 +28,27 @@ const About = () => {
         <div className="flex flex-col items-start gap-3">
           <p>
             i recently graduated from the{" "}
-            <span className="font-semibold">
+            <span className="font-medium">
               🎓 university of michigan - dearborn
             </span>{" "}
             with a bachelor&apos;s degree in 🖥️{" "}
-            <span className="font-semibold">
-              computer & information science
-            </span>
-            .
+            <span className="font-medium">computer & information science</span>.
           </p>
 
           <p>
             for my{" "}
-            <span className="font-semibold">
+            <span className="font-medium">
               📚 senior design capstone project
             </span>
             , i led the development of a mobile app for coffee shops integrated
             with clover, engineered as a reusable solution across businesses.
-            <span className="font-semibold"></span>
+            <span className="font-medium"></span>
           </p>
 
           <p>
             during my time there, i also worked with my university&apos;s 🧑🏻‍💻{" "}
             <motion.a
-              className="font-semibold"
+              className="font-medium"
               whileHover={{
                 textDecoration: "underline",
               }}
@@ -65,7 +67,7 @@ const About = () => {
         <div className="flex flex-col items-start gap-3">
           <p>
             i&apos;m currently looking for my first 💼{" "}
-            <span className="font-semibold">
+            <span className="font-medium">
               professional software engineering role
             </span>{" "}
             where i can work with others to build real-world software.
@@ -76,18 +78,18 @@ const About = () => {
         <div className="flex flex-col items-start gap-3">
           <p>
             when i&apos;m not coding, you can probably find me 🎮{" "}
-            <span className="font-semibold">grinding ranked</span> or 🎨{" "}
-            <span className="font-semibold">drawing something</span>.
+            <span className="font-medium">grinding ranked</span> or 🎨{" "}
+            <span className="font-medium">drawing something</span>.
           </p>
 
           <p>
             but regardless of what i&apos;m doing, you can expect there to be
-            some 🎸 <span className="font-semibold">rock music</span> blaring in
+            some 🎸 <span className="font-medium">rock music</span> blaring in
             the background.
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

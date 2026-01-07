@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-12 my-44">
+    <section className="flex flex-col gap-12 my-44">
       <p className="text-xl">
         hola{" "}
         <motion.span
@@ -61,7 +61,7 @@ const Hero = () => {
 
         <div
           className="flex items-center gap-3 p-2 w-fit
-      border border-neutral-500 rounded-lg"
+          border border-neutral-300 rounded-lg"
         >
           <motion.a
             className="mx-px"
@@ -100,7 +100,7 @@ const Hero = () => {
 
           <motion.a
             className="text-2xl"
-            href="/documents/jesus_orozco.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ rotate: "2deg", scale: 1.1 }}
@@ -109,7 +109,7 @@ const Hero = () => {
           </motion.a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

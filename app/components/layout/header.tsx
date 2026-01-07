@@ -29,7 +29,7 @@ const Header = () => {
     <header
       className="flex items-center justify-center
       fixed top-0 z-50 bg-white
-      w-full shadow-xs"
+      w-full border-b border-black/5"
     >
       <div
         className="flex items-center justify-between
@@ -64,7 +64,7 @@ const Header = () => {
             </nav>
           )}
 
-          <nav className="hidden sm:flex gap-4">
+          <nav className="hidden sm:flex gap-6">
             {tabs.map((m, i) => (
               <motion.a
                 key={i}
@@ -75,19 +75,21 @@ const Header = () => {
                 variants={{
                   header: {
                     opacity: 1,
-                    scale: 1.1,
+                    scale: 1.05,
                     transition: { duration: 0.1, ease: "linear" },
                   },
                 }}
               >
                 <motion.span
                   className="inline-block"
-                  initial={{ opacity: 0, scale: 1, x: 5 }}
+                  initial={{
+                    opacity: 0,
+                    x: 8,
+                  }}
                   variants={{
                     header: {
                       opacity: 1,
-                      scale: 1.05,
-                      x: 0,
+                      x: 2,
                       transition: { duration: 0.1, ease: "linear" },
                     },
                   }}
