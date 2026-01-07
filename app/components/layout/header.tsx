@@ -40,7 +40,7 @@ const Header = () => {
         <div className="relative">
           <button
             key="menu-btn"
-            className="sm:hidden hover:cursor-pointer text-xl"
+            className="lg:hidden hover:cursor-pointer text-xl"
             onClick={() => setOpen((prev) => !prev)}
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -92,7 +92,7 @@ const Header = () => {
             {open && (
               <motion.nav
                 key="menu-nav"
-                className="sm:hidden border border-black/5 rounded-lg
+                className="lg:hidden border border-black/5 rounded-lg
                 flex flex-col justify-center gap-2 z-50 bg-white
                 absolute top-[220%] -right-4 p-2 origin-top-right"
                 initial={{ opacity: 0, y: -5 }}
@@ -121,7 +121,7 @@ const Header = () => {
             )}
           </AnimatePresence>
 
-          <nav className="hidden sm:flex gap-6">
+          <nav className="hidden lg:flex gap-6">
             {tabs.map((m, i) => (
               <motion.a
                 key={i}

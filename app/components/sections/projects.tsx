@@ -167,7 +167,7 @@ const SubProject = ({
           {skills.map((skill, i) => (
             <p
               key={i}
-              className="text-xs text-neutral-400
+              className="text-xs text-neutral-400 h-fit
               rounded-full border border-neutral-200 px-2 py-1"
             >
               {skill}

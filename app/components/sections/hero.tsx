@@ -5,7 +5,10 @@ import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-12 my-44">
+    <section
+      className="flex flex-col gap-12 pt-20 sm:pt-40 lg:pt-0
+      lg:min-h-screen lg:justify-center"
+    >
       <p className="text-3xl font-extralight">
         hola{" "}
         <motion.span
@@ -28,7 +31,7 @@ const Hero = () => {
       <p>📌 detroit, mi.</p>
 
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <p className="font-sour italic font-extralight text-lg text-nowrap">
             contact me!
           </p>
@@ -57,7 +60,7 @@ const Hero = () => {
               strokeLinejoin="round"
             />
           </svg>
-        </div>
+        </div> */}
 
         <div
           className="flex items-center gap-3 p-2 w-fit
