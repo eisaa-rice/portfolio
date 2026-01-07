@@ -17,7 +17,6 @@ const experience = [
       backgroundColor: "#0b2b53",
     },
     link: "https://umdearborn.edu/cecs/life-cecs/events/senior-design-day",
-    skills: ["React Native", "TypeScript", "Express", "Postman", "PostgreSQL"],
   },
   {
     title: "frontend developer",
@@ -27,7 +26,6 @@ const experience = [
     img: "/svgs/gdg.svg",
     style: { paddingLeft: "0.5rem", paddingRight: "0.5rem" },
     link: "https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
   },
 ];
 
@@ -39,7 +37,6 @@ export const Job = ({
   img,
   style,
   link,
-  skills,
 }: {
   title: string;
   company: string;
@@ -48,7 +45,6 @@ export const Job = ({
   img: string;
   style?: React.CSSProperties;
   link: string;
-  skills: string[];
 }) => {
   return (
     <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -66,39 +62,23 @@ export const Job = ({
       </div>
 
       <div className="flex flex-col justify-center w-full">
-        <p
+        <h3
           className="text-xl font-medium shrink-0 
-        inline-flex flex-col sm:flex-row items-start sm:items-center justify-between"
+          inline-flex flex-col sm:flex-row items-start sm:items-center justify-between"
         >
           {title} <span className="text-base font-light shrink-0">{time}</span>
-        </p>
+        </h3>
 
-        <motion.a
-          className="text-lg shrink-0 w-fit text-neutral-500"
-          whileHover={{
-            textDecoration: "underline",
-            underlineThickness: 0.5,
-          }}
+        <a
+          className="text-lg shrink-0 w-fit text-neutral-500 hover:underline"
           href={link}
           target="_blank"
           rel="noopener noreferrer"
         >
           @ {company}
-        </motion.a>
+        </a>
 
-        <p className="mt-2 mb-5">{desc}</p>
-
-        <div className="flex flex-wrap justify-start gap-2">
-          {skills.map((skill, i) => (
-            <div
-              key={i}
-              className="text-xs text-neutral-400
-              rounded-full border border-neutral-200 px-2 py-1"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
+        <p className="mt-2">{desc}</p>
       </div>
     </div>
   );
@@ -109,9 +89,9 @@ const Experience = () => {
     <section id="experience">
       <SectionHeader emoji="💼" title="experience" />
 
-      <div className="flex flex-col justify-center gap-20">
+      <div className="flex flex-col justify-center gap-16">
         {experience.map(
-          ({ title, company, time, desc, img, style, link, skills }, i) => (
+          ({ title, company, time, desc, img, style, link }, i) => (
             <Job
               key={i}
               title={title}
@@ -121,7 +101,6 @@ const Experience = () => {
               img={img}
               style={style}
               link={link}
-              skills={skills}
             />
           )
         )}

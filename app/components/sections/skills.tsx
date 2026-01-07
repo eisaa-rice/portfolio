@@ -108,7 +108,7 @@ const Skills = () => {
       lg:grid lg:grid-cols-3 lg:grid-rows-1"
       >
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
-          <p className="text-xl mb-4 font-medium">languages 🔣</p>
+          <h3 className="text-xl mb-4 font-medium">languages 🔣</h3>
 
           <div className="flex flex-wrap gap-2">
             {languages.map((language, index) => (
@@ -123,7 +123,7 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-2 col-end-3">
-          <p className="text-xl mb-4 font-medium">frameworks 🚧</p>
+          <h3 className="text-xl mb-4 font-medium">frameworks 🚧</h3>
 
           <div className="flex flex-wrap gap-2">
             {frameworks.map((framework, index) => (
@@ -138,7 +138,7 @@ const Skills = () => {
         </div>
 
         <div className="row-start-1 row-end-2 col-start-3 col-end-4">
-          <p className="text-xl mb-4 font-medium">tools ⛏️</p>
+          <h3 className="text-xl mb-4 font-medium">tools ⛏️</h3>
 
           <div className="flex flex-wrap gap-2">
             {tools.map((tool, index) => (

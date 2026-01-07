@@ -13,7 +13,7 @@ const SectionHeader = ({
 }) => {
   return (
     <motion.h2
-      className="text-3xl my-6 inline-block"
+      className="text-2xl my-6 inline-block"
       whileInView="section"
       viewport={{ once: true }}
     >

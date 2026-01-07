@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header
       className="flex items-center justify-center
-      fixed top-0 z-50 bg-white
+      fixed top-0 z-50 backdrop-blur-xs bg-white/75
       w-full border-b border-black/5"
     >
       <div
@@ -48,8 +48,8 @@ const Header = () => {
           {open && (
             <nav
               className="sm:hidden border border-black/5 rounded-lg
-            flex flex-col justify-center gap-2 z-50 bg-white/50
-            absolute top-[240%] -right-4 p-2 backdrop-blur-xl"
+            flex flex-col justify-center gap-2 z-50 bg-white
+            absolute top-[240%] -right-4 p-2"
             >
               {tabs.map((m, i) => (
                 <a

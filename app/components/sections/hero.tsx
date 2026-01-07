@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const Hero = () => {
   return (
     <section className="flex flex-col gap-12 my-44">
-      <p className="text-xl">
+      <p className="text-3xl font-extralight">
         hola{" "}
         <motion.span
           className="inline-block z-10"
@@ -25,7 +25,7 @@ const Hero = () => {
 
       <p className="text-3xl font-extralight">new-grad software engineer.</p>
 
-      <p className="text- ">📌 detroit, mi.</p>
+      <p>📌 detroit, mi.</p>
 
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
         <div className="flex items-center gap-2">

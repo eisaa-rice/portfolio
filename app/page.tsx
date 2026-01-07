@@ -17,7 +17,7 @@ export default function Home() {
 
       <main
         className="min-h-screen w-full max-w-6xl
-        flex flex-col items-center sm:items-start gap-96
+        flex flex-col items-stretch gap-32
         p-6"
       >
         <Hero />
