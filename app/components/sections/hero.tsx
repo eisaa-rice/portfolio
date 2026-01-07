@@ -6,8 +6,8 @@ import { motion } from "motion/react";
 const Hero = () => {
   return (
     <section
-      className="flex flex-col gap-12 pt-20 sm:pt-40 lg:pt-0
-      lg:min-h-screen lg:justify-center"
+      className="flex flex-col gap-12 pt-20 sm:pt-40 lg:pt-20
+      lg:min-h-[calc(100dvh-80px)] lg:justify-center"
     >
       <p className="text-3xl font-extralight">
         hola{" "}
