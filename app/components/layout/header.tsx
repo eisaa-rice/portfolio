@@ -22,6 +22,7 @@ const tabs = [
   },
 ];
 
+// TODO: fix coloring in dark mode
 const Header = () => {
   const [open, setOpen] = useState(false);
 

@@ -1,9 +1,22 @@
 "use client";
 
+import { useState } from "react";
+
 import Image from "next/image";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const Hero = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDark((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle("dark", next);
+      document.documentElement.style.colorScheme = next ? "dark" : "light";
+      return next;
+    });
+  };
+
   return (
     <section
       className="flex flex-col gap-12 pt-20 sm:pt-40 lg:pt-20
@@ -62,54 +75,110 @@ const Hero = () => {
           </svg>
         </div> */}
 
-        <div
-          className="flex items-center gap-3 p-2 w-fit
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between w-full">
+          <div
+            className="flex items-center gap-3 p-2 w-fit
           border border-neutral-300 rounded-lg"
-        >
-          <motion.a
-            className="mx-px"
-            href="https://www.linkedin.com/in/eisaa-rice/"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ rotate: "-2deg", scale: 1.1 }}
           >
-            <Image
-              src="/svgs/linkedin.svg"
-              alt="linkedin"
-              height={25}
-              width={25}
-            />
-          </motion.a>
+            <motion.a
+              className="mx-px"
+              href="https://www.linkedin.com/in/eisaa-rice/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ rotate: "-2deg", scale: 1.1 }}
+            >
+              <Image
+                src="/svgs/linkedin.svg"
+                alt="linkedin"
+                height={25}
+                width={25}
+              />
+            </motion.a>
 
-          <motion.a
-            className="mx-px"
-            href="https://github.com/eisaa-rice"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ rotate: "2deg", scale: 1.1 }}
-          >
-            <Image src="/svgs/github.svg" alt="github" height={25} width={25} />
-          </motion.a>
+            <motion.a
+              className="mx-px"
+              href="https://github.com/eisaa-rice"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ rotate: "2deg", scale: 1.1 }}
+            >
+              <Image
+                src="/svgs/github.svg"
+                alt="github"
+                height={25}
+                width={25}
+              />
+            </motion.a>
 
-          <motion.a
-            className="text-2xl"
-            href="mailto:jesusoro@umich.edu"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ rotate: "-2deg", scale: 1.1 }}
-          >
-            ✉️
-          </motion.a>
+            <motion.a
+              className="text-2xl"
+              href="mailto:jesusoro@umich.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ rotate: "-2deg", scale: 1.1 }}
+            >
+              ✉️
+            </motion.a>
 
-          <motion.a
-            className="text-2xl"
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ rotate: "2deg", scale: 1.1 }}
+            <motion.a
+              className="text-2xl"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ rotate: "2deg", scale: 1.1 }}
+            >
+              📄
+            </motion.a>
+          </div>
+
+          {/* TODO: animate boder from #0000000d to #ffffff0d 
+           - will need variants for sun-animation*/}
+          <button
+            className="p-1 text-3xl
+            flex items-center justify-center
+            border rounded-full
+            hover:cursor-pointer"
+            type="button"
+            onClick={toggleTheme}
           >
-            📄
-          </motion.a>
+            <AnimatePresence mode="wait" initial={false}>
+              {!isDark ? (
+                <motion.span
+                  key="sun"
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    transition: { ease: "easeIn", duration: 0.2 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: { ease: "easeOut", duration: 0.1 },
+                  }}
+                >
+                  ☀️
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="moon"
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    transition: { ease: "easeIn", duration: 0.2 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: { ease: "easeOut", duration: 0.1 },
+                  }}
+                >
+                  🌙
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </button>
         </div>
       </div>
     </section>

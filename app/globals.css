@@ -2,14 +2,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+
+  --grid-line: rgba(0, 0, 0, 0.04);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* TODO: fix coloring on borders in dark mode (maybe switch to opacity or smth?) */
+html.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+
+  /* inverted grid */
+  --grid-line: rgba(255, 255, 255, 0.04);
 }
 
 html {
@@ -25,12 +29,14 @@ body {
 
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.04) 1px,
+      var(--grid-line) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 32px 32px;
+
+  transition: background-color 200ms ease, color 200ms ease,
+    background-image 200ms ease;
 }
 
 .font-sour {
