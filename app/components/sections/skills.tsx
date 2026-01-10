@@ -85,7 +85,8 @@ export const Skill = ({
     <motion.p
       className="inline-flex shrink-0 items-center justify-center 
       rounded-lg py-2 px-3 gap-2 h-10 text-sm
-      border border-neutral-300 font-light"
+      border border-neutral-200 dark:border-neutral-800 font-light
+      transition-colors duration-250 ease-linear"
       whileHover="skill"
     >
       {skill}
@@ -103,9 +104,10 @@ const Skills = () => {
         title="skills"
         emojiStyle={{ marginLeft: "-0.25rem" }}
       />
+
       <div
         className="flex flex-col justify-center pb-6 gap-12
-      lg:grid lg:grid-cols-3 lg:grid-rows-1"
+        lg:grid lg:grid-cols-3 lg:grid-rows-1"
       >
         <div className="row-start-1 row-end-2 col-start-1 col-end-2">
           <h3 className="text-xl mb-4 font-medium">languages 🔣</h3>
@@ -151,7 +153,7 @@ const Skills = () => {
             ))}
           </div>
         </div>
-      </div>{" "}
+      </div>
     </section>
   );
 };

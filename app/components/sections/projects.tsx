@@ -56,14 +56,18 @@ const MainProject = ({
   return (
     <motion.a
       className="flex flex-col
-      border rounded-lg p-4"
+      border rounded-lg p-4
+      border-neutral-200 dark:border-neutral-800
+      hover:border-black dark:hover:border-white
+      transition-colors duration-150 ease-in-out"
+      // this is being overriden
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       whileHover="link"
-      initial={{ scale: 1, borderColor: "#d4d4d4" }}
+      initial={{ scale: 1 }}
       variants={{
-        link: { scale: 1.025, borderColor: "#000000", cursor: "pointer" },
+        link: { scale: 1.025, cursor: "pointer" },
       }}
     >
       <div className="flex justify-between mb-2">
@@ -86,8 +90,9 @@ const MainProject = ({
         {skills.map((skill, i) => (
           <p
             key={i}
-            className="text-xs text-neutral-400
-            rounded-full border border-neutral-200 px-2 py-1"
+            className="text-xs text-neutral-400 px-2 py-1
+            rounded-full border border-neutral-200 dark:border-neutral-800
+            transition-colors duration-250 ease-linear"
           >
             {skill}
           </p>
@@ -142,7 +147,7 @@ const SubProject = ({
         <span className="inline-flex flex-col">
           {title}
           <motion.span
-            className="h-px w-full bg-neutral-400"
+            className="h-px w-full bg-neutral-500"
             initial={{ width: "0%" }}
             variants={{
               link: {
@@ -167,8 +172,9 @@ const SubProject = ({
           {skills.map((skill, i) => (
             <p
               key={i}
-              className="text-xs text-neutral-400 h-fit
-              rounded-full border border-neutral-200 px-2 py-1"
+              className="text-xs text-neutral-400 h-fit px-2 py-1
+              rounded-full border border-neutral-200 dark:border-neutral-800
+              transition-colors duration-250 ease-linear"
             >
               {skill}
             </p>

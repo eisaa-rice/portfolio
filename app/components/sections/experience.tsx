@@ -49,8 +49,9 @@ export const Job = ({
   return (
     <div className="flex flex-col sm:flex-row items-center gap-6">
       <div
-        className="rounded-lg h-26 w-26 relative shrink-0 border border-neutral-300
-        overflow-hidden"
+        className="rounded-lg h-26 w-26 relative shrink-0 overflow-hidden 
+        border border-neutral-200 dark:border-neutral-800
+        transition-colors duration-250 ease-linear"
       >
         <Image
           className="object-contain"
