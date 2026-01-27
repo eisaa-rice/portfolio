@@ -31,8 +31,7 @@ const Header = () => {
       className="flex items-center justify-center
       fixed top-0 z-50 backdrop-blur-xs w-full
       bg-white/75 dark:bg-black/75 
-      border-b border-black/5 dark:border-white/5
-      transition-colors duration-250 ease-linear"
+      border-b border-black/5 dark:border-white/5"
     >
       <div
         className="flex items-center justify-between
@@ -97,7 +96,6 @@ const Header = () => {
                 key="menu-nav"
                 className="lg:hidden border border-black/5 dark:border-white/5 rounded-lg
                 flex flex-col justify-center gap-2 z-50 bg-white dark:bg-black
-                transition-colors duration-250 ease-linear
                 absolute top-[220%] -right-4 p-2 origin-top-right"
                 initial={{ opacity: 0, y: -5 }}
                 animate={{

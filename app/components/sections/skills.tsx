@@ -85,8 +85,7 @@ export const Skill = ({
     <motion.p
       className="inline-flex shrink-0 items-center justify-center 
       rounded-lg py-2 px-3 gap-2 h-10 text-sm
-      border border-neutral-200 dark:border-neutral-800 font-light
-      transition-colors duration-250 ease-linear"
+      border border-neutral-200 dark:border-neutral-800 font-light"
       whileHover="skill"
     >
       {skill}

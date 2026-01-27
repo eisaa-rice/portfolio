@@ -50,8 +50,7 @@ export const Job = ({
     <div className="flex flex-col sm:flex-row items-center gap-6">
       <div
         className="rounded-lg h-26 w-26 relative shrink-0 overflow-hidden 
-        border border-neutral-200 dark:border-neutral-800
-        transition-colors duration-250 ease-linear"
+        border border-neutral-200 dark:border-neutral-800"
       >
         <Image
           className="object-contain"
@@ -103,7 +102,7 @@ const Experience = () => {
               style={style}
               link={link}
             />
-          )
+          ),
         )}
       </div>
     </section>

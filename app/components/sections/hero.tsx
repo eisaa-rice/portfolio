@@ -64,8 +64,7 @@ const Hero = () => {
 
         <div
           className="flex items-center gap-3 p-2 w-fit
-            border border-neutral-200 dark:border-neutral-800 rounded-lg
-            transition-colors duration-250 ease-linear"
+            border border-neutral-200 dark:border-neutral-800 rounded-lg"
         >
           <motion.a
             className="mx-px"

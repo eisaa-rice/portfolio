@@ -36,7 +36,7 @@ export default function Home() {
 
       <main
         className="min-h-screen w-full max-w-6xl
-        flex flex-col items-stretch gap-32
+        flex flex-col items-stretch gap-[75vh]
         p-6"
       >
         <Hero />
@@ -55,7 +55,6 @@ export default function Home() {
         flex items-center justify-center 
         bg-white/50 dark:bg-black/50 backdrop-blur-xs
         border border-neutral-200 dark:border-neutral-800 rounded-full
-        transition-colors duration-250 ease-linear
         hover:cursor-pointer"
         type="button"
         onClick={toggleTheme}

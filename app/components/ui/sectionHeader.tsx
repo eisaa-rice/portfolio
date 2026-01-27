@@ -31,8 +31,7 @@ const SectionHeader = ({
       </motion.span>{" "}
       {title}.
       <motion.div
-        className="w-0 h-px mt-1 bg-neutral-300 dark:bg-neutral-700
-        transition-colors duration-250 ease-linear"
+        className="w-0 h-px mt-1 bg-neutral-300 dark:bg-neutral-700"
         variants={{
           section: {
             width: "100%",

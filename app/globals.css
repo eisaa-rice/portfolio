@@ -22,7 +22,6 @@ section {
   --grid-line: rgba(0, 0, 0, 0.04);
 }
 
-/* TODO: fix coloring on borders in dark mode (maybe switch to opacity or smth?) */
 html.dark {
   --background: #000000;
   --foreground: #ffffff;
@@ -32,22 +31,11 @@ html.dark {
 }
 
 body {
-  transition-property: background-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
-
   background: var(--background);
   color: var(--foreground);
 
-  background-image: linear-gradient(
-      to right,
-      var(--grid-line) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 32px 32px;
-
-  transition-property: background-color, color, background-image;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
 }
